@@ -1,0 +1,255 @@
+# Block & Blood — CLAUDE.md
+
+## Skills activos para este proyecto
+Aplicar siempre los principios de estos sub-skills al trabajar en tareas de desarrollo:
+- `game-development/pc-games` — plataforma objetivo: PC (Steam/Desktop)
+- `game-development/2d-games` — dimensión: 2D sprites, tilemaps, física 2D
+
+---
+
+Tower Defense roguelite en Unity 6000.3.11f1. El jugador construye un laberinto en una grilla 7×9, elige cartas de bono entre niveles de XP y defiende contra oleadas continuas de monstruos.
+
+**GDD completo:** `GDD — Line Wars TD · MVP.md` (raíz del proyecto) — fuente de verdad editable
+**GDD snapshot histórico:** `GDD — Line Wars TD · MVP.pdf` (ya no se actualiza)
+**Tareas detalladas:** `Docs/Tasks/TASK-01` a `TASK-12`
+
+---
+
+## Estructura del proyecto
+
+```
+Assets/
+├── _Project/
+│   ├── Scripts/
+│   │   ├── Managers/       GameManager, GridManager, GridVisualizer, WaveManager, EconomyManager, XPManager, LivesManager, SelectionManager, TowerPlacementManager
+│   │   ├── Towers/         TowerBehaviour, ProjectileBehaviour, EffectSystem
+│   │   ├── Enemies/        EnemyBehaviour
+│   │   ├── Hero/           HeroBehaviour
+│   │   ├── Cards/          CardData, PlayerInventory, CardSystem, CardEffect
+│   │   ├── Shared/          ISelectable, EntityShadow, TowerType
+│   │   └── UI/             HUDController, CardPopupController, CursorManager
+│   ├── ScriptableObjects/
+│   │   ├── Towers/         TowerData SO × 5 (Melee Lv1, Melee Lv2, Rango Lv1, Fuego, Agua)
+│   │   ├── Enemies/        EnemyData SO × 3 (Caminante, Rápido, Blindado)
+│   │   └── Cards/          CardData SO × 15
+│   ├── Prefabs/
+│   ├── Scenes/
+│   └── Art/
+│       ├── Sprites/        GRASS+.png (sprite sheet pixel art 400×224, sliceado 16×16, 350 sprites)
+│       └── UI/             Heart.png (icono vidas), GoldCoin.png (icono oro)
+├── Resources/
+│   ├── Grid/               Sprites de tiles cargados en runtime (Tile_Restricted, Tile_Black, etc.)
+│   └── Decorations/        GRASS+.png (copia sliceada para carga en runtime de tiles y decoraciones)
+├── AstarPathfindingProject/ Plugin A* Pathfinding Project (no modificar)
+└── Kenney/                 Assets externos — no modificar
+```
+
+---
+
+## Sistemas principales
+
+### GridManager
+- Grilla de **7 columnas × 9 filas** (63 celdas, `CellSize = 0.96f` unidades mundo)
+- Spawn: fila 0 (visual inferior) · Meta: fila 8 (visual superior)
+- Estados de celda: `Libre` / `EnConstrucción` / `Ocupada`
+- **Celdas restringidas:** fila 8 completa (7 celdas) — permanentemente no buildable, visualizadas con tile116
+- Expone `bool CanPlaceTower(Vector2Int cell)` — valida bounds + estado + `IsRestricted` + pathfinding **antes** de confirmar construcción
+- Expone `bool IsRestricted(Vector2Int cell)` — consulta `RestrictedCells[]`
+- Configura el `GridGraph` de A* en `Awake()` (width=7, depth=9, nodeSize=0.96, is2D=true)
+- Notifica al PathfindingSystem via `AstarPath.active.UpdateGraphs(bounds)` cuando una celda cambia
+- `_gridOrigin` en escena: `(-0.96, 0, 0)` — desplazado para centrar el grid de 7 cols en x=2.4
+- Pathfinding: **A\* Pathfinding Project** instalado en `Assets/AstarPathfindingProject/`
+
+### GridVisualizer
+- `[ExecuteAlways]` — los tiles se crean también en Edit mode (visibles en Scene view sin Play)
+- **Suelo:** sprite `GRASS+_58` (pixel art 16×16 de `Resources/Decorations/GRASS+`) para todas las celdas libres — tiling sin costuras
+- **Fondo:** sprite `Tile_Black` escalado ×30 detrás de toda la grilla (cubre bordes exteriores)
+- **Celdas restringidas:** `Tile_Restricted` (tile116) — las que no están ocultas por `_hideRestrictedVisual`
+- **Decoraciones:** sprites decorativos (`GRASS+_310`, `GRASS+_311`, `GRASS+_291`, `GRASS+_317`) colocados en celdas libres para variedad visual. `RemoveDecoration(cell)` los elimina al construir una torre
+- `FlashTile(cell, valid)` — feedback visual: verde (válido) / rojo + X (inválido), 3 parpadeos
+- `RefreshTile(cell)` / `RefreshAll()` — actualiza sprites según estado actual de la celda
+- **Editor script:** `Assets/Editor/GrassSpriteSheetSlicer.cs` — sliceo automático de `GRASS+.png` en 350 sprites (25×14 grid de 16×16px) vía `Tools > Slice GRASS+ Sprite Sheet`
+
+### WaveManager
+- Lee `WavePhase` ScriptableObjects (composición + spawn rate por tramo de tiempo)
+- Spawna desde Object Pool
+- Escucha `XPManager.OnLevelUp` para pausar/reanudar el stream
+
+### XPManager
+- Acumula XP de `EnemyBehaviour.OnDeath`
+- Emite `OnLevelUp` al completar cada barra
+- 3 niveles por run: 150 / 300 / 500 XP
+
+### LivesManager
+- Vidas iniciales: **5**
+- Cada monstruo que llega a la meta resta **1 vida**
+- Escucha `EnemyBehaviour.OnEnemyReachedGoal`
+- Eventos: `OnLivesChanged(int)`, `OnGameOver`
+- Singleton en el mismo GameObject que `GameManager`
+
+### EconomyManager
+- Oro inicial: **50**
+- Ingresos: monstruos muertos (Caminante 2, Rápido 3, Blindado 5, Boss 30)
+- Gastos: construcción y mejora de torres
+
+### CardData (ScriptableObject)
+- `CardName`, `Description`, `Icon` (sprite), `CardRarity` (Common/Rare/Epic)
+- `TowerType[] CompatibleTowerTypes` — vacío = compatible con todos los tipos de torre
+- `IsCompatibleWith(TowerType)` — consulta si la carta es aplicable a un tipo de torre específico
+- Creación: `Create > Block&Blood > CardData`
+
+### CardSystem
+- Pool de 15 cartas (8 Comunes, 5 Raras, 2 Épicas)
+- Distribución por nivel: Nivel 1 → 3C · Nivel 2 → 2C+1R · Nivel 3 → 1R+1E+1 aleatoria
+- Al elegir: `CardEffect.Apply(GameState state)` modifica stats en tiempo real
+
+### SelectionManager
+- Singleton en el GameObject `GameManager` — trackea la unidad seleccionada (`ISelectable Current`)
+- Al iniciar, el **héroe** está seleccionado por defecto
+- **Interfaz `ISelectable`** (`Scripts/Shared/`): implementada por `HeroBehaviour` y `TowerBehaviour`
+  - `Transform SelectionTransform` — posición para la elipse de selección
+  - `bool IsSelectable` — héroe: siempre true; torre: solo en estado `Active`
+- **Indicador visual:** elipse verde procedural (ring, centro transparente), sortingOrder −45
+  - Escala: `0.7×0.35` · Color: `(0, 1, 0, 0.7)` · Offset Y: −0.55
+  - Se posiciona en `LateUpdate()` sobre el `SelectionTransform` del `ISelectable` activo
+- **Detección de clicks:** basada en **celda de la grilla** (no en colliders de física)
+  - Click en celda `Ocupada` → busca torre via `Physics2D.OverlapCircle` en el centro de la celda
+  - Click en celda vacía / ESC / right-click → reselecciona héroe
+  - Clicks durante build mode o sobre UI son ignorados
+- Evento: `OnSelectionChanged(ISelectable previous, ISelectable current)`
+- **HUDController** escucha `OnSelectionChanged` → reconstruye el panel inferior completo
+  - Héroe seleccionado → portrait héroe, stats héroe, inventario + 4 build buttons, mensaje neutro en acciones
+  - Torre seleccionada → portrait torre, stats torre, 6 slots de efectos aplicados + inventario clickable, botones mejorar/vender
+- El movimiento WASD y ataque automático del héroe funcionan **siempre**, independiente de la selección
+
+### PlayerInventory
+- Singleton (componente en `GameManager`)
+- Gestiona hasta **6 cartas** en el inventario del jugador
+- `AddCard(CardData)` — agrega carta (retorna false si lleno)
+- `SpendCard(CardData, TowerBehaviour)` — remueve carta del inventario y la aplica a la torre
+- Evento: `OnInventoryChanged` → HUDController refresca sección de cartas
+- Las cartas se obtienen del popup de XP level-up (CardPopupController, pendiente)
+
+### HUDController (panel inferior)
+- **Panel procedural** de 148px fijo, anclado al borde inferior, `Screen Space - Overlay`
+- **4 secciones** en `HorizontalLayoutGroup`:
+  - **Portrait** (100px): sprite + nombre + subtipo de la unidad seleccionada
+  - **Stats** (flex): 4 barras de progreso coloreadas (daño `#e24b4a`, rango `#7f77dd`, velocidad `#f0c040`, efecto `#1d9e75`)
+  - **Cards** (210px): hero → inventario + 4 build buttons (Melee 12, Rango 10, Fuego 25, Agua 25); torre → 6 slots efectos + inventario clickable con filtro de compatibilidad por `TowerType`
+  - **Actions** (160px): hero → mensaje neutro; torre → botones mejorar (1 o 2 según upgrade paths) + vender + advertencia de cartas
+- Constantes de barras: `MaxDamage=50`, `MaxRange=4`, `MaxAttackSpeed=5`, `MaxMoveSpeed=8`
+- Escucha: `OnSelectionChanged`, `OnGoldChanged`, `OnInventoryChanged`, `OnEffectApplied`, `OnTowerSold`, `OnTowerUpgraded`
+- **SerializeFields necesarios en Inspector:** `_goldText`, `_goldIcon`, `_livesText`, `_heartIcon`, `_meleeTowerData`, `_rangeTowerData`, `_fireTowerData`, `_waterTowerData`
+
+### EffectSystem (componente en EnemyBehaviour)
+- Gestiona `Burn` (DoT 4 dmg/s, ignora armadura) y `Slow` (−40%, acumula hasta −70%)
+- Burn: nuevo impacto refresca duración (no acumula stacks)
+- Slow: múltiples fuentes acumulan hasta cap −70%
+
+---
+
+## Torres
+
+| Torre | Costo | Daño | Rango | Efecto |
+|-------|-------|------|-------|--------|
+| Melee Lv1 | 12 oro | 15 dps (físico) | Celda + 8 adyacentes | Slow −15% |
+| Melee Lv2 (Sierra) | +18 oro | 28 dps | = Lv1 | = Lv1 |
+| Rango Lv1 | 10 oro | 20/proyectil (físico) | 3 celdas radio | — |
+| Fuego (Rango Lv2) | +15 oro | 20/proyectil | = Rango Lv1 | Burn 3s, 4 dmg/s, ignora armadura |
+| Agua (Rango Lv2) | +15 oro | 16/proyectil | = Rango Lv1 | Slow −40% 2s (acumula), −15% armadura 2s |
+
+- Construcción: **5 segundos** — el héroe puede moverse y atacar libremente durante ese tiempo
+- Venta: devuelve **60%** del costo total (construcción + mejoras)
+- Las torres Fuego y Agua NO tienen mejora adicional (ya son Lv2)
+- **TowerType** (`enum`): cada `TowerData` tiene un campo `Type` (Melee/Range/Fire/Water) — usado por `CardData.IsCompatibleWith()` para filtrar cartas aplicables
+- **Cartas aplicadas:** cada torre tiene `AppliedEffects` (máx 6 `CardData`). `ApplyCard(CardData)` agrega permanentemente. Evento `OnEffectApplied`. Las cartas se pierden al vender la torre
+- **TotalGoldInvested:** trackea oro invertido (base + mejoras). `SellValue = 60% * TotalGoldInvested`
+
+---
+
+## Monstruos
+
+| Monstruo | HP | Velocidad | Armadura | Oro | XP |
+|----------|----|-----------|----------|-----|-----|
+| Caminante | 60 | 2 c/s | 0% | 2 | 5 |
+| Rápido | 40 | 4 c/s | 0% | 3 | 8 |
+| Blindado | 200 | 1.5 c/s | 50% físico | 5 | 15 |
+
+- La armadura del Blindado **no afecta el DoT de Fuego**
+- Rápido: siempre spawna solo, nunca en grupo
+- Blindado: siempre precedido por 3 Caminantes
+
+---
+
+## Héroe
+- Movimiento WASD, 8 direcciones, **vuela sobre torres** (ignora pathfinding)
+- Sin colisión con torres ni monstruos
+- Ataque automático al **enemigo más cercano** en rango (1.5 celdas, 25 dmg, 1.5 ataques/s)
+- Sin HP — no puede ser dañado en el MVP
+- La construcción es remota: seleccionar torre en HUD + clic en celda → 5s de build desde cualquier posición
+- Múltiples construcciones simultáneas con timers independientes
+- **Sprite:** `Assets/_Project/Art/Sprites/Hero/roguelikeChar_magenta_0_transparent.png` (Kenney Roguelike Characters, fondo magenta removido por script) · **Escala:** 4.5 → 0.72 unidades mundo (~75% de una celda)
+
+---
+
+## Boss — Troll Anciano (~14:00)
+- HP: 1500 · Velocidad: 0.8 c/s · Armadura: 25% física · Recompensa: 30 oro / 50 XP
+- **Fase 1** (100%→50%): lento; a los 30s invoca 8 Caminantes
+- **Fase 2** (50%→0%): velocidad +60% → 1.3 c/s; rugido +20% velocidad a todos 6s; horda mixta cada 40s; regenera **2 HP/s**
+- La regeneración de fase 2 requiere DPS > 2 HP/s para no estancarse
+
+---
+
+## Convenciones de código
+
+### Nombrado
+- Clases, métodos, propiedades públicas: `PascalCase`
+- Variables privadas: `_camelCase` con prefijo `_`
+- ScriptableObjects: sufijo `Data` (ej. `TowerData`, `EnemyData`, `CardData`)
+- Eventos: prefijo `On` (ej. `OnLevelUp`, `OnEnemyDeath`)
+
+### Patrones obligatorios
+- **Object Pooling** para monstruos, proyectiles y efectos visuales — usar `UnityEngine.Pool.ObjectPool<T>`
+- **ScriptableObjects** para todos los datos de configuración (torres, monstruos, cartas)
+- **Eventos C#** para comunicación entre managers (no referencias directas)
+- No implementar A\* desde cero — usar **A\* Pathfinding Project**
+
+### Lo que NO tocar sin revisión cuidadosa
+- Lógica de validación del pathfinding en `GridManager.CanPlaceTower` — un bug aquí rompe el juego
+- Números de balance (daño, HP, XP, oro) — están en ScriptableObjects, no hardcodeados
+- Lógica de aplicación de cartas épicas (`Tormenta de fuego`, `El laberinto vivo`)
+
+---
+
+## Criterios de éxito
+
+### Técnicos (mes 4)
+- Run completa de ~15 minutos sin crashes
+- Pathfinding recalcula en tiempo real sin stutters
+- Las 15 cartas funcionan correctamente
+- El boss completa sus 2 fases
+- 60 fps estables en hardware de gama media
+
+### Diseño (mes 5)
+- **3 de 5 testers quieren hacer otra run inmediatamente** — único criterio que importa para continuar
+
+---
+
+## Assets externos y estilo visual
+- **Plataforma:** PC (Windows/Mac) — el diseño original era mobile, ya no aplica
+- **Estilo visual:** 3/4 view (2.5D) — inspirado en Ball x Pit (que es 3D). Unity 2D estándar, grilla rectangular normal, sin Tilemap isométrico
+- **Kenney Tower Defense Top-Down** — fuente original: `kenney_tower-defense-top-down/` (raíz del proyecto, no modificar). Sprites top-down compatibles con 3/4 view
+- **Kenney Roguelike Characters** — sprites direccionales (frente/espalda/izq/der) para héroe y monstruos. Clave para el estilo 3/4 view
+- **Kenney Tower Defense (original)** — más variantes de torres y monstruos
+- **Kenney Roguelike/RPG Pack** — iconos para cartas
+- **Kenney UI Pack** — HUD, botones, barras
+- Tiles importados a `Assets/Resources/Grid/` según necesidad — renombrados con prefijo `Tile_`
+- Arte final se implementa post-validación del MVP
+- Audio no es bloqueante — el juego debe ser jugable en silencio
+
+### Configuración visual 3/4 view (TASK-12)
+- Héroe y monstruos con **sprites direccionales** (mínimo frente/espalda) — cambian según dirección de movimiento
+- `Camera`: `Transparency Sort Mode = Custom Axis`, `Y = 1`
+- Todos los `SpriteRenderer` de entidades: `Sprite Sort Point = Pivot`, pivot en la base del sprite
+- Sorting Layers (orden inferior a superior): `Ground` → `Shadows` → `TowerBase` → `Characters` → `TowerTop` → `Effects` → `UI`
+- Cada monstruo/héroe/torre tiene un hijo `Shadow` (sprite elipse, alpha 0.3, escala `0.7×0.35`, layer `Shadows`)

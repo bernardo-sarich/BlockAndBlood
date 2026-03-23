@@ -1,0 +1,1053 @@
+fileFormatVersion: 2
+guid: f3933498e8628044cb9b135add7c2fbe
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8688506535905523239
+    second: HEAD_chain_armor_hood_0
+  - first:
+      213: 417189535898086405
+    second: HEAD_chain_armor_hood_1
+  - first:
+      213: -5529445230084662810
+    second: HEAD_chain_armor_hood_2
+  - first:
+      213: 1998103755960132789
+    second: HEAD_chain_armor_hood_3
+  - first:
+      213: -3074375883363882608
+    second: HEAD_chain_armor_hood_4
+  - first:
+      213: 8635844856555220036
+    second: HEAD_chain_armor_hood_5
+  - first:
+      213: 9059568540914326147
+    second: HEAD_chain_armor_hood_6
+  - first:
+      213: -3499381069128131683
+    second: HEAD_chain_armor_hood_7
+  - first:
+      213: -2829384952185124159
+    second: HEAD_chain_armor_hood_8
+  - first:
+      213: -3401565782264049926
+    second: HEAD_chain_armor_hood_9
+  - first:
+      213: -3657575944288522099
+    second: HEAD_chain_armor_hood_10
+  - first:
+      213: 2500208325893869542
+    second: HEAD_chain_armor_hood_11
+  - first:
+      213: -5612212147485929124
+    second: HEAD_chain_armor_hood_12
+  - first:
+      213: -6162313642783361064
+    second: HEAD_chain_armor_hood_13
+  - first:
+      213: -4717122288035519662
+    second: HEAD_chain_armor_hood_14
+  - first:
+      213: 6446625708667795345
+    second: HEAD_chain_armor_hood_15
+  - first:
+      213: 463817467745860241
+    second: HEAD_chain_armor_hood_16
+  - first:
+      213: 1890173015009201604
+    second: HEAD_chain_armor_hood_17
+  - first:
+      213: 1698210337716198372
+    second: HEAD_chain_armor_hood_18
+  - first:
+      213: 4273019189442534746
+    second: HEAD_chain_armor_hood_19
+  - first:
+      213: 3890237063448903084
+    second: HEAD_chain_armor_hood_20
+  - first:
+      213: -6884856060602550972
+    second: HEAD_chain_armor_hood_21
+  - first:
+      213: 6594154134613086177
+    second: HEAD_chain_armor_hood_22
+  - first:
+      213: 4613375127050102278
+    second: HEAD_chain_armor_hood_23
+  - first:
+      213: 9176494439522036279
+    second: HEAD_chain_armor_hood_24
+  - first:
+      213: 6054842538840281862
+    second: HEAD_chain_armor_hood_25
+  - first:
+      213: 3784701901265222226
+    second: HEAD_chain_armor_hood_26
+  - first:
+      213: 2705921057921113726
+    second: HEAD_chain_armor_hood_27
+  - first:
+      213: 6192382053317739233
+    second: HEAD_chain_armor_hood_28
+  - first:
+      213: 1008008595829549747
+    second: HEAD_chain_armor_hood_29
+  - first:
+      213: 4144469940155299692
+    second: HEAD_chain_armor_hood_30
+  - first:
+      213: -3759678617281757685
+    second: HEAD_chain_armor_hood_31
+  - first:
+      213: 3894066645049022887
+    second: HEAD_chain_armor_hood_32
+  - first:
+      213: 994541767817636117
+    second: HEAD_chain_armor_hood_33
+  - first:
+      213: 6173505312162903172
+    second: HEAD_chain_armor_hood_34
+  - first:
+      213: -1464661956554410194
+    second: HEAD_chain_armor_hood_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 218
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d901bad6593c6780800000000000000
+      internalID: -8688506535905523239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_1
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 218
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50c273b2ca72ac500800000000000000
+      internalID: 417189535898086405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_2
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 218
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e953d70cd67343b0800000000000000
+      internalID: -5529445230084662810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_3
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 217
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b4a06697c0babb10800000000000000
+      internalID: 1998103755960132789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_4
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 218
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 099611e3c6f9555d0800000000000000
+      internalID: -3074375883363882608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_5
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 218
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44cab52742fa8d770800000000000000
+      internalID: 8635844856555220036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_6
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 218
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38a908b969d0abd70800000000000000
+      internalID: 9059568540914326147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_7
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 217
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9b14e84573bf6fc0800000000000000
+      internalID: -3499381069128131683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_8
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 218
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ca8b2070610cb8d0800000000000000
+      internalID: -2829384952185124159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_9
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 152
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afe070c71f53bc0d0800000000000000
+      internalID: -3401565782264049926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_10
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 151
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d803badae0ead3dc0800000000000000
+      internalID: -3657575944288522099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_11
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 152
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6efc069c93682b220800000000000000
+      internalID: 2500208325893869542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_12
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 152
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5118f069ca6d12b0800000000000000
+      internalID: -5612212147485929124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_13
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 152
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d7ba5724601b7aa0800000000000000
+      internalID: -6162313642783361064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_14
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 151
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 253a09b754a698eb0800000000000000
+      internalID: -4717122288035519662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_15
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 152
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1977b052de3077950800000000000000
+      internalID: 6446625708667795345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_16
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 152
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19afc9d878fcf6600800000000000000
+      internalID: 463817467745860241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_17
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 152
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cd07a3b75e3b3a10800000000000000
+      internalID: 1890173015009201604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_18
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 86
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eb587dfd41419710800000000000000
+      internalID: 1698210337716198372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_19
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 86
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5d56293050dc4b30800000000000000
+      internalID: 4273019189442534746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_20
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 86
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cad3ee27ff5ecf530800000000000000
+      internalID: 3890237063448903084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_21
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 85
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 445f612f3e31470a0800000000000000
+      internalID: -6884856060602550972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_22
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 86
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ef49c38f34238b50800000000000000
+      internalID: 6594154134613086177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_23
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 86
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 606a17f3c30060040800000000000000
+      internalID: 4613375127050102278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_24
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 86
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73aee07d215795f70800000000000000
+      internalID: 9176494439522036279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_25
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 85
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 603df7a853f170450800000000000000
+      internalID: 6054842538840281862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_26
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 86
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25ab8a5b356f58430800000000000000
+      internalID: 3784701901265222226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_27
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 24
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7e13a79ddc5d8520800000000000000
+      internalID: 2705921057921113726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_28
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 23
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e202893ba2cfe550800000000000000
+      internalID: 6192382053317739233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_29
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 24
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bae5fc2a7a2dfd00800000000000000
+      internalID: 1008008595829549747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_30
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 24
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c67bd35c37d148930800000000000000
+      internalID: 4144469940155299692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_31
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 24
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0ef94b9730f2dbc0800000000000000
+      internalID: -3759678617281757685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_32
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 23
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a918d56bf08a0630800000000000000
+      internalID: 3894066645049022887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_33
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 24
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5192f01f7725dcd00800000000000000
+      internalID: 994541767817636117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_34
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 24
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 484f47e6f52bca550800000000000000
+      internalID: 6173505312162903172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HEAD_chain_armor_hood_35
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 24
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e27bb8be5b97cabe0800000000000000
+      internalID: -1464661956554410194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      HEAD_chain_armor_hood_0: -8688506535905523239
+      HEAD_chain_armor_hood_1: 417189535898086405
+      HEAD_chain_armor_hood_10: -3657575944288522099
+      HEAD_chain_armor_hood_11: 2500208325893869542
+      HEAD_chain_armor_hood_12: -5612212147485929124
+      HEAD_chain_armor_hood_13: -6162313642783361064
+      HEAD_chain_armor_hood_14: -4717122288035519662
+      HEAD_chain_armor_hood_15: 6446625708667795345
+      HEAD_chain_armor_hood_16: 463817467745860241
+      HEAD_chain_armor_hood_17: 1890173015009201604
+      HEAD_chain_armor_hood_18: 1698210337716198372
+      HEAD_chain_armor_hood_19: 4273019189442534746
+      HEAD_chain_armor_hood_2: -5529445230084662810
+      HEAD_chain_armor_hood_20: 3890237063448903084
+      HEAD_chain_armor_hood_21: -6884856060602550972
+      HEAD_chain_armor_hood_22: 6594154134613086177
+      HEAD_chain_armor_hood_23: 4613375127050102278
+      HEAD_chain_armor_hood_24: 9176494439522036279
+      HEAD_chain_armor_hood_25: 6054842538840281862
+      HEAD_chain_armor_hood_26: 3784701901265222226
+      HEAD_chain_armor_hood_27: 2705921057921113726
+      HEAD_chain_armor_hood_28: 6192382053317739233
+      HEAD_chain_armor_hood_29: 1008008595829549747
+      HEAD_chain_armor_hood_3: 1998103755960132789
+      HEAD_chain_armor_hood_30: 4144469940155299692
+      HEAD_chain_armor_hood_31: -3759678617281757685
+      HEAD_chain_armor_hood_32: 3894066645049022887
+      HEAD_chain_armor_hood_33: 994541767817636117
+      HEAD_chain_armor_hood_34: 6173505312162903172
+      HEAD_chain_armor_hood_35: -1464661956554410194
+      HEAD_chain_armor_hood_4: -3074375883363882608
+      HEAD_chain_armor_hood_5: 8635844856555220036
+      HEAD_chain_armor_hood_6: 9059568540914326147
+      HEAD_chain_armor_hood_7: -3499381069128131683
+      HEAD_chain_armor_hood_8: -2829384952185124159
+      HEAD_chain_armor_hood_9: -3401565782264049926
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

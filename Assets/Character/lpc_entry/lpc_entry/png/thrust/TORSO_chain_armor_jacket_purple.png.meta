@@ -1,0 +1,1105 @@
+fileFormatVersion: 2
+guid: 5161664c836eac7439d49cdf97a10dfc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7741782441647093753
+    second: TORSO_chain_armor_jacket_purple_0
+  - first:
+      213: -7962882947289532377
+    second: TORSO_chain_armor_jacket_purple_1
+  - first:
+      213: -3751307702128146098
+    second: TORSO_chain_armor_jacket_purple_2
+  - first:
+      213: -1425220872978799328
+    second: TORSO_chain_armor_jacket_purple_3
+  - first:
+      213: -5827952501389133002
+    second: TORSO_chain_armor_jacket_purple_4
+  - first:
+      213: 5493785903439777459
+    second: TORSO_chain_armor_jacket_purple_5
+  - first:
+      213: -9163488305707689474
+    second: TORSO_chain_armor_jacket_purple_6
+  - first:
+      213: -9094594986065916603
+    second: TORSO_chain_armor_jacket_purple_7
+  - first:
+      213: 3265765282010667708
+    second: TORSO_chain_armor_jacket_purple_8
+  - first:
+      213: -8804189243903327950
+    second: TORSO_chain_armor_jacket_purple_9
+  - first:
+      213: 3608212581635504582
+    second: TORSO_chain_armor_jacket_purple_10
+  - first:
+      213: 254995175193978733
+    second: TORSO_chain_armor_jacket_purple_11
+  - first:
+      213: 8091928333784290824
+    second: TORSO_chain_armor_jacket_purple_12
+  - first:
+      213: -783113396550188641
+    second: TORSO_chain_armor_jacket_purple_13
+  - first:
+      213: 4430664924192215333
+    second: TORSO_chain_armor_jacket_purple_14
+  - first:
+      213: 3566860596581773699
+    second: TORSO_chain_armor_jacket_purple_15
+  - first:
+      213: -317289724593024522
+    second: TORSO_chain_armor_jacket_purple_16
+  - first:
+      213: 5802787398122842961
+    second: TORSO_chain_armor_jacket_purple_17
+  - first:
+      213: -3834021839602429834
+    second: TORSO_chain_armor_jacket_purple_18
+  - first:
+      213: 5306504025797010312
+    second: TORSO_chain_armor_jacket_purple_19
+  - first:
+      213: -5597468187273499657
+    second: TORSO_chain_armor_jacket_purple_20
+  - first:
+      213: 1123038013173377118
+    second: TORSO_chain_armor_jacket_purple_21
+  - first:
+      213: 5457125607926004169
+    second: TORSO_chain_armor_jacket_purple_22
+  - first:
+      213: -8393143396362537508
+    second: TORSO_chain_armor_jacket_purple_23
+  - first:
+      213: -5284692464011924222
+    second: TORSO_chain_armor_jacket_purple_24
+  - first:
+      213: -2291107130319924586
+    second: TORSO_chain_armor_jacket_purple_25
+  - first:
+      213: 2018849351431805488
+    second: TORSO_chain_armor_jacket_purple_26
+  - first:
+      213: -2291960838329573974
+    second: TORSO_chain_armor_jacket_purple_27
+  - first:
+      213: 5459875407202530317
+    second: TORSO_chain_armor_jacket_purple_28
+  - first:
+      213: 8094931126598512257
+    second: TORSO_chain_armor_jacket_purple_29
+  - first:
+      213: 598383271805757149
+    second: TORSO_chain_armor_jacket_purple_30
+  - first:
+      213: -1736827977828792926
+    second: TORSO_chain_armor_jacket_purple_31
+  - first:
+      213: 2294248331445885821
+    second: TORSO_chain_armor_jacket_purple_32
+  - first:
+      213: 7347578749549259995
+    second: TORSO_chain_armor_jacket_purple_33
+  - first:
+      213: -5328568842712926985
+    second: TORSO_chain_armor_jacket_purple_34
+  - first:
+      213: -6450935447673306204
+    second: TORSO_chain_armor_jacket_purple_35
+  - first:
+      213: -9202104553910456584
+    second: TORSO_chain_armor_jacket_purple_36
+  - first:
+      213: -4070005721381591983
+    second: TORSO_chain_armor_jacket_purple_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 202
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f73bbaec16507b60800000000000000
+      internalID: 7741782441647093753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_1
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 201
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 728baca06282e7190800000000000000
+      internalID: -7962882947289532377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_2
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 202
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e49077b258da0fbc0800000000000000
+      internalID: -3751307702128146098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_3
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 202
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02560abca29983ce0800000000000000
+      internalID: -1425220872978799328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_4
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 202
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63bf9dae314fe1fa0800000000000000
+      internalID: -5827952501389133002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_5
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 202
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3be839efb29dd3c40800000000000000
+      internalID: 5493785903439777459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_6
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 202
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef9d8daafefb4d080800000000000000
+      internalID: -9163488305707689474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_7
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 202
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54d0e7f9b0289c180800000000000000
+      internalID: -9094594986065916603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_8
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 138
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cba9c02a834525d20800000000000000
+      internalID: 3265765282010667708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_9
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 138
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 231c3dd778c31d580800000000000000
+      internalID: -8804189243903327950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_10
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 138
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c9ba72d932f21230800000000000000
+      internalID: 3608212581635504582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_11
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 138
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6720e4c2cce98300800000000000000
+      internalID: 254995175193978733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_12
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 138
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 806912b52fd4c4070800000000000000
+      internalID: 8091928333784290824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_13
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 138
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f91c6c3d382d125f0800000000000000
+      internalID: -783113396550188641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_14
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 138
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 521924d1642ec7d30800000000000000
+      internalID: 4430664924192215333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_15
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 138
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 381389680d8008130800000000000000
+      internalID: 3566860596581773699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_16
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 75
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f150c23da2c89bf0800000000000000
+      internalID: -317289724593024522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_17
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 75
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15ba934e464a78050800000000000000
+      internalID: 5802787398122842961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_18
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 85
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 670586d4371dacac0800000000000000
+      internalID: -3834021839602429834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_19
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 75
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 883afc0eb4d74a940800000000000000
+      internalID: 5306504025797010312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_20
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 75
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fb6300275cc152b0800000000000000
+      internalID: -5597468187273499657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_21
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 87
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e58a5747f15d59f00800000000000000
+      internalID: 1123038013173377118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_22
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 84
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c9fd1bc3da9bbb40800000000000000
+      internalID: 5457125607926004169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_23
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 83
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd535eebc80958b80800000000000000
+      internalID: -8393143396362537508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_24
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 84
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20da267143009a6b0800000000000000
+      internalID: -5284692464011924222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_25
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 75
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6929aea243a5430e0800000000000000
+      internalID: -2291107130319924586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_26
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 87
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03ade1fe9c4640c10800000000000000
+      internalID: 2018849351431805488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_27
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 75
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aad5248c2c15130e0800000000000000
+      internalID: -2291960838329573974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_28
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 74
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d04b23451cf55cb40800000000000000
+      internalID: 5459875407202530317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_29
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 75
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18e282a88f8f65070800000000000000
+      internalID: 8094931126598512257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_30
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 10
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd6a4835a62ed4800800000000000000
+      internalID: 598383271805757149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_31
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 10
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a50e81082c85e7e0800000000000000
+      internalID: -1736827977828792926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_32
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 10
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7b5d56b3bec6df10800000000000000
+      internalID: 2294248331445885821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_33
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 10
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdca71e81f7d7f560800000000000000
+      internalID: 7347578749549259995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_34
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 10
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f4b1e89ede1d06b0800000000000000
+      internalID: -5328568842712926985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_35
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 10
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a3057c836ca976a0800000000000000
+      internalID: -6450935447673306204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_36
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 10
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fea92eb9ae8b4080800000000000000
+      internalID: -9202104553910456584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_chain_armor_jacket_purple_37
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 10
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1542e373c5f6487c0800000000000000
+      internalID: -4070005721381591983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TORSO_chain_armor_jacket_purple_0: 7741782441647093753
+      TORSO_chain_armor_jacket_purple_1: -7962882947289532377
+      TORSO_chain_armor_jacket_purple_10: 3608212581635504582
+      TORSO_chain_armor_jacket_purple_11: 254995175193978733
+      TORSO_chain_armor_jacket_purple_12: 8091928333784290824
+      TORSO_chain_armor_jacket_purple_13: -783113396550188641
+      TORSO_chain_armor_jacket_purple_14: 4430664924192215333
+      TORSO_chain_armor_jacket_purple_15: 3566860596581773699
+      TORSO_chain_armor_jacket_purple_16: -317289724593024522
+      TORSO_chain_armor_jacket_purple_17: 5802787398122842961
+      TORSO_chain_armor_jacket_purple_18: -3834021839602429834
+      TORSO_chain_armor_jacket_purple_19: 5306504025797010312
+      TORSO_chain_armor_jacket_purple_2: -3751307702128146098
+      TORSO_chain_armor_jacket_purple_20: -5597468187273499657
+      TORSO_chain_armor_jacket_purple_21: 1123038013173377118
+      TORSO_chain_armor_jacket_purple_22: 5457125607926004169
+      TORSO_chain_armor_jacket_purple_23: -8393143396362537508
+      TORSO_chain_armor_jacket_purple_24: -5284692464011924222
+      TORSO_chain_armor_jacket_purple_25: -2291107130319924586
+      TORSO_chain_armor_jacket_purple_26: 2018849351431805488
+      TORSO_chain_armor_jacket_purple_27: -2291960838329573974
+      TORSO_chain_armor_jacket_purple_28: 5459875407202530317
+      TORSO_chain_armor_jacket_purple_29: 8094931126598512257
+      TORSO_chain_armor_jacket_purple_3: -1425220872978799328
+      TORSO_chain_armor_jacket_purple_30: 598383271805757149
+      TORSO_chain_armor_jacket_purple_31: -1736827977828792926
+      TORSO_chain_armor_jacket_purple_32: 2294248331445885821
+      TORSO_chain_armor_jacket_purple_33: 7347578749549259995
+      TORSO_chain_armor_jacket_purple_34: -5328568842712926985
+      TORSO_chain_armor_jacket_purple_35: -6450935447673306204
+      TORSO_chain_armor_jacket_purple_36: -9202104553910456584
+      TORSO_chain_armor_jacket_purple_37: -4070005721381591983
+      TORSO_chain_armor_jacket_purple_4: -5827952501389133002
+      TORSO_chain_armor_jacket_purple_5: 5493785903439777459
+      TORSO_chain_armor_jacket_purple_6: -9163488305707689474
+      TORSO_chain_armor_jacket_purple_7: -9094594986065916603
+      TORSO_chain_armor_jacket_purple_8: 3265765282010667708
+      TORSO_chain_armor_jacket_purple_9: -8804189243903327950
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

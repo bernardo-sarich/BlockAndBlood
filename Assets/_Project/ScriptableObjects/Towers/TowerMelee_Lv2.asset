@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bc488dea10b89b4f97119a91f6f8e6f, type: 3}
+  m_Name: TowerMelee_Lv2
+  m_EditorClassIdentifier: Assembly-CSharp::TowerData
+  TowerName: Torre Sierra
+  Cost: 18
+  DamageBase: 5
+  AttackSpeed: 0
+  Range: 1.44
+  DamageType: 0
+  IsAreaAttack: 1
+  OnHitEffects:
+  - Type: 1
+    Value: 0.15
+    Duration: 0.3
+  TowerPrefab: {fileID: 2488435549091436615, guid: 7917ea1da12f0ae46985fc28c37720a5, type: 3}
+  ProjectilePrefab: {fileID: 0}
+  UpgradePaths: []

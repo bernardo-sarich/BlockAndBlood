@@ -1,0 +1,1521 @@
+fileFormatVersion: 2
+guid: 8c594c8e54e02b949b8be6903c5d55d2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6352248666472491563
+    second: TORSO_plate_armor_arms_shoulders_0
+  - first:
+      213: -6211401863357967706
+    second: TORSO_plate_armor_arms_shoulders_1
+  - first:
+      213: -9151180739655840268
+    second: TORSO_plate_armor_arms_shoulders_2
+  - first:
+      213: -3834445295327623137
+    second: TORSO_plate_armor_arms_shoulders_3
+  - first:
+      213: 5082180861896291459
+    second: TORSO_plate_armor_arms_shoulders_4
+  - first:
+      213: -8820183282056347338
+    second: TORSO_plate_armor_arms_shoulders_5
+  - first:
+      213: -5463241246630563096
+    second: TORSO_plate_armor_arms_shoulders_6
+  - first:
+      213: 7919297102526304665
+    second: TORSO_plate_armor_arms_shoulders_7
+  - first:
+      213: -1370182804772583674
+    second: TORSO_plate_armor_arms_shoulders_8
+  - first:
+      213: 2203642271020507455
+    second: TORSO_plate_armor_arms_shoulders_9
+  - first:
+      213: 4642929705513970065
+    second: TORSO_plate_armor_arms_shoulders_10
+  - first:
+      213: 8688706899155267246
+    second: TORSO_plate_armor_arms_shoulders_11
+  - first:
+      213: -5542523611804661136
+    second: TORSO_plate_armor_arms_shoulders_12
+  - first:
+      213: 1143871247449353176
+    second: TORSO_plate_armor_arms_shoulders_13
+  - first:
+      213: 2856979179554726599
+    second: TORSO_plate_armor_arms_shoulders_14
+  - first:
+      213: 1302441674268759181
+    second: TORSO_plate_armor_arms_shoulders_15
+  - first:
+      213: 3476941890771705460
+    second: TORSO_plate_armor_arms_shoulders_16
+  - first:
+      213: 4051252446066638314
+    second: TORSO_plate_armor_arms_shoulders_17
+  - first:
+      213: 6210269537378012364
+    second: TORSO_plate_armor_arms_shoulders_18
+  - first:
+      213: -5506987398070767970
+    second: TORSO_plate_armor_arms_shoulders_19
+  - first:
+      213: -1666849850657020127
+    second: TORSO_plate_armor_arms_shoulders_20
+  - first:
+      213: 3860655272494169564
+    second: TORSO_plate_armor_arms_shoulders_21
+  - first:
+      213: -8492545835363418149
+    second: TORSO_plate_armor_arms_shoulders_22
+  - first:
+      213: -4138108449838342168
+    second: TORSO_plate_armor_arms_shoulders_23
+  - first:
+      213: -7430940017464958124
+    second: TORSO_plate_armor_arms_shoulders_24
+  - first:
+      213: -7863195511708771886
+    second: TORSO_plate_armor_arms_shoulders_25
+  - first:
+      213: 8024413133451723120
+    second: TORSO_plate_armor_arms_shoulders_26
+  - first:
+      213: -5863759314862258815
+    second: TORSO_plate_armor_arms_shoulders_27
+  - first:
+      213: 379326666876827442
+    second: TORSO_plate_armor_arms_shoulders_28
+  - first:
+      213: 7266206090678717147
+    second: TORSO_plate_armor_arms_shoulders_29
+  - first:
+      213: -2701044254968618222
+    second: TORSO_plate_armor_arms_shoulders_30
+  - first:
+      213: 5688018853707133104
+    second: TORSO_plate_armor_arms_shoulders_31
+  - first:
+      213: 6505530718431427404
+    second: TORSO_plate_armor_arms_shoulders_32
+  - first:
+      213: 3786668257433439455
+    second: TORSO_plate_armor_arms_shoulders_33
+  - first:
+      213: -113671094532057679
+    second: TORSO_plate_armor_arms_shoulders_34
+  - first:
+      213: -7009945495452759748
+    second: TORSO_plate_armor_arms_shoulders_35
+  - first:
+      213: -1273598603379451791
+    second: TORSO_plate_armor_arms_shoulders_36
+  - first:
+      213: 2986234029361848211
+    second: TORSO_plate_armor_arms_shoulders_37
+  - first:
+      213: 4284576978275936978
+    second: TORSO_plate_armor_arms_shoulders_38
+  - first:
+      213: 1814394025652306847
+    second: TORSO_plate_armor_arms_shoulders_39
+  - first:
+      213: -7221986890318920468
+    second: TORSO_plate_armor_arms_shoulders_40
+  - first:
+      213: 2785568744392343466
+    second: TORSO_plate_armor_arms_shoulders_41
+  - first:
+      213: -767491919686873506
+    second: TORSO_plate_armor_arms_shoulders_42
+  - first:
+      213: 3107795868690606551
+    second: TORSO_plate_armor_arms_shoulders_43
+  - first:
+      213: 194317991503320910
+    second: TORSO_plate_armor_arms_shoulders_44
+  - first:
+      213: -5116222420205723922
+    second: TORSO_plate_armor_arms_shoulders_45
+  - first:
+      213: -6531598645321979237
+    second: TORSO_plate_armor_arms_shoulders_46
+  - first:
+      213: -4586251796070977316
+    second: TORSO_plate_armor_arms_shoulders_47
+  - first:
+      213: -2236989922804145063
+    second: TORSO_plate_armor_arms_shoulders_48
+  - first:
+      213: -8720694058029335650
+    second: TORSO_plate_armor_arms_shoulders_49
+  - first:
+      213: 2931082618581415825
+    second: TORSO_plate_armor_arms_shoulders_50
+  - first:
+      213: -2164459356446039313
+    second: TORSO_plate_armor_arms_shoulders_51
+  - first:
+      213: -703287867136103940
+    second: TORSO_plate_armor_arms_shoulders_52
+  - first:
+      213: 6858190582655979136
+    second: TORSO_plate_armor_arms_shoulders_53
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 209
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d555f55e7748d7a0800000000000000
+      internalID: -6352248666472491563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_1
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 209
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a259592aeaacc9a0800000000000000
+      internalID: -6211401863357967706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 209
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fdca613a99700180800000000000000
+      internalID: -9151180739655840268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_3
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 209
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f184455d15059cac0800000000000000
+      internalID: -3834445295327623137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_4
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 208
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 384fd9d3198878640800000000000000
+      internalID: 5082180861896291459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_5
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 211
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 631413b490a689580800000000000000
+      internalID: -8820183282056347338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_6
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 206
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e2b25c180bae24b0800000000000000
+      internalID: -5463241246630563096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_7
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 211
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9915cdaa1cef6ed60800000000000000
+      internalID: 7919297102526304665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_8
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 208
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6078e24aff12cfce0800000000000000
+      internalID: -1370182804772583674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_9
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 211
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f31663858f8e49e10800000000000000
+      internalID: 2203642271020507455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_10
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 209
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 199e446c7fffe6040800000000000000
+      internalID: 4642929705513970065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_11
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 209
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaea2a9d3ec749870800000000000000
+      internalID: 8688706899155267246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_12
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 211
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07a0b2ff3200513b0800000000000000
+      internalID: -5542523611804661136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_13
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 208
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8db600dc6d8dfdf00800000000000000
+      internalID: 1143871247449353176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_14
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 212
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c2eb084d6706a720800000000000000
+      internalID: 2856979179554726599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_15
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 207
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8454775dc3331210800000000000000
+      internalID: 1302441674268759181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_16
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 211
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47e5f106a34904030800000000000000
+      internalID: 3476941890771705460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_17
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 208
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aedfb3f92a0f83830800000000000000
+      internalID: 4051252446066638314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_18
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 144
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccc88d6ad3f4f2650800000000000000
+      internalID: 6210269537378012364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_19
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 141
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9e607383204393b0800000000000000
+      internalID: -5506987398070767970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_20
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 142
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 127eca564e82ed8e0800000000000000
+      internalID: -1666849850657020127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_21
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 143
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cddf045048dc39530800000000000000
+      internalID: 3860655272494169564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_22
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 144
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdfb074ee8a642a80800000000000000
+      internalID: -8492545835363418149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_23
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 144
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8efd75d1a4c7296c0800000000000000
+      internalID: -4138108449838342168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_24
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 143
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45324c7cc6fffd890800000000000000
+      internalID: -7430940017464958124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_25
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 143
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d91725d75150e290800000000000000
+      internalID: -7863195511708771886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_26
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 142
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0718e5eca317c5f60800000000000000
+      internalID: 8024413133451723120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_27
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 81
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1854f3d78fdbf9ea0800000000000000
+      internalID: -5863759314862258815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_28
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 81
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 237b6010893a34500800000000000000
+      internalID: 379326666876827442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_29
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 81
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bda4fa301ffb6d460800000000000000
+      internalID: 7266206090678717147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_30
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 81
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2136cf39f86f38ad0800000000000000
+      internalID: -2701044254968618222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_31
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 80
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b030f2d207efee40800000000000000
+      internalID: 5688018853707133104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_32
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 83
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4b3f7b78b9484a50800000000000000
+      internalID: 6505530718431427404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_33
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 78
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdc419ea7b2fc8430800000000000000
+      internalID: 3786668257433439455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_34
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 83
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b5df25edb82c6ef0800000000000000
+      internalID: -113671094532057679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_35
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 80
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3940b056bba7be90800000000000000
+      internalID: -7009945495452759748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_36
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 83
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 178522b61d4435ee0800000000000000
+      internalID: -1273598603379451791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_37
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 81
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39fdb48270c317920800000000000000
+      internalID: 2986234029361848211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_38
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 81
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2da24f2af00e57b30800000000000000
+      internalID: 4284576978275936978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_39
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 83
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f93c895d0c50e2910800000000000000
+      internalID: 1814394025652306847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_40
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 80
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce4430edf2956cb90800000000000000
+      internalID: -7221986890318920468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_41
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 83
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aafbfe2b30458a620800000000000000
+      internalID: 2785568744392343466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_42
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 78
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5ec4175a225955f0800000000000000
+      internalID: -767491919686873506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_43
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 83
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d9eab370eb112b20800000000000000
+      internalID: 3107795868690606551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_44
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 80
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e47d5090f2b52b200800000000000000
+      internalID: 194317991503320910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_45
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 16
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eee9fb3d0d68ff8b0800000000000000
+      internalID: -5116222420205723922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_46
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 13
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9a292253a91b55a0800000000000000
+      internalID: -6531598645321979237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_47
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 14
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd031bc5a4c5a50c0800000000000000
+      internalID: -4586251796070977316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_48
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 15
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 954612d648d94f0e0800000000000000
+      internalID: -2236989922804145063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_49
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 16
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9b3d4c55fed9f680800000000000000
+      internalID: -8720694058029335650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_50
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 16
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 197fddfac1c4da820800000000000000
+      internalID: 2931082618581415825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_51
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 15
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe26340eeab46f1e0800000000000000
+      internalID: -2164459356446039313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_52
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 15
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf9a288396b6d36f0800000000000000
+      internalID: -703287867136103940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_plate_armor_arms_shoulders_53
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 14
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08e8329afff2d2f50800000000000000
+      internalID: 6858190582655979136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TORSO_plate_armor_arms_shoulders_0: -6352248666472491563
+      TORSO_plate_armor_arms_shoulders_1: -6211401863357967706
+      TORSO_plate_armor_arms_shoulders_10: 4642929705513970065
+      TORSO_plate_armor_arms_shoulders_11: 8688706899155267246
+      TORSO_plate_armor_arms_shoulders_12: -5542523611804661136
+      TORSO_plate_armor_arms_shoulders_13: 1143871247449353176
+      TORSO_plate_armor_arms_shoulders_14: 2856979179554726599
+      TORSO_plate_armor_arms_shoulders_15: 1302441674268759181
+      TORSO_plate_armor_arms_shoulders_16: 3476941890771705460
+      TORSO_plate_armor_arms_shoulders_17: 4051252446066638314
+      TORSO_plate_armor_arms_shoulders_18: 6210269537378012364
+      TORSO_plate_armor_arms_shoulders_19: -5506987398070767970
+      TORSO_plate_armor_arms_shoulders_2: -9151180739655840268
+      TORSO_plate_armor_arms_shoulders_20: -1666849850657020127
+      TORSO_plate_armor_arms_shoulders_21: 3860655272494169564
+      TORSO_plate_armor_arms_shoulders_22: -8492545835363418149
+      TORSO_plate_armor_arms_shoulders_23: -4138108449838342168
+      TORSO_plate_armor_arms_shoulders_24: -7430940017464958124
+      TORSO_plate_armor_arms_shoulders_25: -7863195511708771886
+      TORSO_plate_armor_arms_shoulders_26: 8024413133451723120
+      TORSO_plate_armor_arms_shoulders_27: -5863759314862258815
+      TORSO_plate_armor_arms_shoulders_28: 379326666876827442
+      TORSO_plate_armor_arms_shoulders_29: 7266206090678717147
+      TORSO_plate_armor_arms_shoulders_3: -3834445295327623137
+      TORSO_plate_armor_arms_shoulders_30: -2701044254968618222
+      TORSO_plate_armor_arms_shoulders_31: 5688018853707133104
+      TORSO_plate_armor_arms_shoulders_32: 6505530718431427404
+      TORSO_plate_armor_arms_shoulders_33: 3786668257433439455
+      TORSO_plate_armor_arms_shoulders_34: -113671094532057679
+      TORSO_plate_armor_arms_shoulders_35: -7009945495452759748
+      TORSO_plate_armor_arms_shoulders_36: -1273598603379451791
+      TORSO_plate_armor_arms_shoulders_37: 2986234029361848211
+      TORSO_plate_armor_arms_shoulders_38: 4284576978275936978
+      TORSO_plate_armor_arms_shoulders_39: 1814394025652306847
+      TORSO_plate_armor_arms_shoulders_4: 5082180861896291459
+      TORSO_plate_armor_arms_shoulders_40: -7221986890318920468
+      TORSO_plate_armor_arms_shoulders_41: 2785568744392343466
+      TORSO_plate_armor_arms_shoulders_42: -767491919686873506
+      TORSO_plate_armor_arms_shoulders_43: 3107795868690606551
+      TORSO_plate_armor_arms_shoulders_44: 194317991503320910
+      TORSO_plate_armor_arms_shoulders_45: -5116222420205723922
+      TORSO_plate_armor_arms_shoulders_46: -6531598645321979237
+      TORSO_plate_armor_arms_shoulders_47: -4586251796070977316
+      TORSO_plate_armor_arms_shoulders_48: -2236989922804145063
+      TORSO_plate_armor_arms_shoulders_49: -8720694058029335650
+      TORSO_plate_armor_arms_shoulders_5: -8820183282056347338
+      TORSO_plate_armor_arms_shoulders_50: 2931082618581415825
+      TORSO_plate_armor_arms_shoulders_51: -2164459356446039313
+      TORSO_plate_armor_arms_shoulders_52: -703287867136103940
+      TORSO_plate_armor_arms_shoulders_53: 6858190582655979136
+      TORSO_plate_armor_arms_shoulders_6: -5463241246630563096
+      TORSO_plate_armor_arms_shoulders_7: 7919297102526304665
+      TORSO_plate_armor_arms_shoulders_8: -1370182804772583674
+      TORSO_plate_armor_arms_shoulders_9: 2203642271020507455
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

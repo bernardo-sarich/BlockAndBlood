@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: df662b5f96ef42e449a7363fe309ae3b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7138146660623809565
+    second: WEAPON_dagger_0
+  - first:
+      213: -1227548161234896403
+    second: WEAPON_dagger_1
+  - first:
+      213: 7589138797948651890
+    second: WEAPON_dagger_2
+  - first:
+      213: 8963314013195774834
+    second: WEAPON_dagger_3
+  - first:
+      213: 1776084303170005383
+    second: WEAPON_dagger_4
+  - first:
+      213: 7325267520508304838
+    second: WEAPON_dagger_5
+  - first:
+      213: 4416906902706008416
+    second: WEAPON_dagger_6
+  - first:
+      213: -4702398478199012203
+    second: WEAPON_dagger_7
+  - first:
+      213: -7918898170456003334
+    second: WEAPON_dagger_8
+  - first:
+      213: 2846439938555982594
+    second: WEAPON_dagger_9
+  - first:
+      213: 4357400388530801971
+    second: WEAPON_dagger_10
+  - first:
+      213: -7915403149060384595
+    second: WEAPON_dagger_11
+  - first:
+      213: 7517578439804923577
+    second: WEAPON_dagger_12
+  - first:
+      213: 450306182385831298
+    second: WEAPON_dagger_13
+  - first:
+      213: 3044261256339439370
+    second: WEAPON_dagger_14
+  - first:
+      213: 8863282569615797210
+    second: WEAPON_dagger_15
+  - first:
+      213: -421234812478087347
+    second: WEAPON_dagger_16
+  - first:
+      213: 6829729274631191854
+    second: WEAPON_dagger_17
+  - first:
+      213: 6932087071451147003
+    second: WEAPON_dagger_18
+  - first:
+      213: -1039127838894830090
+    second: WEAPON_dagger_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WEAPON_dagger_0
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 223
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1c7f1d719acf0360800000000000000
+      internalID: 7138146660623809565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_dagger_1
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 220
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de9f8e0837fd6fee0800000000000000
+      internalID: -1227548161234896403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_dagger_2
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 153
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2794dda1789025960800000000000000
+      internalID: 7589138797948651890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_dagger_3
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 154
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27ba0d6fa96146c70800000000000000
+      internalID: 8963314013195774834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_dagger_4
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 141
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 789689d734be5a810800000000000000
+      internalID: 1776084303170005383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_dagger_5
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 135
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cd9a9cbff398a560800000000000000
+      internalID: 7325267520508304838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_dagger_6
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 136
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06133cd1d610c4d30800000000000000
+      internalID: 4416906902706008416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_dagger_7
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 138
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5944c9a9f79bdbeb0800000000000000
+      internalID: -4702398478199012203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_dagger_8
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 75
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afcaa71f11c6a1290800000000000000
+      internalID: -7918898170456003334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_dagger_9
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 76
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2033d140b06908720800000000000000
+      internalID: 2846439938555982594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_dagger_10
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 79
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33d078e1198987c30800000000000000
+      internalID: 4357400388530801971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_dagger_11
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 76
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da85f3606c6d62290800000000000000
+      internalID: -7915403149060384595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_dagger_12
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 70
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9be25bbd2cdc35860800000000000000
+      internalID: 7517578439804923577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_dagger_13
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 77
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28d0549461fcf3600800000000000000
+      internalID: 450306182385831298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_dagger_14
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 25
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0fb893cb736f3a20800000000000000
+      internalID: 3044261256339439370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_dagger_15
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 26
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adb6cd19984b00b70800000000000000
+      internalID: 8863282569615797210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_dagger_16
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 13
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4f173b7b29772af0800000000000000
+      internalID: -421234812478087347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_dagger_17
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 7
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2d7a7ef69218ce50800000000000000
+      internalID: 6829729274631191854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_dagger_18
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 9
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfa6ce5b678b33060800000000000000
+      internalID: 6932087071451147003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_dagger_19
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 10
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fd447e6cb64491f0800000000000000
+      internalID: -1039127838894830090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      WEAPON_dagger_0: 7138146660623809565
+      WEAPON_dagger_1: -1227548161234896403
+      WEAPON_dagger_10: 4357400388530801971
+      WEAPON_dagger_11: -7915403149060384595
+      WEAPON_dagger_12: 7517578439804923577
+      WEAPON_dagger_13: 450306182385831298
+      WEAPON_dagger_14: 3044261256339439370
+      WEAPON_dagger_15: 8863282569615797210
+      WEAPON_dagger_16: -421234812478087347
+      WEAPON_dagger_17: 6829729274631191854
+      WEAPON_dagger_18: 6932087071451147003
+      WEAPON_dagger_19: -1039127838894830090
+      WEAPON_dagger_2: 7589138797948651890
+      WEAPON_dagger_3: 8963314013195774834
+      WEAPON_dagger_4: 1776084303170005383
+      WEAPON_dagger_5: 7325267520508304838
+      WEAPON_dagger_6: 4416906902706008416
+      WEAPON_dagger_7: -4702398478199012203
+      WEAPON_dagger_8: -7918898170456003334
+      WEAPON_dagger_9: 2846439938555982594
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

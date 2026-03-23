@@ -1,0 +1,1365 @@
+fileFormatVersion: 2
+guid: 71c37d80f48cf904c8ad08fbecdef0b0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -205595587043266785
+    second: HANDS_plate_armor_gloves_0
+  - first:
+      213: -201276572320742726
+    second: HANDS_plate_armor_gloves_1
+  - first:
+      213: -6562545297642030770
+    second: HANDS_plate_armor_gloves_2
+  - first:
+      213: -7827516903069637086
+    second: HANDS_plate_armor_gloves_3
+  - first:
+      213: -1282522599790237324
+    second: HANDS_plate_armor_gloves_4
+  - first:
+      213: 6194478572049911163
+    second: HANDS_plate_armor_gloves_5
+  - first:
+      213: 6300368612375605546
+    second: HANDS_plate_armor_gloves_6
+  - first:
+      213: 2654333485928563191
+    second: HANDS_plate_armor_gloves_7
+  - first:
+      213: 1092452208714624178
+    second: HANDS_plate_armor_gloves_8
+  - first:
+      213: -500882839503548127
+    second: HANDS_plate_armor_gloves_9
+  - first:
+      213: -6413991763309158375
+    second: HANDS_plate_armor_gloves_10
+  - first:
+      213: 1454060084639316886
+    second: HANDS_plate_armor_gloves_11
+  - first:
+      213: -162929824649525148
+    second: HANDS_plate_armor_gloves_12
+  - first:
+      213: 6294200346558788906
+    second: HANDS_plate_armor_gloves_13
+  - first:
+      213: -7655403345197277123
+    second: HANDS_plate_armor_gloves_14
+  - first:
+      213: 2900677169657288530
+    second: HANDS_plate_armor_gloves_15
+  - first:
+      213: 6531520177138137124
+    second: HANDS_plate_armor_gloves_16
+  - first:
+      213: -628938396460149180
+    second: HANDS_plate_armor_gloves_17
+  - first:
+      213: 2669559009056035985
+    second: HANDS_plate_armor_gloves_18
+  - first:
+      213: -671725140179889779
+    second: HANDS_plate_armor_gloves_19
+  - first:
+      213: -1304695857994654096
+    second: HANDS_plate_armor_gloves_20
+  - first:
+      213: 5405422488053705963
+    second: HANDS_plate_armor_gloves_21
+  - first:
+      213: -5431325044588831873
+    second: HANDS_plate_armor_gloves_22
+  - first:
+      213: 4449435847580767956
+    second: HANDS_plate_armor_gloves_23
+  - first:
+      213: 6313483128313751618
+    second: HANDS_plate_armor_gloves_24
+  - first:
+      213: -3787497659026194661
+    second: HANDS_plate_armor_gloves_25
+  - first:
+      213: 4052403397679166894
+    second: HANDS_plate_armor_gloves_26
+  - first:
+      213: -71888170736388176
+    second: HANDS_plate_armor_gloves_27
+  - first:
+      213: -5981619472646162506
+    second: HANDS_plate_armor_gloves_28
+  - first:
+      213: -1964648397608305357
+    second: HANDS_plate_armor_gloves_29
+  - first:
+      213: -8633438351862004124
+    second: HANDS_plate_armor_gloves_30
+  - first:
+      213: -30708251829580496
+    second: HANDS_plate_armor_gloves_31
+  - first:
+      213: -6792264983194753745
+    second: HANDS_plate_armor_gloves_32
+  - first:
+      213: -2443608346144414271
+    second: HANDS_plate_armor_gloves_33
+  - first:
+      213: -4912525705413906505
+    second: HANDS_plate_armor_gloves_34
+  - first:
+      213: 1210994584072229545
+    second: HANDS_plate_armor_gloves_35
+  - first:
+      213: -1849946861957490886
+    second: HANDS_plate_armor_gloves_36
+  - first:
+      213: 6756814991180354782
+    second: HANDS_plate_armor_gloves_37
+  - first:
+      213: 4581051226687526222
+    second: HANDS_plate_armor_gloves_38
+  - first:
+      213: -3833036121155653892
+    second: HANDS_plate_armor_gloves_39
+  - first:
+      213: -3908547714246678011
+    second: HANDS_plate_armor_gloves_40
+  - first:
+      213: 8332816467633147268
+    second: HANDS_plate_armor_gloves_41
+  - first:
+      213: -7738742061470097349
+    second: HANDS_plate_armor_gloves_42
+  - first:
+      213: -4294158965667397200
+    second: HANDS_plate_armor_gloves_43
+  - first:
+      213: -2091528708715276458
+    second: HANDS_plate_armor_gloves_44
+  - first:
+      213: -8348959129454571168
+    second: HANDS_plate_armor_gloves_45
+  - first:
+      213: 4066579399329518531
+    second: HANDS_plate_armor_gloves_46
+  - first:
+      213: 4019619848430028687
+    second: HANDS_plate_armor_gloves_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_0
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 214
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1fe5e227e3952df0800000000000000
+      internalID: -205595587043266785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_1
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 214
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab2c63d160ce43df0800000000000000
+      internalID: -201276572320742726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_2
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 221
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e49f2a752d72de4a0800000000000000
+      internalID: -6562545297642030770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_3
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 221
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2262b2f39d21f5390800000000000000
+      internalID: -7827516903069637086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_4
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 204
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 479a7179d70933ee0800000000000000
+      internalID: -1282522599790237324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_5
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 204
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7dcdc7017537f550800000000000000
+      internalID: 6194478572049911163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_6
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 209
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a213ba64fd76f6750800000000000000
+      internalID: 6300368612375605546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_7
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 209
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f142300e3616d420800000000000000
+      internalID: 2654333485928563191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_8
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 209
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bca68aee7b292f00800000000000000
+      internalID: 1092452208714624178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_9
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 209
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1215d4516b18c09f0800000000000000
+      internalID: -500882839503548127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_10
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 149
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9102dab597cecf6a0800000000000000
+      internalID: -6413991763309158375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_11
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 148
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69b300b61fbdd2410800000000000000
+      internalID: 1454060084639316886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_12
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 157
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 468c27e00382dbdf0800000000000000
+      internalID: -162929824649525148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_13
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 155
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a25f6c9fddd795750800000000000000
+      internalID: 6294200346558788906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_14
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 140
+        width: 21
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d30ed25b73b82c590800000000000000
+      internalID: -7655403345197277123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_15
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 142
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25712817486414820800000000000000
+      internalID: 2900677169657288530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_16
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 141
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4287d91eefe94aa50800000000000000
+      internalID: 6531520177138137124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_17
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 142
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44693655cdf8547f0800000000000000
+      internalID: -628938396460149180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_18
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 145
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1949ab956cd2c0520800000000000000
+      internalID: 2669559009056035985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_19
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 144
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d81d0e04b8d8da6f0800000000000000
+      internalID: -671725140179889779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_20
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 145
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07e1e4c970ac4ede0800000000000000
+      internalID: -1304695857994654096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_21
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 145
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bec695d1d1be30b40800000000000000
+      internalID: 5405422488053705963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_22
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 87
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7b9999f5ae00a4b0800000000000000
+      internalID: -5431325044588831873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_23
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 87
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d6d0f944529fbd30800000000000000
+      internalID: 4449435847580767956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_24
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 94
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2482096747ffd9750800000000000000
+      internalID: 6313483128313751618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_25
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 94
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1fbe1632fa107bc0800000000000000
+      internalID: -3787497659026194661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_26
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 76
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea5b04d6b670d3830800000000000000
+      internalID: 4052403397679166894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_27
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 76
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b774bfe61a900ff0800000000000000
+      internalID: -71888170736388176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_28
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 78
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b7bd5718c40dfca0800000000000000
+      internalID: -5981619472646162506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_29
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 78
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33d340801ba2cb4e0800000000000000
+      internalID: -1964648397608305357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_30
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 79
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46608079f8ddf2880800000000000000
+      internalID: -8633438351862004124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_31
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 79
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03d4606f107e29ff0800000000000000
+      internalID: -30708251829580496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_32
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 80
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f252a581cf60db1a0800000000000000
+      internalID: -6792264983194753745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_33
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 80
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c5e1ede72f861ed0800000000000000
+      internalID: -2443608346144414271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_34
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 78
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bf24da06e333dbb0800000000000000
+      internalID: -4912525705413906505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_35
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 78
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a21c8878215ec010800000000000000
+      internalID: 1210994584072229545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_36
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 20
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a37dca7612ba356e0800000000000000
+      internalID: -1849946861957490886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_37
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 21
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed4d6527f6705cd50800000000000000
+      internalID: 6756814991180354782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_38
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 27
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e45d398b1d9239f30800000000000000
+      internalID: 4581051226687526222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_39
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 29
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfea643c4f15ecac0800000000000000
+      internalID: -3833036121155653892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_40
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 12
+        width: 21
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50a69a0ff8c02c9c0800000000000000
+      internalID: -3908547714246678011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_41
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 13
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48d8ccb9d6c14a370800000000000000
+      internalID: 8332816467633147268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_42
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 14
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3063b1c8177a9490800000000000000
+      internalID: -7738742061470097349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_43
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 14
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b106521c251864c0800000000000000
+      internalID: -4294158965667397200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_44
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 16
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6579e7788b569f2e0800000000000000
+      internalID: -2091528708715276458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_45
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 17
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0611b9c08e9822c80800000000000000
+      internalID: -8348959129454571168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_46
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 17
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c315f30b646f6830800000000000000
+      internalID: 4066579399329518531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HANDS_plate_armor_gloves_47
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 17
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8708cd84fe88c730800000000000000
+      internalID: 4019619848430028687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      HANDS_plate_armor_gloves_0: -205595587043266785
+      HANDS_plate_armor_gloves_1: -201276572320742726
+      HANDS_plate_armor_gloves_10: -6413991763309158375
+      HANDS_plate_armor_gloves_11: 1454060084639316886
+      HANDS_plate_armor_gloves_12: -162929824649525148
+      HANDS_plate_armor_gloves_13: 6294200346558788906
+      HANDS_plate_armor_gloves_14: -7655403345197277123
+      HANDS_plate_armor_gloves_15: 2900677169657288530
+      HANDS_plate_armor_gloves_16: 6531520177138137124
+      HANDS_plate_armor_gloves_17: -628938396460149180
+      HANDS_plate_armor_gloves_18: 2669559009056035985
+      HANDS_plate_armor_gloves_19: -671725140179889779
+      HANDS_plate_armor_gloves_2: -6562545297642030770
+      HANDS_plate_armor_gloves_20: -1304695857994654096
+      HANDS_plate_armor_gloves_21: 5405422488053705963
+      HANDS_plate_armor_gloves_22: -5431325044588831873
+      HANDS_plate_armor_gloves_23: 4449435847580767956
+      HANDS_plate_armor_gloves_24: 6313483128313751618
+      HANDS_plate_armor_gloves_25: -3787497659026194661
+      HANDS_plate_armor_gloves_26: 4052403397679166894
+      HANDS_plate_armor_gloves_27: -71888170736388176
+      HANDS_plate_armor_gloves_28: -5981619472646162506
+      HANDS_plate_armor_gloves_29: -1964648397608305357
+      HANDS_plate_armor_gloves_3: -7827516903069637086
+      HANDS_plate_armor_gloves_30: -8633438351862004124
+      HANDS_plate_armor_gloves_31: -30708251829580496
+      HANDS_plate_armor_gloves_32: -6792264983194753745
+      HANDS_plate_armor_gloves_33: -2443608346144414271
+      HANDS_plate_armor_gloves_34: -4912525705413906505
+      HANDS_plate_armor_gloves_35: 1210994584072229545
+      HANDS_plate_armor_gloves_36: -1849946861957490886
+      HANDS_plate_armor_gloves_37: 6756814991180354782
+      HANDS_plate_armor_gloves_38: 4581051226687526222
+      HANDS_plate_armor_gloves_39: -3833036121155653892
+      HANDS_plate_armor_gloves_4: -1282522599790237324
+      HANDS_plate_armor_gloves_40: -3908547714246678011
+      HANDS_plate_armor_gloves_41: 8332816467633147268
+      HANDS_plate_armor_gloves_42: -7738742061470097349
+      HANDS_plate_armor_gloves_43: -4294158965667397200
+      HANDS_plate_armor_gloves_44: -2091528708715276458
+      HANDS_plate_armor_gloves_45: -8348959129454571168
+      HANDS_plate_armor_gloves_46: 4066579399329518531
+      HANDS_plate_armor_gloves_47: 4019619848430028687
+      HANDS_plate_armor_gloves_5: 6194478572049911163
+      HANDS_plate_armor_gloves_6: 6300368612375605546
+      HANDS_plate_armor_gloves_7: 2654333485928563191
+      HANDS_plate_armor_gloves_8: 1092452208714624178
+      HANDS_plate_armor_gloves_9: -500882839503548127
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

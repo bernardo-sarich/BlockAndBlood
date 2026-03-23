@@ -1,0 +1,793 @@
+fileFormatVersion: 2
+guid: ed6dcdfa25bc58240b4fb3f86020a7a2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4038344425654984701
+    second: BELT_leather_0
+  - first:
+      213: -2496825779555119690
+    second: BELT_leather_1
+  - first:
+      213: -2610123358832778952
+    second: BELT_leather_2
+  - first:
+      213: -2868418820279666684
+    second: BELT_leather_3
+  - first:
+      213: -7660000276644215237
+    second: BELT_leather_4
+  - first:
+      213: -4284005754720247637
+    second: BELT_leather_5
+  - first:
+      213: 2040709726470483894
+    second: BELT_leather_6
+  - first:
+      213: -1908637143566086416
+    second: BELT_leather_7
+  - first:
+      213: 62329748534383673
+    second: BELT_leather_8
+  - first:
+      213: 7562558007425160506
+    second: BELT_leather_9
+  - first:
+      213: -109928274472386994
+    second: BELT_leather_10
+  - first:
+      213: 2647069226117835106
+    second: BELT_leather_11
+  - first:
+      213: 5240896467947084054
+    second: BELT_leather_12
+  - first:
+      213: 5930982486498438036
+    second: BELT_leather_13
+  - first:
+      213: 4182408940263290724
+    second: BELT_leather_14
+  - first:
+      213: -4326037099921774720
+    second: BELT_leather_15
+  - first:
+      213: -770168938753501606
+    second: BELT_leather_16
+  - first:
+      213: 5152943340129024519
+    second: BELT_leather_17
+  - first:
+      213: 105359287404042660
+    second: BELT_leather_18
+  - first:
+      213: 6598926301467607647
+    second: BELT_leather_19
+  - first:
+      213: 4227206006701279333
+    second: BELT_leather_20
+  - first:
+      213: -7593270752733054023
+    second: BELT_leather_21
+  - first:
+      213: -5984234907405020472
+    second: BELT_leather_22
+  - first:
+      213: -4960824709803264859
+    second: BELT_leather_23
+  - first:
+      213: -6458886576383950629
+    second: BELT_leather_24
+  - first:
+      213: 6275341960442501714
+    second: BELT_leather_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BELT_leather_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 205
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dff18dbebd41b0830800000000000000
+      internalID: 4038344425654984701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_leather_1
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 205
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bd4497ae2e795dd0800000000000000
+      internalID: -2496825779555119690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_leather_2
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 205
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 831a2d852aaf6cbd0800000000000000
+      internalID: -2610123358832778952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_leather_3
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 205
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4087f2ec7445138d0800000000000000
+      internalID: -2868418820279666684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_leather_4
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 205
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b364a33355632b590800000000000000
+      internalID: -7660000276644215237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_leather_5
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 205
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba0ab26b6772c84c0800000000000000
+      internalID: -4284005754720247637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_leather_6
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 205
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bf25ff1fae025c10800000000000000
+      internalID: 2040709726470483894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_leather_7
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 142
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fe80ac51a82385e0800000000000000
+      internalID: -1908637143566086416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_leather_8
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 142
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 934d45873907dd000800000000000000
+      internalID: 62329748534383673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_leather_9
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 142
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a35dcd9807a93f860800000000000000
+      internalID: 7562558007425160506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_leather_10
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 142
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4e3d4911d4797ef0800000000000000
+      internalID: -109928274472386994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_leather_11
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 142
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2692f96bf674cb420800000000000000
+      internalID: 2647069226117835106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_leather_12
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 142
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 619d594f1976bb840800000000000000
+      internalID: 5240896467947084054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_leather_13
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 78
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49b6dc4d5251f4250800000000000000
+      internalID: 5930982486498438036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_leather_14
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 78
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 467bfc595c6ea0a30800000000000000
+      internalID: 4182408940263290724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_leather_15
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 78
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 087600e8d24d6f3c0800000000000000
+      internalID: -4326037099921774720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_leather_16
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 78
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a56de844e6fcf45f0800000000000000
+      internalID: -770168938753501606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_leather_17
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 78
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70afa189aaee28740800000000000000
+      internalID: 5152943340129024519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_leather_18
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 78
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a99183b6bf467100800000000000000
+      internalID: 105359287404042660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_leather_19
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 78
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5285f13288149b50800000000000000
+      internalID: 6598926301467607647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_leather_20
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 14
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 568c3d5677d0aaa30800000000000000
+      internalID: 4227206006701279333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_leather_21
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 14
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bbbbf33b784f9690800000000000000
+      internalID: -7593270752733054023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_leather_22
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 14
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c291abbe0ab3fca0800000000000000
+      internalID: -5984234907405020472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_leather_23
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 14
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a43233c53c972bb0800000000000000
+      internalID: -4960824709803264859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_leather_24
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 14
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd0881221ec6d56a0800000000000000
+      internalID: -6458886576383950629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_leather_25
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 14
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25a574cc34e761750800000000000000
+      internalID: 6275341960442501714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BELT_leather_0: 4038344425654984701
+      BELT_leather_1: -2496825779555119690
+      BELT_leather_10: -109928274472386994
+      BELT_leather_11: 2647069226117835106
+      BELT_leather_12: 5240896467947084054
+      BELT_leather_13: 5930982486498438036
+      BELT_leather_14: 4182408940263290724
+      BELT_leather_15: -4326037099921774720
+      BELT_leather_16: -770168938753501606
+      BELT_leather_17: 5152943340129024519
+      BELT_leather_18: 105359287404042660
+      BELT_leather_19: 6598926301467607647
+      BELT_leather_2: -2610123358832778952
+      BELT_leather_20: 4227206006701279333
+      BELT_leather_21: -7593270752733054023
+      BELT_leather_22: -5984234907405020472
+      BELT_leather_23: -4960824709803264859
+      BELT_leather_24: -6458886576383950629
+      BELT_leather_25: 6275341960442501714
+      BELT_leather_3: -2868418820279666684
+      BELT_leather_4: -7660000276644215237
+      BELT_leather_5: -4284005754720247637
+      BELT_leather_6: 2040709726470483894
+      BELT_leather_7: -1908637143566086416
+      BELT_leather_8: 62329748534383673
+      BELT_leather_9: 7562558007425160506
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

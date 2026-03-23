@@ -1,0 +1,1131 @@
+fileFormatVersion: 2
+guid: 077cd1bf3bbc4204c90933802510c868
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5119433047952023883
+    second: WEAPON_spear_0
+  - first:
+      213: -7311097249946211112
+    second: WEAPON_spear_1
+  - first:
+      213: -4102455191527292856
+    second: WEAPON_spear_2
+  - first:
+      213: 5467425695630406623
+    second: WEAPON_spear_3
+  - first:
+      213: -3593058132712740355
+    second: WEAPON_spear_4
+  - first:
+      213: 4025313446578120552
+    second: WEAPON_spear_5
+  - first:
+      213: 8011670754273416832
+    second: WEAPON_spear_6
+  - first:
+      213: -5633131895549173836
+    second: WEAPON_spear_7
+  - first:
+      213: -6516345473138380923
+    second: WEAPON_spear_8
+  - first:
+      213: 3572189561559791718
+    second: WEAPON_spear_9
+  - first:
+      213: -8996532917822689426
+    second: WEAPON_spear_10
+  - first:
+      213: 5478759586973242412
+    second: WEAPON_spear_11
+  - first:
+      213: -7444239764915436902
+    second: WEAPON_spear_12
+  - first:
+      213: -9170693326977019647
+    second: WEAPON_spear_13
+  - first:
+      213: -7847669965991140000
+    second: WEAPON_spear_14
+  - first:
+      213: -7485301911430837772
+    second: WEAPON_spear_15
+  - first:
+      213: -9205214578160748874
+    second: WEAPON_spear_16
+  - first:
+      213: 7164975082335247820
+    second: WEAPON_spear_17
+  - first:
+      213: 1008644750972151793
+    second: WEAPON_spear_18
+  - first:
+      213: -3425878764932001485
+    second: WEAPON_spear_19
+  - first:
+      213: 2049419683953892753
+    second: WEAPON_spear_20
+  - first:
+      213: -6648930402643947554
+    second: WEAPON_spear_21
+  - first:
+      213: 2678721146271298606
+    second: WEAPON_spear_22
+  - first:
+      213: -2453254508788676320
+    second: WEAPON_spear_23
+  - first:
+      213: 1662520408213211654
+    second: WEAPON_spear_24
+  - first:
+      213: -8795601956560020672
+    second: WEAPON_spear_25
+  - first:
+      213: 3216056456417752469
+    second: WEAPON_spear_26
+  - first:
+      213: -2664868607435169167
+    second: WEAPON_spear_27
+  - first:
+      213: 2687529408021627106
+    second: WEAPON_spear_28
+  - first:
+      213: 4266322544775288110
+    second: WEAPON_spear_29
+  - first:
+      213: -5321624980173069151
+    second: WEAPON_spear_30
+  - first:
+      213: 548427186859844636
+    second: WEAPON_spear_31
+  - first:
+      213: 4144328012857402761
+    second: WEAPON_spear_32
+  - first:
+      213: -1457236083562410606
+    second: WEAPON_spear_33
+  - first:
+      213: -7157605870065225894
+    second: WEAPON_spear_34
+  - first:
+      213: -4890350545963848844
+    second: WEAPON_spear_35
+  - first:
+      213: 417418021675069732
+    second: WEAPON_spear_36
+  - first:
+      213: 1059677621890122996
+    second: WEAPON_spear_37
+  - first:
+      213: 1691314411282612854
+    second: WEAPON_spear_38
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WEAPON_spear_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 205
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b416392bb31eb0740800000000000000
+      internalID: 5119433047952023883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_1
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 206
+        width: 42
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dcee9a79c3c98a90800000000000000
+      internalID: -7311097249946211112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_2
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 199
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8400f023db62117c0800000000000000
+      internalID: -4102455191527292856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_3
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 221
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd3b4e7d3b230eb40800000000000000
+      internalID: 5467425695630406623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_4
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 196
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df924564aa4e22ec0800000000000000
+      internalID: -3593058132712740355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_5
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 191
+        width: 7
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86764eca049ccd730800000000000000
+      internalID: 4025313446578120552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_6
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 196
+        width: 7
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0865ad57a1c2f2f60800000000000000
+      internalID: 8011670754273416832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_7
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 201
+        width: 7
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bf5ed8f26813d1b0800000000000000
+      internalID: -5633131895549173836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_8
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 196
+        width: 7
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58facd7315a4195a0800000000000000
+      internalID: -6516345473138380923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_9
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 191
+        width: 7
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 668312fda77f29130800000000000000
+      internalID: 3572189561559791718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_10
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 142
+        width: 34
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6fe1171af4e52380800000000000000
+      internalID: -8996532917822689426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_11
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 136
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c245e4f01d6780c40800000000000000
+      internalID: 5478759586973242412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_12
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 142
+        width: 30
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a92c065006fb0b890800000000000000
+      internalID: -7444239764915436902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_13
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 143
+        width: 61
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1015d7de1072bb080800000000000000
+      internalID: -9170693326977019647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_14
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 111
+        width: 59
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 065a892aeb9771390800000000000000
+      internalID: -7847669965991140000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_15
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 144
+        width: 39
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f9cc94029dde1890800000000000000
+      internalID: -7485301911430837772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_16
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 110
+        width: 56
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b63b7bcc12804080800000000000000
+      internalID: -9205214578160748874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_17
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 110
+        width: 62
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccd1e1f20ea1f6360800000000000000
+      internalID: 7164975082335247820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_18
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 110
+        width: 106
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f7e1469e0d6ffd00800000000000000
+      internalID: 1008644750972151793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_19
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 83
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3319ca41a65d470d0800000000000000
+      internalID: -3425878764932001485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_20
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 77
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19dd3c12850017c10800000000000000
+      internalID: 2049419683953892753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_21
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 86
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edfcc1eb6014ab3a0800000000000000
+      internalID: -6648930402643947554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_22
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 77
+        width: 56
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e24f3d7a0babc2520800000000000000
+      internalID: 2678721146271298606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_23
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 70
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 029860ca50a44fdd0800000000000000
+      internalID: -2453254508788676320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_24
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 64
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60ac26bb085721710800000000000000
+      internalID: 1662520408213211654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_25
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 71
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04b52812f9ebfe580800000000000000
+      internalID: -8795601956560020672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_26
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 68
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 595b166ce4ab1ac20800000000000000
+      internalID: 3216056456417752469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_27
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 63
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 172acb0ee1c740bd0800000000000000
+      internalID: -2664868607435169167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_28
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 68
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e08b88e1c50c4520800000000000000
+      internalID: 2687529408021627106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_29
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 71
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e25529220c5053b30800000000000000
+      internalID: 4266322544775288110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_30
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 8
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a460f4964ac526b0800000000000000
+      internalID: -5321624980173069151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_31
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 14
+        width: 60
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c14a2f9ee976c9700800000000000000
+      internalID: 548427186859844636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_32
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 14
+        width: 30
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 985e01fbe5c938930800000000000000
+      internalID: 4144328012857402761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_33
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 15
+        width: 83
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29d8165b08bd6cbe0800000000000000
+      internalID: -1457236083562410606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_34
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 16
+        width: 29
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5fe28042631bac90800000000000000
+      internalID: -7157605870065225894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_35
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 16
+        width: 56
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47befa0b61cf12cb0800000000000000
+      internalID: -4890350545963848844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_36
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 16
+        width: 56
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 421f9c8aa77fac500800000000000000
+      internalID: 417418021675069732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_37
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 16
+        width: 80
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f40135ce2bb4be00800000000000000
+      internalID: 1059677621890122996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_spear_38
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 16
+        width: 30
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 672cffffe71c87710800000000000000
+      internalID: 1691314411282612854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      WEAPON_spear_0: 5119433047952023883
+      WEAPON_spear_1: -7311097249946211112
+      WEAPON_spear_10: -8996532917822689426
+      WEAPON_spear_11: 5478759586973242412
+      WEAPON_spear_12: -7444239764915436902
+      WEAPON_spear_13: -9170693326977019647
+      WEAPON_spear_14: -7847669965991140000
+      WEAPON_spear_15: -7485301911430837772
+      WEAPON_spear_16: -9205214578160748874
+      WEAPON_spear_17: 7164975082335247820
+      WEAPON_spear_18: 1008644750972151793
+      WEAPON_spear_19: -3425878764932001485
+      WEAPON_spear_2: -4102455191527292856
+      WEAPON_spear_20: 2049419683953892753
+      WEAPON_spear_21: -6648930402643947554
+      WEAPON_spear_22: 2678721146271298606
+      WEAPON_spear_23: -2453254508788676320
+      WEAPON_spear_24: 1662520408213211654
+      WEAPON_spear_25: -8795601956560020672
+      WEAPON_spear_26: 3216056456417752469
+      WEAPON_spear_27: -2664868607435169167
+      WEAPON_spear_28: 2687529408021627106
+      WEAPON_spear_29: 4266322544775288110
+      WEAPON_spear_3: 5467425695630406623
+      WEAPON_spear_30: -5321624980173069151
+      WEAPON_spear_31: 548427186859844636
+      WEAPON_spear_32: 4144328012857402761
+      WEAPON_spear_33: -1457236083562410606
+      WEAPON_spear_34: -7157605870065225894
+      WEAPON_spear_35: -4890350545963848844
+      WEAPON_spear_36: 417418021675069732
+      WEAPON_spear_37: 1059677621890122996
+      WEAPON_spear_38: 1691314411282612854
+      WEAPON_spear_4: -3593058132712740355
+      WEAPON_spear_5: 4025313446578120552
+      WEAPON_spear_6: 8011670754273416832
+      WEAPON_spear_7: -5633131895549173836
+      WEAPON_spear_8: -6516345473138380923
+      WEAPON_spear_9: 3572189561559791718
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

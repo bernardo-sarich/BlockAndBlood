@@ -1,0 +1,741 @@
+fileFormatVersion: 2
+guid: 09b8f093d02054349b40241a0ad47c6c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6710492171532908913
+    second: WEAPON_longsword_0
+  - first:
+      213: 6134910850415734038
+    second: WEAPON_longsword_1
+  - first:
+      213: 6837276907741679606
+    second: WEAPON_longsword_2
+  - first:
+      213: 3012522451549156272
+    second: WEAPON_longsword_3
+  - first:
+      213: 4540993071089524799
+    second: WEAPON_longsword_4
+  - first:
+      213: 9168192461059717810
+    second: WEAPON_longsword_5
+  - first:
+      213: 603737619955580725
+    second: WEAPON_longsword_6
+  - first:
+      213: 6444658880696754166
+    second: WEAPON_longsword_7
+  - first:
+      213: -7940741997773960129
+    second: WEAPON_longsword_8
+  - first:
+      213: -6189512725573750442
+    second: WEAPON_longsword_9
+  - first:
+      213: 3771127536741692040
+    second: WEAPON_longsword_10
+  - first:
+      213: -954685607965168148
+    second: WEAPON_longsword_11
+  - first:
+      213: -2736857551791188003
+    second: WEAPON_longsword_12
+  - first:
+      213: 7419264177686311846
+    second: WEAPON_longsword_13
+  - first:
+      213: 3043018709436112829
+    second: WEAPON_longsword_14
+  - first:
+      213: -80186970285185035
+    second: WEAPON_longsword_15
+  - first:
+      213: 8667541812474597333
+    second: WEAPON_longsword_16
+  - first:
+      213: -7965657334567698750
+    second: WEAPON_longsword_17
+  - first:
+      213: 2514294438875379148
+    second: WEAPON_longsword_18
+  - first:
+      213: -7446541321669479420
+    second: WEAPON_longsword_19
+  - first:
+      213: -576437603397911028
+    second: WEAPON_longsword_20
+  - first:
+      213: 4149020014793763512
+    second: WEAPON_longsword_21
+  - first:
+      213: 1046619056588888983
+    second: WEAPON_longsword_22
+  - first:
+      213: -3391238908470245039
+    second: WEAPON_longsword_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WEAPON_longsword_0
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 659
+        width: 41
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17932488315702d50800000000000000
+      internalID: 6710492171532908913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_longsword_1
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 646
+        width: 25
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61d28bf0ae4932550800000000000000
+      internalID: 6134910850415734038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_longsword_2
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 648
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ff8ce44f13e2ee50800000000000000
+      internalID: 6837276907741679606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_longsword_3
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 668
+        width: 83
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b3f97a6531aec920800000000000000
+      internalID: 3012522451549156272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_longsword_4
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 659
+        width: 70
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f302dc19329d40f30800000000000000
+      internalID: 4540993071089524799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_longsword_5
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 649
+        width: 38
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2baf0e9d776fb3f70800000000000000
+      internalID: 9168192461059717810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_longsword_6
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 458
+        width: 38
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53ffdf6aa28e06800800000000000000
+      internalID: 603737619955580725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_longsword_7
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 462
+        width: 59
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ff1f725b17007950800000000000000
+      internalID: 6444658880696754166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_longsword_8
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 465
+        width: 69
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3c48a19931dcc190800000000000000
+      internalID: -7940741997773960129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_longsword_9
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 477
+        width: 69
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 651ba6338fe6a1aa0800000000000000
+      internalID: -6189512725573750442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_longsword_10
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 447
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 882be2ea38cb55430800000000000000
+      internalID: 3771127536741692040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_longsword_11
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 457
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cedee096f7640c2f0800000000000000
+      internalID: -954685607965168148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_longsword_12
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 254
+        width: 41
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd714a0ae8ab40ad0800000000000000
+      internalID: -2736857551791188003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_longsword_13
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 263
+        width: 41
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a3f5cde57586f660800000000000000
+      internalID: 7419264177686311846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_longsword_14
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 264
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbf9ec4c469fa3a20800000000000000
+      internalID: 3043018709436112829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_longsword_15
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 265
+        width: 55
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f76988106e13eef0800000000000000
+      internalID: -80186970285185035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_longsword_16
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 238
+        width: 83
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dfc4681b5b494870800000000000000
+      internalID: 8667541812474597333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_longsword_17
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 241
+        width: 70
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ce7b9aabdc447190800000000000000
+      internalID: -7965657334567698750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_longsword_18
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 74
+        width: 38
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc538e9887194e220800000000000000
+      internalID: 2514294438875379148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_longsword_19
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 78
+        width: 59
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4047f941f1298a890800000000000000
+      internalID: -7446541321669479420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_longsword_20
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 81
+        width: 69
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0e3a46cd051008f0800000000000000
+      internalID: -576437603397911028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_longsword_21
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 93
+        width: 69
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8baa4c398b7449930800000000000000
+      internalID: 4149020014793763512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_longsword_22
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 63
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79b922b9c76568e00800000000000000
+      internalID: 1046619056588888983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_longsword_23
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 73
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 159c5282e26efe0d0800000000000000
+      internalID: -3391238908470245039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      WEAPON_longsword_0: 6710492171532908913
+      WEAPON_longsword_1: 6134910850415734038
+      WEAPON_longsword_10: 3771127536741692040
+      WEAPON_longsword_11: -954685607965168148
+      WEAPON_longsword_12: -2736857551791188003
+      WEAPON_longsword_13: 7419264177686311846
+      WEAPON_longsword_14: 3043018709436112829
+      WEAPON_longsword_15: -80186970285185035
+      WEAPON_longsword_16: 8667541812474597333
+      WEAPON_longsword_17: -7965657334567698750
+      WEAPON_longsword_18: 2514294438875379148
+      WEAPON_longsword_19: -7446541321669479420
+      WEAPON_longsword_2: 6837276907741679606
+      WEAPON_longsword_20: -576437603397911028
+      WEAPON_longsword_21: 4149020014793763512
+      WEAPON_longsword_22: 1046619056588888983
+      WEAPON_longsword_23: -3391238908470245039
+      WEAPON_longsword_3: 3012522451549156272
+      WEAPON_longsword_4: 4540993071089524799
+      WEAPON_longsword_5: 9168192461059717810
+      WEAPON_longsword_6: 603737619955580725
+      WEAPON_longsword_7: 6444658880696754166
+      WEAPON_longsword_8: -7940741997773960129
+      WEAPON_longsword_9: -6189512725573750442
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,1209 @@
+fileFormatVersion: 2
+guid: a2051182542dfc740b3407c0f2af6da5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7877400720797748462
+    second: TORSO_leather_armor_shoulders_0
+  - first:
+      213: 9118031900046634015
+    second: TORSO_leather_armor_shoulders_1
+  - first:
+      213: 8421073130852894543
+    second: TORSO_leather_armor_shoulders_2
+  - first:
+      213: 685373198148714185
+    second: TORSO_leather_armor_shoulders_3
+  - first:
+      213: -2435394403889350394
+    second: TORSO_leather_armor_shoulders_4
+  - first:
+      213: -5438237755070266116
+    second: TORSO_leather_armor_shoulders_5
+  - first:
+      213: 7047232256597219605
+    second: TORSO_leather_armor_shoulders_6
+  - first:
+      213: 8099718614566771945
+    second: TORSO_leather_armor_shoulders_7
+  - first:
+      213: -6857358128704230827
+    second: TORSO_leather_armor_shoulders_8
+  - first:
+      213: 8724618824252104944
+    second: TORSO_leather_armor_shoulders_9
+  - first:
+      213: 2260450453669322763
+    second: TORSO_leather_armor_shoulders_10
+  - first:
+      213: 673175006086677082
+    second: TORSO_leather_armor_shoulders_11
+  - first:
+      213: -4092224243003667354
+    second: TORSO_leather_armor_shoulders_12
+  - first:
+      213: 7095217392184258505
+    second: TORSO_leather_armor_shoulders_13
+  - first:
+      213: -8802591719564354579
+    second: TORSO_leather_armor_shoulders_14
+  - first:
+      213: 3822097117826236714
+    second: TORSO_leather_armor_shoulders_15
+  - first:
+      213: -1543318257383997847
+    second: TORSO_leather_armor_shoulders_16
+  - first:
+      213: 6844475048229338452
+    second: TORSO_leather_armor_shoulders_17
+  - first:
+      213: -2182720632714141831
+    second: TORSO_leather_armor_shoulders_18
+  - first:
+      213: -3284692342813490747
+    second: TORSO_leather_armor_shoulders_19
+  - first:
+      213: -245702547628521605
+    second: TORSO_leather_armor_shoulders_20
+  - first:
+      213: 8312921376250166704
+    second: TORSO_leather_armor_shoulders_21
+  - first:
+      213: -2680991343283638417
+    second: TORSO_leather_armor_shoulders_22
+  - first:
+      213: -9025336559590034963
+    second: TORSO_leather_armor_shoulders_23
+  - first:
+      213: 7204941237153416591
+    second: TORSO_leather_armor_shoulders_24
+  - first:
+      213: 1308395058641923624
+    second: TORSO_leather_armor_shoulders_25
+  - first:
+      213: -1604536344319854582
+    second: TORSO_leather_armor_shoulders_26
+  - first:
+      213: -3646114004811639807
+    second: TORSO_leather_armor_shoulders_27
+  - first:
+      213: -2252495791581365796
+    second: TORSO_leather_armor_shoulders_28
+  - first:
+      213: 5195307235272712300
+    second: TORSO_leather_armor_shoulders_29
+  - first:
+      213: 6683149656047269712
+    second: TORSO_leather_armor_shoulders_30
+  - first:
+      213: 4259102519185497094
+    second: TORSO_leather_armor_shoulders_31
+  - first:
+      213: -4983250425174728908
+    second: TORSO_leather_armor_shoulders_32
+  - first:
+      213: -3940816313663334948
+    second: TORSO_leather_armor_shoulders_33
+  - first:
+      213: 6361245546187804342
+    second: TORSO_leather_armor_shoulders_34
+  - first:
+      213: 7469581672562506570
+    second: TORSO_leather_armor_shoulders_35
+  - first:
+      213: -879581425820326943
+    second: TORSO_leather_armor_shoulders_36
+  - first:
+      213: -8266371470031236609
+    second: TORSO_leather_armor_shoulders_37
+  - first:
+      213: 8579138009017058958
+    second: TORSO_leather_armor_shoulders_38
+  - first:
+      213: -3157307160204881593
+    second: TORSO_leather_armor_shoulders_39
+  - first:
+      213: -3123028672851866193
+    second: TORSO_leather_armor_shoulders_40
+  - first:
+      213: 4497029244645410965
+    second: TORSO_leather_armor_shoulders_41
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 216
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 213b17bd7c9dda290800000000000000
+      internalID: -7877400720797748462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_1
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 216
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1ca5f424b1c98e70800000000000000
+      internalID: 9118031900046634015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_2
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 216
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f47c2105569add470800000000000000
+      internalID: 8421073130852894543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_3
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 216
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ce3a3eda4fe28900800000000000000
+      internalID: 685373198148714185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_4
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 216
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 609733461bdb33ed0800000000000000
+      internalID: -2435394403889350394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_5
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 216
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf44be4239f7784b0800000000000000
+      internalID: -5438237755070266116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_6
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 216
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 519d628466cccc160800000000000000
+      internalID: 7047232256597219605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_7
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 216
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ec1fd17a2bf76070800000000000000
+      internalID: 8099718614566771945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_8
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 214
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55a62f02d15c5d0a0800000000000000
+      internalID: -6857358128704230827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_9
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 214
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f0ab3c7892141970800000000000000
+      internalID: 8724618824252104944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_10
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 214
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b00a45316bbbe5f10800000000000000
+      internalID: 2260450453669322763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_11
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 214
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a52c775f919975900800000000000000
+      internalID: 673175006086677082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_12
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 216
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66c46868bbf7537c0800000000000000
+      internalID: -4092224243003667354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_13
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 216
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cfe05940a6477260800000000000000
+      internalID: 7095217392184258505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_14
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 152
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deb529c1879e6d580800000000000000
+      internalID: -8802591719564354579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_15
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 152
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a21c31d0411da0530800000000000000
+      internalID: 3822097117826236714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_16
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 152
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96e7045c838059ae0800000000000000
+      internalID: -1543318257383997847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_17
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 152
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45dfbb3fac57cfe50800000000000000
+      internalID: 6844475048229338452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_18
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 152
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97f582b262b65b1e0800000000000000
+      internalID: -2182720632714141831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_19
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 151
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c1082e97bd6a62d0800000000000000
+      internalID: -3284692342813490747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_20
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 152
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b778130b5d6179cf0800000000000000
+      internalID: -245702547628521605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_21
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 89
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bd742da2fd6d5370800000000000000
+      internalID: 8312921376250166704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_22
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 89
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6f6ea9e3943bcad0800000000000000
+      internalID: -2680991343283638417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_23
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 89
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de13a43a7309fb280800000000000000
+      internalID: -9025336559590034963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_24
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 89
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f85c71cb1e71df360800000000000000
+      internalID: 7204941237153416591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_25
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 89
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82e6a38af5a582210800000000000000
+      internalID: 1308395058641923624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_26
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 89
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a087c9f22ba8bb9e0800000000000000
+      internalID: -1604536344319854582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_27
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 89
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10410ac61a6666dc0800000000000000
+      internalID: -3646114004811639807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_28
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 89
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd9fab403078db0e0800000000000000
+      internalID: -2252495791581365796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_29
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 87
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6062719760791840800000000000000
+      internalID: 5195307235272712300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_30
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 87
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 057b87d04315fbc50800000000000000
+      internalID: 6683149656047269712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_31
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 87
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60cd50eec2f5b1b30800000000000000
+      internalID: 4259102519185497094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_32
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 87
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43f55a40420f7dab0800000000000000
+      internalID: -4983250425174728908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_33
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 89
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd5580b21786f49c0800000000000000
+      internalID: -3940816313663334948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_34
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 89
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6be4f85fe1fa74850800000000000000
+      internalID: 6361245546187804342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_35
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 24
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4b3bd5a4f849a760800000000000000
+      internalID: 7469581672562506570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_36
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 24
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e3a2fa7a591bc3f0800000000000000
+      internalID: -879581425820326943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_37
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 24
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff15d53f1f2f74d80800000000000000
+      internalID: -8266371470031236609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_38
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 24
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e868382a0983f0770800000000000000
+      internalID: 8579138009017058958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_39
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 24
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 741d03dadddfe24d0800000000000000
+      internalID: -3157307160204881593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_40
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 23
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fad0e43f7f5c8a4d0800000000000000
+      internalID: -3123028672851866193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shoulders_41
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 24
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59802af8548a86e30800000000000000
+      internalID: 4497029244645410965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TORSO_leather_armor_shoulders_0: -7877400720797748462
+      TORSO_leather_armor_shoulders_1: 9118031900046634015
+      TORSO_leather_armor_shoulders_10: 2260450453669322763
+      TORSO_leather_armor_shoulders_11: 673175006086677082
+      TORSO_leather_armor_shoulders_12: -4092224243003667354
+      TORSO_leather_armor_shoulders_13: 7095217392184258505
+      TORSO_leather_armor_shoulders_14: -8802591719564354579
+      TORSO_leather_armor_shoulders_15: 3822097117826236714
+      TORSO_leather_armor_shoulders_16: -1543318257383997847
+      TORSO_leather_armor_shoulders_17: 6844475048229338452
+      TORSO_leather_armor_shoulders_18: -2182720632714141831
+      TORSO_leather_armor_shoulders_19: -3284692342813490747
+      TORSO_leather_armor_shoulders_2: 8421073130852894543
+      TORSO_leather_armor_shoulders_20: -245702547628521605
+      TORSO_leather_armor_shoulders_21: 8312921376250166704
+      TORSO_leather_armor_shoulders_22: -2680991343283638417
+      TORSO_leather_armor_shoulders_23: -9025336559590034963
+      TORSO_leather_armor_shoulders_24: 7204941237153416591
+      TORSO_leather_armor_shoulders_25: 1308395058641923624
+      TORSO_leather_armor_shoulders_26: -1604536344319854582
+      TORSO_leather_armor_shoulders_27: -3646114004811639807
+      TORSO_leather_armor_shoulders_28: -2252495791581365796
+      TORSO_leather_armor_shoulders_29: 5195307235272712300
+      TORSO_leather_armor_shoulders_3: 685373198148714185
+      TORSO_leather_armor_shoulders_30: 6683149656047269712
+      TORSO_leather_armor_shoulders_31: 4259102519185497094
+      TORSO_leather_armor_shoulders_32: -4983250425174728908
+      TORSO_leather_armor_shoulders_33: -3940816313663334948
+      TORSO_leather_armor_shoulders_34: 6361245546187804342
+      TORSO_leather_armor_shoulders_35: 7469581672562506570
+      TORSO_leather_armor_shoulders_36: -879581425820326943
+      TORSO_leather_armor_shoulders_37: -8266371470031236609
+      TORSO_leather_armor_shoulders_38: 8579138009017058958
+      TORSO_leather_armor_shoulders_39: -3157307160204881593
+      TORSO_leather_armor_shoulders_4: -2435394403889350394
+      TORSO_leather_armor_shoulders_40: -3123028672851866193
+      TORSO_leather_armor_shoulders_41: 4497029244645410965
+      TORSO_leather_armor_shoulders_5: -5438237755070266116
+      TORSO_leather_armor_shoulders_6: 7047232256597219605
+      TORSO_leather_armor_shoulders_7: 8099718614566771945
+      TORSO_leather_armor_shoulders_8: -6857358128704230827
+      TORSO_leather_armor_shoulders_9: 8724618824252104944
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

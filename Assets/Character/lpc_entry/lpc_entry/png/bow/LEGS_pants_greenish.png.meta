@@ -1,0 +1,1469 @@
+fileFormatVersion: 2
+guid: 38a5fcf0c3ac3a54b83c1982fc8da9e0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6944199913750945487
+    second: LEGS_pants_greenish_0
+  - first:
+      213: 4256405993151851814
+    second: LEGS_pants_greenish_1
+  - first:
+      213: -3544489893109916541
+    second: LEGS_pants_greenish_2
+  - first:
+      213: 1575128191180386832
+    second: LEGS_pants_greenish_3
+  - first:
+      213: -2706359087357616526
+    second: LEGS_pants_greenish_4
+  - first:
+      213: 4047416303445225167
+    second: LEGS_pants_greenish_5
+  - first:
+      213: 7568285043747996510
+    second: LEGS_pants_greenish_6
+  - first:
+      213: -1013595879862188569
+    second: LEGS_pants_greenish_7
+  - first:
+      213: 6376574692485064871
+    second: LEGS_pants_greenish_8
+  - first:
+      213: -6730523842584216026
+    second: LEGS_pants_greenish_9
+  - first:
+      213: 993677324095493911
+    second: LEGS_pants_greenish_10
+  - first:
+      213: -7548071842417166330
+    second: LEGS_pants_greenish_11
+  - first:
+      213: -1280144152584948239
+    second: LEGS_pants_greenish_12
+  - first:
+      213: 4165904268921544668
+    second: LEGS_pants_greenish_13
+  - first:
+      213: -2001423460035888582
+    second: LEGS_pants_greenish_14
+  - first:
+      213: 4159734681770333364
+    second: LEGS_pants_greenish_15
+  - first:
+      213: 1250832160282264716
+    second: LEGS_pants_greenish_16
+  - first:
+      213: 7794695871215756564
+    second: LEGS_pants_greenish_17
+  - first:
+      213: -5280656515247554464
+    second: LEGS_pants_greenish_18
+  - first:
+      213: 7387203293939760733
+    second: LEGS_pants_greenish_19
+  - first:
+      213: 4602218265373705861
+    second: LEGS_pants_greenish_20
+  - first:
+      213: -7647171078729453477
+    second: LEGS_pants_greenish_21
+  - first:
+      213: -8922110014228144856
+    second: LEGS_pants_greenish_22
+  - first:
+      213: -1986772828802694177
+    second: LEGS_pants_greenish_23
+  - first:
+      213: -1430683203060111134
+    second: LEGS_pants_greenish_24
+  - first:
+      213: -503635620524907362
+    second: LEGS_pants_greenish_25
+  - first:
+      213: -4848830120973651986
+    second: LEGS_pants_greenish_26
+  - first:
+      213: -3307173747637571769
+    second: LEGS_pants_greenish_27
+  - first:
+      213: -6523595320632756582
+    second: LEGS_pants_greenish_28
+  - first:
+      213: -700008260736087052
+    second: LEGS_pants_greenish_29
+  - first:
+      213: 9040529533164832714
+    second: LEGS_pants_greenish_30
+  - first:
+      213: 2621953868442835724
+    second: LEGS_pants_greenish_31
+  - first:
+      213: 3737526616601789408
+    second: LEGS_pants_greenish_32
+  - first:
+      213: 7703889811952181243
+    second: LEGS_pants_greenish_33
+  - first:
+      213: -4732140650715353812
+    second: LEGS_pants_greenish_34
+  - first:
+      213: 346410724177253806
+    second: LEGS_pants_greenish_35
+  - first:
+      213: 4517045168531350786
+    second: LEGS_pants_greenish_36
+  - first:
+      213: -4887894759901350009
+    second: LEGS_pants_greenish_37
+  - first:
+      213: 2650713767459496987
+    second: LEGS_pants_greenish_38
+  - first:
+      213: 3711933531594413852
+    second: LEGS_pants_greenish_39
+  - first:
+      213: -4847980694532448947
+    second: LEGS_pants_greenish_40
+  - first:
+      213: -7207735335074207848
+    second: LEGS_pants_greenish_41
+  - first:
+      213: -6209535455440449103
+    second: LEGS_pants_greenish_42
+  - first:
+      213: -1412549910659276705
+    second: LEGS_pants_greenish_43
+  - first:
+      213: 8085090625820975145
+    second: LEGS_pants_greenish_44
+  - first:
+      213: -4496573836881875018
+    second: LEGS_pants_greenish_45
+  - first:
+      213: 8690294445651878218
+    second: LEGS_pants_greenish_46
+  - first:
+      213: -2689520906007440080
+    second: LEGS_pants_greenish_47
+  - first:
+      213: 2789084365074840393
+    second: LEGS_pants_greenish_48
+  - first:
+      213: -1527460674020758203
+    second: LEGS_pants_greenish_49
+  - first:
+      213: 1062228566974168762
+    second: LEGS_pants_greenish_50
+  - first:
+      213: 3553219417286650814
+    second: LEGS_pants_greenish_51
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 199
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 131a39b68fe31af90800000000000000
+      internalID: -6944199913750945487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_1
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 198
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62de8a903bac11b30800000000000000
+      internalID: 4256405993151851814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_2
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 198
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38c9833c8317fcec0800000000000000
+      internalID: -3544489893109916541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_3
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 197
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 012b2079ebafbd510800000000000000
+      internalID: 1575128191180386832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_4
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 197
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27e166bbfb4117ad0800000000000000
+      internalID: -2706359087357616526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_5
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 197
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fce2af01faf4b2830800000000000000
+      internalID: 4047416303445225167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_6
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 197
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5340871623f70960800000000000000
+      internalID: 7568285043747996510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_7
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 197
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e5c303eaebfee1f0800000000000000
+      internalID: -1013595879862188569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_8
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 197
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a86155f5e42e7850800000000000000
+      internalID: 6376574692485064871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_9
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 197
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62e787a99306892a0800000000000000
+      internalID: -6730523842584216026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_10
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 197
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7179214f2404acd00800000000000000
+      internalID: 993677324095493911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_11
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 197
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 608b89596acdf3790800000000000000
+      internalID: -7548071842417166330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_12
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 197
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f571ebfca30c3ee0800000000000000
+      internalID: -1280144152584948239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_13
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 134
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdf1a555cd340d930800000000000000
+      internalID: 4165904268921544668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_14
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 134
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3a7d6397f38934e0800000000000000
+      internalID: -2001423460035888582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_15
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 134
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b41bc267a85ab930800000000000000
+      internalID: 4159734681770333364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_16
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 134
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c84424bf839db5110800000000000000
+      internalID: 1250832160282264716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_17
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 134
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 415e408c8925c2c60800000000000000
+      internalID: 7794695871215756564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_18
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 134
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06041d3a0e657b6b0800000000000000
+      internalID: -5280656515247554464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_19
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 134
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5effdab14e948660800000000000000
+      internalID: 7387203293939760733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_20
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 134
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5860a66f02d5edf30800000000000000
+      internalID: 4602218265373705861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_21
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 134
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b50b0bb9b6acfd590800000000000000
+      internalID: -7647171078729453477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_22
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 134
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82dd9f2a63c4e2480800000000000000
+      internalID: -8922110014228144856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_23
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 134
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd341d973a09d64e0800000000000000
+      internalID: -1986772828802694177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_24
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 134
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e8eb77f431352ce0800000000000000
+      internalID: -1430683203060111134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_25
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 134
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e94216e421ab209f0800000000000000
+      internalID: -503635620524907362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_26
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 71
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eefa627f1be75bcb0800000000000000
+      internalID: -4848830120973651986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_27
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 72
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74fa099affe8a12d0800000000000000
+      internalID: -3307173747637571769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_28
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 71
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a96b84f8e988775a0800000000000000
+      internalID: -6523595320632756582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_29
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 71
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fb8cf612321946f0800000000000000
+      internalID: -700008260736087052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_30
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 71
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac7c7bd26b9667d70800000000000000
+      internalID: 9040529533164832714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_31
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 71
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0b1ff1d62d036420800000000000000
+      internalID: 2621953868442835724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_32
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 71
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e30e11d7ac5ed330800000000000000
+      internalID: 3737526616601789408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_33
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 71
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bff192e87f6b9ea60800000000000000
+      internalID: 7703889811952181243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_34
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 71
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2decee662f045eb0800000000000000
+      internalID: -4732140650715353812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_35
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 71
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea598f0e7b2bec400800000000000000
+      internalID: 346410724177253806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_36
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 71
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 205a4b006a4cfae30800000000000000
+      internalID: 4517045168531350786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_37
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 71
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7873690fc95ba2cb0800000000000000
+      internalID: -4887894759901350009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_38
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 71
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1429ae902a39c420800000000000000
+      internalID: 2650713767459496987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_39
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 6
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c17db8c51ef638330800000000000000
+      internalID: 3711933531594413852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_40
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 6
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4d11787e3388bcb0800000000000000
+      internalID: -4847980694532448947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_41
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 6
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 897eed5a6eaf8fb90800000000000000
+      internalID: -7207735335074207848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_42
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 6
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b1574e176c43d9a0800000000000000
+      internalID: -6209535455440449103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_43
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 6
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f50e4ab175d956ce0800000000000000
+      internalID: -1412549910659276705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_44
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 6
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92066e86613043070800000000000000
+      internalID: 8085090625820975145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_45
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 6
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bf27525be5f891c0800000000000000
+      internalID: -4496573836881875018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_46
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 6
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4161a251c02a9870800000000000000
+      internalID: 8690294445651878218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_47
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 6
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03590755cf6ecaad0800000000000000
+      internalID: -2689520906007440080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_48
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 6
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94bb1ece371d4b620800000000000000
+      internalID: 2789084365074840393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_49
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 6
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54d2d9c1c9e5dcae0800000000000000
+      internalID: -1527460674020758203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_50
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 6
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abe74c4f04bcdbe00800000000000000
+      internalID: 1062228566974168762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEGS_pants_greenish_51
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 6
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebb2468fb329f4130800000000000000
+      internalID: 3553219417286650814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      LEGS_pants_greenish_0: -6944199913750945487
+      LEGS_pants_greenish_1: 4256405993151851814
+      LEGS_pants_greenish_10: 993677324095493911
+      LEGS_pants_greenish_11: -7548071842417166330
+      LEGS_pants_greenish_12: -1280144152584948239
+      LEGS_pants_greenish_13: 4165904268921544668
+      LEGS_pants_greenish_14: -2001423460035888582
+      LEGS_pants_greenish_15: 4159734681770333364
+      LEGS_pants_greenish_16: 1250832160282264716
+      LEGS_pants_greenish_17: 7794695871215756564
+      LEGS_pants_greenish_18: -5280656515247554464
+      LEGS_pants_greenish_19: 7387203293939760733
+      LEGS_pants_greenish_2: -3544489893109916541
+      LEGS_pants_greenish_20: 4602218265373705861
+      LEGS_pants_greenish_21: -7647171078729453477
+      LEGS_pants_greenish_22: -8922110014228144856
+      LEGS_pants_greenish_23: -1986772828802694177
+      LEGS_pants_greenish_24: -1430683203060111134
+      LEGS_pants_greenish_25: -503635620524907362
+      LEGS_pants_greenish_26: -4848830120973651986
+      LEGS_pants_greenish_27: -3307173747637571769
+      LEGS_pants_greenish_28: -6523595320632756582
+      LEGS_pants_greenish_29: -700008260736087052
+      LEGS_pants_greenish_3: 1575128191180386832
+      LEGS_pants_greenish_30: 9040529533164832714
+      LEGS_pants_greenish_31: 2621953868442835724
+      LEGS_pants_greenish_32: 3737526616601789408
+      LEGS_pants_greenish_33: 7703889811952181243
+      LEGS_pants_greenish_34: -4732140650715353812
+      LEGS_pants_greenish_35: 346410724177253806
+      LEGS_pants_greenish_36: 4517045168531350786
+      LEGS_pants_greenish_37: -4887894759901350009
+      LEGS_pants_greenish_38: 2650713767459496987
+      LEGS_pants_greenish_39: 3711933531594413852
+      LEGS_pants_greenish_4: -2706359087357616526
+      LEGS_pants_greenish_40: -4847980694532448947
+      LEGS_pants_greenish_41: -7207735335074207848
+      LEGS_pants_greenish_42: -6209535455440449103
+      LEGS_pants_greenish_43: -1412549910659276705
+      LEGS_pants_greenish_44: 8085090625820975145
+      LEGS_pants_greenish_45: -4496573836881875018
+      LEGS_pants_greenish_46: 8690294445651878218
+      LEGS_pants_greenish_47: -2689520906007440080
+      LEGS_pants_greenish_48: 2789084365074840393
+      LEGS_pants_greenish_49: -1527460674020758203
+      LEGS_pants_greenish_5: 4047416303445225167
+      LEGS_pants_greenish_50: 1062228566974168762
+      LEGS_pants_greenish_51: 3553219417286650814
+      LEGS_pants_greenish_6: 7568285043747996510
+      LEGS_pants_greenish_7: -1013595879862188569
+      LEGS_pants_greenish_8: 6376574692485064871
+      LEGS_pants_greenish_9: -6730523842584216026
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

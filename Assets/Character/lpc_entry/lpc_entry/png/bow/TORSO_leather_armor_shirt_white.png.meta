@@ -1,0 +1,1781 @@
+fileFormatVersion: 2
+guid: 883b82b650e1d974a92f7e31bce15dda
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4082484916860373939
+    second: TORSO_leather_armor_shirt_white_0
+  - first:
+      213: -4960312951486160978
+    second: TORSO_leather_armor_shirt_white_1
+  - first:
+      213: -3909362101229726822
+    second: TORSO_leather_armor_shirt_white_2
+  - first:
+      213: -8527442687098588620
+    second: TORSO_leather_armor_shirt_white_3
+  - first:
+      213: 8149614193824592280
+    second: TORSO_leather_armor_shirt_white_4
+  - first:
+      213: -7233160983372877864
+    second: TORSO_leather_armor_shirt_white_5
+  - first:
+      213: 7879443602310514828
+    second: TORSO_leather_armor_shirt_white_6
+  - first:
+      213: 8944581466944540727
+    second: TORSO_leather_armor_shirt_white_7
+  - first:
+      213: -454487201906760717
+    second: TORSO_leather_armor_shirt_white_8
+  - first:
+      213: -4584957653680156694
+    second: TORSO_leather_armor_shirt_white_9
+  - first:
+      213: -7430196297712522271
+    second: TORSO_leather_armor_shirt_white_10
+  - first:
+      213: -5806135404208383874
+    second: TORSO_leather_armor_shirt_white_11
+  - first:
+      213: 4711323127183796624
+    second: TORSO_leather_armor_shirt_white_12
+  - first:
+      213: -1651783264998572867
+    second: TORSO_leather_armor_shirt_white_13
+  - first:
+      213: -1751098180807553759
+    second: TORSO_leather_armor_shirt_white_14
+  - first:
+      213: 3729272884042374113
+    second: TORSO_leather_armor_shirt_white_15
+  - first:
+      213: 123346991089378678
+    second: TORSO_leather_armor_shirt_white_16
+  - first:
+      213: 7267920581191742249
+    second: TORSO_leather_armor_shirt_white_17
+  - first:
+      213: 1190398080407284533
+    second: TORSO_leather_armor_shirt_white_18
+  - first:
+      213: -4678175586751024000
+    second: TORSO_leather_armor_shirt_white_19
+  - first:
+      213: 5599298747637049637
+    second: TORSO_leather_armor_shirt_white_20
+  - first:
+      213: -5445116298686095363
+    second: TORSO_leather_armor_shirt_white_21
+  - first:
+      213: 5696686952574192404
+    second: TORSO_leather_armor_shirt_white_22
+  - first:
+      213: -319449018703195034
+    second: TORSO_leather_armor_shirt_white_23
+  - first:
+      213: -735015678887631588
+    second: TORSO_leather_armor_shirt_white_24
+  - first:
+      213: -7622976465018566803
+    second: TORSO_leather_armor_shirt_white_25
+  - first:
+      213: 2816494836796122395
+    second: TORSO_leather_armor_shirt_white_26
+  - first:
+      213: 5382044032291425721
+    second: TORSO_leather_armor_shirt_white_27
+  - first:
+      213: 4838754943221841334
+    second: TORSO_leather_armor_shirt_white_28
+  - first:
+      213: 6361656862026844217
+    second: TORSO_leather_armor_shirt_white_29
+  - first:
+      213: -3820506370692979150
+    second: TORSO_leather_armor_shirt_white_30
+  - first:
+      213: -2213906040570827782
+    second: TORSO_leather_armor_shirt_white_31
+  - first:
+      213: -8940618798697356899
+    second: TORSO_leather_armor_shirt_white_32
+  - first:
+      213: -3789689104917180853
+    second: TORSO_leather_armor_shirt_white_33
+  - first:
+      213: 8575778653292637675
+    second: TORSO_leather_armor_shirt_white_34
+  - first:
+      213: -5538485723891987084
+    second: TORSO_leather_armor_shirt_white_35
+  - first:
+      213: -5370772768105754302
+    second: TORSO_leather_armor_shirt_white_36
+  - first:
+      213: -498284400728767679
+    second: TORSO_leather_armor_shirt_white_37
+  - first:
+      213: 4617254489049269626
+    second: TORSO_leather_armor_shirt_white_38
+  - first:
+      213: 2151109275078495659
+    second: TORSO_leather_armor_shirt_white_39
+  - first:
+      213: 4714721241082281596
+    second: TORSO_leather_armor_shirt_white_40
+  - first:
+      213: -1923399677848731406
+    second: TORSO_leather_armor_shirt_white_41
+  - first:
+      213: -8618995581246670212
+    second: TORSO_leather_armor_shirt_white_42
+  - first:
+      213: -3119920019588475368
+    second: TORSO_leather_armor_shirt_white_43
+  - first:
+      213: -6309174306983394211
+    second: TORSO_leather_armor_shirt_white_44
+  - first:
+      213: -6643152836122029382
+    second: TORSO_leather_armor_shirt_white_45
+  - first:
+      213: -5690665469772936713
+    second: TORSO_leather_armor_shirt_white_46
+  - first:
+      213: -6280275525399232464
+    second: TORSO_leather_armor_shirt_white_47
+  - first:
+      213: 4673168022290369573
+    second: TORSO_leather_armor_shirt_white_48
+  - first:
+      213: -7240969900806827634
+    second: TORSO_leather_armor_shirt_white_49
+  - first:
+      213: -1759404135039638673
+    second: TORSO_leather_armor_shirt_white_50
+  - first:
+      213: -838923144677585812
+    second: TORSO_leather_armor_shirt_white_51
+  - first:
+      213: 729163901223884147
+    second: TORSO_leather_armor_shirt_white_52
+  - first:
+      213: -8407761917650326629
+    second: TORSO_leather_armor_shirt_white_53
+  - first:
+      213: 2913316309903356558
+    second: TORSO_leather_armor_shirt_white_54
+  - first:
+      213: 7559168344740766960
+    second: TORSO_leather_armor_shirt_white_55
+  - first:
+      213: 1379911402519515890
+    second: TORSO_leather_armor_shirt_white_56
+  - first:
+      213: -194469217831515702
+    second: TORSO_leather_armor_shirt_white_57
+  - first:
+      213: -5098431999082452704
+    second: TORSO_leather_armor_shirt_white_58
+  - first:
+      213: -3053377479000919423
+    second: TORSO_leather_armor_shirt_white_59
+  - first:
+      213: -7207380767464638865
+    second: TORSO_leather_armor_shirt_white_60
+  - first:
+      213: 7851382376245512580
+    second: TORSO_leather_armor_shirt_white_61
+  - first:
+      213: -473772184333150459
+    second: TORSO_leather_armor_shirt_white_62
+  - first:
+      213: -7806665308806403819
+    second: TORSO_leather_armor_shirt_white_63
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 208
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d44b5a919991857c0800000000000000
+      internalID: -4082484916860373939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_1
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 205
+        width: 27
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eafd5e7c6ad692bb0800000000000000
+      internalID: -4960312951486160978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_2
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 204
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a93d3d1b1e72fb9c0800000000000000
+      internalID: -3909362101229726822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_3
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 206
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4327cf07e0078a980800000000000000
+      internalID: -8527442687098588620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_4
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 207
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89175674eee391170800000000000000
+      internalID: 8149614193824592280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_5
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 209
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8df28d69866ae9b90800000000000000
+      internalID: -7233160983372877864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_6
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 209
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c88417f8538695d60800000000000000
+      internalID: 7879443602310514828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_7
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 209
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73095c92479812c70800000000000000
+      internalID: 8944581466944540727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_8
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 209
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f3e26f3c4651b9f0800000000000000
+      internalID: -454487201906760717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_9
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 207
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aef8f2e5e45fe50c0800000000000000
+      internalID: -4584957653680156694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_10
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 206
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1eb2c6785d3a2e890800000000000000
+      internalID: -7430196297712522271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_11
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 206
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e781752bc967c6fa0800000000000000
+      internalID: -5806135404208383874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_12
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 206
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0996fd92c6bf16140800000000000000
+      internalID: 4711323127183796624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_13
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 144
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbc33db3fdfa319e0800000000000000
+      internalID: -1651783264998572867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_14
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 144
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12d02267b79d2b7e0800000000000000
+      internalID: -1751098180807553759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_15
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 144
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1eb97d3fde901c330800000000000000
+      internalID: 3729272884042374113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_16
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 144
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 675eef35f6736b100800000000000000
+      internalID: 123346991089378678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_17
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 144
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9233fa1f247dcd460800000000000000
+      internalID: 7267920581191742249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_18
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 150
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53babf34fb4258010800000000000000
+      internalID: 1190398080407284533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_19
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 144
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 084fcc20718c31fb0800000000000000
+      internalID: -4678175586751024000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_20
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 144
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 529223c6b84b4bd40800000000000000
+      internalID: 5599298747637049637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_21
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 144
+        width: 33
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dff1028639f0f64b0800000000000000
+      internalID: -5445116298686095363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_22
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 144
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41b89ccd992be0f40800000000000000
+      internalID: 5696686952574192404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_23
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 144
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 664595c5fc6119bf0800000000000000
+      internalID: -319449018703195034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_24
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 150
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c156f836223bcc5f0800000000000000
+      internalID: -735015678887631588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_25
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 144
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d67c7671b4fb53690800000000000000
+      internalID: -7622976465018566803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_26
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 143
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1564f2b123361720800000000000000
+      internalID: 2816494836796122395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_27
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 144
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bdcd36388cd0ba40800000000000000
+      internalID: 5382044032291425721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_28
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 80
+        width: 32
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bd37e9ebf5b62340800000000000000
+      internalID: 4838754943221841334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_29
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 80
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9384904e535294850800000000000000
+      internalID: 6361656862026844217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_30
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 81
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2366ab0a2b5dafac0800000000000000
+      internalID: -3820506370692979150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_31
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 80
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afb2fa59f20a641e0800000000000000
+      internalID: -2213906040570827782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_32
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 90
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d91e67f629a8ce380800000000000000
+      internalID: -8940618798697356899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_33
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 80
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4e4e3476d1586bc0800000000000000
+      internalID: -3789689104917180853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_34
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 88
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beda2edaf39430770800000000000000
+      internalID: 8575778653292637675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_35
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 82
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47d88d904985323b0800000000000000
+      internalID: -5538485723891987084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_36
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 90
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24117bb7f9e2775b0800000000000000
+      internalID: -5370772768105754302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_37
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 82
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14381714afcb519f0800000000000000
+      internalID: -498284400728767679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_38
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 92
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a750c599e78c31040800000000000000
+      internalID: 4617254489049269626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_39
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 80
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bad0a161d764add10800000000000000
+      internalID: 2151109275078495659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_40
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 92
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7eb2b53dfd0e6140800000000000000
+      internalID: 4714721241082281596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_41
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 81
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f0c9b00f26be45e0800000000000000
+      internalID: -1923399677848731406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_42
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 91
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7a712b2f2d236880800000000000000
+      internalID: -8618995581246670212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_43
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 80
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8169cc0b541d3b4d0800000000000000
+      internalID: -3119920019588475368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_44
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 81
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d54cb3e256f4178a0800000000000000
+      internalID: -6309174306983394211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_45
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 81
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab2515641b7cec3a0800000000000000
+      internalID: -6643152836122029382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_46
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 80
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f94a9ad7e1b601b0800000000000000
+      internalID: -5690665469772936713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_47
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 80
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 030cff81faaf7d8a0800000000000000
+      internalID: -6280275525399232464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_48
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 80
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52c05588e8d6ad040800000000000000
+      internalID: 4673168022290369573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_49
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 16
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e811d115d38e28b90800000000000000
+      internalID: -7240969900806827634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_50
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 16
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f63eb9ac2475597e0800000000000000
+      internalID: -1759404135039638673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_51
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 16
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6c83af38db8b54f0800000000000000
+      internalID: -838923144677585812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_52
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 16
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 375dc7374b28e1a00800000000000000
+      internalID: 729163901223884147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_53
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 22
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9b25660511a15b80800000000000000
+      internalID: -8407761917650326629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_54
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 16
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e82342a9fbd2e6820800000000000000
+      internalID: 2913316309903356558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_55
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 16
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f4a6a13f8f87e860800000000000000
+      internalID: 7559168344740766960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_56
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 16
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f2dfa80c1e662310800000000000000
+      internalID: 1379911402519515890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_57
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 16
+        width: 33
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac98767d64b1d4df0800000000000000
+      internalID: -194469217831515702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_58
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 16
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 029a4370c1bbe39b0800000000000000
+      internalID: -5098431999082452704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_59
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 22
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 182f8fe3c5930a5d0800000000000000
+      internalID: -3053377479000919423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_60
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 16
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f66b94ad06d3afb90800000000000000
+      internalID: -7207380767464638865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_61
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 16
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48940eb3ca6b5fc60800000000000000
+      internalID: 7851382376245512580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_62
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 15
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5079c5065b2dc69f0800000000000000
+      internalID: -473772184333150459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_leather_armor_shirt_white_63
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 16
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 519aa3c534729a390800000000000000
+      internalID: -7806665308806403819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TORSO_leather_armor_shirt_white_0: -4082484916860373939
+      TORSO_leather_armor_shirt_white_1: -4960312951486160978
+      TORSO_leather_armor_shirt_white_10: -7430196297712522271
+      TORSO_leather_armor_shirt_white_11: -5806135404208383874
+      TORSO_leather_armor_shirt_white_12: 4711323127183796624
+      TORSO_leather_armor_shirt_white_13: -1651783264998572867
+      TORSO_leather_armor_shirt_white_14: -1751098180807553759
+      TORSO_leather_armor_shirt_white_15: 3729272884042374113
+      TORSO_leather_armor_shirt_white_16: 123346991089378678
+      TORSO_leather_armor_shirt_white_17: 7267920581191742249
+      TORSO_leather_armor_shirt_white_18: 1190398080407284533
+      TORSO_leather_armor_shirt_white_19: -4678175586751024000
+      TORSO_leather_armor_shirt_white_2: -3909362101229726822
+      TORSO_leather_armor_shirt_white_20: 5599298747637049637
+      TORSO_leather_armor_shirt_white_21: -5445116298686095363
+      TORSO_leather_armor_shirt_white_22: 5696686952574192404
+      TORSO_leather_armor_shirt_white_23: -319449018703195034
+      TORSO_leather_armor_shirt_white_24: -735015678887631588
+      TORSO_leather_armor_shirt_white_25: -7622976465018566803
+      TORSO_leather_armor_shirt_white_26: 2816494836796122395
+      TORSO_leather_armor_shirt_white_27: 5382044032291425721
+      TORSO_leather_armor_shirt_white_28: 4838754943221841334
+      TORSO_leather_armor_shirt_white_29: 6361656862026844217
+      TORSO_leather_armor_shirt_white_3: -8527442687098588620
+      TORSO_leather_armor_shirt_white_30: -3820506370692979150
+      TORSO_leather_armor_shirt_white_31: -2213906040570827782
+      TORSO_leather_armor_shirt_white_32: -8940618798697356899
+      TORSO_leather_armor_shirt_white_33: -3789689104917180853
+      TORSO_leather_armor_shirt_white_34: 8575778653292637675
+      TORSO_leather_armor_shirt_white_35: -5538485723891987084
+      TORSO_leather_armor_shirt_white_36: -5370772768105754302
+      TORSO_leather_armor_shirt_white_37: -498284400728767679
+      TORSO_leather_armor_shirt_white_38: 4617254489049269626
+      TORSO_leather_armor_shirt_white_39: 2151109275078495659
+      TORSO_leather_armor_shirt_white_4: 8149614193824592280
+      TORSO_leather_armor_shirt_white_40: 4714721241082281596
+      TORSO_leather_armor_shirt_white_41: -1923399677848731406
+      TORSO_leather_armor_shirt_white_42: -8618995581246670212
+      TORSO_leather_armor_shirt_white_43: -3119920019588475368
+      TORSO_leather_armor_shirt_white_44: -6309174306983394211
+      TORSO_leather_armor_shirt_white_45: -6643152836122029382
+      TORSO_leather_armor_shirt_white_46: -5690665469772936713
+      TORSO_leather_armor_shirt_white_47: -6280275525399232464
+      TORSO_leather_armor_shirt_white_48: 4673168022290369573
+      TORSO_leather_armor_shirt_white_49: -7240969900806827634
+      TORSO_leather_armor_shirt_white_5: -7233160983372877864
+      TORSO_leather_armor_shirt_white_50: -1759404135039638673
+      TORSO_leather_armor_shirt_white_51: -838923144677585812
+      TORSO_leather_armor_shirt_white_52: 729163901223884147
+      TORSO_leather_armor_shirt_white_53: -8407761917650326629
+      TORSO_leather_armor_shirt_white_54: 2913316309903356558
+      TORSO_leather_armor_shirt_white_55: 7559168344740766960
+      TORSO_leather_armor_shirt_white_56: 1379911402519515890
+      TORSO_leather_armor_shirt_white_57: -194469217831515702
+      TORSO_leather_armor_shirt_white_58: -5098431999082452704
+      TORSO_leather_armor_shirt_white_59: -3053377479000919423
+      TORSO_leather_armor_shirt_white_6: 7879443602310514828
+      TORSO_leather_armor_shirt_white_60: -7207380767464638865
+      TORSO_leather_armor_shirt_white_61: 7851382376245512580
+      TORSO_leather_armor_shirt_white_62: -473772184333150459
+      TORSO_leather_armor_shirt_white_63: -7806665308806403819
+      TORSO_leather_armor_shirt_white_7: 8944581466944540727
+      TORSO_leather_armor_shirt_white_8: -454487201906760717
+      TORSO_leather_armor_shirt_white_9: -4584957653680156694
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

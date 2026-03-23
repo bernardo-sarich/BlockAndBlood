@@ -1,0 +1,1729 @@
+fileFormatVersion: 2
+guid: 05e72be5343f46d4994324fef5dbceb7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2024472785780944478
+    second: TORSO_robe_shirt_brown_0
+  - first:
+      213: 2382905502211091682
+    second: TORSO_robe_shirt_brown_1
+  - first:
+      213: -151232065431691846
+    second: TORSO_robe_shirt_brown_2
+  - first:
+      213: 2427582849594847987
+    second: TORSO_robe_shirt_brown_3
+  - first:
+      213: 7791338951163965835
+    second: TORSO_robe_shirt_brown_4
+  - first:
+      213: 112841457025046340
+    second: TORSO_robe_shirt_brown_5
+  - first:
+      213: 5871747160119782565
+    second: TORSO_robe_shirt_brown_6
+  - first:
+      213: 605304320547336508
+    second: TORSO_robe_shirt_brown_7
+  - first:
+      213: -8067850773811954377
+    second: TORSO_robe_shirt_brown_8
+  - first:
+      213: 6193052049273947357
+    second: TORSO_robe_shirt_brown_9
+  - first:
+      213: 7877362886944653001
+    second: TORSO_robe_shirt_brown_10
+  - first:
+      213: -4967037493654342234
+    second: TORSO_robe_shirt_brown_11
+  - first:
+      213: 88896526578300055
+    second: TORSO_robe_shirt_brown_12
+  - first:
+      213: 386742869439522114
+    second: TORSO_robe_shirt_brown_13
+  - first:
+      213: 3444312588208616844
+    second: TORSO_robe_shirt_brown_14
+  - first:
+      213: -7450334918400441166
+    second: TORSO_robe_shirt_brown_15
+  - first:
+      213: -5788592783602681954
+    second: TORSO_robe_shirt_brown_16
+  - first:
+      213: 1240154673681427146
+    second: TORSO_robe_shirt_brown_17
+  - first:
+      213: -5381033521209496479
+    second: TORSO_robe_shirt_brown_18
+  - first:
+      213: -1135901953651720766
+    second: TORSO_robe_shirt_brown_19
+  - first:
+      213: 3452696295171948345
+    second: TORSO_robe_shirt_brown_20
+  - first:
+      213: -3397386262375538431
+    second: TORSO_robe_shirt_brown_21
+  - first:
+      213: 6323632434137706207
+    second: TORSO_robe_shirt_brown_22
+  - first:
+      213: 9218025716207257435
+    second: TORSO_robe_shirt_brown_23
+  - first:
+      213: 1327578435813295358
+    second: TORSO_robe_shirt_brown_24
+  - first:
+      213: 2695388894322691890
+    second: TORSO_robe_shirt_brown_25
+  - first:
+      213: 4105232372909528580
+    second: TORSO_robe_shirt_brown_26
+  - first:
+      213: 7697243225425056744
+    second: TORSO_robe_shirt_brown_27
+  - first:
+      213: -528663774611505225
+    second: TORSO_robe_shirt_brown_28
+  - first:
+      213: 769742887557216815
+    second: TORSO_robe_shirt_brown_29
+  - first:
+      213: -9142009435808979475
+    second: TORSO_robe_shirt_brown_30
+  - first:
+      213: 5204792801917676934
+    second: TORSO_robe_shirt_brown_31
+  - first:
+      213: -8250338771124512430
+    second: TORSO_robe_shirt_brown_32
+  - first:
+      213: -4372331048930362476
+    second: TORSO_robe_shirt_brown_33
+  - first:
+      213: 6733321480544092208
+    second: TORSO_robe_shirt_brown_34
+  - first:
+      213: -6978872183671721638
+    second: TORSO_robe_shirt_brown_35
+  - first:
+      213: 6400778897472043931
+    second: TORSO_robe_shirt_brown_36
+  - first:
+      213: 9108412382453982165
+    second: TORSO_robe_shirt_brown_37
+  - first:
+      213: 2260313046258814970
+    second: TORSO_robe_shirt_brown_38
+  - first:
+      213: -4162439634235888936
+    second: TORSO_robe_shirt_brown_39
+  - first:
+      213: 7574058258048650877
+    second: TORSO_robe_shirt_brown_40
+  - first:
+      213: 1852982592484532663
+    second: TORSO_robe_shirt_brown_41
+  - first:
+      213: -369286910140843085
+    second: TORSO_robe_shirt_brown_42
+  - first:
+      213: 7502293832772363360
+    second: TORSO_robe_shirt_brown_43
+  - first:
+      213: -1634162323142547498
+    second: TORSO_robe_shirt_brown_44
+  - first:
+      213: -9046302738671081364
+    second: TORSO_robe_shirt_brown_45
+  - first:
+      213: -6284743850222513746
+    second: TORSO_robe_shirt_brown_46
+  - first:
+      213: -2739800668225837979
+    second: TORSO_robe_shirt_brown_47
+  - first:
+      213: 2613135810132873499
+    second: TORSO_robe_shirt_brown_48
+  - first:
+      213: 9042681691352151876
+    second: TORSO_robe_shirt_brown_49
+  - first:
+      213: 4985977988416283733
+    second: TORSO_robe_shirt_brown_50
+  - first:
+      213: 7646382773826410833
+    second: TORSO_robe_shirt_brown_51
+  - first:
+      213: -6856769635020102391
+    second: TORSO_robe_shirt_brown_52
+  - first:
+      213: -6055760588536583437
+    second: TORSO_robe_shirt_brown_53
+  - first:
+      213: 8976868482189759062
+    second: TORSO_robe_shirt_brown_54
+  - first:
+      213: 3489499197876026321
+    second: TORSO_robe_shirt_brown_55
+  - first:
+      213: -3759310176870549388
+    second: TORSO_robe_shirt_brown_56
+  - first:
+      213: -5120958136501130281
+    second: TORSO_robe_shirt_brown_57
+  - first:
+      213: -7345927858497470827
+    second: TORSO_robe_shirt_brown_58
+  - first:
+      213: 6646538268223265282
+    second: TORSO_robe_shirt_brown_59
+  - first:
+      213: -4349737717033103186
+    second: TORSO_robe_shirt_brown_60
+  - first:
+      213: -8970285637855438755
+    second: TORSO_robe_shirt_brown_61
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 208
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a1d41a3ab0a7e3e0800000000000000
+      internalID: -2024472785780944478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_1
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 205
+        width: 27
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ecad98dde7c11120800000000000000
+      internalID: 2382905502211091682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_2
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 204
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abd9b4ddc37b6edf0800000000000000
+      internalID: -151232065431691846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_3
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 206
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f27ee46db180b120800000000000000
+      internalID: 2427582849594847987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_4
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 207
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b81faccee75602c60800000000000000
+      internalID: 7791338951163965835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_5
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 209
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4475ae115b4e09100800000000000000
+      internalID: 112841457025046340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_6
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 209
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ac29d9aee2ac7150800000000000000
+      internalID: 5871747160119782565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_7
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 209
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c31bb3f8219766800800000000000000
+      internalID: 605304320547336508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_8
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 209
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73df31e677c390090800000000000000
+      internalID: -8067850773811954377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_9
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 207
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd48a70d60422f550800000000000000
+      internalID: 6193052049273947357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_10
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 206
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ce7e234fc3025d60800000000000000
+      internalID: 7877362886944653001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_11
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 206
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a5bfac47b9811bb0800000000000000
+      internalID: -4967037493654342234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_12
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 206
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79437708be2db3100800000000000000
+      internalID: 88896526578300055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_13
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 144
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 245ab58379cfd5500800000000000000
+      internalID: 386742869439522114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_14
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 144
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c85b49bdc08accf20800000000000000
+      internalID: 3444312588208616844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_15
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 144
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b48d038dd71b9890800000000000000
+      internalID: -7450334918400441166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_16
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 144
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e97f8f75889caafa0800000000000000
+      internalID: -5788592783602681954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_17
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 144
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aca6257ea1ae53110800000000000000
+      internalID: 1240154673681427146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_18
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 150
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16ca6dbb58ab255b0800000000000000
+      internalID: -5381033521209496479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_19
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 144
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cdbae001377c30f0800000000000000
+      internalID: -1135901953651720766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_20
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 144
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93ff70fbcf07aef20800000000000000
+      internalID: 3452696295171948345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_21
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 144
+        width: 33
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 101605ac13f0ad0d0800000000000000
+      internalID: -3397386262375538431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_22
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 144
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdeaaeed13e02c750800000000000000
+      internalID: 6323632434137706207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_23
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 144
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5703f8bc810def70800000000000000
+      internalID: 9218025716207257435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_24
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 150
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef4ce16bd818c6210800000000000000
+      internalID: 1327578435813295358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_25
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 144
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23f03a92be1f76520800000000000000
+      internalID: 2695388894322691890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_26
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 143
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 406d4bbb717b8f830800000000000000
+      internalID: 4105232372909528580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_27
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 144
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e31e398ee912da60800000000000000
+      internalID: 7697243225425056744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_28
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 80
+        width: 32
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bff9a4191fc9a8f0800000000000000
+      internalID: -528663774611505225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_29
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 80
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2a3b35f31daeaa00800000000000000
+      internalID: 769742887557216815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_30
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 81
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de52655cade012180800000000000000
+      internalID: -9142009435808979475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_31
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 80
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68d20d72a732b3840800000000000000
+      internalID: 5204792801917676934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_32
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 90
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2599d7e8998e08d80800000000000000
+      internalID: -8250338771124512430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_33
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 80
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49b381c931c5253c0800000000000000
+      internalID: -4372331048930362476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_34
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 88
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 030865e3630917d50800000000000000
+      internalID: 6733321480544092208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_35
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 80
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a51746f79b0162f90800000000000000
+      internalID: -6978872183671721638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_36
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 90
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9b33a59e7224d850800000000000000
+      internalID: 6400778897472043931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_37
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 80
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d360fbadc4976e70800000000000000
+      internalID: 9108412382453982165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_38
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 92
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aff007b6dbe3e5f10800000000000000
+      internalID: 2260313046258814970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_39
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 80
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8daec5ac43b0c36c0800000000000000
+      internalID: -4162439634235888936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_40
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 92
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7e8a1b4bd57c1960800000000000000
+      internalID: 7574058258048650877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_41
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 81
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b1e500b9dd17b910800000000000000
+      internalID: 1852982592484532663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_42
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 91
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bb7ad4038700eaf0800000000000000
+      internalID: -369286910140843085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_43
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 80
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0642007fd708d1860800000000000000
+      internalID: 7502293832772363360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_44
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 81
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d7e2c7760a4259e0800000000000000
+      internalID: -1634162323142547498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_45
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 81
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c68eddaa693157280800000000000000
+      internalID: -9046302738671081364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_46
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 80
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea19a2724ca18c8a0800000000000000
+      internalID: -6284743850222513746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_47
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 16
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 564650feec54af9d0800000000000000
+      internalID: -2739800668225837979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_48
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 16
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1192d0ac29b34420800000000000000
+      internalID: 2613135810132873499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_49
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 16
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44739fd861f0e7d70800000000000000
+      internalID: 9042681691352151876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_50
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 16
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55428794090c13540800000000000000
+      internalID: 4985977988416283733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_51
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 22
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 159d69ade986d1a60800000000000000
+      internalID: 7646382773826410833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_52
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 16
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90521fd785cd7d0a0800000000000000
+      internalID: -6856769635020102391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_53
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 16
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fa677b54dd95fba0800000000000000
+      internalID: -6055760588536583437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_54
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 16
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6521254b25e349c70800000000000000
+      internalID: 8976868482189759062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_55
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 16
+        width: 33
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1db396548013d6030800000000000000
+      internalID: 3489499197876026321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_56
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 16
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 478be13df4f34dbc0800000000000000
+      internalID: -3759310176870549388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_57
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 22
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7db2434f4b3bee8b0800000000000000
+      internalID: -5120958136501130281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_58
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 16
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59ebc9878850e0a90800000000000000
+      internalID: -7345927858497470827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_59
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 16
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20adc7f075f3d3c50800000000000000
+      internalID: 6646538268223265282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_60
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 15
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea09f1e9790a2a3c0800000000000000
+      internalID: -4349737717033103186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORSO_robe_shirt_brown_61
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 16
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5896dd2db4238380800000000000000
+      internalID: -8970285637855438755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TORSO_robe_shirt_brown_0: -2024472785780944478
+      TORSO_robe_shirt_brown_1: 2382905502211091682
+      TORSO_robe_shirt_brown_10: 7877362886944653001
+      TORSO_robe_shirt_brown_11: -4967037493654342234
+      TORSO_robe_shirt_brown_12: 88896526578300055
+      TORSO_robe_shirt_brown_13: 386742869439522114
+      TORSO_robe_shirt_brown_14: 3444312588208616844
+      TORSO_robe_shirt_brown_15: -7450334918400441166
+      TORSO_robe_shirt_brown_16: -5788592783602681954
+      TORSO_robe_shirt_brown_17: 1240154673681427146
+      TORSO_robe_shirt_brown_18: -5381033521209496479
+      TORSO_robe_shirt_brown_19: -1135901953651720766
+      TORSO_robe_shirt_brown_2: -151232065431691846
+      TORSO_robe_shirt_brown_20: 3452696295171948345
+      TORSO_robe_shirt_brown_21: -3397386262375538431
+      TORSO_robe_shirt_brown_22: 6323632434137706207
+      TORSO_robe_shirt_brown_23: 9218025716207257435
+      TORSO_robe_shirt_brown_24: 1327578435813295358
+      TORSO_robe_shirt_brown_25: 2695388894322691890
+      TORSO_robe_shirt_brown_26: 4105232372909528580
+      TORSO_robe_shirt_brown_27: 7697243225425056744
+      TORSO_robe_shirt_brown_28: -528663774611505225
+      TORSO_robe_shirt_brown_29: 769742887557216815
+      TORSO_robe_shirt_brown_3: 2427582849594847987
+      TORSO_robe_shirt_brown_30: -9142009435808979475
+      TORSO_robe_shirt_brown_31: 5204792801917676934
+      TORSO_robe_shirt_brown_32: -8250338771124512430
+      TORSO_robe_shirt_brown_33: -4372331048930362476
+      TORSO_robe_shirt_brown_34: 6733321480544092208
+      TORSO_robe_shirt_brown_35: -6978872183671721638
+      TORSO_robe_shirt_brown_36: 6400778897472043931
+      TORSO_robe_shirt_brown_37: 9108412382453982165
+      TORSO_robe_shirt_brown_38: 2260313046258814970
+      TORSO_robe_shirt_brown_39: -4162439634235888936
+      TORSO_robe_shirt_brown_4: 7791338951163965835
+      TORSO_robe_shirt_brown_40: 7574058258048650877
+      TORSO_robe_shirt_brown_41: 1852982592484532663
+      TORSO_robe_shirt_brown_42: -369286910140843085
+      TORSO_robe_shirt_brown_43: 7502293832772363360
+      TORSO_robe_shirt_brown_44: -1634162323142547498
+      TORSO_robe_shirt_brown_45: -9046302738671081364
+      TORSO_robe_shirt_brown_46: -6284743850222513746
+      TORSO_robe_shirt_brown_47: -2739800668225837979
+      TORSO_robe_shirt_brown_48: 2613135810132873499
+      TORSO_robe_shirt_brown_49: 9042681691352151876
+      TORSO_robe_shirt_brown_5: 112841457025046340
+      TORSO_robe_shirt_brown_50: 4985977988416283733
+      TORSO_robe_shirt_brown_51: 7646382773826410833
+      TORSO_robe_shirt_brown_52: -6856769635020102391
+      TORSO_robe_shirt_brown_53: -6055760588536583437
+      TORSO_robe_shirt_brown_54: 8976868482189759062
+      TORSO_robe_shirt_brown_55: 3489499197876026321
+      TORSO_robe_shirt_brown_56: -3759310176870549388
+      TORSO_robe_shirt_brown_57: -5120958136501130281
+      TORSO_robe_shirt_brown_58: -7345927858497470827
+      TORSO_robe_shirt_brown_59: 6646538268223265282
+      TORSO_robe_shirt_brown_6: 5871747160119782565
+      TORSO_robe_shirt_brown_60: -4349737717033103186
+      TORSO_robe_shirt_brown_61: -8970285637855438755
+      TORSO_robe_shirt_brown_7: 605304320547336508
+      TORSO_robe_shirt_brown_8: -8067850773811954377
+      TORSO_robe_shirt_brown_9: 6193052049273947357
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

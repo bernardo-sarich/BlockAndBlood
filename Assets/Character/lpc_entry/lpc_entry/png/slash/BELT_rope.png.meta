@@ -1,0 +1,767 @@
+fileFormatVersion: 2
+guid: 9b1783f8e59b78046b6d0df11ec9fb86
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6104646590342317627
+    second: BELT_rope_0
+  - first:
+      213: 4893521143339036357
+    second: BELT_rope_1
+  - first:
+      213: 3562948288019893220
+    second: BELT_rope_2
+  - first:
+      213: 3940990570392457943
+    second: BELT_rope_3
+  - first:
+      213: 5889822738347397676
+    second: BELT_rope_4
+  - first:
+      213: -983086907789711337
+    second: BELT_rope_5
+  - first:
+      213: 651659089937557487
+    second: BELT_rope_6
+  - first:
+      213: -6747175120553864004
+    second: BELT_rope_7
+  - first:
+      213: -2557471548669835060
+    second: BELT_rope_8
+  - first:
+      213: -5339526655956905053
+    second: BELT_rope_9
+  - first:
+      213: -3690113388776976499
+    second: BELT_rope_10
+  - first:
+      213: -1947061103705314385
+    second: BELT_rope_11
+  - first:
+      213: -4918059337798033742
+    second: BELT_rope_12
+  - first:
+      213: 7552197543254706026
+    second: BELT_rope_13
+  - first:
+      213: -838047792638435761
+    second: BELT_rope_14
+  - first:
+      213: 8574344935123077922
+    second: BELT_rope_15
+  - first:
+      213: -4271678522279592070
+    second: BELT_rope_16
+  - first:
+      213: 2921282945845875322
+    second: BELT_rope_17
+  - first:
+      213: 2062046278510950843
+    second: BELT_rope_18
+  - first:
+      213: 1841345047248035431
+    second: BELT_rope_19
+  - first:
+      213: -9181959958986181468
+    second: BELT_rope_20
+  - first:
+      213: -1367848958668894936
+    second: BELT_rope_21
+  - first:
+      213: 1951773912687027453
+    second: BELT_rope_22
+  - first:
+      213: -2481215308191521187
+    second: BELT_rope_23
+  - first:
+      213: -6742471276233177636
+    second: BELT_rope_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BELT_rope_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 206
+        width: 20
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c9b8571540f74ba0800000000000000
+      internalID: -6104646590342317627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_rope_1
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 206
+        width: 20
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ce26998d8749e340800000000000000
+      internalID: 4893521143339036357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_rope_2
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 206
+        width: 20
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eb03843792227130800000000000000
+      internalID: 3562948288019893220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_rope_3
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 206
+        width: 20
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d218632b0631b630800000000000000
+      internalID: 3940990570392457943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_rope_4
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 206
+        width: 20
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c22173d239adcb150800000000000000
+      internalID: 5889822738347397676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_rope_5
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 206
+        width: 20
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7186bdd7aaf5b52f0800000000000000
+      internalID: -983086907789711337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_rope_6
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 142
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe7e16a5d782b0900800000000000000
+      internalID: 651659089937557487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_rope_7
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 140
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb49806d9f73d52a0800000000000000
+      internalID: -6747175120553864004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_rope_8
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 142
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc8cd523d29028cd0800000000000000
+      internalID: -2557471548669835060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_rope_9
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 142
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a395f2ebc036e5b0800000000000000
+      internalID: -5339526655956905053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_rope_10
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 142
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8f09098c651accc0800000000000000
+      internalID: -3690113388776976499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_rope_11
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 142
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fab2aadfd36aaf4e0800000000000000
+      internalID: -1947061103705314385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_rope_12
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 74
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2be514ad61b8fbbb0800000000000000
+      internalID: -4918059337798033742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_rope_13
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 74
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a67464ff6abcec860800000000000000
+      internalID: 7552197543254706026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_rope_14
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 77
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4e5cf609f7ae54f0800000000000000
+      internalID: -838047792638435761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_rope_15
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 72
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22b4ea72a413ef670800000000000000
+      internalID: 8574344935123077922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_rope_16
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 73
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7ffbdc2403f7b4c0800000000000000
+      internalID: -4271678522279592070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_rope_17
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 74
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a72dc839c5b7a8820800000000000000
+      internalID: 2921282945845875322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_rope_18
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 74
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb9bf054a2cdd9c10800000000000000
+      internalID: 2062046278510950843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_rope_19
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 14
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76ed42a8095cd8910800000000000000
+      internalID: 1841345047248035431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_rope_20
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 12
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a4b4ceb010239080800000000000000
+      internalID: -9181959958986181468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_rope_21
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 14
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82d07288e9c640de0800000000000000
+      internalID: -1367848958668894936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_rope_22
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 14
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df4a59b5808161b10800000000000000
+      internalID: 1951773912687027453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_rope_23
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 14
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d56abffb2d3f09dd0800000000000000
+      internalID: -2481215308191521187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BELT_rope_24
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 14
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd5c8dfe81eed62a0800000000000000
+      internalID: -6742471276233177636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BELT_rope_0: -6104646590342317627
+      BELT_rope_1: 4893521143339036357
+      BELT_rope_10: -3690113388776976499
+      BELT_rope_11: -1947061103705314385
+      BELT_rope_12: -4918059337798033742
+      BELT_rope_13: 7552197543254706026
+      BELT_rope_14: -838047792638435761
+      BELT_rope_15: 8574344935123077922
+      BELT_rope_16: -4271678522279592070
+      BELT_rope_17: 2921282945845875322
+      BELT_rope_18: 2062046278510950843
+      BELT_rope_19: 1841345047248035431
+      BELT_rope_2: 3562948288019893220
+      BELT_rope_20: -9181959958986181468
+      BELT_rope_21: -1367848958668894936
+      BELT_rope_22: 1951773912687027453
+      BELT_rope_23: -2481215308191521187
+      BELT_rope_24: -6742471276233177636
+      BELT_rope_3: 3940990570392457943
+      BELT_rope_4: 5889822738347397676
+      BELT_rope_5: -983086907789711337
+      BELT_rope_6: 651659089937557487
+      BELT_rope_7: -6747175120553864004
+      BELT_rope_8: -2557471548669835060
+      BELT_rope_9: -5339526655956905053
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

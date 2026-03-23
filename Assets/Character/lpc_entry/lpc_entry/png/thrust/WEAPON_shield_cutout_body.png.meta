@@ -1,0 +1,949 @@
+fileFormatVersion: 2
+guid: cc23de493ef08e346a2c957e6a282dd5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5017936367911524432
+    second: WEAPON_shield_cutout_body_0
+  - first:
+      213: -3419889484202320476
+    second: WEAPON_shield_cutout_body_1
+  - first:
+      213: -2034915449668982559
+    second: WEAPON_shield_cutout_body_2
+  - first:
+      213: 4800090848546868718
+    second: WEAPON_shield_cutout_body_3
+  - first:
+      213: -830753768964472880
+    second: WEAPON_shield_cutout_body_4
+  - first:
+      213: 4267943598348161196
+    second: WEAPON_shield_cutout_body_5
+  - first:
+      213: 2359654450385836731
+    second: WEAPON_shield_cutout_body_6
+  - first:
+      213: 272775586460607470
+    second: WEAPON_shield_cutout_body_7
+  - first:
+      213: -9012936888960449043
+    second: WEAPON_shield_cutout_body_8
+  - first:
+      213: -2009079866021886329
+    second: WEAPON_shield_cutout_body_9
+  - first:
+      213: -4830550052256626725
+    second: WEAPON_shield_cutout_body_10
+  - first:
+      213: -9011373821228033503
+    second: WEAPON_shield_cutout_body_11
+  - first:
+      213: -5690076512387795203
+    second: WEAPON_shield_cutout_body_12
+  - first:
+      213: 636420044789121253
+    second: WEAPON_shield_cutout_body_13
+  - first:
+      213: 3988649767831262760
+    second: WEAPON_shield_cutout_body_14
+  - first:
+      213: -5691624418102433158
+    second: WEAPON_shield_cutout_body_15
+  - first:
+      213: -5698982671835566685
+    second: WEAPON_shield_cutout_body_16
+  - first:
+      213: -4768165911383182718
+    second: WEAPON_shield_cutout_body_17
+  - first:
+      213: -2213380597635597841
+    second: WEAPON_shield_cutout_body_18
+  - first:
+      213: 2721233767782482179
+    second: WEAPON_shield_cutout_body_19
+  - first:
+      213: -3205913051210800508
+    second: WEAPON_shield_cutout_body_20
+  - first:
+      213: 7969359016325285670
+    second: WEAPON_shield_cutout_body_21
+  - first:
+      213: -3535351575182750350
+    second: WEAPON_shield_cutout_body_22
+  - first:
+      213: 3524056841700121044
+    second: WEAPON_shield_cutout_body_23
+  - first:
+      213: 3053169209747575270
+    second: WEAPON_shield_cutout_body_24
+  - first:
+      213: -4849952244796372752
+    second: WEAPON_shield_cutout_body_25
+  - first:
+      213: -8546434021370677445
+    second: WEAPON_shield_cutout_body_26
+  - first:
+      213: 3511460563636998784
+    second: WEAPON_shield_cutout_body_27
+  - first:
+      213: 6502579950332709655
+    second: WEAPON_shield_cutout_body_28
+  - first:
+      213: 2593750261503562074
+    second: WEAPON_shield_cutout_body_29
+  - first:
+      213: -1766559760765819482
+    second: WEAPON_shield_cutout_body_30
+  - first:
+      213: -2610241491512289824
+    second: WEAPON_shield_cutout_body_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 200
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05851ea5a8a43a540800000000000000
+      internalID: 5017936367911524432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_1
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 199
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4add60b22ac1a80d0800000000000000
+      internalID: -3419889484202320476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 201
+        width: 10
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e8a6821e2782c3e0800000000000000
+      internalID: -2034915449668982559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_3
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 206
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eed4d3dd1395d9240800000000000000
+      internalID: 4800090848546868718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_4
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 210
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0df3e0149d19874f0800000000000000
+      internalID: -830753768964472880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_5
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 212
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca0d1f41718ca3b30800000000000000
+      internalID: 4267943598348161196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_6
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 210
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbadaeb783d2fb020800000000000000
+      internalID: 2359654450385836731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_7
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 206
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee3226e53f719c300800000000000000
+      internalID: 272775586460607470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_8
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 136
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de58f7ee6ad9be280800000000000000
+      internalID: -9012936888960449043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_9
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 137
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7864064a1805e14e0800000000000000
+      internalID: -2009079866021886329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_10
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 138
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd7cf71225076fcb0800000000000000
+      internalID: -4830550052256626725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_11
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 138
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12ad27ff04b21f280800000000000000
+      internalID: -9011373821228033503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_12
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 138
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df6f45e2f89c801b0800000000000000
+      internalID: -5690076512387795203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_13
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 138
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e00899a8a405d800800000000000000
+      internalID: 636420044789121253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_14
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 138
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 826d601c4d78a5730800000000000000
+      internalID: 3988649767831262760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_15
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 138
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7aa01c4fb94301b0800000000000000
+      internalID: -5691624418102433158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_16
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 70
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ad6228547529e0b0800000000000000
+      internalID: -5698982671835566685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_17
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 70
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 282f0edcd5214ddb0800000000000000
+      internalID: -4768165911383182718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_18
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 71
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe9303dc21e7841e0800000000000000
+      internalID: -2213380597635597841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_19
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 70
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 301097fa1b3c3c520800000000000000
+      internalID: 2721233767782482179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_20
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 69
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 482aac9c01f4283d0800000000000000
+      internalID: -3205913051210800508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_21
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 68
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62700a74dc9d89e60800000000000000
+      internalID: 7969359016325285670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_22
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 69
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27d4d153978efeec0800000000000000
+      internalID: -3535351575182750350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_23
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 70
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d912d9b607f7e030800000000000000
+      internalID: 3524056841700121044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_24
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 8
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e11a2a48390f5a20800000000000000
+      internalID: 3053169209747575270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_25
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 9
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f8cd47212281bcb0800000000000000
+      internalID: -4849952244796372752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_26
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 10
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3733ebd987f46980800000000000000
+      internalID: -8546434021370677445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_27
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 10
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 082506237c63bb030800000000000000
+      internalID: 3511460563636998784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_28
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 10
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71b882f330ecd3a50800000000000000
+      internalID: 6502579950332709655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_29
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 10
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a511ffcde1adef320800000000000000
+      internalID: 2593750261503562074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_30
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 10
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a5ed09d14beb77e0800000000000000
+      internalID: -1766559760765819482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_shield_cutout_body_31
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 10
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e59c60713f86cbd0800000000000000
+      internalID: -2610241491512289824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      WEAPON_shield_cutout_body_0: 5017936367911524432
+      WEAPON_shield_cutout_body_1: -3419889484202320476
+      WEAPON_shield_cutout_body_10: -4830550052256626725
+      WEAPON_shield_cutout_body_11: -9011373821228033503
+      WEAPON_shield_cutout_body_12: -5690076512387795203
+      WEAPON_shield_cutout_body_13: 636420044789121253
+      WEAPON_shield_cutout_body_14: 3988649767831262760
+      WEAPON_shield_cutout_body_15: -5691624418102433158
+      WEAPON_shield_cutout_body_16: -5698982671835566685
+      WEAPON_shield_cutout_body_17: -4768165911383182718
+      WEAPON_shield_cutout_body_18: -2213380597635597841
+      WEAPON_shield_cutout_body_19: 2721233767782482179
+      WEAPON_shield_cutout_body_2: -2034915449668982559
+      WEAPON_shield_cutout_body_20: -3205913051210800508
+      WEAPON_shield_cutout_body_21: 7969359016325285670
+      WEAPON_shield_cutout_body_22: -3535351575182750350
+      WEAPON_shield_cutout_body_23: 3524056841700121044
+      WEAPON_shield_cutout_body_24: 3053169209747575270
+      WEAPON_shield_cutout_body_25: -4849952244796372752
+      WEAPON_shield_cutout_body_26: -8546434021370677445
+      WEAPON_shield_cutout_body_27: 3511460563636998784
+      WEAPON_shield_cutout_body_28: 6502579950332709655
+      WEAPON_shield_cutout_body_29: 2593750261503562074
+      WEAPON_shield_cutout_body_3: 4800090848546868718
+      WEAPON_shield_cutout_body_30: -1766559760765819482
+      WEAPON_shield_cutout_body_31: -2610241491512289824
+      WEAPON_shield_cutout_body_4: -830753768964472880
+      WEAPON_shield_cutout_body_5: 4267943598348161196
+      WEAPON_shield_cutout_body_6: 2359654450385836731
+      WEAPON_shield_cutout_body_7: 272775586460607470
+      WEAPON_shield_cutout_body_8: -9012936888960449043
+      WEAPON_shield_cutout_body_9: -2009079866021886329
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

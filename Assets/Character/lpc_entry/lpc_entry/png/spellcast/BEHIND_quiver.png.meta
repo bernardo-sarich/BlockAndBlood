@@ -1,0 +1,845 @@
+fileFormatVersion: 2
+guid: 46f209b4da6d1324395f285079624043
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4544719037655290984
+    second: BEHIND_quiver_0
+  - first:
+      213: 9018369824940722956
+    second: BEHIND_quiver_1
+  - first:
+      213: -7335389501462589534
+    second: BEHIND_quiver_2
+  - first:
+      213: -7365669027119877873
+    second: BEHIND_quiver_3
+  - first:
+      213: -5691407153002890306
+    second: BEHIND_quiver_4
+  - first:
+      213: -7605747882624797073
+    second: BEHIND_quiver_5
+  - first:
+      213: -3363510932544070114
+    second: BEHIND_quiver_6
+  - first:
+      213: -8976056338809362127
+    second: BEHIND_quiver_7
+  - first:
+      213: -8406383110521859244
+    second: BEHIND_quiver_8
+  - first:
+      213: -4713868717184272314
+    second: BEHIND_quiver_9
+  - first:
+      213: 2195058531601657089
+    second: BEHIND_quiver_10
+  - first:
+      213: 5761202811284947213
+    second: BEHIND_quiver_11
+  - first:
+      213: -177805427266236081
+    second: BEHIND_quiver_12
+  - first:
+      213: -1145621492006467329
+    second: BEHIND_quiver_13
+  - first:
+      213: -9184579685551954451
+    second: BEHIND_quiver_14
+  - first:
+      213: 3403638346775562916
+    second: BEHIND_quiver_15
+  - first:
+      213: -5852022570457211935
+    second: BEHIND_quiver_16
+  - first:
+      213: -5351797806010696096
+    second: BEHIND_quiver_17
+  - first:
+      213: 686886796781534876
+    second: BEHIND_quiver_18
+  - first:
+      213: -6563536399626525113
+    second: BEHIND_quiver_19
+  - first:
+      213: -8963111285065330680
+    second: BEHIND_quiver_20
+  - first:
+      213: 5146577527967013754
+    second: BEHIND_quiver_21
+  - first:
+      213: -4271034307287496109
+    second: BEHIND_quiver_22
+  - first:
+      213: 1871920930277550234
+    second: BEHIND_quiver_23
+  - first:
+      213: -783667733222967562
+    second: BEHIND_quiver_24
+  - first:
+      213: 1757222284626005984
+    second: BEHIND_quiver_25
+  - first:
+      213: 2765520720246032900
+    second: BEHIND_quiver_26
+  - first:
+      213: 6195335822611485799
+    second: BEHIND_quiver_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BEHIND_quiver_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 199
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8641663c2e5121f30800000000000000
+      internalID: 4544719037655290984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BEHIND_quiver_1
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 199
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0b81bc039fa72d70800000000000000
+      internalID: 9018369824940722956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BEHIND_quiver_2
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 199
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2af413cec16733a90800000000000000
+      internalID: -7335389501462589534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BEHIND_quiver_3
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 199
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f013c697b03e7c990800000000000000
+      internalID: -7365669027119877873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BEHIND_quiver_4
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 199
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebb3525495f0401b0800000000000000
+      internalID: -5691407153002890306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BEHIND_quiver_5
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 199
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6638f40994f27690800000000000000
+      internalID: -7605747882624797073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BEHIND_quiver_6
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 199
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1e5193a0a86251d0800000000000000
+      internalID: -3363510932544070114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BEHIND_quiver_7
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 136
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 139ef592154ae6380800000000000000
+      internalID: -8976056338809362127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BEHIND_quiver_8
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 136
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45350839917865b80800000000000000
+      internalID: -8406383110521859244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BEHIND_quiver_9
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 136
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 648b76a7069f49eb0800000000000000
+      internalID: -4713868717184272314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BEHIND_quiver_10
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 136
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10dae45ca1a667e10800000000000000
+      internalID: 2195058531601657089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BEHIND_quiver_11
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 136
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d010f95ce67e3ff40800000000000000
+      internalID: 5761202811284947213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BEHIND_quiver_12
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 136
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f41d8ace7ee488df0800000000000000
+      internalID: -177805427266236081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BEHIND_quiver_13
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 136
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff8c6e1a25fe910f0800000000000000
+      internalID: -1145621492006467329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BEHIND_quiver_14
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 69
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de5286f1071d98080800000000000000
+      internalID: -9184579685551954451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BEHIND_quiver_15
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 69
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aa847b0b072c3f20800000000000000
+      internalID: 3403638346775562916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BEHIND_quiver_16
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 69
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1eb545e3a7079cea0800000000000000
+      internalID: -5852022570457211935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BEHIND_quiver_17
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 69
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06e740f10489ab5b0800000000000000
+      internalID: -5351797806010696096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BEHIND_quiver_18
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 69
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9eb11307ef488900800000000000000
+      internalID: 686886796781534876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BEHIND_quiver_19
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 69
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7462aed6b62a9e4a0800000000000000
+      internalID: -6563536399626525113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BEHIND_quiver_20
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 69
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 800d26b56c1ac9380800000000000000
+      internalID: -8963111285065330680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BEHIND_quiver_21
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 7
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7b5b737ef05c6740800000000000000
+      internalID: 5146577527967013754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BEHIND_quiver_22
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 7
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35a4f9a2dec3ab4c0800000000000000
+      internalID: -4271034307287496109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BEHIND_quiver_23
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 7
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a98efc01b266af910800000000000000
+      internalID: 1871920930277550234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BEHIND_quiver_24
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 7
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f63f43495adf15f0800000000000000
+      internalID: -783667733222967562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BEHIND_quiver_25
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 7
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ef88829b58e26810800000000000000
+      internalID: 1757222284626005984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BEHIND_quiver_26
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 7
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40a4f35517a116620800000000000000
+      internalID: 2765520720246032900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BEHIND_quiver_27
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 7
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 764920b3b114af550800000000000000
+      internalID: 6195335822611485799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BEHIND_quiver_0: 4544719037655290984
+      BEHIND_quiver_1: 9018369824940722956
+      BEHIND_quiver_10: 2195058531601657089
+      BEHIND_quiver_11: 5761202811284947213
+      BEHIND_quiver_12: -177805427266236081
+      BEHIND_quiver_13: -1145621492006467329
+      BEHIND_quiver_14: -9184579685551954451
+      BEHIND_quiver_15: 3403638346775562916
+      BEHIND_quiver_16: -5852022570457211935
+      BEHIND_quiver_17: -5351797806010696096
+      BEHIND_quiver_18: 686886796781534876
+      BEHIND_quiver_19: -6563536399626525113
+      BEHIND_quiver_2: -7335389501462589534
+      BEHIND_quiver_20: -8963111285065330680
+      BEHIND_quiver_21: 5146577527967013754
+      BEHIND_quiver_22: -4271034307287496109
+      BEHIND_quiver_23: 1871920930277550234
+      BEHIND_quiver_24: -783667733222967562
+      BEHIND_quiver_25: 1757222284626005984
+      BEHIND_quiver_26: 2765520720246032900
+      BEHIND_quiver_27: 6195335822611485799
+      BEHIND_quiver_3: -7365669027119877873
+      BEHIND_quiver_4: -5691407153002890306
+      BEHIND_quiver_5: -7605747882624797073
+      BEHIND_quiver_6: -3363510932544070114
+      BEHIND_quiver_7: -8976056338809362127
+      BEHIND_quiver_8: -8406383110521859244
+      BEHIND_quiver_9: -4713868717184272314
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
