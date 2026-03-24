@@ -4,92 +4,104 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// Manages the in-game HUD:
-///   • Top bar: Gold + Lives display (Inspector-wired, unchanged)
-///   • Bottom panel (148px): Portrait | Stats | Cards | Actions
-///
-/// The bottom panel is built procedurally in Start().
-/// After updating this script, delete the old build-buttons container and
-/// tower-info panel GameObjects from the scene — they are no longer referenced.
-/// Wire _fireTowerData and _waterTowerData in the Inspector.
+/// Right-side panel HUD (200 px wide, full height).
+/// Camera.main.rect is adjusted in Awake so the game area excludes the panel strip.
+/// The top HUD (gold, lives) is repositioned to top-left of the game area.
 /// </summary>
 public class HUDController : MonoBehaviour
 {
-    // ── Top HUD (Inspector-wired, unchanged) ─────────────────────────────────
-    [Header("Gold")]
+    // ── Inspector-wired (top-HUD elements already in scene) ──────────────
+    [Header("Top HUD — Gold")]
     [SerializeField] private TextMeshProUGUI _goldText;
     [SerializeField] private Image           _goldIcon;
 
-    [Header("Lives")]
+    [Header("Top HUD — Lives")]
     [SerializeField] private TextMeshProUGUI _livesText;
     [SerializeField] private Image           _heartIcon;
 
-    // ── Tower Data (wire in Inspector) ───────────────────────────────────────
-    [Header("Tower Data — Build Buttons")]
+    [Header("Tower Data")]
     [SerializeField] private TowerData _meleeTowerData;
     [SerializeField] private TowerData _rangeTowerData;
-    [SerializeField] private TowerData _fireTowerData;
-    [SerializeField] private TowerData _waterTowerData;
 
-    // ── Stat-bar max values (public constants for CardEffect to reference) ───
+    // ── Public constants (CardEffect may reference) ───────────────────────
     public const float MaxDamage      = 50f;
     public const float MaxRange       = 4f;
     public const float MaxAttackSpeed = 5f;
     public const float MaxMoveSpeed   = 8f;
 
-    // ── Layout constants ─────────────────────────────────────────────────────
-    private const float PanelH    = 148f;
-    private const float PortraitW = 100f;
-    private const float CardsW    = 210f;
-    private const float ActionsW  = 160f;
+    // ── Layout ───────────────────────────────────────────────────────────
+    private const float PanelW    = 200f;
+    private const float PortraitH = 70f;
     private const int   Slots     = 6;
 
-    // ── Palette ──────────────────────────────────────────────────────────────
-    private static readonly Color ColBg       = new Color(0.067f, 0.090f, 0.067f, 0.95f);
-    private static readonly Color ColDamage   = new Color(0.886f, 0.294f, 0.290f, 1f);
-    private static readonly Color ColRange    = new Color(0.498f, 0.467f, 0.867f, 1f);
-    private static readonly Color ColSpeed    = new Color(0.941f, 0.753f, 0.251f, 1f);
-    private static readonly Color ColEffect   = new Color(0.114f, 0.620f, 0.459f, 1f);
-    private static readonly Color ColBarBg    = new Color(0.15f, 0.15f, 0.15f, 1f);
-    private static readonly Color ColLabel    = new Color(0.7f, 0.7f, 0.7f, 1f);
-    private static readonly Color ColBorder   = new Color(1f, 1f, 1f, 0.12f);
-    private static readonly Color ColSlotBg   = new Color(0.10f, 0.10f, 0.10f, 0.6f);
-    private static readonly Color ColSlotBdr  = new Color(1f, 1f, 1f, 0.20f);
-    private static readonly Color ColBtn      = new Color(0.18f, 0.18f, 0.18f, 0.90f);
-    private static readonly Color ColSellBtn  = new Color(0.70f, 0.18f, 0.18f, 0.90f);
+    // ── Palette ──────────────────────────────────────────────────────────
+    private static readonly Color ColBg      = new Color(0.086f, 0.110f, 0.086f, 0.97f); // #161C16
+    private static readonly Color ColBgDark  = new Color(0.067f, 0.090f, 0.067f, 1f);    // #111711
+    private static readonly Color ColDamage  = new Color(0.886f, 0.294f, 0.290f, 1f);
+    private static readonly Color ColRange   = new Color(0.498f, 0.467f, 0.867f, 1f);
+    private static readonly Color ColSpeed   = new Color(0.941f, 0.753f, 0.251f, 1f);
+    private static readonly Color ColEffect  = new Color(0.114f, 0.620f, 0.459f, 1f);
+    private static readonly Color ColBarBg   = new Color(0.15f,  0.15f,  0.15f,  1f);
+    private static readonly Color ColLabel   = new Color(0.478f, 0.604f, 0.478f, 1f);    // #7A9A7A
+    private static readonly Color ColBorder  = new Color(1f,     1f,     1f,     0.10f);
+    private static readonly Color ColSlotBg  = new Color(0.10f,  0.10f,  0.10f,  0.70f);
+    private static readonly Color ColSlotBdr = new Color(0.165f, 0.290f, 0.165f, 1f);    // #2A4A2A
+    private static readonly Color ColBtn     = new Color(0.18f,  0.18f,  0.18f,  0.90f);
+    private static readonly Color ColSellBtn = new Color(0.65f,  0.15f,  0.15f,  0.90f);
+    private static readonly Color ColTitle   = new Color(0.416f, 0.667f, 0.416f, 1f);    // #6AAA6A
+    private static readonly Color ColDivider = new Color(0.118f, 0.180f, 0.118f, 1f);    // #1E2E1E
 
-    // ── Runtime panel references ─────────────────────────────────────────────
-    // Portrait
+    // Sub-palette: portrait
+    private static readonly Color ColPortName = new Color(0.910f, 0.961f, 0.910f, 1f);   // #E8F5E8
+    private static readonly Color ColPortSub  = new Color(0.114f, 0.620f, 0.459f, 1f);   // #1D9E75
+
+    // Sub-palette: stat values
+    private static readonly Color ColStatVal  = new Color(0.784f, 0.902f, 0.788f, 1f);   // #C8E6C9
+    private static readonly Color ColNoEffect = new Color(0.290f, 0.416f, 0.290f, 1f);   // #4A6A4A
+    private static readonly Color ColActiveEff= new Color(0.886f, 0.565f, 0.353f, 1f);   // #E2905A
+
+    // Sub-palette: upgrade buttons
+    private static readonly Color ColUpBg     = new Color(0.102f, 0.180f, 0.125f, 0.90f);// #1A2E20
+    private static readonly Color ColUpBdr    = new Color(0.165f, 0.353f, 0.220f, 1f);    // #2A5A38
+    private static readonly Color ColUpTxt    = new Color(0.416f, 0.800f, 0.541f, 1f);    // #6ACC8A
+    private static readonly Color ColUpCost   = new Color(0.941f, 0.753f, 0.251f, 1f);    // #F0C040
+
+    // Sub-palette: sell button
+    private static readonly Color ColSellBg   = new Color(0.118f, 0.118f, 0.118f, 0.90f);// #1E1E1E
+    private static readonly Color ColSellBdr  = new Color(0.227f, 0.227f, 0.227f, 1f);   // #3A3A3A
+    private static readonly Color ColSellTxt  = new Color(0.533f, 0.533f, 0.533f, 1f);   // #888888
+    private static readonly Color ColSellRef  = new Color(0.416f, 0.541f, 0.416f, 1f);   // #6A8A6A
+    private static readonly Color ColWarnTxt  = new Color(0.353f, 0.290f, 0.227f, 1f);   // #5A4A3A
+
+    // ── Runtime refs ─────────────────────────────────────────────────────
     private Image           _portImg;
     private TextMeshProUGUI _portName;
     private TextMeshProUGUI _portSub;
 
-    // Stats (4 rows)
     private readonly Image[]           _barFills  = new Image[4];
+    private readonly Image[]           _barBgs    = new Image[4];
     private readonly TextMeshProUGUI[] _barLabels = new TextMeshProUGUI[4];
     private readonly TextMeshProUGUI[] _barValues = new TextMeshProUGUI[4];
-    private readonly Image[]           _barBgs    = new Image[4];
 
-    // Cards — hero mode
     private GameObject         _heroCardsGO;
-    private readonly Image[]   _hInvIco = new Image[Slots];
-    private readonly Button[]  _buildBtn  = new Button[4];
-    private readonly Image[]   _buildIco  = new Image[4];
+    private TextMeshProUGUI    _hInvTitle;
+    private readonly Image[]           _hInvIco  = new Image[Slots];
+    private readonly TextMeshProUGUI[] _hInvPlus = new TextMeshProUGUI[Slots];
+
+    private GameObject                 _towerCardsGO;
+    private TextMeshProUGUI            _tCardsTitle;
+    private readonly Image[]           _tEffIco  = new Image[Slots];
+    private readonly TextMeshProUGUI[] _tEffPlus = new TextMeshProUGUI[Slots];
+    private readonly Image[]           _tEffDot  = new Image[Slots];
+    private readonly Button[]          _tInvBtn  = new Button[Slots];
+    private readonly Image[]           _tInvIco  = new Image[Slots];
+
+    private GameObject       _buildSec;
+    private readonly Button[]          _buildBtn = new Button[4];
+    private readonly Image[]           _buildIco = new Image[4];
     private readonly TextMeshProUGUI[] _buildCst = new TextMeshProUGUI[4];
 
-    // Cards — tower mode
-    private GameObject                   _towerCardsGO;
-    private readonly Image[]             _tEffIco   = new Image[Slots];
-    private readonly TextMeshProUGUI[]   _tEffPlus  = new TextMeshProUGUI[Slots];
-    private readonly Image[]             _tEffDot   = new Image[Slots];
-    private readonly Button[]            _tInvBtn   = new Button[Slots];
-    private readonly Image[]             _tInvIco   = new Image[Slots];
-
-    // Actions — hero
-    private GameObject      _heroActGO;
-
-    // Actions — tower
-    private GameObject       _towerActGO;
+    private GameObject       _actionsSec;
     private Button           _upBtn0;
     private TextMeshProUGUI  _upTxt0;
     private Button           _upBtn1;
@@ -98,25 +110,27 @@ public class HUDController : MonoBehaviour
     private TextMeshProUGUI  _sellTxt;
     private TextMeshProUGUI  _sellWarn;
 
-    // State
+    private RectTransform  _panelRT;
     private TowerBehaviour _selectedTower;
     private TowerData[]    _bDatas;
-    private int[]          _bCosts;
+    private int            _lastScreenW;
 
-    // ══════════════════════════════════════════════════════════════════════════
-    //  Unity lifecycle
-    // ══════════════════════════════════════════════════════════════════════════
+    // ══════════════════════════════════════════════════════════════════════
+    //  Lifecycle
+    // ══════════════════════════════════════════════════════════════════════
+
+    private void Awake()
+    {
+        _bDatas = new[] { _meleeTowerData, _rangeTowerData };
+        ApplyCameraViewport();
+        RepositionTopHUD();
+        BuildRightPanel();
+    }
 
     private void Start()
     {
-        _bDatas = new[] { _meleeTowerData, _rangeTowerData, _fireTowerData, _waterTowerData };
-        _bCosts = new int[4];
-        for (int i = 0; i < 4; i++) _bCosts[i] = FullCost(i);
-
-        BuildPanel();
-
-        RefreshGold(EconomyManager.Instance != null ? EconomyManager.Instance.Gold : 0);
-        RefreshLives(LivesManager.Instance != null ? LivesManager.Instance.Lives : 0);
+        RefreshGold(EconomyManager.Instance  != null ? EconomyManager.Instance.Gold   : 0);
+        RefreshLives(LivesManager.Instance   != null ? LivesManager.Instance.Lives    : 0);
         RefreshAll();
     }
 
@@ -125,11 +139,11 @@ public class HUDController : MonoBehaviour
         EconomyManager.OnGoldChanged        += RefreshGold;
         EconomyManager.OnGoldChanged        += RefreshGoldDependents;
         LivesManager.OnLivesChanged         += RefreshLives;
-        SelectionManager.OnSelectionChanged += OnSelection;
-        TowerBehaviour.OnTowerSold          += OnSold;
-        TowerBehaviour.OnTowerUpgraded      += OnUpgraded;
-        TowerBehaviour.OnEffectApplied      += OnApplied;
-        PlayerInventory.OnInventoryChanged  += RefreshCards;
+        SelectionManager.OnSelectionChanged += OnSelectionChanged;
+        TowerBehaviour.OnTowerSold          += OnTowerSold;
+        TowerBehaviour.OnTowerUpgraded      += OnTowerUpgraded;
+        TowerBehaviour.OnEffectApplied      += OnEffectApplied;
+        PlayerInventory.OnInventoryChanged  += RefreshCardSections;
     }
 
     private void OnDisable()
@@ -137,190 +151,274 @@ public class HUDController : MonoBehaviour
         EconomyManager.OnGoldChanged        -= RefreshGold;
         EconomyManager.OnGoldChanged        -= RefreshGoldDependents;
         LivesManager.OnLivesChanged         -= RefreshLives;
-        SelectionManager.OnSelectionChanged -= OnSelection;
-        TowerBehaviour.OnTowerSold          -= OnSold;
-        TowerBehaviour.OnTowerUpgraded      -= OnUpgraded;
-        TowerBehaviour.OnEffectApplied      -= OnApplied;
-        PlayerInventory.OnInventoryChanged  -= RefreshCards;
+        SelectionManager.OnSelectionChanged -= OnSelectionChanged;
+        TowerBehaviour.OnTowerSold          -= OnTowerSold;
+        TowerBehaviour.OnTowerUpgraded      -= OnTowerUpgraded;
+        TowerBehaviour.OnEffectApplied      -= OnEffectApplied;
+        PlayerInventory.OnInventoryChanged  -= RefreshCardSections;
     }
 
-    // ══════════════════════════════════════════════════════════════════════════
-    //  Panel construction
-    // ══════════════════════════════════════════════════════════════════════════
+    private void Update()
+    {
+        if (Screen.width != _lastScreenW) ApplyCameraViewport();
+    }
 
-    private void BuildPanel()
+    // ── Camera & top HUD ─────────────────────────────────────────────────
+
+    private void ApplyCameraViewport()
+    {
+        _lastScreenW = Screen.width;
+        if (Camera.main == null) return;
+        float frac = 1f - (PanelW / Screen.width);
+        Camera.main.rect = new Rect(0f, 0f, frac, 1f);
+    }
+
+    private void RepositionTopHUD()
+    {
+        // Place GoldPanel and LivesPanel at top-left of canvas (within game area)
+        GameObject goldPanel  = _goldText  != null ? _goldText.transform.parent.gameObject  : null;
+        GameObject livesPanel = _livesText != null ? _livesText.transform.parent.gameObject : null;
+        SetTopItem(goldPanel,  6f,  6f, 78f, 24f);
+        SetTopItem(livesPanel, 90f, 6f, 78f, 24f);
+    }
+
+    private static void SetTopItem(GameObject go, float x, float y, float w, float h)
+    {
+        if (go == null) return;
+        var rt = go.GetComponent<RectTransform>();
+        if (rt == null) return;
+        rt.anchorMin        = new Vector2(0, 1);
+        rt.anchorMax        = new Vector2(0, 1);
+        rt.pivot            = new Vector2(0, 1);
+        rt.anchoredPosition = new Vector2(x, -y);
+        rt.sizeDelta        = new Vector2(w, h);
+    }
+
+    // ══════════════════════════════════════════════════════════════════════
+    //  Panel construction
+    // ══════════════════════════════════════════════════════════════════════
+
+    private void BuildRightPanel()
     {
         Canvas canvas = GetComponentInParent<Canvas>();
-        if (canvas == null) { Debug.LogError("[HUD] No parent Canvas."); return; }
+        if (canvas == null) { Debug.LogError("[HUD] No Canvas parent."); return; }
 
-        // ── Root ─────────────────────────────────────────────────────────────
-        var root = UI("BottomPanel", canvas.transform);
+        // Destroy any old BottomPanel if it survived
+        var old = canvas.transform.Find("BottomPanel");
+        if (old != null) Destroy(old.gameObject);
+
+        // Root
+        var root = UI("RightPanel", canvas.transform);
         var rt   = root.GetComponent<RectTransform>();
-        rt.anchorMin        = Vector2.zero;
-        rt.anchorMax        = new Vector2(1, 0);
-        rt.pivot            = new Vector2(0.5f, 0);
+        rt.anchorMin        = new Vector2(1f, 1f);
+        rt.anchorMax        = new Vector2(1f, 1f);
+        rt.pivot            = new Vector2(1f, 1f);
         rt.anchoredPosition = Vector2.zero;
-        rt.sizeDelta        = new Vector2(0, PanelH);
+        rt.sizeDelta        = new Vector2(PanelW, 0f);
+        _panelRT = rt;
 
         root.AddComponent<Image>().color = ColBg;
 
-        var hlg = root.AddComponent<HorizontalLayoutGroup>();
-        hlg.spacing                = 0;
-        hlg.childControlWidth      = true;
-        hlg.childControlHeight     = true;
-        hlg.childForceExpandWidth  = false;
-        hlg.childForceExpandHeight = true;
+        var csf = root.AddComponent<ContentSizeFitter>();
+        csf.horizontalFit = ContentSizeFitter.FitMode.Unconstrained;
+        csf.verticalFit   = ContentSizeFitter.FitMode.PreferredSize;
 
-        SecPortrait(root.transform);
-        SecStats(root.transform);
-        SecCards(root.transform);
-        SecActions(root.transform);
-    }
-
-    // ── Portrait (100px) ─────────────────────────────────────────────────────
-
-    private void SecPortrait(Transform p)
-    {
-        var root = UI("Portrait", p);
-        FW(root, PortraitW);
-        root.AddComponent<Image>().color = ColBg;
-
-        // right border line
-        var bd = UI("Bdr", root.transform);
-        AnchorRT(bd, new Vector2(1, 0.05f), new Vector2(1, 0.95f), new Vector2(1, 0.5f));
-        bd.GetComponent<RectTransform>().sizeDelta = new Vector2(1, 0);
-        bd.AddComponent<Image>().color = ColBorder;
-
-        // sprite
-        var spr = UI("Spr", root.transform);
-        AnchorFill(spr, 0.1f, 0.38f, 0.9f, 0.95f);
-        _portImg = spr.AddComponent<Image>();
-        _portImg.preserveAspect = true;
-        _portImg.raycastTarget  = false;
-
-        // name
-        _portName = TMP("Name", root.transform, 13, TextAlignmentOptions.Center, Color.white);
-        AnchorFill(_portName.gameObject, 0.05f, 0.16f, 0.95f, 0.38f);
-
-        // subtype
-        _portSub = TMP("Sub", root.transform, 10, TextAlignmentOptions.Center, ColLabel);
-        AnchorFill(_portSub.gameObject, 0.05f, 0.02f, 0.95f, 0.18f);
-    }
-
-    // ── Stats (flex) ─────────────────────────────────────────────────────────
-
-    private void SecStats(Transform p)
-    {
-        var root = UI("Stats", p);
-        var le   = root.AddComponent<LayoutElement>();
-        le.flexibleWidth = 1;
-        le.minWidth      = 140;
+        // Left-edge separator line (positioned absolutely, excluded from VLG)
+        var sep = UI("LeftBorder", root.transform);
+        var sepLE = sep.AddComponent<LayoutElement>();
+        sepLE.ignoreLayout = true;
+        var sepRT = sep.GetComponent<RectTransform>();
+        sepRT.anchorMin = new Vector2(0, 0);
+        sepRT.anchorMax = new Vector2(0, 1);
+        sepRT.pivot     = new Vector2(0, 0.5f);
+        sepRT.offsetMin = sepRT.offsetMax = Vector2.zero;
+        sepRT.sizeDelta = new Vector2(1, 0);
+        sep.AddComponent<Image>().color = ColDivider;
 
         var vlg = root.AddComponent<VerticalLayoutGroup>();
-        vlg.spacing                = 2;
-        vlg.padding                = new RectOffset(10, 10, 8, 8);
+        vlg.spacing                = 0;
+        vlg.padding                = new RectOffset(0, 0, 0, 0);
         vlg.childControlWidth      = true;
-        vlg.childControlHeight     = true;
+        vlg.childControlHeight     = false;
         vlg.childForceExpandWidth  = true;
-        vlg.childForceExpandHeight = true;
+        vlg.childForceExpandHeight = false;
+        vlg.childAlignment         = TextAnchor.UpperLeft;
 
-        MakeRow(root.transform, 0, "Daño",        ColDamage);
-        MakeRow(root.transform, 1, "Rango",       ColRange);
-        MakeRow(root.transform, 2, "Vel. ataque", ColSpeed);
-        MakeRow(root.transform, 3, "Velocidad",   ColSpeed);
+        BuildPortrait(root.transform);
+        AddHDivider(root.transform);
+        BuildStats(root.transform);
+        AddHDivider(root.transform);
+        BuildHeroCards(root.transform);
+        BuildTowerCards(root.transform);
+        AddHDivider(root.transform);
+        BuildBuildSec(root.transform);
+        BuildActionsSec(root.transform);
+
+        LayoutRebuilder.ForceRebuildLayoutImmediate(_panelRT);
     }
 
-    private void MakeRow(Transform p, int i, string label, Color barCol)
+    // ── Portrait ─────────────────────────────────────────────────────────
+
+    private void BuildPortrait(Transform p)
     {
-        var row = UI($"R{i}", p);
-        var hlg = row.AddComponent<HorizontalLayoutGroup>();
-        hlg.spacing                = 4;
+        var sec = UI("Portrait", p);
+        FH(sec, PortraitH);
+        sec.AddComponent<Image>().color = ColBgDark;
+
+        var hlg = sec.AddComponent<HorizontalLayoutGroup>();
+        hlg.spacing                = 8;
+        hlg.padding                = new RectOffset(8, 8, 10, 10);
         hlg.childAlignment         = TextAnchor.MiddleLeft;
         hlg.childControlWidth      = true;
         hlg.childControlHeight     = true;
         hlg.childForceExpandWidth  = false;
         hlg.childForceExpandHeight = true;
 
-        // label (70px)
-        var lbl = UI("L", row.transform);
-        FW(lbl, 70);
-        _barLabels[i] = lbl.AddComponent<TextMeshProUGUI>();
-        _barLabels[i].text          = label;
-        _barLabels[i].fontSize      = 11;
-        _barLabels[i].color         = ColLabel;
-        _barLabels[i].alignment     = TextAlignmentOptions.MidlineLeft;
-        _barLabels[i].raycastTarget = false;
+        // Icon 44×44
+        var icoGO = UI("Icon", sec.transform);
+        var icoLE = icoGO.AddComponent<LayoutElement>();
+        icoLE.minWidth = icoLE.preferredWidth = 44;
+        _portImg = icoGO.AddComponent<Image>();
+        _portImg.preserveAspect = true;
+        _portImg.raycastTarget  = false;
 
-        // bar container (flex) — holds fixed-height bar centered vertically
-        var ctr = UI("C", row.transform);
-        ctr.AddComponent<LayoutElement>().flexibleWidth = 1;
+        // Text column
+        var col = UI("Info", sec.transform);
+        col.AddComponent<LayoutElement>().flexibleWidth = 1;
+        var cv = col.AddComponent<VerticalLayoutGroup>();
+        cv.spacing = 2;
+        cv.childControlWidth      = true;
+        cv.childControlHeight     = true;
+        cv.childForceExpandWidth  = true;
+        cv.childForceExpandHeight = false;
 
-        var bg = UI("Bg", ctr.transform);
-        var bgrt = bg.GetComponent<RectTransform>();
-        bgrt.anchorMin = new Vector2(0, 0.25f);
-        bgrt.anchorMax = new Vector2(1, 0.75f);
-        bgrt.offsetMin = bgrt.offsetMax = Vector2.zero;
-        _barBgs[i] = bg.AddComponent<Image>();
-        _barBgs[i].color         = ColBarBg;
-        _barBgs[i].raycastTarget = false;
+        _portName = TMP("Name", col.transform, 14, TextAlignmentOptions.Left, ColPortName);
+        _portName.fontStyle = FontStyles.Bold;
+        _portName.gameObject.AddComponent<LayoutElement>().preferredHeight = 20;
 
-        var fill = UI("F", bg.transform);
-        var frt  = fill.GetComponent<RectTransform>();
-        frt.anchorMin = Vector2.zero;
-        frt.anchorMax = new Vector2(0, 1);
-        frt.offsetMin = frt.offsetMax = Vector2.zero;
-        _barFills[i] = fill.AddComponent<Image>();
-        _barFills[i].color         = barCol;
-        _barFills[i].raycastTarget = false;
-
-        // value (56px)
-        var val = UI("V", row.transform);
-        FW(val, 56);
-        _barValues[i] = val.AddComponent<TextMeshProUGUI>();
-        _barValues[i].fontSize      = 11;
-        _barValues[i].color         = Color.white;
-        _barValues[i].alignment     = TextAlignmentOptions.MidlineRight;
-        _barValues[i].raycastTarget = false;
+        _portSub = TMP("Sub", col.transform, 9, TextAlignmentOptions.Left, ColPortSub);
+        _portSub.fontStyle = FontStyles.Bold | FontStyles.UpperCase;
+        _portSub.gameObject.AddComponent<LayoutElement>().preferredHeight = 14;
     }
 
-    // ── Cards (210px) ────────────────────────────────────────────────────────
+    // ── Stats ─────────────────────────────────────────────────────────────
 
-    private void SecCards(Transform p)
+    private void BuildStats(Transform p)
     {
-        var root = UI("Cards", p);
-        FW(root, CardsW);
+        var sec = UI("Stats", p);
+        // title 14 + 4 rows × 22 + spacing 3×4 + pad 5+5 = 14+88+12+10 = 124
+        FH(sec, 124);
 
-        // left border
-        var bd = UI("Bdr", root.transform);
-        AnchorRT(bd, new Vector2(0, 0.05f), new Vector2(0, 0.95f), new Vector2(0, 0.5f));
-        bd.GetComponent<RectTransform>().sizeDelta = new Vector2(1, 0);
-        bd.AddComponent<Image>().color = ColBorder;
+        var vlg = sec.AddComponent<VerticalLayoutGroup>();
+        vlg.spacing                = 3;
+        vlg.padding                = new RectOffset(8, 8, 5, 5);
+        vlg.childControlWidth      = true;
+        vlg.childControlHeight     = true;
+        vlg.childForceExpandWidth  = true;
+        vlg.childForceExpandHeight = false;
 
-        // ── Hero mode ────────────────────────────────────────────────────────
-        _heroCardsGO = UI("HCards", root.transform);
-        Stretch(_heroCardsGO);
+        MakeSectionTitle(sec.transform, "STATS");
 
-        var hv = _heroCardsGO.AddComponent<VerticalLayoutGroup>();
-        hv.spacing = 4;  hv.padding = new RectOffset(8, 8, 6, 6);
-        hv.childControlWidth = hv.childControlHeight = true;
-        hv.childForceExpandWidth = hv.childForceExpandHeight = true;
+        BuildStatRow(sec.transform, 0, "Dano",       ColDamage);
+        BuildStatRow(sec.transform, 1, "Rango",      ColRange);
+        BuildStatRow(sec.transform, 2, "Vel.atq",    ColSpeed);
+        BuildStatRow(sec.transform, 3, "Velocidad",  ColSpeed);
+    }
 
-        // top: inventory
-        var hInv = UI("Inv", _heroCardsGO.transform);
-        var hig  = hInv.AddComponent<GridLayoutGroup>();
-        hig.cellSize        = new Vector2(30, 42);
-        hig.spacing         = new Vector2(2, 0);
-        hig.constraint      = GridLayoutGroup.Constraint.FixedColumnCount;
-        hig.constraintCount = Slots;
-        hig.childAlignment  = TextAnchor.MiddleCenter;
+    private void BuildStatRow(Transform p, int i, string label, Color barCol)
+    {
+        var row = UI($"SR{i}", p);
+        var rowLE = row.AddComponent<LayoutElement>();
+        rowLE.preferredHeight = 22;
+        rowLE.flexibleHeight  = 0;
+
+        var hlg = row.AddComponent<HorizontalLayoutGroup>();
+        hlg.spacing                = 3;
+        hlg.childAlignment         = TextAnchor.MiddleLeft;
+        hlg.childControlWidth      = true;
+        hlg.childControlHeight     = true;
+        hlg.childForceExpandWidth  = false;
+        hlg.childForceExpandHeight = true;
+
+        // label 52px
+        var lbl = UI("L", row.transform);
+        FW(lbl, 52);
+        _barLabels[i] = lbl.AddComponent<TextMeshProUGUI>();
+        _barLabels[i].text               = label;
+        _barLabels[i].fontSize           = 10;
+        _barLabels[i].color              = ColLabel;
+        _barLabels[i].fontStyle          = FontStyles.Normal;
+        _barLabels[i].alignment          = TextAlignmentOptions.MidlineLeft;
+        _barLabels[i].raycastTarget      = false;
+        _barLabels[i].enableWordWrapping = false;
+
+        // bar container 56px fixed
+        var barCtr = UI("Bar", row.transform);
+        FW(barCtr, 56);
+
+        var bgGO = UI("Bg", barCtr.transform);
+        var bgRT = bgGO.GetComponent<RectTransform>();
+        bgRT.anchorMin = new Vector2(0, 0.2f);
+        bgRT.anchorMax = new Vector2(1, 0.8f);
+        bgRT.offsetMin = bgRT.offsetMax = Vector2.zero;
+        _barBgs[i] = bgGO.AddComponent<Image>();
+        _barBgs[i].color = ColBarBg;
+        _barBgs[i].raycastTarget = false;
+
+        var fillGO = UI("Fill", bgGO.transform);
+        var fillRT = fillGO.GetComponent<RectTransform>();
+        fillRT.anchorMin = Vector2.zero;
+        fillRT.anchorMax = new Vector2(0, 1);
+        fillRT.offsetMin = fillRT.offsetMax = Vector2.zero;
+        _barFills[i] = fillGO.AddComponent<Image>();
+        _barFills[i].color = barCol;
+        _barFills[i].raycastTarget = false;
+
+        // value — remaining width
+        var val = UI("V", row.transform);
+        val.AddComponent<LayoutElement>().flexibleWidth = 1;
+        _barValues[i] = val.AddComponent<TextMeshProUGUI>();
+        _barValues[i].fontSize           = 11;
+        _barValues[i].fontStyle          = FontStyles.Bold;
+        _barValues[i].color              = ColStatVal;
+        _barValues[i].alignment          = TextAlignmentOptions.MidlineRight;
+        _barValues[i].raycastTarget      = false;
+        _barValues[i].enableWordWrapping = false;
+    }
+
+    // ── Hero inventory (direct VLG child, hero only) ──────────────────────
+
+    private void BuildHeroCards(Transform p)
+    {
+        _heroCardsGO = UI("HeroCards", p);
+        // title 14 + grid 38 + spacing 4 + padding 6+4 = 66
+        FH(_heroCardsGO, 68);
+
+        var vlg = _heroCardsGO.AddComponent<VerticalLayoutGroup>();
+        vlg.spacing                = 4;
+        vlg.padding                = new RectOffset(8, 8, 6, 4);
+        vlg.childControlWidth      = true;
+        vlg.childControlHeight     = true;
+        vlg.childForceExpandWidth  = true;
+        vlg.childForceExpandHeight = false;
+
+        var hTitleRow = MakeSectionTitle(_heroCardsGO.transform, "INVENTARIO (0/6)");
+        _hInvTitle = hTitleRow;
+
+        var grid = UI("Grid", _heroCardsGO.transform);
+        var gg   = grid.AddComponent<GridLayoutGroup>();
+        gg.cellSize        = new Vector2(26, 38);
+        gg.spacing         = new Vector2(3, 0);
+        gg.constraint      = GridLayoutGroup.Constraint.FixedColumnCount;
+        gg.constraintCount = Slots;
+        gg.childAlignment  = TextAnchor.UpperLeft;
+        grid.AddComponent<LayoutElement>().preferredHeight = 38;
 
         for (int i = 0; i < Slots; i++)
         {
-            var s = UI($"S{i}", hInv.transform);
+            var s = UI($"S{i}", grid.transform);
             s.AddComponent<Image>().color = ColSlotBg;
-            var ol = s.AddComponent<Outline>();
-            ol.effectColor    = ColSlotBdr;
-            ol.effectDistance  = new Vector2(1, 1);
+            AddOutline(s, ColSlotBdr);
 
             var ico = UI("I", s.transform);
             Stretch(ico, 2);
@@ -328,90 +426,47 @@ public class HUDController : MonoBehaviour
             _hInvIco[i].preserveAspect = true;
             _hInvIco[i].raycastTarget  = false;
             _hInvIco[i].color          = Color.clear;
+
+            _hInvPlus[i] = TMP("+", s.transform, 10, TextAlignmentOptions.Center, ColSlotBdr);
+            Stretch(_hInvPlus[i].gameObject);
+            _hInvPlus[i].text = "+";
         }
+    }
 
-        // bottom: 2×2 build buttons
-        var bRow = UI("Build", _heroCardsGO.transform);
-        var bg   = bRow.AddComponent<GridLayoutGroup>();
-        bg.cellSize        = new Vector2(92, 26);
-        bg.spacing         = new Vector2(4, 3);
-        bg.constraint      = GridLayoutGroup.Constraint.FixedColumnCount;
-        bg.constraintCount = 2;
-        bg.childAlignment  = TextAnchor.MiddleCenter;
+    // ── Tower cards (direct VLG child, tower only) ────────────────────────
 
-        for (int i = 0; i < 4; i++)
-        {
-            int idx = i;
-            var btn = UI($"B{i}", bRow.transform);
-            btn.AddComponent<Image>().color = ColBtn;
+    private void BuildTowerCards(Transform p)
+    {
+        _towerCardsGO = UI("TowerCards", p);
+        // title 14 + eff-grid 32 + apply-label 12 + inv-grid 32 + spacing+padding ≈ 120
+        FH(_towerCardsGO, 120);
 
-            var b = btn.AddComponent<Button>();
-            var bc = b.colors;
-            bc.normalColor      = Color.white;
-            bc.highlightedColor = new Color(1.3f, 1.3f, 1.3f);
-            bc.pressedColor     = new Color(0.8f, 0.8f, 0.8f);
-            bc.disabledColor    = new Color(0.5f, 0.5f, 0.5f, 0.5f);
-            b.colors = bc;
-            _buildBtn[i] = b;
+        var vlg = _towerCardsGO.AddComponent<VerticalLayoutGroup>();
+        vlg.spacing                = 4;
+        vlg.padding                = new RectOffset(8, 8, 6, 4);
+        vlg.childControlWidth      = true;
+        vlg.childControlHeight     = true;
+        vlg.childForceExpandWidth  = true;
+        vlg.childForceExpandHeight = false;
 
-            var bhl = btn.AddComponent<HorizontalLayoutGroup>();
-            bhl.spacing            = 3;
-            bhl.padding            = new RectOffset(3, 4, 2, 2);
-            bhl.childAlignment     = TextAnchor.MiddleCenter;
-            bhl.childControlWidth  = false;
-            bhl.childControlHeight = true;
-            bhl.childForceExpandWidth  = false;
-            bhl.childForceExpandHeight = true;
+        // Applied effects title
+        _tCardsTitle = MakeSectionTitle(_towerCardsGO.transform, "EFECTOS APLICADOS (0/6)");
 
-            // icon
-            var icoGO = UI("I", btn.transform);
-            FW(icoGO, 18);
-            _buildIco[i] = icoGO.AddComponent<Image>();
-            _buildIco[i].preserveAspect = true;
-            _buildIco[i].raycastTarget  = false;
-
-            // cost label
-            var cGO = UI("C", btn.transform);
-            cGO.AddComponent<LayoutElement>().flexibleWidth = 1;
-            _buildCst[i] = cGO.AddComponent<TextMeshProUGUI>();
-            _buildCst[i].fontSize      = 10;
-            _buildCst[i].color         = Color.white;
-            _buildCst[i].alignment     = TextAlignmentOptions.MidlineLeft;
-            _buildCst[i].raycastTarget = false;
-
-            if (_bDatas[i] != null)
-            {
-                _buildIco[i].sprite = TowerIcon(_bDatas[i]);
-                _buildCst[i].text   = $"{_bDatas[i].TowerName} {_bCosts[i]}g";
-                b.onClick.AddListener(() => ClickBuild(idx));
-            }
-        }
-
-        // ── Tower mode ───────────────────────────────────────────────────────
-        _towerCardsGO = UI("TCards", root.transform);
-        Stretch(_towerCardsGO);
-
-        var tv = _towerCardsGO.AddComponent<VerticalLayoutGroup>();
-        tv.spacing = 4;  tv.padding = new RectOffset(8, 8, 6, 6);
-        tv.childControlWidth = tv.childControlHeight = true;
-        tv.childForceExpandWidth = tv.childForceExpandHeight = true;
-
-        // top: applied effects
-        var eRow = UI("Eff", _towerCardsGO.transform);
-        var eg   = eRow.AddComponent<GridLayoutGroup>();
-        eg.cellSize        = new Vector2(30, 42);
-        eg.spacing         = new Vector2(2, 0);
+        // Applied effects grid
+        var eGrid = UI("EffGrid", _towerCardsGO.transform);
+        var eg    = eGrid.AddComponent<GridLayoutGroup>();
+        eg.cellSize        = new Vector2(26, 32);
+        eg.spacing         = new Vector2(3, 0);
         eg.constraint      = GridLayoutGroup.Constraint.FixedColumnCount;
         eg.constraintCount = Slots;
-        eg.childAlignment  = TextAnchor.MiddleCenter;
+        eg.childAlignment  = TextAnchor.UpperLeft;
+        eGrid.AddComponent<LayoutElement>().preferredHeight = 32;
 
         for (int i = 0; i < Slots; i++)
         {
-            var s = UI($"E{i}", eRow.transform);
+            var s = UI($"E{i}", eGrid.transform);
             s.AddComponent<Image>().color = ColSlotBg;
-            var ol = s.AddComponent<Outline>();
-            ol.effectColor   = ColSlotBdr;
-            ol.effectDistance = new Vector2(1, 1);
+            AddOutline(s, ColSlotBdr);
 
             var ico = UI("I", s.transform);
             Stretch(ico, 2);
@@ -420,41 +475,41 @@ public class HUDController : MonoBehaviour
             _tEffIco[i].raycastTarget  = false;
             _tEffIco[i].color          = Color.clear;
 
-            // rarity dot (top-right corner)
             var dot = UI("D", s.transform);
-            AnchorFill(dot, 0.70f, 0.75f, 0.95f, 0.95f);
+            AnchorFill(dot, 0.55f, 0f, 1f, 0.35f);
             _tEffDot[i] = dot.AddComponent<Image>();
             _tEffDot[i].raycastTarget = false;
-            _tEffDot[i].color         = Color.clear;
+            _tEffDot[i].color = Color.clear;
 
-            // "+" placeholder
-            _tEffPlus[i] = TMP("+", s.transform, 16, TextAlignmentOptions.Center, ColSlotBdr);
+            _tEffPlus[i] = TMP("+", s.transform, 10, TextAlignmentOptions.Center, ColSlotBdr);
             Stretch(_tEffPlus[i].gameObject);
             _tEffPlus[i].text = "+";
         }
 
-        // bottom: player inventory (clickable)
-        var tInv = UI("TInv", _towerCardsGO.transform);
-        var tig  = tInv.AddComponent<GridLayoutGroup>();
-        tig.cellSize        = new Vector2(30, 42);
-        tig.spacing         = new Vector2(2, 0);
-        tig.constraint      = GridLayoutGroup.Constraint.FixedColumnCount;
-        tig.constraintCount = Slots;
-        tig.childAlignment  = TextAnchor.MiddleCenter;
+        // "Apply card" subtitle
+        MakeSectionTitle(_towerCardsGO.transform, "APLICAR CARTA");
+
+        // Inventory (clickable)
+        var tGrid = UI("InvGrid", _towerCardsGO.transform);
+        var tg    = tGrid.AddComponent<GridLayoutGroup>();
+        tg.cellSize        = new Vector2(26, 32);
+        tg.spacing         = new Vector2(3, 0);
+        tg.constraint      = GridLayoutGroup.Constraint.FixedColumnCount;
+        tg.constraintCount = Slots;
+        tg.childAlignment  = TextAnchor.UpperLeft;
+        tGrid.AddComponent<LayoutElement>().preferredHeight = 32;
 
         for (int i = 0; i < Slots; i++)
         {
             int idx = i;
-            var s = UI($"TI{i}", tInv.transform);
+            var s = UI($"TI{i}", tGrid.transform);
             s.AddComponent<Image>().color = ColSlotBg;
-            var ol = s.AddComponent<Outline>();
-            ol.effectColor   = ColSlotBdr;
-            ol.effectDistance = new Vector2(1, 1);
+            AddOutline(s, ColSlotBdr);
 
             _tInvBtn[i] = s.AddComponent<Button>();
             var bc = _tInvBtn[i].colors;
             bc.normalColor   = Color.white;
-            bc.disabledColor = new Color(1, 1, 1, 0.35f);
+            bc.disabledColor = new Color(1, 1, 1, 0.3f);
             _tInvBtn[i].colors = bc;
             _tInvBtn[i].onClick.AddListener(() => ClickTowerInv(idx));
 
@@ -469,93 +524,181 @@ public class HUDController : MonoBehaviour
         _towerCardsGO.SetActive(false);
     }
 
-    // ── Actions (160px) ──────────────────────────────────────────────────────
+    // ── Build section (hero only) ─────────────────────────────────────────
 
-    private void SecActions(Transform p)
+    private void BuildBuildSec(Transform p)
     {
-        var root = UI("Actions", p);
-        FW(root, ActionsW);
+        _buildSec = UI("Build", p);
 
-        // left border
-        var bd = UI("Bdr", root.transform);
-        AnchorRT(bd, new Vector2(0, 0.05f), new Vector2(0, 0.95f), new Vector2(0, 0.5f));
-        bd.GetComponent<RectTransform>().sizeDelta = new Vector2(1, 0);
-        bd.AddComponent<Image>().color = ColBorder;
-
-        // ── Hero ─────────────────────────────────────────────────────────────
-        _heroActGO = UI("HAct", root.transform);
-        Stretch(_heroActGO);
-        var msg = TMP("Msg", _heroActGO.transform, 11, TextAlignmentOptions.Center, ColLabel);
-        Stretch(msg.gameObject, 12);
-        msg.text = "Seleccioná una torre\npara ver sus opciones";
-
-        // ── Tower ────────────────────────────────────────────────────────────
-        _towerActGO = UI("TAct", root.transform);
-        Stretch(_towerActGO);
-
-        var vlg = _towerActGO.AddComponent<VerticalLayoutGroup>();
-        vlg.spacing = 4;
-        vlg.padding = new RectOffset(10, 10, 10, 6);
+        var vlg = _buildSec.AddComponent<VerticalLayoutGroup>();
+        vlg.spacing                = 4;
+        vlg.padding                = new RectOffset(8, 8, 6, 6);
         vlg.childControlWidth      = true;
-        vlg.childControlHeight     = false;
+        vlg.childControlHeight     = true;
         vlg.childForceExpandWidth  = true;
         vlg.childForceExpandHeight = false;
 
-        // upgrade button 0
-        _upBtn0 = MakeBtn("Up0", _towerActGO.transform, ColBtn, 30);
-        _upTxt0 = _upBtn0.GetComponentInChildren<TextMeshProUGUI>();
-        _upBtn0.onClick.AddListener(() => _selectedTower?.TryUpgrade(0));
+        MakeSectionTitle(_buildSec.transform, "CONSTRUIR TORRE");
 
-        // upgrade button 1
-        _upBtn1 = MakeBtn("Up1", _towerActGO.transform, ColBtn, 30);
-        _upTxt1 = _upBtn1.GetComponentInChildren<TextMeshProUGUI>();
-        _upBtn1.onClick.AddListener(() => _selectedTower?.TryUpgrade(1));
+        // Count valid tower data to size grid dynamically
+        int validCount = 0;
+        for (int i = 0; i < _bDatas.Length; i++) if (_bDatas[i] != null) validCount++;
+        int rows = Mathf.CeilToInt(validCount / 2f);
+        int gridH = rows > 0 ? rows * 48 + (rows - 1) * 4 : 0;
 
-        // sell button
-        _sellBtn = MakeBtn("Sell", _towerActGO.transform, ColSellBtn, 30);
-        _sellTxt = _sellBtn.GetComponentInChildren<TextMeshProUGUI>();
-        _sellBtn.onClick.AddListener(() => _selectedTower?.Sell());
+        var grid = UI("Grid", _buildSec.transform);
+        var gg   = grid.AddComponent<GridLayoutGroup>();
+        gg.cellSize        = new Vector2(84, 48);
+        gg.spacing         = new Vector2(4, 4);
+        gg.constraint      = GridLayoutGroup.Constraint.FixedColumnCount;
+        gg.constraintCount = 2;
+        gg.childAlignment  = TextAnchor.UpperLeft;
+        grid.AddComponent<LayoutElement>().preferredHeight = gridH;
 
-        // warning
-        var wGO = UI("W", _towerActGO.transform);
-        wGO.AddComponent<LayoutElement>().preferredHeight = 24;
-        _sellWarn = wGO.AddComponent<TextMeshProUGUI>();
-        _sellWarn.text          = "Cartas aplicadas se\npierden al vender.";
-        _sellWarn.fontSize      = 9;
-        _sellWarn.color         = new Color(0.85f, 0.55f, 0.30f, 0.75f);
-        _sellWarn.alignment     = TextAlignmentOptions.Top;
-        _sellWarn.raycastTarget = false;
+        // Section height: title 14 + spacing 4 + grid + padding 12
+        FH(_buildSec, 14 + 4 + gridH + 12);
 
-        _towerActGO.SetActive(false);
+        for (int i = 0; i < _bDatas.Length; i++)
+        {
+            if (_bDatas[i] == null) continue; // skip unassigned tower data
+
+            int idx = i;
+            var btn = UI($"B{i}", grid.transform);
+            btn.AddComponent<Image>().color = ColBtn;
+
+            _buildBtn[i] = btn.AddComponent<Button>();
+            var bc = _buildBtn[i].colors;
+            bc.normalColor      = Color.white;
+            bc.highlightedColor = new Color(1.2f, 1.2f, 1.2f);
+            bc.pressedColor     = new Color(0.8f, 0.8f, 0.8f);
+            bc.disabledColor    = new Color(1f, 1f, 1f, 0.35f);
+            _buildBtn[i].colors = bc;
+
+            var bvl = btn.AddComponent<VerticalLayoutGroup>();
+            bvl.spacing                = 1;
+            bvl.padding                = new RectOffset(2, 2, 2, 2);
+            bvl.childAlignment         = TextAnchor.UpperCenter;
+            bvl.childControlWidth      = true;
+            bvl.childControlHeight     = true;
+            bvl.childForceExpandWidth  = true;
+            bvl.childForceExpandHeight = false;
+
+            var icoGO = UI("I", btn.transform);
+            var icoLE = icoGO.AddComponent<LayoutElement>();
+            icoLE.preferredHeight = 24;
+            icoLE.preferredWidth  = 24;
+            _buildIco[i] = icoGO.AddComponent<Image>();
+            _buildIco[i].preserveAspect = true;
+            _buildIco[i].raycastTarget  = false;
+            _buildIco[i].color          = Color.clear;
+
+            var nameGO = UI("N", btn.transform);
+            nameGO.AddComponent<LayoutElement>().preferredHeight = 10;
+            var nameTmp = nameGO.AddComponent<TextMeshProUGUI>();
+            nameTmp.fontSize           = 8;
+            nameTmp.color              = Color.white;
+            nameTmp.alignment          = TextAlignmentOptions.Center;
+            nameTmp.raycastTarget      = false;
+            nameTmp.enableWordWrapping = false;
+
+            var costGO = UI("C", btn.transform);
+            costGO.AddComponent<LayoutElement>().preferredHeight = 10;
+            _buildCst[i] = costGO.AddComponent<TextMeshProUGUI>();
+            _buildCst[i].fontSize           = 8;
+            _buildCst[i].color              = ColUpCost;
+            _buildCst[i].alignment          = TextAlignmentOptions.Center;
+            _buildCst[i].raycastTarget      = false;
+            _buildCst[i].enableWordWrapping = false;
+
+            if (_bDatas[i] != null)
+            {
+                _buildIco[i].sprite = TowerIcon(_bDatas[i]);
+                _buildIco[i].color  = _buildIco[i].sprite != null ? Color.white : Color.clear;
+                nameTmp.text        = _bDatas[i].TowerName;
+                _buildCst[i].text   = $"{BuildCost(i)}g";
+                _buildBtn[i].onClick.AddListener(() => ClickBuild(idx));
+            }
+        }
     }
 
-    // ══════════════════════════════════════════════════════════════════════════
+    // ── Actions section (tower only) ──────────────────────────────────────
+
+    private void BuildActionsSec(Transform p)
+    {
+        _actionsSec = UI("Actions", p);
+        // title 14 + 2 upgrade btns × 28 + divider 1 + sell btn 28 + warn 24 + spacing + padding ≈ 160
+        FH(_actionsSec, 160);
+
+        var vlg = _actionsSec.AddComponent<VerticalLayoutGroup>();
+        vlg.spacing                = 4;
+        vlg.padding                = new RectOffset(8, 8, 6, 6);
+        vlg.childControlWidth      = true;
+        vlg.childControlHeight     = true;
+        vlg.childForceExpandWidth  = true;
+        vlg.childForceExpandHeight = false;
+
+        // "MEJORAR" section
+        MakeSectionTitle(_actionsSec.transform, "MEJORAR");
+
+        _upBtn0 = MakeStyledBtn("Up0", _actionsSec.transform, ColUpBg, ColUpBdr, 28);
+        _upTxt0 = _upBtn0.GetComponentInChildren<TextMeshProUGUI>();
+        _upTxt0.color = ColUpTxt;
+        _upBtn0.onClick.AddListener(() => _selectedTower?.TryUpgrade(0));
+
+        _upBtn1 = MakeStyledBtn("Up1", _actionsSec.transform, ColUpBg, ColUpBdr, 28);
+        _upTxt1 = _upBtn1.GetComponentInChildren<TextMeshProUGUI>();
+        _upTxt1.color = ColUpTxt;
+        _upBtn1.onClick.AddListener(() => _selectedTower?.TryUpgrade(1));
+
+        // "VENDER" section
+        MakeSectionTitle(_actionsSec.transform, "VENDER");
+
+        _sellBtn = MakeStyledBtn("Sell", _actionsSec.transform, ColSellBg, ColSellBdr, 28);
+        _sellTxt = _sellBtn.GetComponentInChildren<TextMeshProUGUI>();
+        _sellTxt.color = ColSellTxt;
+        _sellBtn.onClick.AddListener(() => _selectedTower?.Sell());
+
+        var wGO = UI("Warn", _actionsSec.transform);
+        wGO.AddComponent<LayoutElement>().preferredHeight = 24;
+        _sellWarn = wGO.AddComponent<TextMeshProUGUI>();
+        _sellWarn.text          = "Las cartas aplicadas se\npierden al vender.";
+        _sellWarn.fontSize      = 8;
+        _sellWarn.fontStyle     = FontStyles.Italic;
+        _sellWarn.color         = ColWarnTxt;
+        _sellWarn.alignment     = TextAlignmentOptions.TopLeft;
+        _sellWarn.raycastTarget = false;
+
+        _actionsSec.SetActive(false);
+    }
+
+    // ══════════════════════════════════════════════════════════════════════
     //  Refresh
-    // ══════════════════════════════════════════════════════════════════════════
+    // ══════════════════════════════════════════════════════════════════════
 
     private void RefreshAll()
     {
         bool tower = _selectedTower != null;
+
         RefreshPortrait(tower);
         RefreshStats(tower);
-        RefreshCards();
+        RefreshCardSections();
         RefreshActions(tower);
 
-        if (_heroCardsGO  != null) _heroCardsGO.SetActive(!tower);
-        if (_towerCardsGO != null) _towerCardsGO.SetActive(tower);
-        if (_heroActGO    != null) _heroActGO.SetActive(!tower);
-        if (_towerActGO   != null) _towerActGO.SetActive(tower);
+        if (_buildSec   != null) _buildSec.SetActive(!tower);
+        if (_actionsSec != null) _actionsSec.SetActive(tower);
     }
 
     private void RefreshPortrait(bool tower)
     {
+        if (_portImg == null) return; // panel not built yet
+
         if (tower && _selectedTower != null)
         {
             Sprite ico = TowerIcon(_selectedTower.Data);
             _portImg.sprite = ico;
             _portImg.color  = ico != null ? Color.white : Color.clear;
             _portName.text  = _selectedTower.Data.TowerName;
-            _portSub.text   = _selectedTower.Data.Type.ToString();
+            _portSub.text   = FormatTowerSubtype(_selectedTower.Data);
         }
         else
         {
@@ -567,8 +710,8 @@ public class HUDController : MonoBehaviour
             }
             _portImg.sprite = heroSpr;
             _portImg.color  = heroSpr != null ? Color.white : Color.clear;
-            _portName.text  = "Héroe";
-            _portSub.text   = "Mago";
+            _portName.text  = "Heroe";
+            _portSub.text   = "MAGO";
         }
     }
 
@@ -579,70 +722,84 @@ public class HUDController : MonoBehaviour
             TowerData d = _selectedTower.Data;
 
             FillBar(0, d.DamageBase, MaxDamage, $"{d.DamageBase:0.#}");
-            FillBar(1, d.Range, MaxRange, $"{d.Range / GridManager.CellSize:0.#} celdas");
+            FillBar(1, d.Range, MaxRange, $"{d.Range / GridManager.CellSize:0.#}c");
 
             if (d.IsAreaAttack)
-                FillBar(2, d.DamageBase * 0.5f, MaxAttackSpeed, "Continuo");
+                FillBar(2, d.DamageBase * 0.5f, MaxAttackSpeed, "AOE");
             else
                 FillBar(2, d.AttackSpeed, MaxAttackSpeed, $"{d.AttackSpeed:0.#}/s");
 
-            // 4th row: effect text, no bar
             string eff = FmtEffects(d);
+            bool hasEff = d.OnHitEffects != null && d.OnHitEffects.Length > 0;
             _barBgs[3].color    = Color.clear;
             _barFills[3].color  = Color.clear;
             _barLabels[3].text  = "Efecto";
-            _barLabels[3].color = ColEffect;
-            _barValues[3].text  = eff;
-            _barValues[3].color = ColEffect;
+            _barLabels[3].color = ColLabel;
+            if (hasEff)
+            {
+                _barValues[3].text      = eff;
+                _barValues[3].color     = ColActiveEff;
+                _barValues[3].fontStyle = FontStyles.Bold;
+            }
+            else
+            {
+                _barValues[3].text      = "ninguno";
+                _barValues[3].color     = ColNoEffect;
+                _barValues[3].fontStyle = FontStyles.Italic;
+            }
         }
         else if (HeroBehaviour.Instance != null)
         {
             var h = HeroBehaviour.Instance;
 
-            FillBar(0, h.Damage,             MaxDamage,      $"{h.Damage:0.#}");
-            FillBar(1, h.AttackRange,        MaxRange,       $"{h.AttackRange / GridManager.CellSize:0.#} celdas");
+            FillBar(0, h.Damage,              MaxDamage,      $"{h.Damage:0.#}");
+            FillBar(1, h.AttackRange,         MaxRange,       $"{h.AttackRange / GridManager.CellSize:0.#}c");
             FillBar(2, 1f / h.AttackInterval, MaxAttackSpeed, $"{1f / h.AttackInterval:0.#}/s");
-            FillBar(3, h.MoveSpeed,          MaxMoveSpeed,   $"{h.MoveSpeed:0.#}");
+            FillBar(3, h.MoveSpeed,           MaxMoveSpeed,   $"{h.MoveSpeed:0.#}");
 
-            // restore 4th row appearance
-            _barLabels[3].text  = "Velocidad";
-            _barLabels[3].color = ColLabel;
-            _barValues[3].color = Color.white;
-            _barBgs[3].color    = ColBarBg;
-            _barFills[3].color  = ColSpeed;
+            _barLabels[3].text      = "Velocidad";
+            _barLabels[3].color     = ColLabel;
+            _barValues[3].color     = ColStatVal;
+            _barValues[3].fontStyle = FontStyles.Bold;
+            _barBgs[3].color        = ColBarBg;
+            _barFills[3].color      = ColSpeed;
         }
     }
 
-    private void RefreshCards()
+    private void RefreshCardSections()
     {
         bool tower = _selectedTower != null;
         if (_heroCardsGO  != null) _heroCardsGO.SetActive(!tower);
         if (_towerCardsGO != null) _towerCardsGO.SetActive(tower);
 
-        IReadOnlyList<CardData> inv = PlayerInventory.Instance != null
-            ? PlayerInventory.Instance.Cards : null;
+        IReadOnlyList<CardData> inv = PlayerInventory.Instance?.Cards;
         int invCount = inv?.Count ?? 0;
 
         if (!tower)
         {
-            // hero mode — show inventory, refresh build buttons
+            if (_hInvTitle != null)
+                _hInvTitle.text = $"INVENTARIO ({invCount}/6)";
+
             for (int i = 0; i < Slots; i++)
             {
                 bool has = i < invCount && inv[i] != null;
                 _hInvIco[i].sprite = has ? inv[i].Icon : null;
                 _hInvIco[i].color  = has && inv[i].Icon != null ? Color.white : Color.clear;
+                _hInvPlus[i].gameObject.SetActive(!has);
             }
 
             int gold = EconomyManager.Instance != null ? EconomyManager.Instance.Gold : 0;
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < _bDatas.Length; i++)
                 if (_buildBtn[i] != null)
-                    _buildBtn[i].interactable = _bDatas[i] != null && gold >= _bCosts[i];
+                    _buildBtn[i].interactable = _bDatas[i] != null && gold >= BuildCost(i);
         }
         else
         {
-            // tower mode — applied effects + clickable inventory
             var applied = _selectedTower.AppliedEffects;
             int appCnt  = applied?.Count ?? 0;
+
+            if (_tCardsTitle != null)
+                _tCardsTitle.text = $"EFECTOS APLICADOS ({appCnt}/6)";
 
             for (int i = 0; i < Slots; i++)
             {
@@ -658,7 +815,7 @@ public class HUDController : MonoBehaviour
 
             for (int i = 0; i < Slots; i++)
             {
-                bool has = i < invCount && inv[i] != null;
+                bool has = i < invCount && inv != null && inv[i] != null;
                 _tInvIco[i].sprite = has ? inv[i].Icon : null;
                 _tInvIco[i].color  = has && inv[i].Icon != null ? Color.white : Color.clear;
                 _tInvBtn[i].interactable = has && !full && inv[i].IsCompatibleWith(tt);
@@ -668,12 +825,12 @@ public class HUDController : MonoBehaviour
 
     private void RefreshActions(bool tower)
     {
-        if (_heroActGO  != null) _heroActGO.SetActive(!tower);
-        if (_towerActGO != null) _towerActGO.SetActive(tower);
+        if (_actionsSec == null) return;
+        if (!tower || _selectedTower == null) { _actionsSec.SetActive(false); return; }
 
-        if (!tower || _selectedTower == null) return;
+        _actionsSec.SetActive(true);
 
-        TowerData d = _selectedTower.Data;
+        TowerData   d     = _selectedTower.Data;
         TowerData[] paths = d.UpgradePaths;
         bool has0 = paths != null && paths.Length > 0 && paths[0] != null;
         bool has1 = paths != null && paths.Length > 1 && paths[1] != null;
@@ -684,45 +841,45 @@ public class HUDController : MonoBehaviour
 
         if (has0)
         {
-            _upTxt0.text          = $"{paths[0].TowerName} (+{paths[0].Cost}g)";
-            _upBtn0.interactable  = gold >= paths[0].Cost;
+            _upTxt0.text = $"{paths[0].TowerName} <color=#{ColorUtility.ToHtmlStringRGB(ColUpCost)}>+{paths[0].Cost}g</color>";
+            _upBtn0.interactable = gold >= paths[0].Cost;
         }
         if (has1)
         {
-            _upTxt1.text          = $"{paths[1].TowerName} (+{paths[1].Cost}g)";
-            _upBtn1.interactable  = gold >= paths[1].Cost;
+            _upTxt1.text = $"{paths[1].TowerName} <color=#{ColorUtility.ToHtmlStringRGB(ColUpCost)}>+{paths[1].Cost}g</color>";
+            _upBtn1.interactable = gold >= paths[1].Cost;
         }
 
-        _sellTxt.text = $"Vender ({_selectedTower.SellValue}g)";
+        _sellTxt.text = $"Vender <color=#{ColorUtility.ToHtmlStringRGB(ColSellRef)}>({_selectedTower.SellValue}g)</color>";
 
-        // Show sell warning only if tower has applied cards
         bool hasCards = _selectedTower.AppliedEffects != null && _selectedTower.AppliedEffects.Count > 0;
         _sellWarn.gameObject.SetActive(hasCards);
     }
 
-    // ══════════════════════════════════════════════════════════════════════════
+    // ══════════════════════════════════════════════════════════════════════
     //  Event handlers
-    // ══════════════════════════════════════════════════════════════════════════
+    // ══════════════════════════════════════════════════════════════════════
 
-    private void OnSelection(ISelectable prev, ISelectable curr)
+    private void OnSelectionChanged(ISelectable prev, ISelectable curr)
     {
         _selectedTower = curr as TowerBehaviour;
         RefreshAll();
+        if (_panelRT != null) LayoutRebuilder.ForceRebuildLayoutImmediate(_panelRT);
     }
 
-    private void OnSold(TowerBehaviour t, int refund)
+    private void OnTowerSold(TowerBehaviour t, int refund)
     {
         if (_selectedTower == t) { _selectedTower = null; RefreshAll(); }
     }
 
-    private void OnUpgraded(TowerBehaviour t)
+    private void OnTowerUpgraded(TowerBehaviour t)
     {
         if (_selectedTower == t) RefreshAll();
     }
 
-    private void OnApplied(TowerBehaviour t)
+    private void OnEffectApplied(TowerBehaviour t)
     {
-        if (_selectedTower == t) RefreshCards();
+        if (_selectedTower == t) RefreshCardSections();
     }
 
     private void RefreshGold(int gold)
@@ -737,12 +894,10 @@ public class HUDController : MonoBehaviour
 
     private void RefreshGoldDependents(int gold)
     {
-        // build buttons
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < _bDatas.Length; i++)
             if (_buildBtn[i] != null)
-                _buildBtn[i].interactable = _bDatas[i] != null && gold >= _bCosts[i];
+                _buildBtn[i].interactable = _bDatas[i] != null && gold >= BuildCost(i);
 
-        // upgrade buttons
         if (_selectedTower != null)
         {
             var paths = _selectedTower.Data.UpgradePaths;
@@ -753,7 +908,7 @@ public class HUDController : MonoBehaviour
         }
     }
 
-    // ── Button clicks ────────────────────────────────────────────────────────
+    // ── Button handlers ───────────────────────────────────────────────────
 
     private void ClickBuild(int idx)
     {
@@ -765,14 +920,13 @@ public class HUDController : MonoBehaviour
     {
         if (_selectedTower == null) return;
         var inv = PlayerInventory.Instance;
-        if (inv == null) return;
-        if (slot < 0 || slot >= inv.Cards.Count) return;
+        if (inv == null || slot < 0 || slot >= inv.Cards.Count) return;
         inv.SpendCard(inv.Cards[slot], _selectedTower);
     }
 
-    // ══════════════════════════════════════════════════════════════════════════
+    // ══════════════════════════════════════════════════════════════════════
     //  Helpers
-    // ══════════════════════════════════════════════════════════════════════════
+    // ══════════════════════════════════════════════════════════════════════
 
     private void FillBar(int i, float val, float max, string text)
     {
@@ -781,12 +935,9 @@ public class HUDController : MonoBehaviour
         _barValues[i].text = text;
     }
 
-    private int FullCost(int idx)
+    private int BuildCost(int idx)
     {
-        if (_bDatas[idx] == null) return 0;
-        // Fuego/Agua: Rango base + upgrade delta
-        if ((idx == 2 || idx == 3) && _rangeTowerData != null)
-            return _rangeTowerData.Cost + _bDatas[idx].Cost;
+        if (_bDatas == null || idx < 0 || idx >= _bDatas.Length || _bDatas[idx] == null) return 0;
         return _bDatas[idx].Cost;
     }
 
@@ -796,17 +947,14 @@ public class HUDController : MonoBehaviour
         var sb = new System.Text.StringBuilder();
         for (int i = 0; i < d.OnHitEffects.Length; i++)
         {
-            if (i > 0) sb.Append(" + ");
+            if (i > 0) sb.Append('+');
             var e = d.OnHitEffects[i];
             switch (e.Type)
             {
-                case EffectType.Burn:
-                    sb.Append($"Burn {e.Value:0.#} dps"); break;
+                case EffectType.Burn:           sb.Append($"Burn {e.Value:0.#}dps");        break;
                 case EffectType.Slow:
-                case EffectType.SlowArea:
-                    sb.Append($"Slow -{e.Value * 100:0}%"); break;
-                case EffectType.ArmorReduction:
-                    sb.Append($"Arm -{e.Value * 100:0}%"); break;
+                case EffectType.SlowArea:       sb.Append($"Slow -{e.Value * 100:0}%");     break;
+                case EffectType.ArmorReduction: sb.Append($"Arm -{e.Value * 100:0}%");      break;
             }
         }
         return sb.ToString();
@@ -835,7 +983,7 @@ public class HUDController : MonoBehaviour
         return null;
     }
 
-    // ── UI creation shortcuts ────────────────────────────────────────────────
+    // ── UI helpers ────────────────────────────────────────────────────────
 
     private static GameObject UI(string name, Transform parent)
     {
@@ -856,19 +1004,30 @@ public class HUDController : MonoBehaviour
         return tmp;
     }
 
+    /// <summary>Sets a fixed height on a GO that is a direct child of a VLG with childControlHeight=false.</summary>
+    private static void FH(GameObject go, float h)
+    {
+        go.GetComponent<RectTransform>().sizeDelta = new Vector2(0, h);
+        var le = go.GetComponent<LayoutElement>() ?? go.AddComponent<LayoutElement>();
+        le.preferredHeight = h;
+        le.minHeight       = h;
+        le.flexibleHeight  = 0;
+    }
+
     private static void FW(GameObject go, float w)
     {
-        var le = go.AddComponent<LayoutElement>();
+        var le = go.GetComponent<LayoutElement>() ?? go.AddComponent<LayoutElement>();
         le.preferredWidth = w;
         le.minWidth       = w;
     }
 
-    private static void AnchorRT(GameObject go, Vector2 min, Vector2 max, Vector2 pivot)
+    private static void Stretch(GameObject go, float inset = 0)
     {
         var rt = go.GetComponent<RectTransform>();
-        rt.anchorMin = min;
-        rt.anchorMax = max;
-        rt.pivot     = pivot;
+        rt.anchorMin = Vector2.zero;
+        rt.anchorMax = Vector2.one;
+        rt.offsetMin = new Vector2(inset, inset);
+        rt.offsetMax = new Vector2(-inset, -inset);
     }
 
     private static void AnchorFill(GameObject go, float xMin, float yMin, float xMax, float yMax)
@@ -879,13 +1038,87 @@ public class HUDController : MonoBehaviour
         rt.offsetMin = rt.offsetMax = Vector2.zero;
     }
 
-    private static void Stretch(GameObject go, float inset = 0)
+    private static void AddOutline(GameObject go, Color color)
     {
-        var rt = go.GetComponent<RectTransform>();
-        rt.anchorMin = Vector2.zero;
-        rt.anchorMax = Vector2.one;
-        rt.offsetMin = new Vector2(inset, inset);
-        rt.offsetMax = new Vector2(-inset, -inset);
+        var ol = go.AddComponent<Outline>();
+        ol.effectColor    = color;
+        ol.effectDistance = new Vector2(1, 1);
+    }
+
+    /// <summary>Builds an HLG row: bold title text + flexible 1px horizontal line.</summary>
+    private static TextMeshProUGUI MakeSectionTitle(Transform parent, string text)
+    {
+        var row = UI("SecTitle", parent);
+        row.AddComponent<LayoutElement>().preferredHeight = 14;
+
+        var hlg = row.AddComponent<HorizontalLayoutGroup>();
+        hlg.spacing                = 6;
+        hlg.padding                = new RectOffset(0, 0, 0, 0);
+        hlg.childAlignment         = TextAnchor.MiddleLeft;
+        hlg.childControlWidth      = true;
+        hlg.childControlHeight     = true;
+        hlg.childForceExpandWidth  = false;
+        hlg.childForceExpandHeight = true;
+
+        var tmp = TMP("Lbl", row.transform, 9, TextAlignmentOptions.MidlineLeft, ColTitle);
+        tmp.text      = text;
+        tmp.fontStyle = FontStyles.Bold;
+        tmp.enableWordWrapping = false;
+
+        var lineGO = UI("Line", row.transform);
+        lineGO.AddComponent<LayoutElement>().flexibleWidth = 1;
+        var lineImg = lineGO.AddComponent<Image>();
+        lineImg.color = new Color(0.165f, 0.227f, 0.165f, 1f); // #2A3A2A
+        lineImg.raycastTarget = false;
+        // Constrain to 1px via RectTransform anchorMin/anchorMax centered vertically
+        var lineRT = lineGO.GetComponent<RectTransform>();
+        lineRT.anchorMin = new Vector2(0f, 0.4f);
+        lineRT.anchorMax = new Vector2(1f, 0.6f);
+        lineRT.offsetMin = lineRT.offsetMax = Vector2.zero;
+
+        return tmp;
+    }
+
+    /// <summary>Creates a button with custom bg color and outline border.</summary>
+    private static Button MakeStyledBtn(string name, Transform parent, Color bgCol, Color borderCol, float h)
+    {
+        var go = UI(name, parent);
+        go.AddComponent<LayoutElement>().preferredHeight = h;
+        go.AddComponent<Image>().color = bgCol;
+        AddOutline(go, borderCol);
+
+        var btn = go.AddComponent<Button>();
+        var c   = btn.colors;
+        c.normalColor      = Color.white;
+        c.highlightedColor = new Color(1.2f, 1.2f, 1.2f);
+        c.pressedColor     = new Color(0.8f, 0.8f, 0.8f);
+        c.disabledColor    = new Color(0.6f, 0.6f, 0.6f, 0.6f);
+        btn.colors = c;
+
+        var txt = TMP("T", go.transform, 10, TextAlignmentOptions.Center, Color.white);
+        Stretch(txt.gameObject, 3);
+        txt.enableWordWrapping = false;
+        txt.richText = true;
+
+        return btn;
+    }
+
+    private static string FormatTowerSubtype(TowerData d)
+    {
+        if (d == null) return "";
+        switch (d.Type)
+        {
+            case TowerType.Melee: return "MELEE \u00b7 LV " + (d.UpgradePaths != null && d.UpgradePaths.Length > 0 ? "1" : "2");
+            case TowerType.Range: return "RANGO \u00b7 LV 1";
+            default:              return d.Type.ToString().ToUpper();
+        }
+    }
+
+    private static void AddHDivider(Transform p)
+    {
+        var go = UI("Div", p);
+        FH(go, 1);
+        go.AddComponent<Image>().color = ColDivider;
     }
 
     private static Button MakeBtn(string name, Transform parent, Color bgCol, float h)
@@ -902,8 +1135,9 @@ public class HUDController : MonoBehaviour
         c.disabledColor    = new Color(0.6f, 0.6f, 0.6f, 0.6f);
         btn.colors = c;
 
-        var txt = TMP("T", go.transform, 11, TextAlignmentOptions.Center, Color.white);
-        Stretch(txt.gameObject, 4);
+        var txt = TMP("T", go.transform, 9, TextAlignmentOptions.Center, Color.white);
+        Stretch(txt.gameObject, 3);
+        txt.enableWordWrapping = false;
 
         return btn;
     }

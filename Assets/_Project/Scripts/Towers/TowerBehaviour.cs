@@ -170,7 +170,6 @@ public class TowerBehaviour : MonoBehaviour, ISelectable
     /// <summary>
     /// Upgrades to UpgradePaths[pathIndex], spending the upgrade cost.
     /// Returns false if upgrade unavailable or insufficient gold.
-    /// Torre Rango: pathIndex 0 = Fuego, 1 = Agua.
     /// </summary>
     public bool TryUpgrade(int pathIndex = 0)
     {

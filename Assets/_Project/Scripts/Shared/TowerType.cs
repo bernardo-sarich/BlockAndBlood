@@ -5,6 +5,4 @@ public enum TowerType
 {
     Melee,
     Range,
-    Fire,
-    Water
 }

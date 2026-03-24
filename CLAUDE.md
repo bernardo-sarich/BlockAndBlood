@@ -29,7 +29,7 @@ Assets/
 │   │   ├── Shared/          ISelectable, EntityShadow, TowerType
 │   │   └── UI/             HUDController, CardPopupController, CursorManager
 │   ├── ScriptableObjects/
-│   │   ├── Towers/         TowerData SO × 5 (Melee Lv1, Melee Lv2, Rango Lv1, Fuego, Agua)
+│   │   ├── Towers/         TowerData SO × 3 (Melee Lv1, Melee Lv2, Rango Lv1)
 │   │   ├── Enemies/        EnemyData SO × 3 (Caminante, Rápido, Blindado)
 │   │   └── Cards/          CardData SO × 15
 │   ├── Prefabs/
@@ -130,16 +130,20 @@ Assets/
 - Evento: `OnInventoryChanged` → HUDController refresca sección de cartas
 - Las cartas se obtienen del popup de XP level-up (CardPopupController, pendiente)
 
-### HUDController (panel inferior)
-- **Panel procedural** de 148px fijo, anclado al borde inferior, `Screen Space - Overlay`
-- **4 secciones** en `HorizontalLayoutGroup`:
-  - **Portrait** (100px): sprite + nombre + subtipo de la unidad seleccionada
-  - **Stats** (flex): 4 barras de progreso coloreadas (daño `#e24b4a`, rango `#7f77dd`, velocidad `#f0c040`, efecto `#1d9e75`)
-  - **Cards** (210px): hero → inventario + 4 build buttons (Melee 12, Rango 10, Fuego 25, Agua 25); torre → 6 slots efectos + inventario clickable con filtro de compatibilidad por `TowerType`
-  - **Actions** (160px): hero → mensaje neutro; torre → botones mejorar (1 o 2 según upgrade paths) + vender + advertencia de cartas
+### HUDController (panel lateral derecho)
+- **Panel procedural** de 200px ancho, altura completa, anclado al borde derecho, `Screen Space - Overlay`
+- `Camera.main.rect` ajustado en `Awake()` para que el área de juego excluya la franja del panel
+- Top HUD (oro, vidas) reposicionado a top-left del área de juego
+- **Secciones en `VerticalLayoutGroup`** (stacking vertical, `childForceExpandHeight = false`):
+  - **Portrait** (70px): sprite 44×44 + nombre + subtipo, fondo `#111711`
+  - **Stats** (124px): 4 barras de progreso coloreadas (daño `#e24b4a`, rango `#7f77dd`, velocidad `#f0c040`, efecto `#1d9e75`)
+  - **HeroCards** (68px, solo héroe): inventario (6 slots)
+  - **TowerCards** (120px, solo torre): 6 slots efectos aplicados + inventario clickable con filtro de compatibilidad por `TowerType`
+  - **Build** (altura dinámica, solo héroe): grilla 2×2 de botones de construcción (`GridLayoutGroup`, `CellSize 84×48`, `Spacing 4×4`). Cada botón: ícono 24×24 + nombre + costo en dorado. Botones para `TowerData` null se omiten. Desactivado visual: `alpha 0.35` cuando oro insuficiente
+  - **Actions** (160px, solo torre): botones mejorar (1 o 2 según upgrade paths) + vender + advertencia de cartas
 - Constantes de barras: `MaxDamage=50`, `MaxRange=4`, `MaxAttackSpeed=5`, `MaxMoveSpeed=8`
 - Escucha: `OnSelectionChanged`, `OnGoldChanged`, `OnInventoryChanged`, `OnEffectApplied`, `OnTowerSold`, `OnTowerUpgraded`
-- **SerializeFields necesarios en Inspector:** `_goldText`, `_goldIcon`, `_livesText`, `_heartIcon`, `_meleeTowerData`, `_rangeTowerData`, `_fireTowerData`, `_waterTowerData`
+- **SerializeFields necesarios en Inspector:** `_goldText`, `_goldIcon`, `_livesText`, `_heartIcon`, `_meleeTowerData`, `_rangeTowerData`
 
 ### EffectSystem (componente en EnemyBehaviour)
 - Gestiona `Burn` (DoT 4 dmg/s, ignora armadura) y `Slow` (−40%, acumula hasta −70%)
@@ -155,13 +159,11 @@ Assets/
 | Melee Lv1 | 12 oro | 15 dps (físico) | Celda + 8 adyacentes | Slow −15% |
 | Melee Lv2 (Sierra) | +18 oro | 28 dps | = Lv1 | = Lv1 |
 | Rango Lv1 | 10 oro | 20/proyectil (físico) | 3 celdas radio | — |
-| Fuego (Rango Lv2) | +15 oro | 20/proyectil | = Rango Lv1 | Burn 3s, 4 dmg/s, ignora armadura |
-| Agua (Rango Lv2) | +15 oro | 16/proyectil | = Rango Lv1 | Slow −40% 2s (acumula), −15% armadura 2s |
 
 - Construcción: **5 segundos** — el héroe puede moverse y atacar libremente durante ese tiempo
 - Venta: devuelve **60%** del costo total (construcción + mejoras)
-- Las torres Fuego y Agua NO tienen mejora adicional (ya son Lv2)
-- **TowerType** (`enum`): cada `TowerData` tiene un campo `Type` (Melee/Range/Fire/Water) — usado por `CardData.IsCompatibleWith()` para filtrar cartas aplicables
+- **TowerType** (`enum`): cada `TowerData` tiene un campo `Type` (Melee/Range) — usado por `CardData.IsCompatibleWith()` para filtrar cartas aplicables
+- Los efectos elementales (Burn, Slow, ArmorReduction) se aplican exclusivamente a través de **cartas**, no como torres dedicadas
 - **Cartas aplicadas:** cada torre tiene `AppliedEffects` (máx 6 `CardData`). `ApplyCard(CardData)` agrega permanentemente. Evento `OnEffectApplied`. Las cartas se pierden al vender la torre
 - **TotalGoldInvested:** trackea oro invertido (base + mejoras). `SellValue = 60% * TotalGoldInvested`
 
@@ -175,7 +177,7 @@ Assets/
 | Rápido | 40 | 4 c/s | 0% | 3 | 8 |
 | Blindado | 200 | 1.5 c/s | 50% físico | 5 | 15 |
 
-- La armadura del Blindado **no afecta el DoT de Fuego**
+- La armadura del Blindado **no afecta el DoT de Burn** (aplicado vía cartas)
 - Rápido: siempre spawna solo, nunca en grupo
 - Blindado: siempre precedido por 3 Caminantes
 

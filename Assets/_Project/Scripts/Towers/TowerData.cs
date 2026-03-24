@@ -3,7 +3,6 @@ using UnityEngine;
 /// <summary>
 /// ScriptableObject that holds all configuration for a single tower type or upgrade tier.
 /// UpgradePaths references the next-tier TowerData SOs (empty array = no upgrades available).
-/// For Torre Rango, UpgradePaths has two entries: Torre Fuego and Torre Agua.
 /// </summary>
 [CreateAssetMenu(menuName = "Block&Blood/TowerData", fileName = "NewTowerData")]
 public class TowerData : ScriptableObject
@@ -44,6 +43,6 @@ public class TowerData : ScriptableObject
     public GameObject ProjectilePrefab;
 
     [Header("Progression")]
-    /// <summary>Available upgrade paths. Torre Rango has two (Fuego, Agua). Others have one or none.</summary>
+    /// <summary>Available upgrade paths (empty = no upgrades available).</summary>
     public TowerData[] UpgradePaths;
 }

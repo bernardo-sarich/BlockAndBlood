@@ -1,9 +1,9 @@
 /// <summary>
 /// Types of status effects that towers can apply to enemies.
 /// SlowArea: non-stacking aura slow (Melee towers — refreshed continuously while in range).
-/// Slow: stacking projectile-based slow (Agua tower — accumulates up to -70%).
-/// Burn: damage-over-time that ignores armor (Fuego tower).
-/// ArmorReduction: temporarily lowers physical armor (Agua tower).
+/// Slow: stacking projectile-based slow (accumulates up to -70%, applied via cards).
+/// Burn: damage-over-time that ignores armor (applied via cards).
+/// ArmorReduction: temporarily lowers physical armor (applied via cards).
 /// </summary>
 public enum EffectType
 {

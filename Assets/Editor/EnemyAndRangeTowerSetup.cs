@@ -99,8 +99,6 @@ public static class EnemyAndRangeTowerSetup
 
         string[] rangePrefabs = {
             "Assets/_Project/Prefabs/Towers/Tower_Range_Lv1.prefab",
-            "Assets/_Project/Prefabs/Towers/Tower_Fire_Lv2.prefab",
-            "Assets/_Project/Prefabs/Towers/Tower_Water_Lv2.prefab",
         };
 
         foreach (string path in rangePrefabs)

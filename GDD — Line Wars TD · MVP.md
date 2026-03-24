@@ -3,7 +3,7 @@
 
 > **Este archivo es la fuente de verdad editable del diseño.**
 > El archivo `GDD — Line Wars TD · MVP.pdf` es un snapshot histórico y ya no se actualiza.
-> Última actualización: v1.8 — Sistema de selección (héroe/torre), elipse verde de selección, HUD condicionado.
+> Última actualización: v1.11 — Torres Fuego y Agua eliminadas; efectos elementales ahora vía cartas.
 
 ---
 
@@ -107,10 +107,8 @@ Victoria (boss muerto) / Derrota (0 vidas, de 5 iniciales)
 | Melee Lv1 | 12 oro | 15 dps (físico, AoE) | Celda propia + 8 adyacentes | Slow −15% |
 | Torre Sierra (Melee Lv2) | +18 oro | 28 dps | = Lv1 | Slow −15% |
 | Rango Lv1 | 10 oro | 20/proyectil (físico) | 3 celdas radio | — |
-| Fuego (Rango Lv2) | +15 oro | 20/proyectil | = Rango Lv1 | Burn: 4 dmg/s, 3s, ignora armadura |
-| Agua (Rango Lv2) | +15 oro | 16/proyectil | = Rango Lv1 | Slow −40% 2s + −15% armadura 2s |
 
-> **Fuego y Agua son Lv2 — no tienen mejora adicional.**
+> Los efectos elementales (Burn, Slow proyectil, ArmorReduction) se aplican exclusivamente a través de **cartas**, no como torres dedicadas.
 
 ### Detalles por torre
 
@@ -127,22 +125,12 @@ Victoria (boss muerto) / Derrota (0 vidas, de 5 iniciales)
 - Target: enemigo con mayor progreso hacia la meta
 - Rol: DPS a distancia, cubre más área que Melee
 
-**Torre de Fuego — Rango Lv2 (+15 oro, total 25 oro)**
-- Burn: 4 dmg/s, ignora armadura física, nuevo impacto refresca duración (no acumula stacks)
-- Rol: DPS sostenido vs alto HP. Counter natural de Blindados
-
-**Torre de Agua — Rango Lv2 (+15 oro, total 25 oro)**
-- Slow acumula hasta cap −70%. −15% armadura se aplica a toda fuente de daño
-- Rol: control sistémico. Amplifica efectividad de todas las demás torres
-
 ### Efectividad por monstruo
 
 | Torre | Caminante | Rápido | Blindado |
 |-------|-----------|--------|----------|
 | Melee | ★★★ | ★★ | ★★ |
 | Rango | ★★★ | ★★ | ★ |
-| Fuego | ★★★ | ★★ | ★★★ |
-| Agua | ★★ | ★★★ | ★★★ |
 
 ---
 
@@ -164,7 +152,7 @@ Victoria (boss muerto) / Derrota (0 vidas, de 5 iniciales)
 
 ### Mecánicas especiales
 
-- La armadura del Blindado **no afecta el DoT de Fuego**
+- La armadura del Blindado **no afecta el DoT de Burn** (aplicado vía cartas)
 - Al llegar a la meta: resta **1 vida** al jugador
 - Al morir: da **oro + XP** al jugador
 
@@ -174,8 +162,8 @@ Componente de `EnemyBehaviour` que gestiona efectos activos:
 
 | Efecto | Valor | Comportamiento |
 |--------|-------|---------------|
-| Burn (DoT) | 4 dmg/s | Ignora armadura. Nuevo impacto refresca duración, no acumula stacks |
-| Slow | −40% por Torre de Agua | Múltiples fuentes acumulan hasta cap **−70%** |
+| Burn (DoT) | 4 dmg/s | Ignora armadura. Nuevo impacto refresca duración, no acumula stacks. Aplicado vía cartas |
+| Slow | −40% por carta | Múltiples fuentes acumulan hasta cap **−70%**. Aplicado vía cartas |
 
 ---
 
@@ -249,8 +237,8 @@ Componente de `EnemyBehaviour` que gestiona efectos activos:
 |-------|--------|
 | Filo afilado | Torres Melee +20% daño |
 | Pólvora | Torres de Rango +20% daño |
-| Rescoldo | Torres de Fuego: quemadura 5s (antes 3s) |
-| Corriente fría | Torres de Agua: slow −55% (antes −40%) |
+| Rescoldo | Torres con Burn: quemadura 5s (antes 3s) |
+| Corriente fría | Torres con Slow: slow −55% (antes −40%) |
 | Construcción rápida | Tiempo de construcción 3s (antes 5s) |
 | Buen ojo | Héroe +50% rango de ataque |
 | Golpe certero | Héroe +30% daño |
@@ -260,7 +248,7 @@ Componente de `EnemyBehaviour` que gestiona efectos activos:
 
 | Carta | Efecto |
 |-------|--------|
-| Corriente amplificada | Enemigo ralentizado por Agua recibe +25% daño de todas las fuentes |
+| Corriente amplificada | Enemigo ralentizado por Slow recibe +25% daño de todas las fuentes |
 | Brasas | Al expirar quemadura, AoE de 10 dmg en 1 celda alrededor |
 | Economía de guerra | Vender torre devuelve 80% (antes 60%) — una vez por pausa de XP |
 | Sierra en cadena | Torre Melee mata enemigo → siguiente en misma celda recibe 50% del daño del kill |
@@ -270,7 +258,7 @@ Componente de `EnemyBehaviour` que gestiona efectos activos:
 
 | Carta | Requisito | Efecto |
 |-------|-----------|--------|
-| Tormenta de fuego | ≥1 Torre de Fuego construida | Torres de Fuego también aplican slow de Agua (−25% vel, 1.5s) |
+| Tormenta de fuego | ≥1 torre con Burn aplicado | Torres con Burn también aplican Slow (−25% vel, 1.5s) |
 | El laberinto vivo | — | Monstruo que dobla en esquina recibe 15 de daño |
 
 ### Sinergias destacadas
@@ -296,9 +284,9 @@ Componente de `EnemyBehaviour` que gestiona efectos activos:
 - No se puede extender
 
 **Opciones típicas con 50 oro:**
-- 4 Torres de Rango (40 oro)
-- 3 Rango + 1 Melee (42 oro)
-- 1 Torre de Fuego completa (25) + 2 Rango (20)
+- 5 Torres de Rango (50 oro)
+- 4 Rango + 1 Melee (52 oro → sobra algo)
+- 3 Rango + 2 Melee (54 oro → requiere ahorrar)
 
 ### Stream de monstruos (0:30 → fin)
 
@@ -349,8 +337,8 @@ Componente de `EnemyBehaviour` que gestiona efectos activos:
 ### Mecánica de diseño
 
 El boss valida el build del jugador:
-- **Torres de Fuego** → manejan el HP alto (DoT ignora armadura)
-- **Torres de Agua** → contienen la velocidad de fase 2
+- **Cartas de Burn** → manejan el HP alto (DoT ignora armadura)
+- **Cartas de Slow** → contienen la velocidad de fase 2
 - **Sin ninguno** → el jugador pierde vidas inevitablemente
 
 La regeneración en fase 2 castiga builds defensivos con DPS < 2 HP/s.
@@ -391,35 +379,37 @@ La regeneración en fase 2 castiga builds defensivos con DPS < 2 HP/s.
 - **Oro actual** — número + icono de moneda (`GoldCoin.png`)
 - **Barra de XP** con número de nivel actual
 
-### Panel inferior de información de unidad (siempre visible)
+### Panel lateral derecho de información de unidad (siempre visible)
 
-Panel horizontal fijo de **148px** anclado al borde inferior de la pantalla. Contiene cuatro secciones en fila:
+Panel vertical procedural de **200px de ancho**, altura completa, anclado al borde derecho de la pantalla (`Screen Space - Overlay`). El viewport de la cámara se ajusta para excluir la franja del panel. Secciones apiladas con `VerticalLayoutGroup` (`childForceExpandHeight = false`); el fondo `#161C16` queda visible debajo del último elemento.
 
-**1. Portrait (100px fijo)**
-- Sprite de la unidad seleccionada, nombre y subtipo/nivel
-- Fondo `#111711`, borde derecho sutil
+**1. Portrait (70px)**
+- Sprite 44×44 de la unidad seleccionada, nombre y subtipo/nivel
+- Fondo `#111711`
 
-**2. Stats (flex)**
-- 3–4 filas: label + barra de progreso coloreada + valor numérico
-- **Héroe:** Daño, Vel. ataque, Rango, Velocidad de movimiento
+**2. Stats (124px)**
+- 4 filas: label + barra de progreso coloreada + valor numérico
+- **Héroe:** Daño, Rango, Vel. ataque, Velocidad de movimiento
 - **Torre:** Daño, Rango, Vel. ataque, Efecto especial (texto sin barra)
 - Colores de barra: daño `#e24b4a`, rango `#7f77dd`, velocidad `#f0c040`, efecto `#1d9e75`
 
-**3. Cartas (210px fijo)**
+**3. Cartas (solo héroe: 68px / solo torre: 120px)**
 
 *Con héroe seleccionado:*
-- Fila superior: inventario de cartas del jugador como miniaturas (hasta 6 slots, slots vacíos con borde)
-- Fila inferior: grilla 2×2 de botones de construcción — Melee (12g), Rango (10g), Fuego (25g), Agua (25g). Botones desactivados si no hay oro suficiente
+- Inventario de cartas del jugador como miniaturas (hasta 6 slots, slots vacíos con borde)
 
 *Con torre seleccionada:*
-- Fila superior: 6 slots de efectos aplicados a la torre. Slots ocupados muestran ícono + indicador de rareza. Slots vacíos con signo `+`
-- Fila inferior: inventario del jugador como miniaturas clicables. Click → aplica carta permanentemente a la torre (sin deshacer). Cartas incompatibles con el tipo de torre a opacity 35%, no clicables
+- 6 slots de efectos aplicados a la torre. Slots ocupados muestran ícono + indicador de rareza. Slots vacíos con signo `+`
+- Inventario del jugador como miniaturas clicables. Click → aplica carta permanentemente a la torre (sin deshacer). Cartas incompatibles con el tipo de torre a opacity 35%, no clicables
 
-**4. Acciones (160px fijo)**
+**4. Construir torre (altura dinámica, solo héroe)**
+- Grilla 2×2 (`GridLayoutGroup`, cell 84×48, spacing 4×4) de botones de construcción
+- Cada botón: ícono de torre (24×24) + nombre + costo en dorado, apilados verticalmente
+- Torres: Melee (12g), Rango (10g)
+- Botones para `TowerData` no asignados se omiten automáticamente
+- Botón desactivado visualmente (alpha 0.35) cuando el oro del jugador es insuficiente
 
-*Con héroe seleccionado:* mensaje neutro "Seleccioná una torre para ver sus opciones"
-
-*Con torre seleccionada:*
+**5. Acciones (160px, solo torre)**
 - Botón(es) **Mejorar** (1 o 2 según upgrade paths disponibles) con nombre y costo
 - Botón **Vender** mostrando oro devuelto (60% del total invertido)
 - Advertencia: "Cartas aplicadas se pierden al vender" (solo visible si la torre tiene cartas)
@@ -516,10 +506,10 @@ Sprites decorativos del sprite sheet `GRASS+.png` (troncos rotos, plantas) coloc
 ### Assets pendientes por TASK
 
 - **[TASK-12]** Configuración visual 3/4 view: Sprite Sort Point, Sorting Layers, sombras, sprites direccionales
-- Torres: base + cañón rotatorio (Rango), base + sierra (Melee), variantes Fuego/Agua
+- Torres: base + cañón rotatorio (Rango), base + sierra (Melee)
 - Monstruos: 3 variantes con sprites direccionales (frente/espalda) — Roguelike Characters
 - Proyectiles básicos
-- Efectos de estado: partícula de fuego (Burn), partícula de agua/hielo (Slow)
+- Efectos de estado: partícula de fuego (Burn, vía cartas), partícula de agua/hielo (Slow, vía cartas)
 - Barras de HP sobre monstruos
 - Hero sprite: `roguelikeChar_magenta_0_transparent.png` asignado (Kenney Roguelike Characters, fondo removido). Escala 4.5 (~75% de una celda). Pendiente: sprites direccionales (frente/espalda) para completar 3/4 view
 - Boss sprite más grande e imponente
@@ -583,7 +573,7 @@ Assets/
 │   │       ├── HUDController.cs
 │   │       └── CardPopupController.cs
 │   ├── ScriptableObjects/
-│   │   ├── Towers/         TowerData SO × 5
+│   │   ├── Towers/         TowerData SO × 3
 │   │   ├── Enemies/        EnemyData SO × 3
 │   │   └── Cards/          CardData SO × 15
 │   ├── Prefabs/
@@ -621,7 +611,7 @@ Assets/
 **TowerData**
 ```csharp
 string towerName
-TowerType type          // Melee / Range / Fire / Water
+TowerType type          // Melee / Range
 int cost
 float damageBase
 float attackSpeed
@@ -734,3 +724,5 @@ Este GDD cubre exclusivamente el MVP. El diseño completo (Mundos 2–5, Torres 
 | 1.7 | 2026-03-22 | Visual del suelo reemplazado: tiles Kenney → sprite pixel art `GRASS+_58` (16×16, tiling sin costuras). Sprite sheet `GRASS+.png` sliceado (350 sprites) e importado a `Resources/Decorations/`. Fondo `Tile_Black` escalado. Sistema de decoraciones: 4 sprites decorativos (troncos, plantas) en celdas libres, eliminados automáticamente al construir torre. `GrassSpriteSheetSlicer` editor script añadido |
 | 1.8 | 2026-03-23 | Sistema de selección implementado: `SelectionManager` (singleton en GameManager), interfaz `ISelectable` (implementada por `HeroBehaviour` y `TowerBehaviour`). Elipse verde (ring con centro transparente) indica unidad seleccionada. Héroe seleccionado por defecto; click en celda con torre → selecciona torre; click vacío/ESC/right-click → reselecciona héroe. HUD condicionado a selección: botones de construcción solo visibles con héroe seleccionado, panel torre solo con torre seleccionada. Detección de clicks basada en celda de grilla (no colliders). WASD y ataque automático siempre activos |
 | 1.9 | 2026-03-23 | Panel inferior de información de unidad: HUDController reescrito completamente. Panel 148px fijo inferior con 4 secciones (Portrait 100px, Stats flex, Cards 210px, Actions 160px). Construido proceduralmente en código. Nuevos sistemas: `TowerType` enum, `CardData` SO (nombre, ícono, rareza, compatibilidad por tipo de torre), `PlayerInventory` singleton (máx 6 cartas, AddCard/SpendCard, evento OnInventoryChanged). `TowerBehaviour` extendido con `AppliedEffects` (máx 6 cartas permanentes), `ApplyCard()`, evento `OnEffectApplied`. 4 botones de construcción (Melee/Rango/Fuego/Agua). Cartas aplicables a torres desde el inventario con filtro de compatibilidad. Botones vender/mejorar en sección Actions. Eliminados: botones flotantes anteriores y panel lateral derecho |
+| 1.10 | 2026-03-24 | HUD migrado de panel inferior a **panel lateral derecho** (200px ancho, altura completa). Viewport de cámara ajustado para excluir franja del panel. Secciones en `VerticalLayoutGroup` vertical. Botones de construcción reestructurados: grilla 2×2 (`GridLayoutGroup`, cell 84×48) con layout vertical por botón (ícono 24×24 + nombre + costo). Botones para `TowerData` null se omiten; altura de sección dinámica. `_fireTowerData` y `_waterTowerData` asignados en Inspector (`TowerFire_Lv2`, `TowerWater_Lv2`). Botón desactivado a alpha 0.35 |
+| 1.11 | 2026-03-24 | **Torres Fuego y Agua eliminadas.** Los efectos elementales (Burn, Slow, ArmorReduction) ahora se aplican exclusivamente vía cartas. `TowerType` enum reducido a Melee/Range. Eliminados: `TowerFire_Lv2` y `TowerWater_Lv2` (SOs + prefabs), upgrade paths de torre Rango vaciados, `_fireTowerData`/`_waterTowerData` del HUD. Botones de construcción reducidos a 2 (Melee/Rango). Cartas actualizadas para referenciar efectos en vez de torres. Boss: estrategia ahora requiere cartas de Burn/Slow en vez de torres dedicadas |

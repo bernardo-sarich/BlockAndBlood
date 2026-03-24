@@ -55,8 +55,6 @@ public static class MeleeSawSetup
 
         // 3. Fix sortingOrder on ALL tower prefabs so they render above grid tiles
         FixSortingOrder("Assets/_Project/Prefabs/Towers/Tower_Range_Lv1.prefab");
-        FixSortingOrder("Assets/_Project/Prefabs/Towers/Tower_Fire_Lv2.prefab");
-        FixSortingOrder("Assets/_Project/Prefabs/Towers/Tower_Water_Lv2.prefab");
 
         Debug.Log("[MeleeSaw] Done — all tower prefabs updated.");
     }
