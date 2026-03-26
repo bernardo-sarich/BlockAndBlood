@@ -124,7 +124,8 @@ public class TowerBehaviour : MonoBehaviour, ISelectable
 
         var sr          = _buildingVisual.AddComponent<SpriteRenderer>();
         sr.sprite       = _buildingSprite;
-        sr.sortingOrder = 10;
+        // Y-based sorting for perspective camera depth ordering
+        sr.sortingOrder = Mathf.RoundToInt(-transform.position.y * 100);
     }
 
     private IEnumerator BuildTimer()
@@ -135,7 +136,12 @@ public class TowerBehaviour : MonoBehaviour, ISelectable
 
         // Remove construction visual, show real tower
         if (_buildingVisual != null) Destroy(_buildingVisual);
-        if (_spriteRenderer != null) _spriteRenderer.enabled = true;
+        if (_spriteRenderer != null)
+        {
+            _spriteRenderer.enabled = true;
+            // Static Y-based sorting for perspective camera depth ordering
+            _spriteRenderer.sortingOrder = Mathf.RoundToInt(-transform.position.y * 100);
+        }
 
         // Re-enable spin
         var spin = GetComponent<SpinForever>();

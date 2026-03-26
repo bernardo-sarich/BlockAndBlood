@@ -202,7 +202,7 @@ public class SelectionManager : MonoBehaviour
         _indicatorSr                  = _indicator.AddComponent<SpriteRenderer>();
         _indicatorSr.sprite           = _ellipseSprite;
         _indicatorSr.color            = _color;
-        _indicatorSr.sortingOrder     = -45; // Above entity shadows (-50), below entities
+        _indicatorSr.sortingOrder     = -4500; // Above entity shadows, below entities
 
         _indicator.SetActive(false);
     }

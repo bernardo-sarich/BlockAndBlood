@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 /// <summary>
 /// Minimal test spawner for TASK-02 validation.
-/// Spawns enemy instances at the grid's spawn row (row 0) pointing to goal row (row 8).
+/// Spawns enemy instances at the grid's spawn row pointing to goal row.
 /// Press E to spawn one enemy. Auto-spawns every _autoSpawnRate seconds if > 0.
 /// This component is for playtesting only — WaveManager will replace it in TASK-06.
 /// </summary>
@@ -15,7 +15,7 @@ public class TestEnemySpawner : MonoBehaviour
 
     [Header("Spawn Settings")]
     [SerializeField] private float _autoSpawnRate = 0f; // 0 = manual only
-    [SerializeField] private int   _spawnColumn   = 3;  // which grid column (0-6)
+    [SerializeField] private int   _spawnColumn   = 7;  // which grid column (0..Columns-1)
 
     private float _autoSpawnTimer;
 
@@ -40,7 +40,8 @@ public class TestEnemySpawner : MonoBehaviour
         if (_enemyPrefab == null || _enemyData == null || GridManager.Instance == null) return;
 
         // Spawn at the spawn row cell (must be ON the A* graph for pathfinding)
-        int col = Mathf.Clamp(_spawnColumn, 0, 6);
+        // FIX: was hardcoded to 0–6 from old 7-col grid
+        int col = Mathf.Clamp(_spawnColumn, 0, GridManager.Columns - 1);
         Vector3 spawnPos = GridManager.Instance.CellToWorld(new Vector2Int(col, GridManager.SpawnRow));
         Vector3 goalPos  = GridManager.Instance.CellToWorld(new Vector2Int(col, GridManager.GoalRow));
         spawnPos.z = 0f;
@@ -58,8 +59,9 @@ public class TestEnemySpawner : MonoBehaviour
     {
         if (GridManager.Instance == null) return;
         Gizmos.color = Color.red;
-        Vector3 spawn = GridManager.Instance.CellToWorld(new Vector2Int(_spawnColumn, 0));
-        Vector3 goal  = GridManager.Instance.CellToWorld(new Vector2Int(_spawnColumn, 8));
+        // FIX: was hardcoded to rows 0 and 8 from old 9-row grid
+        Vector3 spawn = GridManager.Instance.CellToWorld(new Vector2Int(_spawnColumn, GridManager.SpawnRow));
+        Vector3 goal  = GridManager.Instance.CellToWorld(new Vector2Int(_spawnColumn, GridManager.GoalRow));
         Gizmos.DrawSphere(spawn, 0.2f);
         Gizmos.DrawLine(spawn, goal);
     }

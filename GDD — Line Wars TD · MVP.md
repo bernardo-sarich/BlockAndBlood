@@ -27,7 +27,7 @@
 
 ## 1. Concepto
 
-**Block & Blood** es un tower defense roguelite en el que el jugador construye un laberinto de torres en una grilla 7×9, elige cartas de mejora entre niveles de XP y defiende contra oleadas continuas de monstruos durante ~15 minutos hasta enfrentarse a un boss final.
+**Block & Blood** es un tower defense roguelite en el que el jugador construye un laberinto de torres en una grilla 14×18, elige cartas de mejora entre niveles de XP y defiende contra oleadas continuas de monstruos durante ~15 minutos hasta enfrentarse a un boss final.
 
 **Plataforma:** PC (Windows / Mac)
 **Modelo de negocio:** Demo gratuita en itch.io → Early Access en Steam a $2.99
@@ -59,18 +59,18 @@ Victoria (boss muerto) / Derrota (0 vidas, de 5 iniciales)
 
 | Parámetro | Valor |
 |-----------|-------|
-| Dimensiones | 7 columnas × 9 filas (63 celdas) |
-| Tamaño de celda | 96×96 px → `CellSize = 0.96f` unidades mundo |
-| Coordenadas | X: 0–6 (columnas) · Y: 0–8 (filas) |
-| Spawn (entrada enemigos) | Fila 0 — borde visual inferior |
-| Meta (salida enemigos) | Fila 8 — borde visual superior |
-| Celdas restringidas | Fila 8 completa (7 celdas) — no buildable permanentemente |
+| Dimensiones | 14 columnas × 18 filas (252 celdas) |
+| Tamaño de celda | 48×48 px → `CellSize = 0.48f` unidades mundo |
+| Coordenadas | X: 0–13 (columnas) · Y: 0–17 (filas) |
+| Spawn (entrada enemigos) | Fila 17 — borde visual superior |
+| Meta (salida enemigos) | Fila 0 — borde visual inferior |
+| Celdas restringidas | Fila 17 completa (14 celdas) — no buildable permanentemente |
 
 ### Estados de celda
 
 | Estado | Descripción | Sprite |
 |--------|-------------|--------|
-| `Libre` | Transitable, disponible para construir | tile124 — pasto verde |
+| `Libre` | Transitable, disponible para construir | `grass_base` / `path_base` / `path_edge_*` según columna |
 | `EnConstrucción` | Reservada 5s, no bloquea pathfinding hasta completarse | tile085 — gris + llave |
 | `Ocupada` | Torre activa, bloquea pathfinding | tile040 — pasto + X |
 | `Restringida` | Fila GoalRow — permanentemente no buildable | tile116 — borde tierra/pasto |
@@ -381,7 +381,7 @@ La regeneración en fase 2 castiga builds defensivos con DPS < 2 HP/s.
 
 ### Panel lateral derecho de información de unidad (siempre visible)
 
-Panel vertical procedural de **200px de ancho**, altura completa, anclado al borde derecho de la pantalla (`Screen Space - Overlay`). El viewport de la cámara se ajusta para excluir la franja del panel. Secciones apiladas con `VerticalLayoutGroup` (`childForceExpandHeight = false`); el fondo `#161C16` queda visible debajo del último elemento.
+Panel vertical procedural de **200px de ancho**, altura completa, anclado al borde derecho de la pantalla (`Screen Space - Overlay`). El panel **se superpone al juego** — la cámara usa viewport completo (pantalla entera), no se recorta para excluir el panel. Secciones apiladas con `VerticalLayoutGroup` (`childForceExpandHeight = false`); el fondo `#161C16` queda visible debajo del último elemento.
 
 **1. Portrait (70px)**
 - Sprite 44×44 de la unidad seleccionada, nombre y subtipo/nivel
@@ -460,16 +460,23 @@ El juego comenzó como diseño mobile y ahora apunta a **PC (Windows/Mac)**. Est
 
 **Qué implica técnicamente:**
 - **Unity 2D estándar** — sin Tilemap isométrico, sin configuración especial de grilla
-- Grilla rectangular normal (7×9) — **nada cambia** en GridManager ni pathfinding
+- Grilla rectangular normal (14×18) — **nada cambia** en GridManager ni pathfinding
 - Los personajes se ven "desde atrás" al moverse hacia arriba (sprites direccionales)
 - La profundidad se logra con sorting por Y, sombras y Sorting Layers (mismas técnicas de TASK-12)
 
+**Cámara perspectiva 2.5D:**
+- Tipo: **perspectiva** (`cam.orthographic = false`), `fieldOfView = 60°`
+- Tilt X: `CameraTilt = 15°` — rotación en X para efecto 3/4 view
+- `CenterCamera()` en GridManager calcula distancia Z para llenar el viewport, con `offsetY = 2.44f` para compensar el desplazamiento del tilt
+- Sorting: `TransparencySortMode.CustomAxis`, `sortAxis = Vector3.up`
+
 **Lo que da la sensación de 3/4 view:**
 
-1. **Sprites direccionales** — héroe y monstruos con al menos 2 vistas (frente/espalda). El personaje se ve "desde atrás" subiendo y "de frente" bajando. Pack **Roguelike Characters** de Kenney tiene exactamente esto
-2. **Sombra proyectada bajo entidades dinámicas** — `GameObject` hijo con sprite elipse negra semitransparente (~30% opacidad) bajo cada monstruo, torre y héroe
-3. **Sprite Sort Point = "Pivot"** — entidades más abajo en pantalla se dibujan encima, creando profundidad correcta
-4. **Sorting Layers por componente de torre** — base y cañón/sierra en layers distintos dan sensación de volumen
+1. **Cámara perspectiva con tilt de 15°** — genera escorzo natural (objetos lejanos más pequeños) + leve inclinación top-down
+2. **Sprites direccionales** — héroe y monstruos con al menos 2 vistas (frente/espalda). El personaje se ve "desde atrás" subiendo y "de frente" bajando. Pack **Roguelike Characters** de Kenney tiene exactamente esto
+3. **Sombra proyectada bajo entidades dinámicas** — `GameObject` hijo con sprite elipse negra semitransparente (~30% opacidad) bajo cada monstruo, torre y héroe
+4. **Sprite Sort Point = "Pivot"** — entidades más abajo en pantalla se dibujan encima, creando profundidad correcta
+5. **Sorting Layers por componente de torre** — base y cañón/sierra en layers distintos dan sensación de volumen
 
 ### Packs de Kenney recomendados
 
@@ -493,7 +500,10 @@ El juego comenzó como diseño mobile y ahora apunta a **PC (Windows/Mac)**. Est
 | Sprite | Nombre en proyecto | Uso |
 |--------|-------------------|-----|
 | tile116 | `Tile_Restricted` | Fila superior — no buildable |
-| GRASS+_58 | (cargado desde `Resources/Decorations/GRASS+`) | Celda libre — pixel art 16×16 tiling sin costuras |
+| grass_base | `Resources/Decorations/grass_base` | Celda libre — pasto (columnas fuera del camino) |
+| path_base | `Resources/Decorations/path_base` | Celda libre — camino central (cols 2–4) |
+| path_edge_left | `Resources/Decorations/path_edge_left` | Celda libre — borde izquierdo del camino (col 1) |
+| path_edge_right | `Resources/Decorations/path_edge_right` | Celda libre — borde derecho del camino (col 5) |
 | tile040 | `Tile_Ocupada` | Torre colocada |
 | tile085 | `Tile_Building` | En construcción |
 | tile086 | `Tile_Invalid` | Flash de rechazo |
@@ -584,7 +594,7 @@ Assets/
 │       └── UI/
 ├── Resources/
 │   ├── Grid/               ← IMPLEMENTADO (TASK-01) — sprites de tiles en runtime
-│   └── Decorations/        GRASS+.png (sprite sheet pixel art 400×224, sliceado 16×16, 350 sprites)
+│   └── Decorations/        GRASS+.png (sprite sheet), grass_base.png, path_base.png, path_edge_left.png, path_edge_right.png
 ├── AstarPathfindingProject/ Plugin A* (no modificar)
 └── Kenney/                 Assets externos (no modificar)
 ```
@@ -596,7 +606,7 @@ Assets/
 | GameManager | Estado global de la run (referencias a managers) |
 | LivesManager | Vidas del jugador (5 iniciales), escucha OnEnemyReachedGoal, emite OnLivesChanged/OnGameOver |
 | GridManager | Estado de celdas + validación pathfinding + configuración A* |
-| GridVisualizer | Tiles visuales (GRASS+_58 pixel art) + decoraciones + feedback de colocación |
+| GridVisualizer | Tiles visuales (grass/path sprites por columna) + decoraciones + feedback de colocación |
 | WaveManager | Stream de monstruos + pausas por XP |
 | XPManager | Acumula XP, emite `OnLevelUp` |
 | EconomyManager | Oro: ingresos y gastos |
@@ -726,3 +736,6 @@ Este GDD cubre exclusivamente el MVP. El diseño completo (Mundos 2–5, Torres 
 | 1.9 | 2026-03-23 | Panel inferior de información de unidad: HUDController reescrito completamente. Panel 148px fijo inferior con 4 secciones (Portrait 100px, Stats flex, Cards 210px, Actions 160px). Construido proceduralmente en código. Nuevos sistemas: `TowerType` enum, `CardData` SO (nombre, ícono, rareza, compatibilidad por tipo de torre), `PlayerInventory` singleton (máx 6 cartas, AddCard/SpendCard, evento OnInventoryChanged). `TowerBehaviour` extendido con `AppliedEffects` (máx 6 cartas permanentes), `ApplyCard()`, evento `OnEffectApplied`. 4 botones de construcción (Melee/Rango/Fuego/Agua). Cartas aplicables a torres desde el inventario con filtro de compatibilidad. Botones vender/mejorar en sección Actions. Eliminados: botones flotantes anteriores y panel lateral derecho |
 | 1.10 | 2026-03-24 | HUD migrado de panel inferior a **panel lateral derecho** (200px ancho, altura completa). Viewport de cámara ajustado para excluir franja del panel. Secciones en `VerticalLayoutGroup` vertical. Botones de construcción reestructurados: grilla 2×2 (`GridLayoutGroup`, cell 84×48) con layout vertical por botón (ícono 24×24 + nombre + costo). Botones para `TowerData` null se omiten; altura de sección dinámica. `_fireTowerData` y `_waterTowerData` asignados en Inspector (`TowerFire_Lv2`, `TowerWater_Lv2`). Botón desactivado a alpha 0.35 |
 | 1.11 | 2026-03-24 | **Torres Fuego y Agua eliminadas.** Los efectos elementales (Burn, Slow, ArmorReduction) ahora se aplican exclusivamente vía cartas. `TowerType` enum reducido a Melee/Range. Eliminados: `TowerFire_Lv2` y `TowerWater_Lv2` (SOs + prefabs), upgrade paths de torre Rango vaciados, `_fireTowerData`/`_waterTowerData` del HUD. Botones de construcción reducidos a 2 (Melee/Rango). Cartas actualizadas para referenciar efectos en vez de torres. Boss: estrategia ahora requiere cartas de Burn/Slow en vez de torres dedicadas |
+| 1.12 | 2026-03-24 | **Tiles de suelo diferenciados por columna.** `GRASS+_58` uniforme reemplazado por 4 sprites artesanales: `grass_base` (pasto), `path_base` (camino central, cols 2–4), `path_edge_left` (col 1), `path_edge_right` (col 5). `GridVisualizer`: constantes `PathColMin=2`/`PathColMax=4`, método `GetTileSprite(col,row)` para asignar sprite según columna. Nuevos assets en `Resources/Decorations/` |
+| 2.1 | 2026-03-25 | **HUD superpuesto al juego.** El panel lateral derecho ya no reduce el viewport de la cámara — `Camera.main.rect = Rect(0,0,1,1)` (pantalla completa). El panel `Screen Space - Overlay` se superpone sobre el área jugable en lugar de estar al lado de ella |
+| 2.0 | 2026-03-25 | **Grilla ampliada de 7×9 a 14×18** (252 celdas). `CellSize` reducido de 0.96 a **0.48**. Spawn movido a fila 17 (arriba), meta a fila 0 (abajo). `_gridOrigin` centrado en origen mundo. **Cámara perspectiva 2.5D:** `fieldOfView=60°`, `CameraTilt=15°`, `CenterCamera()` calcula distZ para llenar viewport con `offsetY=2.44f` para compensar tilt. A* graph reconfigurado (14×18, nodeSize=0.48) |

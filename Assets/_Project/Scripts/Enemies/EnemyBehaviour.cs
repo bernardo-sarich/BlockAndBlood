@@ -20,7 +20,7 @@ using UnityEngine.Pool;
 public class EnemyBehaviour : MonoBehaviour, IDamageable, IHasHp
 {
     // World units per cell — must match GridManager.CellSize.
-    private const float CellSize = 0.96f;
+    private const float CellSize = GridManager.CellSize;
 
     // ── Events ───────────────────────────────────────────────────────────────
     /// <summary>Fired on death. Parameters: enemy, goldReward, xpReward.</summary>
@@ -63,6 +63,10 @@ public class EnemyBehaviour : MonoBehaviour, IDamageable, IHasHp
 
         _effects = GetComponent<EffectSystem>();
         _aiPath  = GetComponent<AIPath>();
+
+        // Ensure dynamic Y-sorting is present for perspective camera depth ordering
+        if (GetComponent<DynamicYSorting>() == null)
+            gameObject.AddComponent<DynamicYSorting>();
 
         if (_aiPath != null)
         {

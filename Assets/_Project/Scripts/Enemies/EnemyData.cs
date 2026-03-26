@@ -13,7 +13,7 @@ public class EnemyData : ScriptableObject
     [Header("Stats")]
     public float MaxHp;
 
-    /// <summary>Base movement speed in cells per second (1 cell = 0.96 world units).</summary>
+    /// <summary>Base movement speed in cells per second (1 cell = GridManager.CellSize world units).</summary>
     public float MoveSpeed;
 
     /// <summary>Fraction of physical damage absorbed (0 = no armor, 0.5 = 50% reduction).</summary>

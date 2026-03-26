@@ -122,13 +122,15 @@ public class HUDController : MonoBehaviour
     private void Awake()
     {
         _bDatas = new[] { _meleeTowerData, _rangeTowerData };
-        ApplyCameraViewport();
         RepositionTopHUD();
         BuildRightPanel();
     }
 
     private void Start()
     {
+        // ApplyCameraViewport runs in Start so GridManager.Awake has already
+        // positioned the camera and set perspective FOV/distance.
+        ApplyCameraViewport();
         RefreshGold(EconomyManager.Instance  != null ? EconomyManager.Instance.Gold   : 0);
         RefreshLives(LivesManager.Instance   != null ? LivesManager.Instance.Lives    : 0);
         RefreshAll();
@@ -169,8 +171,10 @@ public class HUDController : MonoBehaviour
     {
         _lastScreenW = Screen.width;
         if (Camera.main == null) return;
-        float frac = 1f - (PanelW / Screen.width);
-        Camera.main.rect = new Rect(0f, 0f, frac, 1f);
+        Camera.main.rect = new Rect(0f, 0f, 1f, 1f);
+
+        if (GridManager.Instance != null)
+            GridManager.Instance.CenterCamera();
     }
 
     private void RepositionTopHUD()

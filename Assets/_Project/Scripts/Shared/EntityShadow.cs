@@ -14,7 +14,7 @@ public class EntityShadow : MonoBehaviour
 {
     private static readonly Color EllipseShadowColor = new Color(0f, 0f, 0f, 0.5f);
     private static readonly Color SpriteShadowColor  = new Color(0f, 0f, 0f, 0.35f);
-    private const int ShadowSortingOrder = -50; // Above ground tiles (-100..-108) but below all entities
+    private const int ShadowSortingOrder = -5000; // Above ground tiles but below all entities
 
     /// <summary>
     /// Optional override: use this renderer as the shadow source instead of the

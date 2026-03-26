@@ -27,7 +27,7 @@ public class HeroBehaviour : MonoBehaviour, ISelectable
 
     [Header("Combat")]
     [SerializeField] private float _baseDamage        = 25f;
-    [SerializeField] private float _baseAttackRange   = 1.44f;  // 1.5 cells × 0.96
+    [SerializeField] private float _baseAttackRange   = 1.5f * GridManager.CellSize;  // 1.5 cells
     [SerializeField] private float _baseAttackInterval = 0.667f; // 1.5 attacks/s
     [SerializeField] private LayerMask _enemyLayer;
 
@@ -83,6 +83,10 @@ public class HeroBehaviour : MonoBehaviour, ISelectable
         AttackRange    = _baseAttackRange;
         AttackInterval = _baseAttackInterval;
         MoveSpeed      = _baseMoveSpeed;
+
+        // Ensure dynamic Y-sorting is present for perspective camera depth ordering
+        if (GetComponent<DynamicYSorting>() == null)
+            gameObject.AddComponent<DynamicYSorting>();
     }
 
     private void Start()
@@ -333,16 +337,15 @@ public class HeroBehaviour : MonoBehaviour, ISelectable
 
     private void ClampToScreen()
     {
-        // Clamp to grid world bounds (independent of camera mode/position).
-        // Grid: origin (-0.96,0,0), 7 cols × 9 rows × CellSize 0.96.
-        const float minX = -0.96f;
-        const float maxX =  5.76f;  // -0.96 + 7 * 0.96
-        const float minY =  0f;
-        const float maxY =  8.64f;  // 9 * 0.96
+        // Clamp to grid world bounds derived from GridManager origin.
+        if (GridManager.Instance == null) return;
+        Vector3 origin = GridManager.Instance.GridOrigin;
+        float gridWidth  = GridManager.Columns * GridManager.CellSize;
+        float gridHeight = GridManager.Rows    * GridManager.CellSize;
 
         Vector3 p = transform.position;
-        p.x = Mathf.Clamp(p.x, minX, maxX);
-        p.y = Mathf.Clamp(p.y, minY, maxY);
+        p.x = Mathf.Clamp(p.x, origin.x, origin.x + gridWidth);
+        p.y = Mathf.Clamp(p.y, origin.y, origin.y + gridHeight);
         transform.position = p;
     }
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Renders the 7x9 grid visuals.
+/// Renders the 14x18 grid visuals.
 ///
 /// Ground layer: a single large grass sprite covers the entire grid area (no tiling seams).
 /// Tile layer: only non-libre cells (restricted) get individual tile sprites.
@@ -20,12 +20,21 @@ public class GridVisualizer : MonoBehaviour
     [Header("Restricted cells that should display as Libre")]
     [SerializeField] private Vector2Int[] _hideRestrictedVisual = new Vector2Int[0];
 
+    // Central path: cols 5–8 (4 wide), edges at 4 and 9, grass on 0–3 and 10–13
+    private const int PathColMin = 2;
+    private const int PathColMax = 11;
+
     private Sprite _spriteRestricted;
-    private Sprite _spriteGrass;
     private Sprite _spriteBlack;
     private Sprite _spriteOcupada;
     private Sprite _spriteBuilding;
     private Sprite _spriteInvalid;
+
+    private Sprite _grassBase;
+    private Sprite _pathBase;
+    private Sprite _pathEdgeLeft;
+    private Sprite _pathEdgeRight;
+
     private SpriteRenderer[,] _tiles;
     private Dictionary<Vector2Int, GameObject> _decorations = new Dictionary<Vector2Int, GameObject>();
     private GridManager _grid;
@@ -38,15 +47,7 @@ public class GridVisualizer : MonoBehaviour
         _spriteBuilding   = Resources.Load<Sprite>("Grid/Tile_Building");
         _spriteInvalid    = Resources.Load<Sprite>("Grid/Tile_Invalid");
 
-        // Load grass tile from GRASS+ sprite sheet
-        var grassSprites = Resources.LoadAll<Sprite>("Decorations/GRASS+");
-        foreach (var s in grassSprites)
-        {
-            if (s.name == "GRASS+_58") { _spriteGrass = s; break; }
-        }
-
-        if (_spriteGrass == null)
-            Debug.LogError("[GridVisualizer] GRASS+_32 sprite not found in Resources/Decorations/GRASS+.");
+        LoadTileSprites();
     }
 
     private void Start()
@@ -69,30 +70,43 @@ public class GridVisualizer : MonoBehaviour
 
         BuildBackground();
         BuildTileObjects();
-        BuildDecorations();
+        //BuildDecorations();
     }
 
     private void BuildBackground()
     {
-        Sprite bgSprite = _spriteBlack != null ? _spriteBlack : _spriteGrass;
-        if (bgSprite == null) return;
+        if (_grassBase == null) return;
 
-        var bg = new GameObject("Background");
-        bg.transform.SetParent(transform);
-        bg.transform.position   = new Vector3(2.4f, 4.32f, 0f);
-        float bgScale = ComputeTileScale(bgSprite) * 30f;
-        bg.transform.localScale = new Vector3(bgScale, bgScale, 1f);
+        float scale = ComputeTileScale(_grassBase);
+        const int extraCols = 8;
 
-        var sr          = bg.AddComponent<SpriteRenderer>();
-        sr.sprite       = bgSprite;
-        sr.color        = _spriteBlack != null ? Color.white : Color.black;
-        sr.sortingOrder = -1000;
+        for (int y = 0; y < GridManager.Rows; y++)
+        {
+            for (int x = -extraCols; x < 0; x++)
+                SpawnBgTile(x, y, scale);
+
+            for (int x = GridManager.Columns; x < GridManager.Columns + extraCols; x++)
+                SpawnBgTile(x, y, scale);
+        }
+    }
+
+    private void SpawnBgTile(int x, int y, float scale)
+    {
+        var worldPos = _grid.CellToWorld(new Vector2Int(x, y));
+        var go = new GameObject($"BgTile_{x}_{y}");
+        go.transform.SetParent(transform);
+        go.transform.position   = worldPos;
+        go.transform.localScale = new Vector3(scale, scale, 1f);
+
+        var sr          = go.AddComponent<SpriteRenderer>();
+        sr.sprite       = _grassBase;
+        sr.sortingOrder = -20000;
     }
 
     private void BuildTileObjects()
     {
         _tiles = new SpriteRenderer[GridManager.Columns, GridManager.Rows];
-        float scale = ComputeTileScale(_spriteGrass);
+        float scale = ComputeTileScale(_grassBase);
 
         for (int x = 0; x < GridManager.Columns; x++)
         {
@@ -107,7 +121,7 @@ public class GridVisualizer : MonoBehaviour
                 go.transform.localScale = new Vector3(scale, scale, 1f);
 
                 var sr          = go.AddComponent<SpriteRenderer>();
-                sr.sortingOrder = -100 - y;
+                sr.sortingOrder = -10000 + y;
                 sr.sprite       = SpriteForCell(cell); // null for libre cells
                 sr.color        = Color.white;
                 _tiles[x, y]    = sr;
@@ -184,12 +198,37 @@ public class GridVisualizer : MonoBehaviour
         return false;
     }
 
+    private void LoadTileSprites()
+    {
+        _grassBase     = Resources.Load<Sprite>("Decorations/grass_base");
+        _pathBase      = Resources.Load<Sprite>("Decorations/path_base");
+        _pathEdgeLeft  = Resources.Load<Sprite>("Decorations/path_edge_left");
+        _pathEdgeRight = Resources.Load<Sprite>("Decorations/path_edge_right");
+
+        if (_grassBase == null)
+            Debug.LogError("[GridVisualizer] grass_base sprite not found in Resources/Decorations/.");
+    }
+
+    private Sprite GetTileSprite(int col, int row)
+    {
+        bool isPath      = col >= PathColMin && col <= PathColMax;
+        bool isLeftEdge  = col == PathColMin - 1;
+        bool isRightEdge = col == PathColMax + 1;
+
+        if (isPath)      return _pathBase;
+        if (isLeftEdge)  return _pathEdgeLeft;
+        if (isRightEdge) return _pathEdgeRight;
+        return _grassBase;
+    }
+
     private Sprite SpriteForCell(Vector2Int cell)
     {
-        if (_grid.IsRestricted(cell) && !HideRestrictedVisual(cell))
+        // Spawn row (top of grid) is restricted but should show normal path/grass tiles
+        bool isSpawnRow = cell.y == GridManager.Rows - 1;
+        if (_grid.IsRestricted(cell) && !HideRestrictedVisual(cell) && !isSpawnRow)
             return _spriteRestricted;
 
-        return _spriteGrass;
+        return GetTileSprite(cell.x, cell.y);
     }
 
     /// <summary>
@@ -211,13 +250,13 @@ public class GridVisualizer : MonoBehaviour
                 if (s.name == decoNames[i]) decoSprites[i] = s;
         }
 
-        // Positions on the grid for each decoration
+        // Positions on the grid for each decoration (spread across 14×18 grid)
         var positions = new Vector2Int[]
         {
-            new Vector2Int(1, 3),
-            new Vector2Int(5, 6),
-            new Vector2Int(3, 1),
-            new Vector2Int(4, 5),
+            new Vector2Int(2, 6),
+            new Vector2Int(11, 12),
+            new Vector2Int(1, 2),
+            new Vector2Int(12, 9),
         };
 
         for (int i = 0; i < positions.Length; i++)
@@ -231,13 +270,13 @@ public class GridVisualizer : MonoBehaviour
             go.transform.SetParent(transform);
             go.transform.position = worldPos;
 
-            // Scale: 16px sprite at 16 PPU = 1 world unit. Cell is 0.96 units.
+            // Scale: 16px sprite at 16 PPU = 1 world unit. Cell is CellSize units.
             float decoScale = GridManager.CellSize * 0.6f;
             go.transform.localScale = new Vector3(decoScale, decoScale, 1f);
 
             var sr = go.AddComponent<SpriteRenderer>();
             sr.sprite = decoSprites[i];
-            sr.sortingOrder = -90;
+            sr.sortingOrder = -9000;
 
             _decorations[cell] = go;
         }

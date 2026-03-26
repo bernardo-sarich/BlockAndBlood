@@ -7,7 +7,7 @@ Aplicar siempre los principios de estos sub-skills al trabajar en tareas de desa
 
 ---
 
-Tower Defense roguelite en Unity 6000.3.11f1. El jugador construye un laberinto en una grilla 7×9, elige cartas de bono entre niveles de XP y defiende contra oleadas continuas de monstruos.
+Tower Defense roguelite en Unity 6000.3.11f1. El jugador construye un laberinto en una grilla 14×18, elige cartas de bono entre niveles de XP y defiende contra oleadas continuas de monstruos.
 
 **GDD completo:** `GDD — Line Wars TD · MVP.md` (raíz del proyecto) — fuente de verdad editable
 **GDD snapshot histórico:** `GDD — Line Wars TD · MVP.pdf` (ya no se actualiza)
@@ -39,7 +39,7 @@ Assets/
 │       └── UI/             Heart.png (icono vidas), GoldCoin.png (icono oro)
 ├── Resources/
 │   ├── Grid/               Sprites de tiles cargados en runtime (Tile_Restricted, Tile_Black, etc.)
-│   └── Decorations/        GRASS+.png (copia sliceada para carga en runtime de tiles y decoraciones)
+│   └── Decorations/        GRASS+.png (sprite sheet), grass_base.png, path_base.png, path_edge_left.png, path_edge_right.png
 ├── AstarPathfindingProject/ Plugin A* Pathfinding Project (no modificar)
 └── Kenney/                 Assets externos — no modificar
 ```
@@ -49,20 +49,37 @@ Assets/
 ## Sistemas principales
 
 ### GridManager
-- Grilla de **7 columnas × 9 filas** (63 celdas, `CellSize = 0.96f` unidades mundo)
-- Spawn: fila 0 (visual inferior) · Meta: fila 8 (visual superior)
+- Grilla de **14 columnas × 18 filas** (252 celdas, `CellSize = 0.48f` unidades mundo)
+- Spawn: fila 17 (visual superior) · Meta: fila 0 (visual inferior)
 - Estados de celda: `Libre` / `EnConstrucción` / `Ocupada`
-- **Celdas restringidas:** fila 8 completa (7 celdas) — permanentemente no buildable, visualizadas con tile116
+- **Celdas restringidas:** fila 17 completa (14 celdas) — permanentemente no buildable
 - Expone `bool CanPlaceTower(Vector2Int cell)` — valida bounds + estado + `IsRestricted` + pathfinding **antes** de confirmar construcción
 - Expone `bool IsRestricted(Vector2Int cell)` — consulta `RestrictedCells[]`
-- Configura el `GridGraph` de A* en `Awake()` (width=7, depth=9, nodeSize=0.96, is2D=true)
+- Configura el `GridGraph` de A* en `Awake()` (width=14, depth=18, nodeSize=0.48, is2D=true)
 - Notifica al PathfindingSystem via `AstarPath.active.UpdateGraphs(bounds)` cuando una celda cambia
-- `_gridOrigin` en escena: `(-0.96, 0, 0)` — desplazado para centrar el grid de 7 cols en x=2.4
+- `_gridOrigin` se calcula para centrar el grid en el origen mundo: `(-(gridWidth/2), -(gridHeight/2), 0)`
 - Pathfinding: **A\* Pathfinding Project** instalado en `Assets/AstarPathfindingProject/`
+
+### Cámara (perspectiva 2.5D)
+- **Tipo:** perspectiva (`cam.orthographic = false`) — no ortográfica
+- **FOV:** `CameraFOV = 60°` · **Tilt X:** `CameraTilt = 15°` (efecto 3/4 view)
+- **`CenterCamera()`** en GridManager calcula la distancia Z para que el grid llene el viewport:
+  - `distFromH` y `distFromW` → se toma el mayor, multiplicado por `0.85f` para acercar la cámara
+  - `offsetY = 2.44f` — compensa el desplazamiento visual del tilt (la cámara baja en Y para centrar el grid)
+  - Posición final: `(GridCenter.x, GridCenter.y - offsetY, -distZ)`
+  - Rotación: `Euler(-CameraTilt, 0, 0)`
+- **Sorting:** `TransparencySortMode.CustomAxis`, `sortAxis = Vector3.up`
+- **Se llama dos veces:** en `GridManager.Awake()` y en `HUDController.ApplyCameraViewport()` (viewport siempre `Rect(0,0,1,1)` — pantalla completa)
+- **NO modificar** FOV ni tilt sin verificar que el grid sigue llenando el viewport
 
 ### GridVisualizer
 - `[ExecuteAlways]` — los tiles se crean también en Edit mode (visibles en Scene view sin Play)
-- **Suelo:** sprite `GRASS+_58` (pixel art 16×16 de `Resources/Decorations/GRASS+`) para todas las celdas libres — tiling sin costuras
+- **Suelo diferenciado por columna:** 4 sprites artesanales (16×16, PPU 16) cargados desde `Resources/Decorations/`:
+  - `grass_base` — pasto (columnas fuera del camino: 0, 6)
+  - `path_base` — camino central (cols `PathColMin=2` a `PathColMax=4`)
+  - `path_edge_left` — borde izquierdo del camino (col 1)
+  - `path_edge_right` — borde derecho del camino (col 5)
+- `LoadTileSprites()` carga los 4 sprites en `Awake()` · `GetTileSprite(col, row)` selecciona sprite según columna
 - **Fondo:** sprite `Tile_Black` escalado ×30 detrás de toda la grilla (cubre bordes exteriores)
 - **Celdas restringidas:** `Tile_Restricted` (tile116) — las que no están ocultas por `_hideRestrictedVisual`
 - **Decoraciones:** sprites decorativos (`GRASS+_310`, `GRASS+_311`, `GRASS+_291`, `GRASS+_317`) colocados en celdas libres para variedad visual. `RemoveDecoration(cell)` los elimina al construir una torre
@@ -132,8 +149,8 @@ Assets/
 
 ### HUDController (panel lateral derecho)
 - **Panel procedural** de 200px ancho, altura completa, anclado al borde derecho, `Screen Space - Overlay`
-- `Camera.main.rect` ajustado en `Awake()` para que el área de juego excluya la franja del panel
-- Top HUD (oro, vidas) reposicionado a top-left del área de juego
+- El panel **se superpone al juego** — la cámara usa viewport completo `Rect(0,0,1,1)`, no se reduce para excluir el panel
+- Top HUD (oro, vidas) anclado a top-left del canvas
 - **Secciones en `VerticalLayoutGroup`** (stacking vertical, `childForceExpandHeight = false`):
   - **Portrait** (70px): sprite 44×44 + nombre + subtipo, fondo `#111711`
   - **Stats** (124px): 4 barras de progreso coloreadas (daño `#e24b4a`, rango `#7f77dd`, velocidad `#f0c040`, efecto `#1d9e75`)

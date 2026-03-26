@@ -2,9 +2,10 @@ using UnityEngine;
 using Pathfinding;
 
 /// <summary>
-/// Manages the 5x9 game grid and validates tower placement via A* Pathfinding.
-/// Spawn row: 0 (top). Goal row: 8 (bottom).
+/// Manages the 14x18 game grid and validates tower placement via A* Pathfinding.
+/// Spawn row: 17 (top). Goal row: 0 (bottom).
 /// </summary>
+[DefaultExecutionOrder(-10)]
 public class GridManager : MonoBehaviour
 {
     public static GridManager Instance { get; private set; }
@@ -12,39 +13,50 @@ public class GridManager : MonoBehaviour
     public enum CellState { Libre, EnConstruccion, Ocupada }
 
     /// <summary>Cells that can never have a tower placed on them (enemy spawn row at top).</summary>
-    public static readonly Vector2Int[] RestrictedCells = new Vector2Int[]
+    public static readonly Vector2Int[] RestrictedCells = BuildRestrictedCells();
+
+    private static Vector2Int[] BuildRestrictedCells()
     {
-        new Vector2Int(0, SpawnRow),
-        new Vector2Int(1, SpawnRow),
-        new Vector2Int(2, SpawnRow),
-        new Vector2Int(3, SpawnRow),
-        new Vector2Int(4, SpawnRow),
-        new Vector2Int(5, SpawnRow),
-        new Vector2Int(6, SpawnRow),
-    };
+        var cells = new Vector2Int[Columns];
+        for (int x = 0; x < Columns; x++)
+            cells[x] = new Vector2Int(x, SpawnRow);
+        return cells;
+    }
 
-    public const int Columns = 7;
-    public const int Rows = 9;
-    public const float CellSize = 0.96f;
+    public const int Columns  = 14;
+    public const int Rows     = 18;
+    public const float CellSize = 0.48f;
 
-    /// <summary>Enemies enter from top (row 8) and walk down to bottom (row 0).</summary>
-    public const int SpawnRow = 8;
+    /// <summary>Enemies enter from top (row 17) and walk down to bottom (row 0).</summary>
+    public const int SpawnRow = 17;
     public const int GoalRow  = 0;
 
-    [Header("Grid Origin (bottom-left corner)")]
-    [SerializeField] private Vector3 _gridOrigin = Vector3.zero;
+    /// <summary>Bottom-left corner of the grid in world space. Computed at runtime to center the grid on the origin.</summary>
+    private Vector3 _gridOrigin;
 
     private CellState[,] _grid = new CellState[Columns, Rows];
 
-    public Vector2Int SpawnCell => new Vector2Int(Columns / 2, SpawnRow);
-    public Vector2Int GoalCell  => new Vector2Int(Columns / 2, GoalRow);
+    public Vector3    GridOrigin => _gridOrigin;
+    public Vector3    GridCenter => _gridOrigin + new Vector3(
+        Columns * CellSize * 0.5f,
+        Rows    * CellSize * 0.5f,
+        0f);
+    public Vector2Int SpawnCell  => new Vector2Int(Columns / 2, SpawnRow);
+    public Vector2Int GoalCell   => new Vector2Int(Columns / 2, GoalRow);
 
     private void Awake()
     {
         if (Instance != null && Instance != this) { Destroy(gameObject); return; }
         Instance = this;
+
+        // Center grid on world origin
+        float gridWidth  = Columns * CellSize;
+        float gridHeight = Rows    * CellSize;
+        _gridOrigin = new Vector3(-(gridWidth / 2f), -(gridHeight / 2f), 0f);
+
         ClearGrid();
         ConfigureAstarGraph();
+        CenterCamera();
     }
 
     /// <summary>
@@ -88,6 +100,69 @@ public class GridManager : MonoBehaviour
         int walkable = 0;
         graph.GetNodes(node => { if (node.Walkable) walkable++; });
         Debug.Log($"[GridManager] A* graph scanned: {graph.CountNodes()} nodes, {walkable} walkable, center={center}");
+    }
+
+    /// <summary>
+    /// FOV for the perspective camera (degrees). Adjust to taste (10-25 range for subtle 2.5D).
+    /// </summary>
+    public const float CameraFOV  = 60f;
+
+    /// <summary>
+    /// X-axis tilt in degrees — creates the 3/4 top-down perspective effect.
+    /// Higher = more pronounced look-down. Range 10-25 is reasonable.
+    /// </summary>
+    public const float CameraTilt = 15f;
+
+    /// <summary>
+    /// Sets up a perspective camera with slight tilt for a 2.5D effect inspired by Ball x Pit.
+    /// The camera distance is calculated so the grid appears the same size as it did in orthographic mode.
+    /// Call again after viewport changes.
+    /// </summary>
+    public void CenterCamera()
+    {
+        Camera cam = Camera.main;
+        if (cam == null) return;
+
+        // Diagnostic: log current state before any changes
+        float gridHeight = Rows * CellSize;
+        Debug.Log($"[CenterCamera] BEFORE — fieldOfView: {cam.fieldOfView}, camera.position: {cam.transform.position}, camera.rotation: {cam.transform.eulerAngles}, gridHeight: {gridHeight}, camera.rect: {cam.rect}");
+
+        cam.orthographic = false;
+        cam.fieldOfView  = CameraFOV;
+
+        // With perspective, Unity sorts transparent sprites by distance from camera.
+        // Override to sort by Y-axis so nearer (lower Y) entities render in front.
+        cam.transparencySortMode = TransparencySortMode.CustomAxis;
+        cam.transparencySortAxis = Vector3.up;
+
+        float gridWidth  = Columns * CellSize;
+
+        Rect  r          = cam.rect;
+        float viewW      = Screen.width  * r.width;
+        float viewH      = Screen.height * r.height;
+        float viewAspect = (viewH > 0f) ? viewW / viewH : cam.aspect;
+
+        // Distance so the grid fills exactly 100% of viewport height,
+        // accounting for the X-axis tilt (perspective foreshortening).
+        float fovRad  = CameraFOV * Mathf.Deg2Rad;
+        float tiltRad = CameraTilt * Mathf.Deg2Rad;
+        float distFromH = (gridHeight * 0.5f) / (Mathf.Tan(fovRad * 0.5f) * Mathf.Cos(tiltRad));
+
+        // Distance so the grid fills exactly 100% of viewport width
+        float hFovRad   = 2f * Mathf.Atan(Mathf.Tan(fovRad * 0.5f) * viewAspect);
+        float distFromW = (gridWidth * 0.5f) / Mathf.Tan(hFovRad * 0.5f);
+
+        float distZ = Mathf.Max(distFromH, distFromW) * 0.85f;
+
+        // Offset Y to compensate for the tilt pushing the grid down in the viewport
+        float offsetY = 2.44f;
+
+        // Position camera centered on the grid, pulled back on Z
+        cam.transform.position = new Vector3(GridCenter.x, GridCenter.y - offsetY, -distZ);
+        // Apply tilt: rotate around X to look slightly downward (3/4 view effect)
+        cam.transform.rotation = Quaternion.Euler(-CameraTilt, 0f, 0f);
+
+        Debug.Log($"[CenterCamera] AFTER — distFromH: {distFromH:F3}, distFromW: {distFromW:F3}, distZ: {distZ:F3}, camera.position: {cam.transform.position}");
     }
 
     private void ClearGrid()
@@ -185,7 +260,7 @@ public class GridManager : MonoBehaviour
 
     /// <summary>
     /// Recalculates paths for every active AIPath agent synchronously.
-    /// Cheap on a 7×9 grid (~63 nodes) even with 30+ enemies.
+    /// Cheap on a 14×18 grid (~252 nodes) even with 30+ enemies.
     /// </summary>
     private void ForceAllEnemiesRepath()
     {
@@ -243,11 +318,16 @@ public class GridManager : MonoBehaviour
 #if UNITY_EDITOR
     private void OnDrawGizmos()
     {
+        // In edit mode _gridOrigin hasn't been computed yet — derive it inline
+        Vector3 origin = Application.isPlaying
+            ? _gridOrigin
+            : new Vector3(-(Columns * CellSize) / 2f, -(Rows * CellSize) / 2f, 0f);
+
         for (int x = 0; x < Columns; x++)
         {
             for (int y = 0; y < Rows; y++)
             {
-                Vector3 center = _gridOrigin + new Vector3(
+                Vector3 center = origin + new Vector3(
                     x * CellSize + CellSize * 0.5f,
                     y * CellSize + CellSize * 0.5f,
                     0f);

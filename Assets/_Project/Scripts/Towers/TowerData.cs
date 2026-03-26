@@ -20,7 +20,7 @@ public class TowerData : ScriptableObject
     /// <summary>Attacks per second. Ignored for IsAreaAttack towers (damage is per-second continuous).</summary>
     public float AttackSpeed;
 
-    /// <summary>Attack radius in world units. Use CellSize multiples: 1.44 = 1.5 cells, 2.88 = 3 cells.</summary>
+    /// <summary>Attack radius in world units. Use CellSize multiples (e.g. 1.5 cells = 1.5 × GridManager.CellSize).</summary>
     public float Range;
 
     public DamageType DamageType;
