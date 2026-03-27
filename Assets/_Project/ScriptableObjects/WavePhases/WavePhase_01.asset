@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b51245df51e000b4393f728b49c45a19, type: 3}
+  m_Name: WavePhase_01
+  m_EditorClassIdentifier: Assembly-CSharp::WavePhase
+  StartTime: 0
+  EndTime: 20
+  SpawnInterval: 1.4
+  Composition:
+  - Data: {fileID: 11400000, guid: c14f546aea5dd2647b3aebb4cb6f23c1, type: 2}
+    Weight: 100
