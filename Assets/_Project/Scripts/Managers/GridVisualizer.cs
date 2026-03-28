@@ -20,9 +20,10 @@ public class GridVisualizer : MonoBehaviour
     [Header("Restricted cells that should display as Libre")]
     [SerializeField] private Vector2Int[] _hideRestrictedVisual = new Vector2Int[0];
 
-    // Central path: cols 5–8 (4 wide), edges at 4 and 9, grass on 0–3 and 10–13
-    private const int PathColMin = 2;
-    private const int PathColMax = 11;
+    // Central path: cols 2–11 (10 wide), edge at 1 and 12, grass on 0 and 13
+    // Public so GridManager, WaveManager, and HeroBehaviour can read them without hardcoding.
+    public const int PathColMin = 2;
+    public const int PathColMax = 11;
 
     private Sprite _spriteRestricted;
     private Sprite _spriteBlack;
@@ -34,6 +35,7 @@ public class GridVisualizer : MonoBehaviour
     private Sprite _pathBase;
     private Sprite _pathEdgeLeft;
     private Sprite _pathEdgeRight;
+    private Sprite[] _pathVariants;
 
     private SpriteRenderer[,] _tiles;
     private Dictionary<Vector2Int, GameObject> _decorations = new Dictionary<Vector2Int, GameObject>();
@@ -205,6 +207,10 @@ public class GridVisualizer : MonoBehaviour
         _pathEdgeLeft  = Resources.Load<Sprite>("Decorations/path_edge_left");
         _pathEdgeRight = Resources.Load<Sprite>("Decorations/path_edge_right");
 
+        _pathVariants = new Sprite[4];
+        for (int i = 1; i <= 4; i++)
+            _pathVariants[i - 1] = Resources.Load<Sprite>($"Decorations/rockPath_{i}");
+
         if (_grassBase == null)
             Debug.LogError("[GridVisualizer] grass_base sprite not found in Resources/Decorations/.");
     }
@@ -215,7 +221,18 @@ public class GridVisualizer : MonoBehaviour
         bool isLeftEdge  = col == PathColMin - 1;
         bool isRightEdge = col == PathColMax + 1;
 
-        if (isPath)      return _pathBase;
+        if (isPath)
+        {
+            bool variantsReady = _pathVariants != null && _pathVariants[0] != null;
+            if (variantsReady)
+            {
+                Random.InitState(col * 1000 + row);
+                int index = Random.Range(0, 4);
+                Random.InitState(System.Environment.TickCount);
+                return _pathVariants[index];
+            }
+            return _pathBase;
+        }
         if (isLeftEdge)  return _pathEdgeLeft;
         if (isRightEdge) return _pathEdgeRight;
         return _grassBase;
@@ -285,6 +302,7 @@ public class GridVisualizer : MonoBehaviour
     private IEnumerator FlashRoutine(Vector2Int cell, bool valid)
     {
         var sr         = _tiles[cell.x, cell.y];
+        sr.color       = Color.white; // reset any tint left by an interrupted flash
         var origSprite = sr.sprite;
         var origColor  = sr.color;
         float half     = _flashDuration / 6f; // 3 flashes

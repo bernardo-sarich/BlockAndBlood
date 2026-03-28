@@ -3,7 +3,7 @@
 
 > **Este archivo es la fuente de verdad editable del diseño.**
 > El archivo `GDD — Line Wars TD · MVP.pdf` es un snapshot histórico y ya no se actualiza.
-> Última actualización: v2.7 — Nuevos enemigos: Sacerdote (curación de área) y Bruto (aura de armadura).
+> Última actualización: v2.8 — Sprite del Rápido reemplazado por spider_sheet.png (araña, 4 frames).
 
 ---
 
@@ -83,8 +83,9 @@ Derrota (0 vidas, de 5)     ← GameState.Defeat
 - Algoritmo: **A\* Pathfinding Project** (plugin instalado, no implementar desde cero)
 - Recalcula cuando una celda cambia a `Ocupada` o vuelve a `Libre`
 - **Regla de validación:** `CanPlaceTower()` verifica que exista al menos un camino spawn→meta excluyendo la celda objetivo. Si no existe, rechaza con flash rojo en la celda
-- Cada monstruo recalcula su ruta individualmente cuando el grafo cambia
+- Cada monstruo recalcula su ruta individualmente cuando el grafo cambia (`ai.SearchPath()` vía el Seeker — no construir `ABPath` manualmente)
 - El héroe ignora la grilla completamente (vuela en línea recta)
+- **Configuración crítica de AIPath en los prefabs de monstruos:** `pickNextWaypointDist: 0.5` (≈ 1 celda). No aumentar — valores ≥ 1 celda causan atajos diagonales que cruzan celdas de torre y bloquean a los monstruos en laberintos con giros. `radius: 0.1` (menor que `CellSize/2 = 0.24`)
 
 ### Estrategias válidas (no forzar ninguna)
 
@@ -146,7 +147,7 @@ Derrota (0 vidas, de 5)     ← GameState.Defeat
 | Caminante | 150 | 1.2 c/s | 0% | 2 | 5 |
 | Rápido | 40 | 4 c/s | 0% | 3 | 8 |
 | Blindado | 200 | 1.5 c/s | 50% físico | 5 | 15 |
-| Sacerdote | 200 | 2.0 c/s | 0% | 4 | 12 |
+| Sacerdote | 200 | 1.2 c/s | 0% | 4 | 12 |
 | Bruto | 650 | 1.2 c/s | 20% físico | 6 | 18 |
 
 ### Comportamiento de spawn
@@ -164,6 +165,7 @@ Derrota (0 vidas, de 5)     ← GameState.Defeat
 - Al llegar a la meta: resta **1 vida** al jugador
 - Al morir: da **oro + XP** al jugador
 - **Sacerdote:** cada 2 s cura el **15% del HP máximo** a todos los enemigos en radio 1.92 u (incluyéndose), excepto otros Sacerdotes. Prioridad táctica: eliminarlo rápido evita que regenere al Blindado o al Bruto.
+  - Al activar la curación: **se detiene** (deja de moverse), reproduce la animación de cast (3 frames) y lanza un **HealOrb** visual por cada enemigo curado — esfera verde que vuela hacia el target. Velocidad: **1.2 c/s** (igual que el Caminante).
 - **Bruto:** aura pasiva que otorga **+30% armadura física** a todos los enemigos en radio 1.92 u (incluido él mismo). Múltiples Brutos **no acumulan** el bono — un enemigo cubierto por varios Brutos sigue recibiendo solo +30%. Ejemplo: un Blindado (50% armadura base) bajo un aura de Bruto absorbe el 80% del daño físico.
 
 ### EffectSystem
@@ -208,7 +210,7 @@ Componente de `EnemyBehaviour` que gestiona efectos activos:
 - Al llegar: inicia el timer de construcción de **5 segundos** (manejado por `TowerBehaviour`)
 - El héroe puede moverse y atacar libremente durante la construcción
 - **Múltiples construcciones en cola** — se procesan en orden; los timers de 5s corren concurrentemente
-- WASD durante el desplazamiento automático cancela el auto-movimiento (el jugador retoma control)
+- **WASD durante el desplazamiento automático cancela toda la cola de construcción** — las órdenes pendientes se descartan (el oro aún no fue gastado, no hay reembolso necesario)
 - Celda inválida: flash rojo, no se encola
 - **Modo placement persistente:** tras construir una torre exitosamente el modo build **no se cancela** — el cursor mantiene el preview para construir otra del mismo tipo inmediatamente. Se cancela solo al: clic derecho, ESC, cambio de tipo de torre en el HUD, click en una torre ya construida, o intento de construcción sin oro suficiente (en ese último caso: flash rojo en la celda y modo cancelado)
 
@@ -552,7 +554,7 @@ Sprites decorativos del sprite sheet `GRASS+.png` (troncos rotos, plantas) coloc
 
 - **[TASK-12]** Configuración visual 3/4 view: Sprite Sort Point, Sorting Layers, sombras, sprites direccionales
 - Torres: base + cañón rotatorio (Rango), base + sierra (Melee)
-- Monstruos: 3 variantes con sprites direccionales (frente/espalda) — Roguelike Characters
+- Monstruos: sprites direccionales (frente/espalda) — Rápido: `spider_sheet.png` ← **IMPLEMENTADO** (4 frames 32×32, `_walkFps=8`); resto pendiente (Roguelike Characters)
 - Proyectiles básicos
 - Efectos de estado: partícula de fuego (Burn, vía cartas), partícula de agua/hielo (Slow, vía cartas)
 - Barras de HP sobre monstruos
@@ -785,6 +787,9 @@ Este GDD cubre exclusivamente el MVP. El diseño completo (Mundos 2–5, Torres 
 | 1.10 | 2026-03-24 | HUD migrado de panel inferior a **panel lateral derecho** (200px ancho, altura completa). Viewport de cámara ajustado para excluir franja del panel. Secciones en `VerticalLayoutGroup` vertical. Botones de construcción reestructurados: grilla 2×2 (`GridLayoutGroup`, cell 84×48) con layout vertical por botón (ícono 24×24 + nombre + costo). Botones para `TowerData` null se omiten; altura de sección dinámica. `_fireTowerData` y `_waterTowerData` asignados en Inspector (`TowerFire_Lv2`, `TowerWater_Lv2`). Botón desactivado a alpha 0.35 |
 | 1.11 | 2026-03-24 | **Torres Fuego y Agua eliminadas.** Los efectos elementales (Burn, Slow, ArmorReduction) ahora se aplican exclusivamente vía cartas. `TowerType` enum reducido a Melee/Range. Eliminados: `TowerFire_Lv2` y `TowerWater_Lv2` (SOs + prefabs), upgrade paths de torre Rango vaciados, `_fireTowerData`/`_waterTowerData` del HUD. Botones de construcción reducidos a 2 (Melee/Rango). Cartas actualizadas para referenciar efectos en vez de torres. Boss: estrategia ahora requiere cartas de Burn/Slow en vez de torres dedicadas |
 | 1.12 | 2026-03-24 | **Tiles de suelo diferenciados por columna.** `GRASS+_58` uniforme reemplazado por 4 sprites artesanales: `grass_base` (pasto), `path_base` (camino central, cols 2–4), `path_edge_left` (col 1), `path_edge_right` (col 5). `GridVisualizer`: constantes `PathColMin=2`/`PathColMax=4`, método `GetTileSprite(col,row)` para asignar sprite según columna. Nuevos assets en `Resources/Decorations/` |
+| 3.0 | 2026-03-28 | **Sacerdote y Bruto: sprites, animaciones y corrección de pathfinding.** Sacerdote: sprites de caminata (`priest_walk.png`, 4 frames) y cast (`priest_cast.png`, 3 frames) asignados; `EnemyAnimator` añadido al prefab (`_walkCols=4`). Al curar: se detiene, reproduce animación cast y lanza un `HealOrb` visual (4 frames, `heal_orb_DRAFT.png`) por cada enemigo curado. Velocidad reducida 2.0 → **1.2 c/s** (igual que Caminante). `EnemyAnimator.IsLocked` añadido para ceder control del sprite durante el cast. Bugfix: `Enemy_Sacerdote` y `Enemy_Bruto` atravesaban torres por `orientation: 0` (ZAxisForward, modo 3D) + `constrainInsideGraph: 0`; corregido a `orientation: 1` + `enableRotation: 0` + `constrainInsideGraph: 1` en ambos prefabs. |
+| 2.9 | 2026-03-28 | **Sprite del Caminante reemplazado por zombie.** `Enemy_Caminante.prefab`: `SpriteRenderer` y `EnemyAnimator.walkSprites` apuntan ahora a `zombie_32x32-sheet.png` (`Assets/_Project/Art/Enemies/`, guid `cb37bb16db387ef4aa3bc29d8ff6ed69`, PPU 48). 4 frames 32×32 en fila horizontal. `EnemyAnimator`: `WalkCols` const → campo serializable `_walkCols` (default 9, retrocompatible con LPC); `Enemy_Caminante` usa `_walkCols=4`. `EntityShadow._yOffset` ajustado de −0.55 a −0.25 para compensar el sprite más pequeño (PPU 48 vs 32 anterior). |
+| 2.8 | 2026-03-28 | **Sprite del Rápido reemplazado.** `Enemy_Rapido.prefab`: `SpriteRenderer` y `EnemyAnimator.walkSprites` ahora apuntan a `spider_sheet.png` (`Assets/_Project/Art/Enemies/`, guid `47b54cba9bbc9b643b35a004a3646539`). 4 frames 32×32, animación a 8 fps. Sheet creado en proyecto. |
 | 2.7 | 2026-03-27 | **Sistema de fases expandido: 10 → 42 fases (840 s).** `WavePhase_01–10` reemplazados; `WavePhase_11–42` creados. Cada fase dura exactamente 20 s. Bruto y Sacerdote introducidos desde fase 04/05. Blindado reintroducido como quinto tipo en fase 25 (480 s). `WaveManager` añade evento `OnBossPhaseStart` disparado al llegar a 840 s, campo `_bossTriggered`. Tabla del stream del §8 del GDD actualizada |
 | 2.6 | 2026-03-26 | **Modo placement persistente.** Tras construir una torre exitosamente el modo build ya no se cancela — el cursor mantiene el preview activo para colocar otra del mismo tipo sin volver a pulsar el botón. Se cancela solo con: clic derecho, ESC, cambio de tipo de torre en HUD, click en torre existente, u oro insuficiente (este último además dispara flash rojo en la celda). `HeroBehaviour.HandleBuildInput()`: eliminada llamada a `CancelSelection()` post-QueueBuild. `TowerPlacementManager.RequestPlacement()`: llama `CancelSelection()` + flash rojo cuando `TrySpend` falla. §6 (Construcción) y tabla de Controles actualizados |
 | 2.5 | 2026-03-26 | **HUD: iconos y barra de XP rediseñados.** Iconos de oro y corazón movidos a `HorizontalLayoutGroup` (icono→número, spacing 4px, panel sin ancho fijo con `ContentSizeFitter`). TMP del número con `enableWordWrapping=false`/`overflowMode=Overflow` para soportar tres dígitos sin wrap. Textos de XP y Nivel eliminados del panel lateral; reemplazados por barra de XP en el borde inferior: 90% ancho, 10px alto, fondo `(0.06,0.06,0.06,120/255)`, relleno `#C8A840` controlado por `anchorMax.x` (no `fillAmount` — no funciona sin sprite en Unity 6). Texto centrado `"N / 100"` / `"MAX"`. `HUDController` suscrito además a `EnemyBehaviour.OnEnemyDeath` para actualizar la barra en cada kill |

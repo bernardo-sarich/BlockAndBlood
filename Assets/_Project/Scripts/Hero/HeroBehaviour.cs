@@ -141,7 +141,6 @@ public class HeroBehaviour : MonoBehaviour, ISelectable
 
         Debug.Log($"[Hero] QueueBuild at {cell}, tower={TowerPlacementManager.Instance.SelectedTower.TowerName}");
         QueueBuild(TowerPlacementManager.Instance.SelectedTower, cell);
-        TowerPlacementManager.Instance.CancelSelection();
     }
 
     private void HandleCancelInput()
@@ -167,11 +166,20 @@ public class HeroBehaviour : MonoBehaviour, ISelectable
 
         if (h == 0f && v == 0f) return;
 
+        // Manual input while auto-moving to a build site cancels all pending builds.
+        // Gold is not spent until RequestPlacement (on arrival), so no refund needed.
+        if (_isAutoMoving && _currentBuild.Data != null)
+        {
+            Debug.Log("[Hero] WASD interrupted auto-move — cancelling build queue.");
+            _currentBuild = default;
+            _buildQueue.Clear();
+            _isAutoMoving = false;
+        }
+
         Vector3 dir = new Vector3(h, v, 0f).normalized;
         transform.position += dir * (MoveSpeed * Time.deltaTime);
         ClampToScreen();
 
-        // Manual input cancels auto-move steering (player has full control)
         _isAutoMoving = false;
     }
 
@@ -337,14 +345,16 @@ public class HeroBehaviour : MonoBehaviour, ISelectable
 
     private void ClampToScreen()
     {
-        // Clamp to grid world bounds derived from GridManager origin.
         if (GridManager.Instance == null) return;
-        Vector3 origin = GridManager.Instance.GridOrigin;
-        float gridWidth  = GridManager.Columns * GridManager.CellSize;
-        float gridHeight = GridManager.Rows    * GridManager.CellSize;
+        Vector3 origin      = GridManager.Instance.GridOrigin;
+        float   gridHeight  = GridManager.Rows * GridManager.CellSize;
+
+        // X is confined to the playable path columns (PathColMin–PathColMax).
+        float xMin = origin.x + GridVisualizer.PathColMin * GridManager.CellSize;
+        float xMax = origin.x + (GridVisualizer.PathColMax + 1) * GridManager.CellSize;
 
         Vector3 p = transform.position;
-        p.x = Mathf.Clamp(p.x, origin.x, origin.x + gridWidth);
+        p.x = Mathf.Clamp(p.x, xMin, xMax);
         p.y = Mathf.Clamp(p.y, origin.y, origin.y + gridHeight);
         transform.position = p;
     }

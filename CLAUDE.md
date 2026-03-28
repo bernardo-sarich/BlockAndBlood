@@ -23,7 +23,7 @@ Assets/
 │   ├── Scripts/
 │   │   ├── Managers/       GameManager, GridManager, GridVisualizer, WaveManager, EconomyManager, XPManager, LivesManager, SelectionManager, TowerPlacementManager
 │   │   ├── Towers/         TowerBehaviour, ProjectileBehaviour, EffectSystem
-│   │   ├── Enemies/        EnemyBehaviour, EnemyPool, PriestBehaviour, BruteBehaviour
+│   │   ├── Enemies/        EnemyBehaviour, EnemyAnimator, EnemyPool, HealOrb, PriestBehaviour, BruteBehaviour
 │   │   ├── Hero/           HeroBehaviour
 │   │   ├── Cards/          CardData, PlayerInventory, CardSystem, CardEffect
 │   │   ├── Data/           CardRarity (enum standalone)
@@ -36,10 +36,16 @@ Assets/
 │   │   ├── Cards/          CardData SO × 15
 │   │   └── WavePhases/     WavePhase_01–42 (assets de oleadas, 20 s cada una, 840 s total)
 │   ├── Prefabs/
-│   │   └── Enemies/        Enemy_Caminante, Enemy_Rapido, Enemy_Blindado, Enemy_Sacerdote, Enemy_Bruto
+│   │   └── Enemies/        Enemy_Caminante, Enemy_Rapido, Enemy_Blindado, Enemy_Sacerdote, Enemy_Bruto, HealOrb
 │   ├── Scenes/
 │   └── Art/
 │       ├── Sprites/        GRASS+.png (sprite sheet pixel art 400×224, sliceado 16×16, 350 sprites)
+│       ├── Enemies/        spider_sheet.png — 4 frames 32×32, PPU 32, guid 47b54cba9bbc9b643b35a004a3646539 (sprite del Rápido)
+│       │                   zombie_32x32-sheet.png — 4 frames 32×32, PPU 48, guid cb37bb16db387ef4aa3bc29d8ff6ed69 (sprite del Caminante)
+│       │                   priest/ — sprites del Sacerdote:
+│       │                     priest_walk.png  — 4 frames 32×32, PPU 48, guid 8f6ec1208a22dc9449294e50e52a1990 (caminata, 1 fila horizontal)
+│       │                     priest_cast.png  — 3 frames 32×32, PPU 48, guid df1832685dff3274fa5a40f7dc5032c4 (animación de curación)
+│       │                     heal_orb_DRAFT.png — 4 frames 16×16, PPU 16, guid 1492210df7157444aa7747234dbcb27b (proyectil de curación)
 │       └── UI/             Heart.png (icono vidas), GoldCoin.png (icono oro)
 ├── Resources/
 │   ├── Grid/               Sprites de tiles cargados en runtime (Tile_Restricted, Tile_Black, etc.)
@@ -169,6 +175,14 @@ Brute y Priest aparecen desde fase 04/05. Armored (Blindado) se introduce en fas
 | 42 (820–840) | 0.60s | W5 R10 Br35 P25 A25 |
 
 Leyenda: W=Walker R=Runner Br=Brute P=Priest A=Armored
+
+### EnemyAnimator
+- Componente en el raíz del prefab de cada enemigo, junto al `SpriteRenderer`
+- `walkSprites` — array de sprites ordenado `[dir0_f0, dir0_f1…, dir1_f0…, dir3_fN]`
+- `_walkCols` (serializable, default 9) — frames por dirección. Usar **9** para sheets LPC de 4×9; usar **4** para sheets simples de 4 frames horizontales
+- Dirección determinada por `AIPath.velocity`: Up=0, Left=1, Down=2, Right=3. Frame 0 = idle; frames 1…(_walkCols−1) = ciclo de caminata
+- Cada enemigo configura `_walkCols` en su prefab según el número de columnas de su sprite sheet
+- `public bool IsLocked` — cuando `true`, `Update()` no ejecuta; permite a scripts externos (e.g. `PriestBehaviour`) controlar el sprite temporalmente sin conflicto
 
 ### EnemyPool
 - Singleton en el GameObject `GameManager`
@@ -329,13 +343,16 @@ Leyenda: W=Walker R=Runner Br=Brute P=Priest A=Armored
 | Caminante | 150 | 1.2 c/s | 0% | 2 | 5 |
 | Rápido | 40 | 4 c/s | 0% | 3 | 8 |
 | Blindado | 200 | 1.5 c/s | 50% físico | 5 | 15 |
-| Sacerdote | 200 | 2.0 c/s | 0% | 4 | 12 |
+| Sacerdote | 200 | 1.2 c/s | 0% | 4 | 12 |
 | Bruto | 650 | 1.2 c/s | 20% físico | 6 | 18 |
 
 - La armadura del Blindado **no afecta el DoT de Burn** (aplicado vía cartas)
 - Rápido: siempre spawna solo, nunca en grupo
 - Blindado: siempre precedido por 3 Caminantes
 - **Sacerdote (`PriestBehaviour`):** cada 2 s cura el 15% del HP máximo a todos los enemigos en radio 1.92 u, incluyéndose a sí mismo. No cura a otros Sacerdotes. La curación no supera el HP máximo del objetivo. El timer de curación se reinicia al salir y volver del pool.
+  - Al curar: se detiene (`_aiPath.canMove = false`), reproduce animación `priest_cast.png` (3 frames a 8 fps), luego llama `SearchPath()` y reanuda movimiento.
+  - En el **frame 2** del cast instancia un `HealOrb` por cada enemigo curado — proyectil visual puro que vuela hacia el target a 4 u/s ciclando `heal_orb_DRAFT.png` (4 frames). La curación ya fue aplicada instantáneamente; el orbe es solo feedback visual.
+  - `EnemyAnimator.IsLocked = true` durante el cast para evitar conflicto entre el animator y los sprites del cast.
 - **Bruto (`BruteBehaviour`):** aura pasiva en radio 1.92 u — otorga +30% armadura física a todos los enemigos en rango (incluido él mismo). Múltiples Brutos no acumulan: `EnemyBehaviour` lleva un contador `_bruteAuraCount`; `IsUnderBruteAura` es true cuando el contador > 0. El aura se recalcula cada frame. La constante del bono es `EnemyBehaviour.BruteAuraArmorBonus = 0.3f`.
 
 ---
@@ -393,6 +410,26 @@ Leyenda: W=Walker R=Runner Br=Brute P=Priest A=Armored
 **WaveManager con `_phases` vacío → silencio total, sin spawn ni error**
 - Si el array `_phases` o los campos `_caminanteData/_rapidoData/_blindadoData` están en null en el Inspector, `GetActivePhase()` siempre devuelve null y el SpawnLoop no hace nada. No hay error en consola.
 - Después de añadir o recrear el WaveManager en la escena, verificar siempre que estos campos están asignados.
+
+**Sacerdote/Bruto atraviesan torres → `constrainInsideGraph: 0` + `orientation: 0`**
+- Prefabs creados sin copiar la configuración AIPath del Caminante. `orientation: 0` (ZAxisForward) pone el agente en modo 3D, ignorando el graph 2D. `constrainInsideGraph: 0` hace que si el enemigo deriva mínimamente fuera de un nodo walkable (por la pausa del cast, flotantes, etc.) A* planifique el siguiente path desde ese nodo inválido e incluya celdas de torres como atajos.
+- **Configuración obligatoria en prefabs 2D:** `orientation: 1` (YAxisForward) · `enableRotation: 0` · `constrainInsideGraph: 1`. Verificar estos tres campos en cualquier prefab de enemigo nuevo.
+- Además, al restaurar `canMove = true` en `PriestBehaviour` se llama `SearchPath()` para forzar recálculo desde la posición actual ya-snapada.
+
+**WASD interrumpe auto-move → cola de construcción queda trabada permanentemente**
+- Presionar WASD mientras el héroe se desplaza automáticamente hacia un tile de construcción seteaba `_isAutoMoving = false` pero no limpiaba `_currentBuild`. `HandleAutoMove()` retornaba early para siempre, bloqueando cualquier construcción futura.
+- Fix en `HeroBehaviour.HandleMovement()`: al detectar WASD con `_isAutoMoving == true`, limpiar `_currentBuild = default` y vaciar `_buildQueue`. El oro no fue gastado (se gasta en `RequestPlacement` al llegar), por lo que no se necesita reembolso.
+
+**Tile queda pintado verde tras intento de construcción sin oro suficiente**
+- `TowerPlacementManager.RequestPlacement` llama `FlashTile(cell, true)` (verde) al validar la celda, y luego `FlashTile(cell, false)` (rojo) al detectar oro insuficiente. `FlashTile` llama `StopAllCoroutines()` antes de iniciar la nueva coroutine, matando la coroutine verde con `sr.color` ya seteado en verde. La coroutine roja capturaba `origColor = verde` y al terminar restauraba... verde.
+- Fix en `GridVisualizer.FlashRoutine()`: resetear `sr.color = Color.white` al inicio de la coroutine, antes de capturar `origColor`, para limpiar cualquier tint residual de una coroutine interrumpida.
+
+**Enemigos oscilan ante el gap del laberinto y no avanzan → `pickNextWaypointDist` demasiado grande**
+- Con `pickNextWaypointDist: 0.96` (2 celdas) o mayor, el cursor de waypoints salta 2+ celdas por delante. Al aproximarse al gap desde una columna lateral, el enemigo intenta moverse en línea recta hacia un punto al otro lado del muro, cruzando diagonalmente por una celda de torre. `constrainInsideGraph: true` lo devuelve al área caminable → oscilación.
+- El problema no ocurre con laberintos de 1 fila (los caminos son casi verticales), pero sí con laberintos de varias filas donde hay giros horizontales→verticales.
+- **Valor correcto: `pickNextWaypointDist: 0.5`** (≈ 1 celda, ligeramente mayor que `CellSize = 0.48`). El enemigo avanza al siguiente waypoint solo cuando ya está en él, siguiendo el camino celda a celda sin atajos diagonales.
+- **`radius: 0.5` también era incorrecto** — mayor que la mitad de una celda (0.24). Corregido a `0.1` en los 5 prefabs de enemigos.
+- **NO subir `pickNextWaypointDist` por encima de `CellSize (0.48)`** en prefabs de enemigos. El valor de `ForceAllEnemiesRepath` también se corrigió para usar `ai.SearchPath()` en lugar de construir `ABPath` manualmente (que eludía el Seeker y creaba condiciones de carrera).
 
 ---
 
