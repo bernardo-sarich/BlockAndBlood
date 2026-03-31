@@ -46,3 +46,6 @@ gen_forest_tileset.py
 # Misc
 OpenClaude.bat
 skills-lock.json
+/Assets/_Recovery
+/.agents/skills/game-ui-design/references
+/.agents/skills/game-ui-design/SKILL.md
