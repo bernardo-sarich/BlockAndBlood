@@ -34,6 +34,9 @@ public class EntityShadow : MonoBehaviour
     /// </summary>
     [SerializeField] private bool _useSpriteAsShadow;
 
+    /// <summary>When true, uses a flat solid square instead of an ellipse.</summary>
+    [SerializeField] private bool _useSquareShadow;
+
     private static Sprite _ellipseSprite;
 
     // Cached references for sprite-shadow mode
@@ -50,6 +53,8 @@ public class EntityShadow : MonoBehaviour
 
         if (_useSpriteAsShadow)
             CreateSpriteShadow();
+        else if (_useSquareShadow)
+            CreateSquareShadow();
         else
             CreateEllipseShadow();
     }
@@ -75,6 +80,29 @@ public class EntityShadow : MonoBehaviour
         _shadowSr.sprite           = _parentSr.sprite;
         _shadowSr.color            = SpriteShadowColor;
         _shadowSr.flipX            = _parentSr.flipX;
+        _shadowSr.sortingLayerName = _parentSr.sortingLayerName;
+        _shadowSr.sortingOrder     = ShadowSortingOrder;
+    }
+
+    private void CreateSquareShadow()
+    {
+        var tex = new Texture2D(4, 4, TextureFormat.RGBA32, false);
+        tex.filterMode = FilterMode.Point;
+        var pixels = new Color[16];
+        for (int i = 0; i < pixels.Length; i++) pixels[i] = Color.white;
+        tex.SetPixels(pixels);
+        tex.Apply();
+        var squareSprite = Sprite.Create(tex, new Rect(0, 0, 4, 4), new Vector2(0.5f, 0.5f), 4f);
+
+        var shadowGo = new GameObject("Shadow");
+        shadowGo.transform.SetParent(transform);
+        shadowGo.transform.localPosition = new Vector3(0f, _yOffset, 0f);
+        shadowGo.transform.localRotation = Quaternion.identity;
+        shadowGo.transform.localScale    = new Vector3(_scale.x, _scale.y, 1f);
+
+        _shadowSr                  = shadowGo.AddComponent<SpriteRenderer>();
+        _shadowSr.sprite           = squareSprite;
+        _shadowSr.color            = EllipseShadowColor;
         _shadowSr.sortingLayerName = _parentSr.sortingLayerName;
         _shadowSr.sortingOrder     = ShadowSortingOrder;
     }

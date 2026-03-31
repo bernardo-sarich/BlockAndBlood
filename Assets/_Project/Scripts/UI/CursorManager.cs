@@ -52,8 +52,15 @@ public class CursorManager : MonoBehaviour
 
     private void Update()
     {
+        if (CardSystem.IsPickerActive)
+        {
+            Cursor.visible = true;
+            return; // suspend cursor/preview logic while card picker is shown
+        }
+
         if (_inPlacementMode && _previewRenderer != null)
         {
+            Cursor.visible = false;
             UpdatePreview();
             return;
         }
@@ -150,8 +157,8 @@ public class CursorManager : MonoBehaviour
         _cursorSpriteRenderer.sortingLayerName = "Effects";
         _cursorSpriteRenderer.sortingOrder     = 101;
 
-        // Size: ~0.3 world units, compensate for parent scale
-        float desiredSize = 0.3f;
+        // Size: ~0.625 cells, compensate for parent scale
+        float desiredSize = 0.625f * GridManager.CellSize;
         float sx = parentScale.x != 0f ? desiredSize / parentScale.x : desiredSize;
         float sy = parentScale.y != 0f ? desiredSize / parentScale.y : desiredSize;
         cursorGO.transform.localScale = new Vector3(sx, sy, 1f);
@@ -208,6 +215,7 @@ public class CursorManager : MonoBehaviour
         if (gm.GetCellState(cell) != GridManager.CellState.Libre) return false;
         if (cell == gm.SpawnCell || cell == gm.GoalCell) return false;
         if (gm.IsRestricted(cell)) return false;
+        if (cell.x < GridVisualizer.PathColMin || cell.x > GridVisualizer.PathColMax) return false;
         return true;
     }
 }

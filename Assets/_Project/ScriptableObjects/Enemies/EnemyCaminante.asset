@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: EnemyCaminante
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   EnemyName: Caminante
-  MaxHp: 60
-  MoveSpeed: 1.333
+  MaxHp: 150
+  MoveSpeed: 1.2
   ArmorFraction: 0
   GoldReward: 2
   XpReward: 5
+  Prefab: {fileID: 5651935703564863863, guid: 0c0d32b55f9f9e840aa0e2033cdb2b3c, type: 3}

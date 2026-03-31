@@ -16,7 +16,7 @@ MonoBehaviour:
   Cost: 18
   DamageBase: 5
   AttackSpeed: 0
-  Range: 1.44
+  Range: 3
   DamageType: 0
   IsAreaAttack: 1
   OnHitEffects:

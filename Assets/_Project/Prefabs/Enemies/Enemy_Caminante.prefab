@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 240006018286943592}
   - component: {fileID: 4125608709633776431}
   - component: {fileID: 4911754457891267175}
+  - component: {fileID: 8891234567890123}
   m_Layer: 9
   m_Name: Enemy_Caminante
   m_TagString: Untagged
@@ -34,7 +35,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.96, y: 0.96, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -88,7 +89,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2136899263122000377, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
+  m_Sprite: {fileID: -5518760217352772082, guid: cb37bb16db387ef4aa3bc29d8ff6ed69, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -175,7 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: AstarPathfindingProject::Pathfinding.AIPath
   version: 5
-  radius: 0.5
+  radius: 0.2
   height: 2
   canMove: 1
   maxSpeed: 1
@@ -197,9 +198,9 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 0.6
-  pickNextWaypointDist: 0.96
-  endReachedDistance: 0.2
+  slowdownDistance: 1.25
+  pickNextWaypointDist: 1.04
+  endReachedDistance: 0.4
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
@@ -242,7 +243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EntityShadow
   sourceRenderer: {fileID: 0}
   _scale: {x: 0.7, y: 0.35}
-  _yOffset: -0.55
+  _yOffset: -0.25
   _useSpriteAsShadow: 1
 --- !u!114 &4911754457891267175
 MonoBehaviour:
@@ -257,40 +258,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAnimator
   walkSprites:
-  - {fileID: -1618929283172466583, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: -2487684106898997955, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: -6006746078250453604, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: -8460311602716381935, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: -2128470511313866455, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: 8121433766766928303, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: 6322729840155156033, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: 2190389895306661296, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: -6292984561030156561, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: -7251852262842320102, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: 3676211318759982786, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: 8395446640691033870, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: 3217276624601806948, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: -6075615081128769881, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: 3651632615970487317, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: 6431400610059372818, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: -2803042162646123694, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: -1126067868770167418, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: -2136899263122000377, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: -5805702789659959130, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: 3434612575962682485, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: -9212539449433674559, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: -4862001770157733102, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: -1572154755752631009, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: -2246129062448992470, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: 3629322822068419098, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: -4117390039414007227, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: -3586820007611676473, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: 4938625756301291360, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: 6435666332182867892, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: 8221355165183484391, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: -8418386901240781844, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: 3489411036184235607, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: 915556538585068760, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: 213548373716946457, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
-  - {fileID: -3561193950231981506, guid: 4a340f396a41ae14abe7cd6df4e78b70, type: 3}
+  - {fileID: -5518760217352772082, guid: cb37bb16db387ef4aa3bc29d8ff6ed69, type: 3}
+  - {fileID: -802753271998291943, guid: cb37bb16db387ef4aa3bc29d8ff6ed69, type: 3}
+  - {fileID: 1770238971194830914, guid: cb37bb16db387ef4aa3bc29d8ff6ed69, type: 3}
+  - {fileID: 8650089751509717412, guid: cb37bb16db387ef4aa3bc29d8ff6ed69, type: 3}
+  - {fileID: -5518760217352772082, guid: cb37bb16db387ef4aa3bc29d8ff6ed69, type: 3}
+  - {fileID: -802753271998291943, guid: cb37bb16db387ef4aa3bc29d8ff6ed69, type: 3}
+  - {fileID: 1770238971194830914, guid: cb37bb16db387ef4aa3bc29d8ff6ed69, type: 3}
+  - {fileID: 8650089751509717412, guid: cb37bb16db387ef4aa3bc29d8ff6ed69, type: 3}
+  - {fileID: -5518760217352772082, guid: cb37bb16db387ef4aa3bc29d8ff6ed69, type: 3}
+  - {fileID: -802753271998291943, guid: cb37bb16db387ef4aa3bc29d8ff6ed69, type: 3}
+  - {fileID: 1770238971194830914, guid: cb37bb16db387ef4aa3bc29d8ff6ed69, type: 3}
+  - {fileID: 8650089751509717412, guid: cb37bb16db387ef4aa3bc29d8ff6ed69, type: 3}
+  - {fileID: -5518760217352772082, guid: cb37bb16db387ef4aa3bc29d8ff6ed69, type: 3}
+  - {fileID: -802753271998291943, guid: cb37bb16db387ef4aa3bc29d8ff6ed69, type: 3}
+  - {fileID: 1770238971194830914, guid: cb37bb16db387ef4aa3bc29d8ff6ed69, type: 3}
+  - {fileID: 8650089751509717412, guid: cb37bb16db387ef4aa3bc29d8ff6ed69, type: 3}
   _walkFps: 8
+  _walkCols: 4
+--- !u!114 &8891234567890123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5651935703564863863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AuraBlindadoVisual
+  _frames:
+  - {fileID: 2189304624557462875, guid: 0220d8a36253c134baf97f8e975300e9, type: 3}
+  - {fileID: 944569503135356471, guid: 0220d8a36253c134baf97f8e975300e9, type: 3}
+  - {fileID: -7018890948945355956, guid: 0220d8a36253c134baf97f8e975300e9, type: 3}

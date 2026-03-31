@@ -61,6 +61,8 @@ public class TowerPlacementManager : MonoBehaviour
         if (!EconomyManager.Instance.TrySpend(data.Cost))
         {
             Debug.Log("[TowerPlacementManager] Not enough gold.");
+            _visualizer?.FlashTile(cell, false);
+            CancelSelection();
             return;
         }
 

@@ -15,13 +15,15 @@ public class EnemyAnimator : MonoBehaviour
 {
     private enum Dir { Up = 0, Left = 1, Down = 2, Right = 3 }
 
-    [Header("Sprites (4 dirs x 9 frames = 36)")]
+    [Header("Sprites (4 dirs x N frames)")]
     [SerializeField] public Sprite[] walkSprites;
 
     [Header("Playback")]
     [SerializeField] private float _walkFps = 8f;
+    [SerializeField] private int   _walkCols = 9;
 
-    private const int WalkCols = 9;
+    // When true, Update() skips — lets PriestBehaviour (or similar) own the sprite.
+    public bool IsLocked { get; set; }
 
     private SpriteRenderer _sr;
     private AIPath         _aiPath;
@@ -39,6 +41,7 @@ public class EnemyAnimator : MonoBehaviour
 
     private void Update()
     {
+        if (IsLocked) return;
         if (_sr == null || walkSprites == null || walkSprites.Length == 0) return;
 
         // Read movement from AIPath
@@ -67,7 +70,7 @@ public class EnemyAnimator : MonoBehaviour
             if (_isMoving)
             {
                 _frame++;
-                if (_frame >= WalkCols)
+                if (_frame >= _walkCols)
                     _frame = 1;
             }
             else
@@ -83,7 +86,7 @@ public class EnemyAnimator : MonoBehaviour
     {
         if (_sr == null || walkSprites == null || walkSprites.Length == 0) return;
 
-        int idx = (int)_dir * WalkCols + _frame;
+        int idx = (int)_dir * _walkCols + _frame;
         idx = Mathf.Clamp(idx, 0, walkSprites.Length - 1);
         if (walkSprites[idx] != null)
             _sr.sprite = walkSprites[idx];

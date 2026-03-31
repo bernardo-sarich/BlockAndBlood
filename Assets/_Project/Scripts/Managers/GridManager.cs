@@ -25,7 +25,7 @@ public class GridManager : MonoBehaviour
 
     public const int Columns  = 14;
     public const int Rows     = 18;
-    public const float CellSize = 0.48f;
+    public const float CellSize = 1.0f;
 
     /// <summary>Enemies enter from top (row 17) and walk down to bottom (row 0).</summary>
     public const int SpawnRow = 17;
@@ -96,6 +96,18 @@ public class GridManager : MonoBehaviour
 
         AstarPath.active.Scan();
 
+        // Mark columns outside the playable path as non-walkable so enemies never route through grass/edges.
+        for (int x = 0; x < Columns; x++)
+        {
+            if (x >= GridVisualizer.PathColMin && x <= GridVisualizer.PathColMax) continue;
+            for (int y = 0; y < Rows; y++)
+            {
+                GraphNode node = graph.GetNode(x, y);
+                if (node != null) node.Walkable = false;
+            }
+        }
+        AstarPath.active.FlushGraphUpdates();
+
         // Diagnostic: verify graph has walkable nodes
         int walkable = 0;
         graph.GetNodes(node => { if (node.Walkable) walkable++; });
@@ -154,8 +166,10 @@ public class GridManager : MonoBehaviour
 
         float distZ = Mathf.Max(distFromH, distFromW) * 0.85f;
 
-        // Offset Y to compensate for the tilt pushing the grid down in the viewport
-        float offsetY = 2.44f;
+        // Offset Y to compensate for the tilt pushing the grid down in the viewport.
+        // Ratio 0.2824 = 2.44 / (18 * 0.48) — derived from original hand-tuned value;
+        // computed from gridHeight so it auto-adapts to any CellSize or row-count change.
+        float offsetY = gridHeight * 0.2824f;
 
         // Position camera centered on the grid, pulled back on Z
         cam.transform.position = new Vector3(GridCenter.x, GridCenter.y - offsetY, -distZ);
@@ -184,6 +198,7 @@ public class GridManager : MonoBehaviour
         if (_grid[cell.x, cell.y] != CellState.Libre) { Debug.Log($"[Grid] {cell} rejected: state={_grid[cell.x, cell.y]}"); return false; }
         if (cell == SpawnCell || cell == GoalCell) { Debug.Log($"[Grid] {cell} rejected: spawn/goal"); return false; }
         if (IsRestricted(cell)) { Debug.Log($"[Grid] {cell} rejected: restricted"); return false; }
+        if (cell.x < GridVisualizer.PathColMin || cell.x > GridVisualizer.PathColMax) { Debug.Log($"[Grid] {cell} rejected: outside playable columns"); return false; }
         bool pathOk = PathExistsWithCellBlocked(cell);
         if (!pathOk) Debug.Log($"[Grid] {cell} rejected: path blocked");
         return pathOk;
@@ -210,7 +225,13 @@ public class GridManager : MonoBehaviour
     /// <summary>Converts a grid cell to its world-space center.</summary>
     public Vector3 CellToWorld(Vector2Int cell)
     {
-        return _gridOrigin + new Vector3(
+        // In Edit mode Awake() hasn't run yet, so _gridOrigin is (0,0,0).
+        // Re-derive it so GridVisualizer [ExecuteAlways] positions tiles correctly.
+        Vector3 origin = Application.isPlaying
+            ? _gridOrigin
+            : new Vector3(-(Columns * CellSize) / 2f, -(Rows * CellSize) / 2f, 0f);
+
+        return origin + new Vector3(
             cell.x * CellSize + CellSize * 0.5f,
             cell.y * CellSize + CellSize * 0.5f,
             0f);
@@ -259,20 +280,18 @@ public class GridManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Recalculates paths for every active AIPath agent synchronously.
-    /// Cheap on a 14×18 grid (~252 nodes) even with 30+ enemies.
+    /// Recalculates paths for every active AIPath agent after a graph change.
+    /// Uses SearchPath() so the Seeker cancels any in-flight request and recalculates
+    /// against the updated graph. Skipping agents without a path (!hasPath) is wrong
+    /// because the graph change is exactly what cleared their path.
     /// </summary>
     private void ForceAllEnemiesRepath()
     {
         var agents = Object.FindObjectsByType<AIPath>(FindObjectsSortMode.None);
         foreach (var ai in agents)
         {
-            if (ai == null || !ai.enabled || !ai.hasPath) continue;
-
-            var path = ABPath.Construct(ai.position, ai.destination, null);
-            AstarPath.StartPath(path);
-            AstarPath.BlockUntilCalculated(path);
-            ai.SetPath(path);
+            if (ai == null || !ai.enabled) continue;
+            ai.SearchPath();
         }
     }
 

@@ -22,4 +22,7 @@ public class EnemyData : ScriptableObject
     [Header("Rewards")]
     public int GoldReward;
     public int XpReward;
+
+    [Header("Prefab")]
+    public GameObject Prefab;
 }

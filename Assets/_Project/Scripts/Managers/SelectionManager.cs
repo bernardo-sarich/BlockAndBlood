@@ -24,8 +24,8 @@ public class SelectionManager : MonoBehaviour
     // ── Inspector ────────────────────────────────────────────────────────────
     [Header("Selection Indicator")]
     [SerializeField] private Color   _color  = new Color(0f, 1f, 0f, 0.7f);
-    [SerializeField] private Vector2 _scale  = new Vector2(0.7f, 0.35f);
-    [SerializeField] private float   _yOffset = -0.55f;
+    [SerializeField] private Vector2 _scale  = new Vector2(1.46f, 0.73f);
+    [SerializeField] private float   _yOffset = -1.15f;
 
     // ── Internal state ───────────────────────────────────────────────────────
     private GameObject     _indicator;
@@ -53,14 +53,16 @@ public class SelectionManager : MonoBehaviour
 
     private void OnEnable()
     {
-        TowerBehaviour.OnTowerClicked += HandleTowerClicked;
-        TowerBehaviour.OnTowerSold    += HandleTowerSold;
+        TowerBehaviour.OnTowerClicked    += HandleTowerClicked;
+        TowerBehaviour.OnTowerSold       += HandleTowerSold;
+        GameManager.OnGameStateChanged   += HandleGameStateChanged;
     }
 
     private void OnDisable()
     {
-        TowerBehaviour.OnTowerClicked -= HandleTowerClicked;
-        TowerBehaviour.OnTowerSold    -= HandleTowerSold;
+        TowerBehaviour.OnTowerClicked    -= HandleTowerClicked;
+        TowerBehaviour.OnTowerSold       -= HandleTowerSold;
+        GameManager.OnGameStateChanged   -= HandleGameStateChanged;
     }
 
     private void Update()
@@ -121,6 +123,12 @@ public class SelectionManager : MonoBehaviour
     private void HandleTowerSold(TowerBehaviour tower, int refund)
     {
         if (Current is TowerBehaviour tb && tb == tower)
+            SelectHero();
+    }
+
+    private void HandleGameStateChanged(GameManager.GameState state)
+    {
+        if (state == GameManager.GameState.Paused && Current is TowerBehaviour)
             SelectHero();
     }
 

@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 8
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3586820007611676473, guid: 5fd9c084525be5b47afd51666576bade, type: 3}
+  m_Sprite: {fileID: 8205950651708530623, guid: e304f1ea5bcf4744cb0081ebb0dff110, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,10 +103,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9f3e6702f441a946b7264439663e650, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::ProjectileBehaviour
   _speed: 8
   _hitRadius: 0.15
+  _fireArrowFrames:
+  - {fileID: 2994823578221778999, guid: e7c11f4ea5bfb254fa40ee9f034304d6, type: 3}
+  - {fileID: 6630924600861205932, guid: e7c11f4ea5bfb254fa40ee9f034304d6, type: 3}
+  - {fileID: -6868817808022736161, guid: e7c11f4ea5bfb254fa40ee9f034304d6, type: 3}
+  - {fileID: 3197845688033716936, guid: e7c11f4ea5bfb254fa40ee9f034304d6, type: 3}
+  _fireAnimFps: 8
 --- !u!58 &9200297534063656778
 CircleCollider2D:
   m_ObjectHideFlags: 0

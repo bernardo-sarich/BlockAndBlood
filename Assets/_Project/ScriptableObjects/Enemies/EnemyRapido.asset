@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: EnemyRapido
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   EnemyName: "R\xE1pido"
-  MaxHp: 40
+  MaxHp: 90
   MoveSpeed: 4
   ArmorFraction: 0
   GoldReward: 3
   XpReward: 8
+  Prefab: {fileID: 5651935703564863863, guid: d990a79168752c045b684db4f554f4a6, type: 3}

@@ -22,6 +22,9 @@ public class EnemyBehaviour : MonoBehaviour, IDamageable, IHasHp
     // World units per cell — must match GridManager.CellSize.
     private const float CellSize = GridManager.CellSize;
 
+    /// <summary>Armor bonus granted by an armor aura (Blindado, +30% physical damage reduction).</summary>
+    public const float BruteAuraArmorBonus = 0.3f;
+
     // ── Events ───────────────────────────────────────────────────────────────
     /// <summary>Fired on death. Parameters: enemy, goldReward, xpReward.</summary>
     public static event System.Action<EnemyBehaviour, int, int> OnEnemyDeath;
@@ -34,6 +37,7 @@ public class EnemyBehaviour : MonoBehaviour, IDamageable, IHasHp
     private float      _currentHp;
     private bool       _isDead;
     private float      _totalPathLength;
+    private int        _bruteAuraCount;
 
     private EffectSystem                _effects;
     private AIPath                      _aiPath;
@@ -41,8 +45,19 @@ public class EnemyBehaviour : MonoBehaviour, IDamageable, IHasHp
 
     // ── IDamageable / IHasHp ─────────────────────────────────────────────────
     public float   CurrentHp => _currentHp;
+    public float   MaxHp     => _data?.MaxHp ?? 0f;
     public bool    IsAlive   => !_isDead;
     public Vector3 Position  => transform.position;
+
+    // ── Armor aura (Blindado) ────────────────────────────────────────────────
+    /// <summary>True when at least one armor aura (Blindado) is active on this enemy.</summary>
+    public bool IsUnderBruteAura => _bruteAuraCount > 0;
+
+    /// <summary>Called by BruteBehaviour when this enemy enters its aura range.</summary>
+    public void AddBruteAura()    { _bruteAuraCount++; }
+
+    /// <summary>Called by BruteBehaviour when this enemy leaves its aura range.</summary>
+    public void RemoveBruteAura() { if (_bruteAuraCount > 0) _bruteAuraCount--; }
 
     // ── Initialisation ───────────────────────────────────────────────────────
 
@@ -57,11 +72,13 @@ public class EnemyBehaviour : MonoBehaviour, IDamageable, IHasHp
         _currentHp       = data.MaxHp;
         _isDead          = false;
         _totalPathLength = 0f;
+        _bruteAuraCount  = 0;
         _pool            = pool;
 
         transform.position = spawnPos;
 
         _effects = GetComponent<EffectSystem>();
+        _effects?.ClearEffects();
         _aiPath  = GetComponent<AIPath>();
 
         // Ensure dynamic Y-sorting is present for perspective camera depth ordering
@@ -139,9 +156,10 @@ public class EnemyBehaviour : MonoBehaviour, IDamageable, IHasHp
 
         float effective = amount;
 
-        if (!ignoreArmor && _data.ArmorFraction > 0f)
+        if (!ignoreArmor)
         {
-            float armor = Mathf.Max(0f, _data.ArmorFraction - _effects.CurrentArmorReduction);
+            float bruteBonus = _bruteAuraCount > 0 ? BruteAuraArmorBonus : 0f;
+            float armor = Mathf.Clamp01(_data.ArmorFraction + bruteBonus - _effects.CurrentArmorReduction);
             effective  *= (1f - armor);
         }
 
@@ -149,6 +167,13 @@ public class EnemyBehaviour : MonoBehaviour, IDamageable, IHasHp
 
         if (_currentHp <= 0f)
             Die();
+    }
+
+    /// <summary>Restores HP up to MaxHp. Called by PriestBehaviour.</summary>
+    public void Heal(float amount)
+    {
+        if (_isDead || _data == null) return;
+        _currentHp = Mathf.Min(_currentHp + amount, _data.MaxHp);
     }
 
     private void Die()
@@ -173,7 +198,8 @@ public class EnemyBehaviour : MonoBehaviour, IDamageable, IHasHp
 
     private void ReturnToPool()
     {
-        if (_pool != null) _pool.Release(this);
-        else               Destroy(gameObject);
+        if (EnemyPool.Instance != null) EnemyPool.Instance.Despawn(this);
+        else if (_pool != null)         _pool.Release(this);
+        else                            Destroy(gameObject);
     }
 }

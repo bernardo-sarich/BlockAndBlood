@@ -25,14 +25,15 @@ public class HUDController : MonoBehaviour
 
     // ── Public constants (CardEffect may reference) ───────────────────────
     public const float MaxDamage      = 50f;
-    public const float MaxRange       = 4f;
+    public const float MaxRange       = 8f;  // cells
     public const float MaxAttackSpeed = 5f;
-    public const float MaxMoveSpeed   = 8f;
+    public const float MaxMoveSpeed   = 12f; // cells/sec
 
     // ── Layout ───────────────────────────────────────────────────────────
-    private const float PanelW    = 200f;
-    private const float PortraitH = 70f;
-    private const int   Slots     = 6;
+    private const float PanelW      = 200f;
+    private const float PortraitH   = 70f;
+    private const int   Slots       = 6;
+    private const int   InvColumns  = 3;
 
     // ── Palette ──────────────────────────────────────────────────────────
     private static readonly Color ColBg      = new Color(0.086f, 0.110f, 0.086f, 0.97f); // #161C16
@@ -43,6 +44,7 @@ public class HUDController : MonoBehaviour
     private static readonly Color ColEffect  = new Color(0.114f, 0.620f, 0.459f, 1f);
     private static readonly Color ColBarBg   = new Color(0.15f,  0.15f,  0.15f,  1f);
     private static readonly Color ColLabel   = new Color(0.478f, 0.604f, 0.478f, 1f);    // #7A9A7A
+    private static readonly Color ColXpText  = new Color(0.478f, 0.722f, 0.478f, 1f);    // #7AB87A — XP / Level display
     private static readonly Color ColBorder  = new Color(1f,     1f,     1f,     0.10f);
     private static readonly Color ColSlotBg  = new Color(0.10f,  0.10f,  0.10f,  0.70f);
     private static readonly Color ColSlotBdr = new Color(0.165f, 0.290f, 0.165f, 1f);    // #2A4A2A
@@ -85,16 +87,18 @@ public class HUDController : MonoBehaviour
 
     private GameObject         _heroCardsGO;
     private TextMeshProUGUI    _hInvTitle;
-    private readonly Image[]           _hInvIco  = new Image[Slots];
-    private readonly TextMeshProUGUI[] _hInvPlus = new TextMeshProUGUI[Slots];
+    private readonly Image[]           _hInvIco     = new Image[Slots];
+    private readonly TextMeshProUGUI[] _hInvPlus    = new TextMeshProUGUI[Slots];
+    private readonly TextMeshProUGUI[] _hInvCharges = new TextMeshProUGUI[Slots];
 
     private GameObject                 _towerCardsGO;
     private TextMeshProUGUI            _tCardsTitle;
-    private readonly Image[]           _tEffIco  = new Image[Slots];
-    private readonly TextMeshProUGUI[] _tEffPlus = new TextMeshProUGUI[Slots];
-    private readonly Image[]           _tEffDot  = new Image[Slots];
-    private readonly Button[]          _tInvBtn  = new Button[Slots];
-    private readonly Image[]           _tInvIco  = new Image[Slots];
+    private readonly Image[]           _tEffIco     = new Image[Slots];
+    private readonly TextMeshProUGUI[] _tEffPlus    = new TextMeshProUGUI[Slots];
+    private readonly Image[]           _tEffDot     = new Image[Slots];
+    private readonly Button[]          _tInvBtn     = new Button[Slots];
+    private readonly Image[]           _tInvIco     = new Image[Slots];
+    private readonly TextMeshProUGUI[] _tInvCharges = new TextMeshProUGUI[Slots];
 
     private GameObject       _buildSec;
     private readonly Button[]          _buildBtn = new Button[4];
@@ -115,6 +119,17 @@ public class HUDController : MonoBehaviour
     private TowerData[]    _bDatas;
     private int            _lastScreenW;
 
+    // ── XP bar (bottom of screen) ─────────────────────────────────────────
+    private Image           _xpBarFill;
+    private TextMeshProUGUI _xpBarLabel;
+
+    // ── Game timer (bottom-right) ─────────────────────────────────────────
+    private TextMeshProUGUI _timerLabel;
+    private float           _playingStartTime  = -1f;
+    private float           _totalPausedTime   = 0f;
+    private float           _pauseStartTime    = -1f;
+    private bool            _timerRunning      = false;
+
     // ══════════════════════════════════════════════════════════════════════
     //  Lifecycle
     // ══════════════════════════════════════════════════════════════════════
@@ -123,6 +138,8 @@ public class HUDController : MonoBehaviour
     {
         _bDatas = new[] { _meleeTowerData, _rangeTowerData };
         RepositionTopHUD();
+        BuildXpHUD();
+        BuildTimerHUD();
         BuildRightPanel();
     }
 
@@ -133,6 +150,7 @@ public class HUDController : MonoBehaviour
         ApplyCameraViewport();
         RefreshGold(EconomyManager.Instance  != null ? EconomyManager.Instance.Gold   : 0);
         RefreshLives(LivesManager.Instance   != null ? LivesManager.Instance.Lives    : 0);
+        RefreshXp(XPManager.Instance         != null ? XPManager.Instance.CurrentXp   : 0);
         RefreshAll();
     }
 
@@ -146,6 +164,10 @@ public class HUDController : MonoBehaviour
         TowerBehaviour.OnTowerUpgraded      += OnTowerUpgraded;
         TowerBehaviour.OnEffectApplied      += OnEffectApplied;
         PlayerInventory.OnInventoryChanged  += RefreshCardSections;
+        XPManager.OnXpChanged               += RefreshXp;
+        XPManager.OnLevelUp                 += RefreshLevel;
+        EnemyBehaviour.OnEnemyDeath         += OnEnemyDied;
+        GameManager.OnGameStateChanged      += OnGameStateChangedTimer;
     }
 
     private void OnDisable()
@@ -158,11 +180,22 @@ public class HUDController : MonoBehaviour
         TowerBehaviour.OnTowerUpgraded      -= OnTowerUpgraded;
         TowerBehaviour.OnEffectApplied      -= OnEffectApplied;
         PlayerInventory.OnInventoryChanged  -= RefreshCardSections;
+        XPManager.OnXpChanged               -= RefreshXp;
+        XPManager.OnLevelUp                 -= RefreshLevel;
+        EnemyBehaviour.OnEnemyDeath         -= OnEnemyDied;
+        GameManager.OnGameStateChanged      -= OnGameStateChangedTimer;
     }
 
     private void Update()
     {
         if (Screen.width != _lastScreenW) ApplyCameraViewport();
+        if (_timerRunning && _timerLabel != null)
+        {
+            float elapsed = Time.time - _playingStartTime - _totalPausedTime;
+            int   mins    = (int)(elapsed / 60f);
+            int   secs    = (int)(elapsed % 60f);
+            _timerLabel.text = $"{mins}:{secs:D2}";
+        }
     }
 
     // ── Camera & top HUD ─────────────────────────────────────────────────
@@ -179,11 +212,59 @@ public class HUDController : MonoBehaviour
 
     private void RepositionTopHUD()
     {
-        // Place GoldPanel and LivesPanel at top-left of canvas (within game area)
         GameObject goldPanel  = _goldText  != null ? _goldText.transform.parent.gameObject  : null;
         GameObject livesPanel = _livesText != null ? _livesText.transform.parent.gameObject : null;
-        SetTopItem(goldPanel,  6f,  6f, 78f, 24f);
-        SetTopItem(livesPanel, 90f, 6f, 78f, 24f);
+        SetTopItem(goldPanel,  6f,  6f, 0f, 24f);
+        SetTopItem(livesPanel, 90f, 6f, 0f, 24f);
+
+        SetupIconTextRow(goldPanel,  _goldIcon,  _goldText);
+        SetupIconTextRow(livesPanel, _heartIcon, _livesText);
+    }
+
+    /// <summary>
+    /// Re-parents icon as first child of panel and adds a HorizontalLayoutGroup
+    /// so icon → text render left-to-right without overlap.
+    /// </summary>
+    private static void SetupIconTextRow(GameObject panel, Image icon, TextMeshProUGUI txt)
+    {
+        if (panel == null || icon == null || txt == null) return;
+
+        // Ensure order: icon first, text second
+        icon.transform.SetParent(panel.transform, false);
+        icon.transform.SetSiblingIndex(0);
+        txt.transform.SetSiblingIndex(1);
+
+        // Text must never wrap regardless of digit count
+        txt.enableWordWrapping = false;
+        txt.overflowMode       = TextOverflowModes.Overflow;
+
+        // Fixed-size LayoutElement on the icon
+        float size             = txt.fontSize;
+        var iconLE             = icon.GetComponent<LayoutElement>() ?? icon.gameObject.AddComponent<LayoutElement>();
+        iconLE.minWidth        = size;
+        iconLE.preferredWidth  = size;
+        iconLE.minHeight       = size;
+        iconLE.preferredHeight = size;
+        iconLE.flexibleWidth   = 0;
+
+        // Panel must not have a fixed preferred width
+        var panelLE = panel.GetComponent<LayoutElement>();
+        if (panelLE != null) panelLE.preferredWidth = -1;
+
+        // HorizontalLayoutGroup on the panel
+        var hlg                    = panel.GetComponent<HorizontalLayoutGroup>() ?? panel.AddComponent<HorizontalLayoutGroup>();
+        hlg.spacing                = 4f;
+        hlg.childForceExpandWidth  = false;
+        hlg.childForceExpandHeight = true;
+        hlg.childControlWidth      = true;
+        hlg.childControlHeight     = true;
+        hlg.childAlignment         = TextAnchor.MiddleLeft;
+        hlg.padding                = new RectOffset(2, 2, 0, 0);
+
+        // Let the panel auto-size horizontally to fit icon + text
+        var csf = panel.GetComponent<ContentSizeFitter>() ?? panel.AddComponent<ContentSizeFitter>();
+        csf.horizontalFit = ContentSizeFitter.FitMode.PreferredSize;
+        csf.verticalFit   = ContentSizeFitter.FitMode.Unconstrained;
     }
 
     private static void SetTopItem(GameObject go, float x, float y, float w, float h)
@@ -395,8 +476,8 @@ public class HUDController : MonoBehaviour
     private void BuildHeroCards(Transform p)
     {
         _heroCardsGO = UI("HeroCards", p);
-        // title 14 + grid 38 + spacing 4 + padding 6+4 = 66
-        FH(_heroCardsGO, 68);
+        // title 14 + 2 rows of 56 + spacing 6 + padding 6+4 = ~142
+        FH(_heroCardsGO, 148);
 
         var vlg = _heroCardsGO.AddComponent<VerticalLayoutGroup>();
         vlg.spacing                = 4;
@@ -411,12 +492,12 @@ public class HUDController : MonoBehaviour
 
         var grid = UI("Grid", _heroCardsGO.transform);
         var gg   = grid.AddComponent<GridLayoutGroup>();
-        gg.cellSize        = new Vector2(26, 38);
-        gg.spacing         = new Vector2(3, 0);
+        gg.cellSize        = new Vector2(56, 56);
+        gg.spacing         = new Vector2(4, 4);
         gg.constraint      = GridLayoutGroup.Constraint.FixedColumnCount;
-        gg.constraintCount = Slots;
+        gg.constraintCount = InvColumns;
         gg.childAlignment  = TextAnchor.UpperLeft;
-        grid.AddComponent<LayoutElement>().preferredHeight = 38;
+        grid.AddComponent<LayoutElement>().preferredHeight = 118; // 2 rows × 56 + spacing 6
 
         for (int i = 0; i < Slots; i++)
         {
@@ -434,6 +515,17 @@ public class HUDController : MonoBehaviour
             _hInvPlus[i] = TMP("+", s.transform, 10, TextAlignmentOptions.Center, ColSlotBdr);
             Stretch(_hInvPlus[i].gameObject);
             _hInvPlus[i].text = "+";
+
+            // Charge count badge — bottom-right corner
+            var badge = UI("Ch", s.transform);
+            AnchorFill(badge, 0.45f, 0f, 1f, 0.38f);
+            _hInvCharges[i] = badge.AddComponent<TextMeshProUGUI>();
+            _hInvCharges[i].fontSize   = 9f;
+            _hInvCharges[i].fontStyle  = FontStyles.Bold;
+            _hInvCharges[i].alignment  = TextAlignmentOptions.BottomRight;
+            _hInvCharges[i].color      = ColSpeed; // amarillo dorado
+            _hInvCharges[i].raycastTarget = false;
+            _hInvCharges[i].text       = "";
         }
     }
 
@@ -442,8 +534,8 @@ public class HUDController : MonoBehaviour
     private void BuildTowerCards(Transform p)
     {
         _towerCardsGO = UI("TowerCards", p);
-        // title 14 + eff-grid 32 + apply-label 12 + inv-grid 32 + spacing+padding ≈ 120
-        FH(_towerCardsGO, 120);
+        // title 14 + eff-grid 32 + apply-label 14 + inv-grid 118 + spacing+padding ≈ 200
+        FH(_towerCardsGO, 200);
 
         var vlg = _towerCardsGO.AddComponent<VerticalLayoutGroup>();
         vlg.spacing                = 4;
@@ -493,15 +585,15 @@ public class HUDController : MonoBehaviour
         // "Apply card" subtitle
         MakeSectionTitle(_towerCardsGO.transform, "APLICAR CARTA");
 
-        // Inventory (clickable)
+        // Inventory (clickable) — 3 columns with charge badges
         var tGrid = UI("InvGrid", _towerCardsGO.transform);
         var tg    = tGrid.AddComponent<GridLayoutGroup>();
-        tg.cellSize        = new Vector2(26, 32);
-        tg.spacing         = new Vector2(3, 0);
+        tg.cellSize        = new Vector2(56, 56);
+        tg.spacing         = new Vector2(4, 4);
         tg.constraint      = GridLayoutGroup.Constraint.FixedColumnCount;
-        tg.constraintCount = Slots;
+        tg.constraintCount = InvColumns;
         tg.childAlignment  = TextAnchor.UpperLeft;
-        tGrid.AddComponent<LayoutElement>().preferredHeight = 32;
+        tGrid.AddComponent<LayoutElement>().preferredHeight = 118; // 2 rows × 56 + spacing 6
 
         for (int i = 0; i < Slots; i++)
         {
@@ -523,6 +615,17 @@ public class HUDController : MonoBehaviour
             _tInvIco[i].preserveAspect = true;
             _tInvIco[i].raycastTarget  = false;
             _tInvIco[i].color          = Color.clear;
+
+            // Charge count badge — bottom-right corner
+            var badge = UI("Ch", s.transform);
+            AnchorFill(badge, 0.45f, 0f, 1f, 0.38f);
+            _tInvCharges[i] = badge.AddComponent<TextMeshProUGUI>();
+            _tInvCharges[i].fontSize      = 9f;
+            _tInvCharges[i].fontStyle     = FontStyles.Bold;
+            _tInvCharges[i].alignment     = TextAlignmentOptions.BottomRight;
+            _tInvCharges[i].color         = ColSpeed; // amarillo dorado
+            _tInvCharges[i].raycastTarget = false;
+            _tInvCharges[i].text          = "";
         }
 
         _towerCardsGO.SetActive(false);
@@ -726,7 +829,7 @@ public class HUDController : MonoBehaviour
             TowerData d = _selectedTower.Data;
 
             FillBar(0, d.DamageBase, MaxDamage, $"{d.DamageBase:0.#}");
-            FillBar(1, d.Range, MaxRange, $"{d.Range / GridManager.CellSize:0.#}c");
+            FillBar(1, d.Range, MaxRange, $"{d.Range:0.#}c");
 
             if (d.IsAreaAttack)
                 FillBar(2, d.DamageBase * 0.5f, MaxAttackSpeed, "AOE");
@@ -757,7 +860,7 @@ public class HUDController : MonoBehaviour
             var h = HeroBehaviour.Instance;
 
             FillBar(0, h.Damage,              MaxDamage,      $"{h.Damage:0.#}");
-            FillBar(1, h.AttackRange,         MaxRange,       $"{h.AttackRange / GridManager.CellSize:0.#}c");
+            FillBar(1, h.AttackRange / GridManager.CellSize, MaxRange, $"{h.AttackRange / GridManager.CellSize:0.#}c");
             FillBar(2, 1f / h.AttackInterval, MaxAttackSpeed, $"{1f / h.AttackInterval:0.#}/s");
             FillBar(3, h.MoveSpeed,           MaxMoveSpeed,   $"{h.MoveSpeed:0.#}");
 
@@ -776,7 +879,7 @@ public class HUDController : MonoBehaviour
         if (_heroCardsGO  != null) _heroCardsGO.SetActive(!tower);
         if (_towerCardsGO != null) _towerCardsGO.SetActive(tower);
 
-        IReadOnlyList<CardData> inv = PlayerInventory.Instance?.Cards;
+        IReadOnlyList<CardSlot> inv = PlayerInventory.Instance?.Slots;
         int invCount = inv?.Count ?? 0;
 
         if (!tower)
@@ -786,10 +889,13 @@ public class HUDController : MonoBehaviour
 
             for (int i = 0; i < Slots; i++)
             {
-                bool has = i < invCount && inv[i] != null;
-                _hInvIco[i].sprite = has ? inv[i].Icon : null;
-                _hInvIco[i].color  = has && inv[i].Icon != null ? Color.white : Color.clear;
+                bool   has = i < invCount && inv[i].IsValid;
+                Sprite ico = has ? inv[i].Card.DisplayIcon : null;
+                _hInvIco[i].sprite = ico;
+                _hInvIco[i].color  = ico != null ? Color.white : Color.clear;
                 _hInvPlus[i].gameObject.SetActive(!has);
+                if (_hInvCharges[i] != null)
+                    _hInvCharges[i].text = has ? $"x{inv[i].Charges}" : "";
             }
 
             int gold = EconomyManager.Instance != null ? EconomyManager.Instance.Gold : 0;
@@ -808,8 +914,9 @@ public class HUDController : MonoBehaviour
             for (int i = 0; i < Slots; i++)
             {
                 bool has = i < appCnt && applied[i] != null;
-                _tEffIco[i].sprite = has ? applied[i].Icon : null;
-                _tEffIco[i].color  = has && applied[i].Icon != null ? Color.white : Color.clear;
+                Sprite effIco = has ? applied[i].DisplayIcon : null;
+                _tEffIco[i].sprite = effIco;
+                _tEffIco[i].color  = effIco != null ? Color.white : Color.clear;
                 _tEffPlus[i].gameObject.SetActive(!has);
                 _tEffDot[i].color = has ? RarityCol(applied[i].CardRarity) : Color.clear;
             }
@@ -819,10 +926,13 @@ public class HUDController : MonoBehaviour
 
             for (int i = 0; i < Slots; i++)
             {
-                bool has = i < invCount && inv != null && inv[i] != null;
-                _tInvIco[i].sprite = has ? inv[i].Icon : null;
-                _tInvIco[i].color  = has && inv[i].Icon != null ? Color.white : Color.clear;
-                _tInvBtn[i].interactable = has && !full && inv[i].IsCompatibleWith(tt);
+                bool   has    = i < invCount && inv != null && inv[i].IsValid;
+                Sprite invIco = has ? inv[i].Card.DisplayIcon : null;
+                _tInvIco[i].sprite = invIco;
+                _tInvIco[i].color  = invIco != null ? Color.white : Color.clear;
+                _tInvBtn[i].interactable = has && !full && inv[i].Card.IsCompatibleWith(tt);
+                if (_tInvCharges[i] != null)
+                    _tInvCharges[i].text = has ? $"x{inv[i].Charges}" : "";
             }
         }
     }
@@ -896,6 +1006,134 @@ public class HUDController : MonoBehaviour
         if (_livesText != null) _livesText.text = lives.ToString();
     }
 
+    private void BuildXpHUD()
+    {
+        Canvas canvas = GetComponentInParent<Canvas>();
+        if (canvas == null) return;
+
+        // Destroy stale bar if rebuilding
+        var oldBar = canvas.transform.Find("XPBar");
+        if (oldBar != null) Destroy(oldBar.gameObject);
+
+        // ── Background ────────────────────────────────────────────────────────
+        var barGO              = new GameObject("XPBar");
+        barGO.transform.SetParent(canvas.transform, false);
+        var barRT              = barGO.AddComponent<RectTransform>();
+        barRT.anchorMin        = new Vector2(0.05f, 0f);
+        barRT.anchorMax        = new Vector2(0.95f, 0f);
+        barRT.pivot            = new Vector2(0.5f,  0f);
+        barRT.anchoredPosition = new Vector2(0f, 20f);
+        barRT.sizeDelta        = new Vector2(0f, 10f);
+        barGO.AddComponent<Image>().color = new Color(0.06f, 0.06f, 0.06f, 120f / 255f);
+
+        // ── Fill (anchor-based width: anchorMax.x = fillAmount) ───────────────
+        var fillGO              = new GameObject("XPFill");
+        fillGO.transform.SetParent(barGO.transform, false);
+        var fillRT              = fillGO.AddComponent<RectTransform>();
+        fillRT.anchorMin        = new Vector2(0f, 0f);
+        fillRT.anchorMax        = new Vector2(0f, 1f); // starts empty; x updated by RefreshXp
+        fillRT.sizeDelta        = Vector2.zero;
+        fillRT.anchoredPosition = Vector2.zero;
+        _xpBarFill              = fillGO.AddComponent<Image>();
+        _xpBarFill.color        = new Color(0.784f, 0.659f, 0.251f, 1f); // #C8A840
+        Debug.Log($"[XPBar Init] fillImage={_xpBarFill.name}, " +
+                  $"type={_xpBarFill.type}, " +
+                  $"parent={_xpBarFill.transform.parent.name}");
+
+        // ── Label ─────────────────────────────────────────────────────────────
+        var lblGO          = new GameObject("XpLabel");
+        lblGO.transform.SetParent(barGO.transform, false);
+        var lblRT          = lblGO.AddComponent<RectTransform>();
+        lblRT.anchorMin    = Vector2.zero;
+        lblRT.anchorMax    = Vector2.one;
+        lblRT.offsetMin    = Vector2.zero;
+        lblRT.offsetMax    = Vector2.zero;
+        _xpBarLabel              = lblGO.AddComponent<TextMeshProUGUI>();
+        _xpBarLabel.fontSize     = 11f;
+        _xpBarLabel.color        = Color.white;
+        _xpBarLabel.alignment    = TextAlignmentOptions.Center;
+        _xpBarLabel.raycastTarget = false;
+        _xpBarLabel.text         = "0 / 100";
+    }
+
+    private void OnEnemyDied(EnemyBehaviour e, int gold, int xp)
+    {
+        RefreshXp(XPManager.Instance?.CurrentXp ?? 0);
+    }
+
+    private void RefreshXp(int xp)
+    {
+        if (_xpBarFill == null || _xpBarLabel == null) return;
+        int lvl = XPManager.Instance?.CurrentLevel ?? 0;
+        if (lvl >= XPManager.MaxLevel)
+        {
+            _xpBarFill.rectTransform.anchorMax = new Vector2(1f, 1f);
+            _xpBarLabel.text                   = "MAX";
+            Debug.Log($"[XPBar] fill=1 (MAX), xp={xp}");
+            return;
+        }
+        float xpRelativa   = Mathf.Max(0f, xp - lvl * XPManager.XpPerLevel);
+        float fillAmount   = Mathf.Clamp01(xpRelativa / XPManager.XpPerLevel);
+        _xpBarFill.rectTransform.anchorMax = new Vector2(fillAmount, 1f);
+        _xpBarLabel.text   = $"{(int)xpRelativa} / {XPManager.XpPerLevel}";
+        Debug.Log($"[XPBar] fill={fillAmount:F2}, xp={xp}, lvl={lvl}, xpRel={xpRelativa}");
+    }
+
+    private void RefreshLevel()
+    {
+        RefreshXp(XPManager.Instance?.CurrentXp ?? 0);
+    }
+
+    private void BuildTimerHUD()
+    {
+        Canvas canvas = GetComponentInParent<Canvas>();
+        if (canvas == null) return;
+
+        var go          = new GameObject("GameTimer");
+        go.transform.SetParent(canvas.transform, false);
+        var rt          = go.AddComponent<RectTransform>();
+        rt.anchorMin    = new Vector2(1f, 0f);
+        rt.anchorMax    = new Vector2(1f, 0f);
+        rt.pivot        = new Vector2(1f, 0f);
+        rt.anchoredPosition = new Vector2(-10f, 35f);
+        rt.sizeDelta    = new Vector2(80f, 20f);
+
+        _timerLabel                  = go.AddComponent<TextMeshProUGUI>();
+        _timerLabel.fontSize         = 13f;
+        _timerLabel.color            = new Color(0.8f, 0.8f, 0.8f, 0.85f);
+        _timerLabel.alignment        = TextAlignmentOptions.BottomRight;
+        _timerLabel.raycastTarget    = false;
+        _timerLabel.enableWordWrapping = false;
+        _timerLabel.text             = "0:00";
+    }
+
+    private void OnGameStateChangedTimer(GameManager.GameState state)
+    {
+        switch (state)
+        {
+            case GameManager.GameState.Playing:
+                if (_playingStartTime < 0f)
+                    _playingStartTime = Time.time;
+                else if (_pauseStartTime >= 0f)
+                {
+                    _totalPausedTime += Time.time - _pauseStartTime;
+                    _pauseStartTime   = -1f;
+                }
+                _timerRunning = true;
+                break;
+
+            case GameManager.GameState.Paused:
+                _pauseStartTime = Time.time;
+                _timerRunning   = false;
+                break;
+
+            case GameManager.GameState.Defeat:
+            case GameManager.GameState.Victory:
+                _timerRunning = false;
+                break;
+        }
+    }
+
     private void RefreshGoldDependents(int gold)
     {
         for (int i = 0; i < _bDatas.Length; i++)
@@ -924,8 +1162,8 @@ public class HUDController : MonoBehaviour
     {
         if (_selectedTower == null) return;
         var inv = PlayerInventory.Instance;
-        if (inv == null || slot < 0 || slot >= inv.Cards.Count) return;
-        inv.SpendCard(inv.Cards[slot], _selectedTower);
+        if (inv == null) return;
+        inv.SpendCard(slot, _selectedTower);
     }
 
     // ══════════════════════════════════════════════════════════════════════

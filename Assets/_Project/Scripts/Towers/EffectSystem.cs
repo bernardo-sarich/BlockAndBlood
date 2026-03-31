@@ -86,6 +86,20 @@ public class EffectSystem : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Clears all active effects. Called by EnemyPool when returning an enemy to the pool.
+    /// </summary>
+    public void ClearEffects()
+    {
+        _burnDps             = 0f;
+        _burnTimer           = 0f;
+        _slowAreaValue       = 0f;
+        _slowAreaTimer       = 0f;
+        _armorReductionValue = 0f;
+        _armorReductionTimer = 0f;
+        _slowSources.Clear();
+    }
+
     // ── Unity lifecycle ──────────────────────────────────────────────────────
 
     private void Update()

@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: TowerRange_Lv1
   m_EditorClassIdentifier: Assembly-CSharp::TowerData
   TowerName: Torre Rango
-  Cost: 10
+  Cost: 15
   DamageBase: 10
   AttackSpeed: 1
-  Range: 2.88
+  Range: 6
   DamageType: 0
   IsAreaAttack: 0
   OnHitEffects: []
-  Icon: {fileID: 21300000, guid: 27474753a9234bc4eb894e4ff6e600da, type: 3}
+  Icon: {fileID: 6527467073598181691, guid: 4a1f52ab9dff9eb4fa8f26a68b9c5bd1, type: 3}
   TowerPrefab: {fileID: 6407354298655566531, guid: b6bc4d74bfd115246a0cce50870d37e1, type: 3}
   ProjectilePrefab: {fileID: 3418119967822372837, guid: dd3c87d472a398e48846730a4f5f7809, type: 3}
   UpgradePaths: []

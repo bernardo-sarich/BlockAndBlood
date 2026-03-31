@@ -1,17 +1,10 @@
 # Block & Blood — CLAUDE.md
 
-## Skills activos para este proyecto
-Aplicar siempre los principios de estos sub-skills al trabajar en tareas de desarrollo:
-- `game-development/pc-games` — plataforma objetivo: PC (Steam/Desktop)
-- `game-development/2d-games` — dimensión: 2D sprites, tilemaps, física 2D
+## Skills activos
+- `game-development/pc-games` · `game-development/2d-games`
 
----
-
-Tower Defense roguelite en Unity 6000.3.11f1. El jugador construye un laberinto en una grilla 14×18, elige cartas de bono entre niveles de XP y defiende contra oleadas continuas de monstruos.
-
-**GDD completo:** `GDD — Line Wars TD · MVP.md` (raíz del proyecto) — fuente de verdad editable
-**GDD snapshot histórico:** `GDD — Line Wars TD · MVP.pdf` (ya no se actualiza)
-**Tareas detalladas:** `Docs/Tasks/TASK-01` a `TASK-12`
+Tower Defense roguelite, Unity 6000.3.11f1. Grilla 14×18, cartas de bono por XP, oleadas continuas de monstruos.
+**GDD:** `GDD — Line Wars TD · MVP.md` (fuente de verdad) · **Tareas:** `Docs/Tasks/TASK-01` a `TASK-12`
 
 ---
 
@@ -21,37 +14,34 @@ Tower Defense roguelite en Unity 6000.3.11f1. El jugador construye un laberinto 
 Assets/
 ├── _Project/
 │   ├── Scripts/
-│   │   ├── Managers/       GameManager, GridManager, GridVisualizer, WaveManager, EconomyManager, XPManager, LivesManager, SelectionManager, TowerPlacementManager
-│   │   ├── Towers/         TowerBehaviour, ProjectileBehaviour, EffectSystem
-│   │   ├── Enemies/        EnemyBehaviour, EnemyAnimator, EnemyPool, HealOrb, PriestBehaviour, BruteBehaviour
-│   │   ├── Hero/           HeroBehaviour
-│   │   ├── Cards/          CardData, PlayerInventory, CardSystem, CardEffect
-│   │   ├── Data/           CardRarity (enum standalone)
-│   │   ├── Shared/          ISelectable, EntityShadow, TowerType
-│   │   ├── UI/             HUDController, CardPopupController, CursorManager, GameOverScreen
-│   │   └── Waves/          WavePhase (SO), WaveManager
+│   │   ├── Managers/   GameManager, GridManager, GridVisualizer, WaveManager, EconomyManager, XPManager, LivesManager, SelectionManager, TowerPlacementManager
+│   │   ├── Towers/     TowerBehaviour, ProjectileBehaviour, EffectSystem
+│   │   ├── Enemies/    EnemyBehaviour, EnemyAnimator, EnemyPool, HealOrb, PriestBehaviour, BruteBehaviour
+│   │   ├── Hero/       HeroBehaviour
+│   │   ├── Cards/      CardData, PlayerInventory, CardSystem, CardEffect
+│   │   ├── Data/       CardRarity (enum standalone)
+│   │   ├── Shared/     ISelectable, EntityShadow, TowerType
+│   │   ├── UI/         HUDController, CardPopupController, CursorManager, GameOverScreen
+│   │   └── Waves/      WavePhase (SO), WaveManager
 │   ├── ScriptableObjects/
-│   │   ├── Towers/         TowerData SO × 3 (Melee Lv1, Melee Lv2, Rango Lv1)
-│   │   ├── Enemies/        EnemyData SO × 5 (Caminante, Rápido, Blindado, Sacerdote, Bruto)
-│   │   ├── Cards/          CardData SO × 15
-│   │   └── WavePhases/     WavePhase_01–42 (assets de oleadas, 20 s cada una, 840 s total)
-│   ├── Prefabs/
-│   │   └── Enemies/        Enemy_Caminante, Enemy_Rapido, Enemy_Blindado, Enemy_Sacerdote, Enemy_Bruto, HealOrb
-│   ├── Scenes/
+│   │   ├── Towers/     TowerData SO × 3 (Melee Lv1, Melee Lv2, Rango Lv1)
+│   │   ├── Enemies/    EnemyData SO × 5 (Caminante, Rápido, Blindado, Sacerdote, Bruto)
+│   │   ├── Cards/      CardData SO × 15
+│   │   └── WavePhases/ WavePhase_01–42 (20 s c/u, 840 s total)
+│   ├── Prefabs/Enemies/ Enemy_Caminante, Enemy_Rapido, Enemy_Blindado, Enemy_Sacerdote, Enemy_Bruto, HealOrb
 │   └── Art/
-│       ├── Sprites/        GRASS+.png (sprite sheet pixel art 400×224, sliceado 16×16, 350 sprites)
-│       ├── Enemies/        spider_sheet.png — 4 frames 32×32, PPU 32, guid 47b54cba9bbc9b643b35a004a3646539 (sprite del Rápido)
-│       │                   zombie_32x32-sheet.png — 4 frames 32×32, PPU 48, guid cb37bb16db387ef4aa3bc29d8ff6ed69 (sprite del Caminante)
-│       │                   priest/ — sprites del Sacerdote:
-│       │                     priest_walk.png  — 4 frames 32×32, PPU 48, guid 8f6ec1208a22dc9449294e50e52a1990 (caminata, 1 fila horizontal)
-│       │                     priest_cast.png  — 3 frames 32×32, PPU 48, guid df1832685dff3274fa5a40f7dc5032c4 (animación de curación)
-│       │                     heal_orb_DRAFT.png — 4 frames 16×16, PPU 16, guid 1492210df7157444aa7747234dbcb27b (proyectil de curación)
-│       └── UI/             Heart.png (icono vidas), GoldCoin.png (icono oro)
+│       ├── Sprites/    GRASS+.png (400×224, 16×16, 350 sprites)
+│       ├── Enemies/    spider_sheet.png 4f 32×32 PPU32 guid:47b54cba9bbc9b643b35a004a3646539 (Rápido)
+│       │               zombie_32x32-sheet.png 4f 32×32 PPU48 guid:cb37bb16db387ef4aa3bc29d8ff6ed69 (Caminante)
+│       │               priest/priest_walk.png 4f 32×32 PPU48 guid:8f6ec1208a22dc9449294e50e52a1990
+│       │               priest/priest_cast.png 3f 32×32 PPU48 guid:df1832685dff3274fa5a40f7dc5032c4
+│       │               priest/heal_orb_DRAFT.png 4f 16×16 PPU16 guid:1492210df7157444aa7747234dbcb27b
+│       └── UI/         Heart.png, GoldCoin.png
 ├── Resources/
-│   ├── Grid/               Sprites de tiles cargados en runtime (Tile_Restricted, Tile_Black, etc.)
-│   └── Decorations/        GRASS+.png (sprite sheet), grass_base.png, path_base.png, path_edge_left.png, path_edge_right.png, rockPath_1.png, rockPath_2.png, rockPath_3.png, rockPath_4.png
-├── AstarPathfindingProject/ Plugin A* Pathfinding Project (no modificar)
-└── Kenney/                 Assets externos — no modificar
+│   ├── Grid/           Tile_Restricted, Tile_Black, etc. (cargados en runtime)
+│   └── Decorations/    GRASS+.png, grass_base.png, path_base.png, path_edge_left.png, path_edge_right.png, rockPath_1–4.png
+├── AstarPathfindingProject/  (NO modificar)
+└── Kenney/                   (NO modificar)
 ```
 
 ---
@@ -59,79 +49,62 @@ Assets/
 ## Sistemas principales
 
 ### GridManager
-- Grilla de **14 columnas × 18 filas** (252 celdas, `CellSize = 1.0f` unidades mundo — 1 celda = 1 world unit, diseñado para sprites 64×64 PPU=64)
-- Spawn: fila 17 (visual superior) · Meta: fila 0 (visual inferior)
-- Estados de celda: `Libre` / `EnConstrucción` / `Ocupada`
-- **Celdas restringidas:** fila 17 completa (14 celdas) — permanentemente no buildable
-- **Columnas jugables:** solo cols `GridVisualizer.PathColMin` (2) a `GridVisualizer.PathColMax` (11); cols 0, 1, 12, 13 son no buildables y no transitables
-- Expone `bool CanPlaceTower(Vector2Int cell)` — valida bounds + estado + `IsRestricted` + columna jugable + pathfinding **antes** de confirmar construcción
-- Expone `bool IsRestricted(Vector2Int cell)` — consulta `RestrictedCells[]`
-- Configura el `GridGraph` de A* en `Awake()` (width=14, depth=18, nodeSize=CellSize=1.0, is2D=true); tras el scan marca como `Walkable=false` todos los nodos en cols < `PathColMin` o > `PathColMax`
-- Notifica al PathfindingSystem via `AstarPath.active.UpdateGraphs(bounds)` cuando una celda cambia
-- `_gridOrigin` se calcula para centrar el grid en el origen mundo: `(-(gridWidth/2), -(gridHeight/2), 0)`
-- Pathfinding: **A\* Pathfinding Project** instalado en `Assets/AstarPathfindingProject/`
+- Grilla **14×18** · `CellSize = 1.0f` · Spawn: fila 17 · Meta: fila 0
+- Estados celda: `Libre` / `EnConstrucción` / `Ocupada`
+- Celdas restringidas: fila 17 completa (permanentemente no buildable)
+- **Columnas jugables:** `PathColMin=2` a `PathColMax=11` (cols 0,1,12,13 no buildables ni transitables)
+- `CanPlaceTower(Vector2Int)` — valida bounds + estado + `IsRestricted` + columna + pathfinding
+- `GridGraph` A* en `Awake()`: width=14, depth=18, nodeSize=1.0, is2D=true; nodos cols < PathColMin o > PathColMax → `Walkable=false`
+- `AstarPath.active.UpdateGraphs(bounds)` al cambiar celda
+- `_gridOrigin = (-(gridWidth/2), -(gridHeight/2), 0)`
 
 ### Cámara (perspectiva 2.5D)
-- **Tipo:** perspectiva (`cam.orthographic = false`) — no ortográfica
-- **FOV:** `CameraFOV = 60°` · **Tilt X:** `CameraTilt = 15°` (efecto 3/4 view)
-- **`CenterCamera()`** en GridManager calcula la distancia Z para que el grid llene el viewport:
-  - `distFromH` y `distFromW` → se toma el mayor, multiplicado por `0.85f` para acercar la cámara
-  - `offsetY = gridHeight * 0.2824f` — compensa el desplazamiento visual del tilt; computado desde la altura del grid para auto-adaptarse a cambios de CellSize (ratio derivado de tuning manual original)
-  - Posición final: `(GridCenter.x, GridCenter.y - offsetY, -distZ)`
-  - Rotación: `Euler(-CameraTilt, 0, 0)`
-- **Sorting:** `TransparencySortMode.CustomAxis`, `sortAxis = Vector3.up`
-- **Se llama dos veces:** en `GridManager.Awake()` y en `HUDController.ApplyCameraViewport()` (viewport siempre `Rect(0,0,1,1)` — pantalla completa)
-- **NO modificar** FOV ni tilt sin verificar que el grid sigue llenando el viewport
+- Perspectiva, `FOV=60°`, `Tilt=15°`
+- `CenterCamera()`: toma el mayor de `distFromH`/`distFromW` × 0.85f; `offsetY = gridHeight * 0.2824f`
+- Pos final: `(GridCenter.x, GridCenter.y - offsetY, -distZ)` · Rot: `Euler(-15, 0, 0)`
+- `TransparencySortMode.CustomAxis`, `sortAxis = Vector3.up`
+- Se llama en `GridManager.Awake()` y `HUDController.ApplyCameraViewport()` · viewport `Rect(0,0,1,1)` siempre
+- **NO modificar FOV/tilt** sin verificar que el grid sigue llenando el viewport
 
 ### GridVisualizer
-- `[ExecuteAlways]` — los tiles se crean también en Edit mode (visibles en Scene view sin Play)
-- **`PathColMin = 2` y `PathColMax = 11` son `public const int`** — fuente de verdad para los límites del área jugable; leídos por GridManager, HeroBehaviour y WaveManager. No hardcodear esos números en otros scripts.
-- **Suelo diferenciado por columna:** sprites artesanales (16×16, PPU 16) cargados desde `Resources/Decorations/`:
-  - `grass_base` — pasto (cols 0 y 13, fuera del camino y no jugables)
-  - `path_edge_left` — borde izquierdo del camino (col 1, no jugable)
-  - `path_edge_right` — borde derecho del camino (col 12, no jugable)
-  - `rockPath_1` … `rockPath_4` — **variantes del camino central** (cols `PathColMin=2` a `PathColMax=11`); elegidas al azar por celda con seed determinístico `col * 1000 + row` → resultado fijo entre regeneraciones
-- `LoadTileSprites()` carga todos los sprites en `Awake()`, incluyendo `_pathVariants[4]` · `GetTileSprite(col, row)` selecciona sprite según columna; en cols de camino elige variante con `Random.InitState(col*1000+row)` y restaura aleatoriedad global con `TickCount`
-- **Fondo:** sprite `Tile_Black` escalado ×30 detrás de toda la grilla (cubre bordes exteriores)
-- **Celdas restringidas:** `Tile_Restricted` (tile116) — las que no están ocultas por `_hideRestrictedVisual`
-- **Decoraciones:** sprites decorativos (`GRASS+_310`, `GRASS+_311`, `GRASS+_291`, `GRASS+_317`) colocados en celdas libres para variedad visual. `RemoveDecoration(cell)` los elimina al construir una torre
-- `FlashTile(cell, valid)` — feedback visual: verde (válido) / rojo + X (inválido), 3 parpadeos
-- `RefreshTile(cell)` / `RefreshAll()` — actualiza sprites según estado actual de la celda
-- **Editor script:** `Assets/Editor/GrassSpriteSheetSlicer.cs` — sliceo automático de `GRASS+.png` en 350 sprites (25×14 grid de 16×16px) vía `Tools > Slice GRASS+ Sprite Sheet`
+- `[ExecuteAlways]` — tiles visibles en Edit mode
+- **`PathColMin = 2` y `PathColMax = 11` son `public const int`** — fuente de verdad; leídos por GridManager, HeroBehaviour, WaveManager
+- Suelo por columna (sprites 16×16 PPU16 desde `Resources/Decorations/`):
+  - Cols 0,13 → `grass_base` · Col 1 → `path_edge_left` · Col 12 → `path_edge_right`
+  - Cols 2–11 → `rockPath_1…4`, seed determinístico `col*1000+row`
+- `Tile_Black` ×30 como fondo · `Tile_Restricted` (tile116) en celdas restringidas
+- Decoraciones: `GRASS+_310/311/291/317` · `RemoveDecoration(cell)` al construir torre
+- `FlashTile(cell, valid)` — verde válido / rojo+X inválido, 3 parpadeos
+- `RefreshTile(cell)` / `RefreshAll()`
+- Editor: `Assets/Editor/GrassSpriteSheetSlicer.cs` → `Tools > Slice GRASS+ Sprite Sheet`
 
 ### GameManager (máquina de estados)
-- `GameState` enum: `Preparation` / `Playing` / `Paused` / `Victory` / `Defeat`
-- `static event Action<GameState> OnGameStateChanged` — todos los sistemas escuchan este evento
-- `CurrentState` propiedad pública; `TransitionTo(GameState)` con guard de mismo estado
-- **Preparation:** `_prepDuration = 5s`; `EconomyManager.Add(50)` en `Start()`; build countdown procedural (TMP, `sortingOrder=100`)
-- **Playing:** al expirar countdown o al elegir una carta (`CardSystem.OnCardChosen`) → `Time.timeScale = 1`
-- **Paused:** al dispararse `XPManager.OnLevelUp` → `Time.timeScale = 0` (congela enemigos, torres y spawner; la UI de Unity sigue respondiendo)
-- **Victory:** al dispararse `BossBehaviour.OnBossDefeated` → `Time.timeScale = 1`
-- **Defeat:** al dispararse `LivesManager.OnGameOver` → `Time.timeScale = 1`
-- **Singleton:** componente en el GameObject `GameManager` junto con `LivesManager`, `EconomyManager`, `XPManager`, `SelectionManager`, `PlayerInventory`, `EnemyPool`
+- `GameState`: `Preparation` / `Playing` / `Paused` / `Victory` / `Defeat`
+- `static event Action<GameState> OnGameStateChanged`
+- `TransitionTo(GameState)` con guard de mismo estado
+- Preparation: `_prepDuration=5s`, `EconomyManager.Add(50)`, countdown TMP `sortingOrder=100`
+- Playing: al expirar countdown o `CardSystem.OnCardChosen` → `timeScale=1`
+- Paused: `XPManager.OnLevelUp` → `timeScale=0`
+- Victory: `BossBehaviour.OnBossDefeated` · Defeat: `LivesManager.OnGameOver`
+- **Singleton GO `GameManager`** contiene: `LivesManager`, `EconomyManager`, `XPManager`, `SelectionManager`, `PlayerInventory`, `EnemyPool`, `WaveManager`, `CardSystem`, `GameOverScreen`
 
 ### WaveManager
-- Lee `WavePhase[]` ScriptableObjects — composición + intervalo por tramo de tiempo de juego
-- **Tiempo de juego:** `PlayingElapsed = Time.time - _playingStartTime - _totalPausedTime` donde `_playingStartTime` se fija cuando Playing comienza por primera vez (no desde el inicio del juego)
-- `SpawnLoop` coroutine: drena `_spawnQueue` primero (precursores del Blindado), luego selecciona enemigo por fase activa
-- **Reglas especiales:** Rápido nunca dos seguidos (re-roll; si insiste, fuerza otro tipo). Blindado siempre enqueue [Caminante×3, Blindado]
-- `SpawnNext`: columna aleatoria entre `GridVisualizer.PathColMin` y `GridVisualizer.PathColMax` inclusive (cols 2–11), fila spawn=17, meta=0; llama `EnemyPool.Instance.Spawn()`
-- Escucha `GameManager.OnGameStateChanged`: Playing → `StartSpawning`, Paused → `StopSpawning`, Defeat/Victory → detiene y vacía cola
-- **Inspector obligatorio:** `_phases` (array de 5 WavePhase SOs), `_caminanteData`, `_rapidoData`, `_blindadoData` — si alguno está vacío/null, no se spawnea nada sin error visible
+- Lee `WavePhase[]` SOs · `PlayingElapsed = Time.time - _playingStartTime - _totalPausedTime`
+- `SpawnLoop`: drena `_spawnQueue` (precursores Blindado) → selecciona por fase activa
+- Rápido: nunca 2 seguidos (re-roll/fuerza). Blindado: enqueue [Caminante×3, Blindado]
+- `SpawnNext`: col aleatoria PathColMin–PathColMax, fila 17→0, llama `EnemyPool.Instance.Spawn()`
+- Playing→`StartSpawning` · Paused→`StopSpawning` · Defeat/Victory→detiene y vacía cola
+- **Inspector obligatorio:** `_phases[]`, `_caminanteData`, `_rapidoData`, `_blindadoData`
 
 ### WavePhase (ScriptableObject)
-- `[CreateAssetMenu(menuName = "Block&Blood/WavePhase")]`
-- Campos: `float StartTime`, `float EndTime`, `float SpawnInterval`, `EnemySpawnWeight[] Composition`
-- `EnemySpawnWeight`: struct con `EnemyData Data` + `float Weight` (peso probabilístico)
-- **Los tiempos son relativos al inicio del estado Playing** (no al inicio del juego). WavePhase_01.StartTime=0 significa "spawnear inmediatamente al comenzar Playing"
-- Assets en `ScriptableObjects/WavePhases/`:
+- `[CreateAssetMenu("Block&Blood/WavePhase")]`
+- Campos: `float StartTime`, `EndTime`, `SpawnInterval` · `EnemySpawnWeight[] Composition` (Data + Weight)
+- Tiempos relativos al inicio de Playing. 42 fases × 20s = 840s. A 840s dispara `OnBossPhaseStart`.
+- Brute/Priest desde fase 04/05. Armored desde fase 25.
 
-42 fases de 20 s cada una (0–840 s). Al llegar a 840 s, WaveManager dispara `OnBossPhaseStart` y detiene el stream.
-Brute y Priest aparecen desde fase 04/05. Armored (Blindado) se introduce en fase 25.
-
-| Fases | Intervalo | Composición (pesos) |
-|-------|-----------|---------------------|
-| 01 (0–20) | 1.40s | Walker 100 |
+| Fases | Intervalo | Composición |
+|-------|-----------|-------------|
+| 01 (0–20) | 1.40s | W100 |
 | 02 (20–40) | 1.40s | W80 R20 |
 | 03 (40–60) | 1.35s | W70 R30 |
 | 04 (60–80) | 1.30s | W65 R30 Br5 |
@@ -174,159 +147,105 @@ Brute y Priest aparecen desde fase 04/05. Armored (Blindado) se introduce en fas
 | 41 (800–820) | 0.60s | W5 R10 Br35 P25 A25 |
 | 42 (820–840) | 0.60s | W5 R10 Br35 P25 A25 |
 
-Leyenda: W=Walker R=Runner Br=Brute P=Priest A=Armored
+W=Walker R=Runner Br=Brute P=Priest A=Armored
 
 ### EnemyAnimator
-- Componente en el raíz del prefab de cada enemigo, junto al `SpriteRenderer`
-- `walkSprites` — array de sprites ordenado `[dir0_f0, dir0_f1…, dir1_f0…, dir3_fN]`
-- `_walkCols` (serializable, default 9) — frames por dirección. Usar **9** para sheets LPC de 4×9; usar **4** para sheets simples de 4 frames horizontales
-- Dirección determinada por `AIPath.velocity`: Up=0, Left=1, Down=2, Right=3. Frame 0 = idle; frames 1…(_walkCols−1) = ciclo de caminata
-- Cada enemigo configura `_walkCols` en su prefab según el número de columnas de su sprite sheet
-- `public bool IsLocked` — cuando `true`, `Update()` no ejecuta; permite a scripts externos (e.g. `PriestBehaviour`) controlar el sprite temporalmente sin conflicto
+- En raíz del prefab junto al `SpriteRenderer`
+- `walkSprites[]`: orden `[dir0_f0, dir0_f1…, dir3_fN]`
+- `_walkCols`: **9** para LPC 4×9; **4** para sheets de 4 frames horizontales
+- Dirección desde `AIPath.velocity`: Up=0, Left=1, Down=2, Right=3. Frame 0=idle
+- `public bool IsLocked` — cuando true, Update() no ejecuta (PriestBehaviour lo usa)
 
 ### EnemyPool
-- Singleton en el GameObject `GameManager`
-- Un `ObjectPool<EnemyBehaviour>` por `EnemyData` (creado lazy en primer uso), capacidad 30/máx 60
-- `Spawn(EnemyData, Vector3 spawnPos, Vector3 goalPos)` — activa desde pool o instancia el `EnemyData.Prefab`
-- `Despawn(EnemyBehaviour)` — identifica el pool correcto via `_activeMap<EnemyBehaviour, pool>` y libera
-- `EnemyBehaviour.ReturnToPool()` llama `EnemyPool.Instance?.Despawn(this)`, fallback `_pool.Release()`, fallback `Destroy()`
-- `EffectSystem.ClearEffects()` se llama en `EnemyBehaviour.Initialize()` al salir del pool
+- Singleton en GO `GameManager` · `ObjectPool<EnemyBehaviour>` por EnemyData (lazy, cap 30/máx 60)
+- `Spawn(EnemyData, spawnPos, goalPos)` · `Despawn(EnemyBehaviour)` via `_activeMap`
+- `ReturnToPool()`: `EnemyPool.Instance?.Despawn` → fallback `_pool.Release()` → fallback `Destroy()`
+- `EffectSystem.ClearEffects()` llamado en `EnemyBehaviour.Initialize()`
 
-### EnemyBehaviour — API pública relevante
-- `public float MaxHp` — HP máximo del tipo (delegado a `EnemyData.MaxHp`)
-- `public void Heal(float amount)` — restaura HP hasta MaxHp; llamado por `PriestBehaviour`
-- `public const float BruteAuraArmorBonus = 0.3f` — bono de armadura del aura de Bruto
-- `public bool IsUnderBruteAura` — true cuando `_bruteAuraCount > 0`
-- `public void AddBruteAura()` / `RemoveBruteAura()` — llamados por `BruteBehaviour` al entrar/salir del radio
-- `Initialize()` resetea `_bruteAuraCount = 0` — garantiza estado limpio al salir del pool
+### EnemyBehaviour — API relevante
+- `public float MaxHp` · `public void Heal(float amount)`
+- `public const float BruteAuraArmorBonus = 0.3f`
+- `public bool IsUnderBruteAura` (true cuando `_bruteAuraCount > 0`)
+- `AddBruteAura()` / `RemoveBruteAura()` · `Initialize()` resetea `_bruteAuraCount = 0`
 
 ### XPManager
-- Acumula XP de `EnemyBehaviour.OnEnemyDeath`
-- **100 XP por nivel, máximo nivel 15** (antes: umbrales fijos 150/300/500 con 3 niveles)
-- Ritmo esperado: jugador eficiente sube ~1 nivel/minuto; dejar pasar enemigos penaliza implícitamente
-- `CurrentXp`, `CurrentLevel` (0 = sin level-up aún)
-- `static event Action<int> OnXpChanged` — fired con XP total al ganar XP
-- `static event Action OnLevelUp` — fired al cruzar cada umbral; `GameManager` transiciona a `Paused`
-- `static CardRarity GetRarityForCurrentLevel()`:
-  - Niveles 1–5: 80% Común, 20% Rara
-  - Niveles 6–10: 50% Común, 40% Rara, 10% Épica
-  - Niveles 11–15: 20% Común, 50% Rara, 30% Épica
+- 100 XP/nivel, máximo nivel 15
+- `CurrentXp`, `CurrentLevel` · `static event Action<int> OnXpChanged` · `static event Action OnLevelUp`
+- `GetRarityForCurrentLevel()`: Niv 1–5: 80%C/20%R · Niv 6–10: 50%C/40%R/10%E · Niv 11–15: 20%C/50%R/30%E
 
 ### LivesManager
-- Vidas iniciales: **5**
-- Cada monstruo que llega a la meta resta **1 vida**
+- 5 vidas iniciales · −1 por enemigo en meta
 - Escucha `EnemyBehaviour.OnEnemyReachedGoal`
 - Eventos: `OnLivesChanged(int)`, `OnGameOver`
-- Singleton en el mismo GameObject que `GameManager`
 
 ### EconomyManager
-- Oro inicial: **50**
-- Ingresos: monstruos muertos (Caminante 2, Rápido 3, Blindado 5, Sacerdote 4, Bruto 6, Boss 30)
-- Gastos: construcción y mejora de torres
+- 50 oro inicial · Ingresos: Caminante 2, Rápido 3, Blindado 5, Sacerdote 4, Bruto 6, Boss 30
 
 ### CardData (ScriptableObject)
-- `CardName`, `Description`, `CardRarity` (Common/Rare/Epic)
-- `Icon` (sprite estático), `IconFrames[]` (frames de animación para el picker)
-- `DisplayIcon` — computed: `Icon != null ? Icon : IconFrames?[0]` — usar siempre esto para mostrar el ícono
-- `BonusDamage` — daño plano adicional; se aplica como `DamageType.Fire` (ignora armadura física)
-- `OnHitEffects[]` — array de `EffectData` (Burn, Slow, etc.) aplicados en cada golpe de la torre
-- `TowerType[] CompatibleTowerTypes` — vacío = compatible con todos los tipos de torre
-- `IsCompatibleWith(TowerType)` — consulta si la carta es aplicable a un tipo de torre específico
-- Creación: `Create > Block&Blood > CardData`
-- **Ubicación obligatoria:** `Assets/Resources/Cards/` para ser descubiertas por `Resources.LoadAll<CardData>("Cards")`
-- **`mainObjectFileID: 11400000`** requerido en el `.meta` — sin esto `Resources.LoadAll` devuelve array vacío
+- `CardName`, `Description`, `CardRarity` · `Icon`, `IconFrames[]` · `DisplayIcon` = `Icon ?? IconFrames?[0]`
+- `BonusDamage` — como `DamageType.Fire` (ignora armadura) · `OnHitEffects[]` · `TowerType[] CompatibleTowerTypes`
+- `IsCompatibleWith(TowerType)` · Create menu: `Block&Blood > CardData`
+- **Ubicación obligatoria:** `Assets/Resources/Cards/`
+- **`mainObjectFileID: 11400000`** en el `.meta` — sin esto `Resources.LoadAll` devuelve vacío
 
 ### CardSystem
-- **MonoBehaviour singleton** en el GameObject `GameManager`
-- Escucha `XPManager.OnLevelUp` → carga cartas reales desde `Resources.LoadAll<CardData>("Cards")`, filtra por rareza (`XPManager.GetRarityForCurrentLevel()`), elige 3 sin repetir via `HashSet<int> used`
-- Si `Resources/Cards/` está vacío, recurre a `MakePlaceholderCard()` como fallback
-- Muestra picker procedural (Canvas `sortingOrder=200`): overlay oscuro + panel centrado 580×260px + fila de 3 cartas clickeables (160×140px cada una)
-  - Cada carta muestra: imagen 64px animada (`AnimateIcon` coroutine con `WaitForSecondsRealtime(1f/8f)` — crítico para `timeScale=0`), nombre, color de rareza, descripción
-  - Sprite usa `card.DisplayIcon` (no `card.Icon` directo)
-- Colores de rareza: Común blanco `(0.9,0.9,0.9)`, Rara amarillo `(1,0.85,0.2)`, Épica violeta `(0.75,0.4,1)`
-- `ShowPicker()`: `IsPickerActive = true`, `Cursor.visible = true`, `Cursor.lockState = CursorLockMode.Confined`
-- `ChooseCard()`: `IsPickerActive = false`, `Cursor.lockState = CursorLockMode.None` + `PlayerInventory.Instance?.AddCard(chosen)` + destruye canvas + `OnCardChosen?.Invoke()`
-- `public static bool IsPickerActive` — chequeado por `HeroBehaviour` (bloquea right-click/ESC/clicks) y `CursorManager` (fuerza cursor visible, omite preview de placement)
-- `static event Action OnCardChosen` — escuchado por `GameManager` para transicionar de `Paused` a `Playing`
-- **Enum dual:** `CardRarity` standalone (`Scripts/Data/CardRarity.cs`) para XPManager/CardSystem; `CardData.Rarity` (nested) para los SO de cartas; mapeados via switch expression
-- Distribución de rareza delegada a `XPManager.GetRarityForCurrentLevel()` (pesos por rango de nivel)
+- MonoBehaviour singleton en GO `GameManager`
+- `OnLevelUp` → `Resources.LoadAll<CardData>("Cards")`, filtra por rareza, elige 3 sin repetir (`HashSet<int>`)
+- Picker Canvas `sortingOrder=200`: overlay + panel 580×260 + 3 cartas 160×140
+  - Animación: `WaitForSecondsRealtime(1f/8f)` (crítico para `timeScale=0`) · Sprite: `card.DisplayIcon`
+  - Colores: Común `(0.9,0.9,0.9)` · Rara `(1,0.85,0.2)` · Épica `(0.75,0.4,1)`
+- `ShowPicker()`: `IsPickerActive=true`, cursor visible, `CursorLockMode.Confined`
+- `ChooseCard()`: `IsPickerActive=false`, `CursorLockMode.None`, `PlayerInventory.Instance?.AddCard(chosen)`, destruye canvas, `OnCardChosen?.Invoke()`
+- `public static bool IsPickerActive` — HeroBehaviour y CursorManager lo consultan
+- `static event Action OnCardChosen` — GameManager transiciona Paused→Playing
+- Enum dual: `CardRarity` standalone (XPManager/CardSystem) vs `CardData.Rarity` (nested SO); mapeados via switch
 
 ### SelectionManager
-- Singleton en el GameObject `GameManager` — trackea la unidad seleccionada (`ISelectable Current`)
-- Al iniciar, el **héroe** está seleccionado por defecto
-- **Interfaz `ISelectable`** (`Scripts/Shared/`): implementada por `HeroBehaviour` y `TowerBehaviour`
-  - `Transform SelectionTransform` — posición para la elipse de selección
-  - `bool IsSelectable` — héroe: siempre true; torre: solo en estado `Active`
-- **Indicador visual:** elipse verde procedural (ring, centro transparente), sortingOrder −45
-  - Escala: `0.7×0.35` · Color: `(0, 1, 0, 0.7)` · Offset Y: −0.55
-  - Se posiciona en `LateUpdate()` sobre el `SelectionTransform` del `ISelectable` activo
-- **Detección de clicks:** basada en **celda de la grilla** (no en colliders de física)
-  - Click en celda `Ocupada` → busca torre via `Physics2D.OverlapCircle` en el centro de la celda
-  - Click en celda vacía / ESC / right-click → reselecciona héroe
-  - Clicks durante build mode o sobre UI son ignorados
-- **Auto-deselección en Paused:** escucha `GameManager.OnGameStateChanged`; si el estado es `Paused` y la selección actual es una `TowerBehaviour`, llama `SelectHero()` automáticamente
-- Evento: `OnSelectionChanged(ISelectable previous, ISelectable current)`
-- **HUDController** escucha `OnSelectionChanged` → reconstruye el panel inferior completo
-  - Héroe seleccionado → portrait héroe, stats héroe, inventario + 4 build buttons, mensaje neutro en acciones
-  - Torre seleccionada → portrait torre, stats torre, 6 slots de efectos aplicados + inventario clickable, botones mejorar/vender
-- El movimiento WASD y ataque automático del héroe funcionan **siempre**, independiente de la selección
+- Singleton GO `GameManager` · `ISelectable Current` · Héroe seleccionado por defecto
+- `ISelectable`: `Transform SelectionTransform`, `bool IsSelectable`
+- Elipse verde: `sortingOrder=−45`, escala `0.7×0.35`, color `(0,1,0,0.7)`, offsetY −0.55, en `LateUpdate()`
+- Click basado en celda: Ocupada → `Physics2D.OverlapCircle` → torre; vacía/ESC/right-click → héroe
+- Paused + torre seleccionada → `SelectHero()` automáticamente
+- Evento: `OnSelectionChanged(ISelectable prev, ISelectable curr)` → HUDController reconstruye panel
 
 ### PlayerInventory
-- Singleton (componente en `GameManager`)
-- Gestiona hasta **6 cartas** en el inventario del jugador
-- `AddCard(CardData)` — agrega carta (retorna false si lleno)
-- `SpendCard(CardData, TowerBehaviour)` — remueve carta del inventario y la aplica a la torre
-- Evento: `OnInventoryChanged` → HUDController refresca sección de cartas
-- Las cartas se obtienen al elegir en el picker de `CardSystem` (el popup se dispara automáticamente en cada `OnLevelUp`)
+- Singleton GO `GameManager` · hasta 6 cartas
+- `AddCard(CardData)` (false si lleno) · `SpendCard(CardData, TowerBehaviour)`
+- Evento: `OnInventoryChanged`
 
-### HUDController (panel lateral derecho)
-- **Panel procedural** de 200px ancho, altura completa, anclado al borde derecho, `Screen Space - Overlay`
-- El panel **se superpone al juego** — la cámara usa viewport completo `Rect(0,0,1,1)`, no se reduce para excluir el panel
-- Top HUD (oro, vidas) anclado a top-left del canvas
-- **Secciones en `VerticalLayoutGroup`** (stacking vertical, `childForceExpandHeight = false`):
-  - **Portrait** (70px): sprite 44×44 + nombre + subtipo, fondo `#111711`
-  - **Stats** (124px): 4 barras de progreso coloreadas (daño `#e24b4a`, rango `#7f77dd`, velocidad `#f0c040`, efecto `#1d9e75`)
-  - **HeroCards** (68px, solo héroe): inventario (6 slots)
-  - **TowerCards** (120px, solo torre): 6 slots efectos aplicados + inventario clickable con filtro de compatibilidad por `TowerType`
-  - **Build** (altura dinámica, solo héroe): grilla 2×2 de botones de construcción (`GridLayoutGroup`, `CellSize 84×48`, `Spacing 4×4`). Cada botón: ícono 24×24 + nombre + costo en dorado. Botones para `TowerData` null se omiten. Desactivado visual: `alpha 0.35` cuando oro insuficiente
-  - **Actions** (160px, solo torre): botones mejorar (1 o 2 según upgrade paths) + vender + advertencia de cartas
-- Constantes de barras: `MaxDamage=50`, `MaxRange=4`, `MaxAttackSpeed=5`, `MaxMoveSpeed=8`
+### HUDController
+- Panel 200px derecha, `Screen Space - Overlay`, viewport completo `Rect(0,0,1,1)`
+- `VerticalLayoutGroup`, `childForceExpandHeight=false`. Secciones:
+  - **Portrait** 70px: sprite 44×44 + nombre + subtipo, bg `#111711`
+  - **Stats** 124px: 4 barras (dmg `#e24b4a`, rango `#7f77dd`, vel `#f0c040`, efecto `#1d9e75`). Máximos: Dmg=50, Range=4, AtkSpd=5, MoveSpd=8
+  - **HeroCards** 68px: 6 slots inventario
+  - **TowerCards** 120px: 6 slots efectos + inventario clickable filtrado por TowerType
+  - **Build** (héroe): `GridLayoutGroup`, CellSize 84×48, Spacing 4×4, ícono 24×24 + nombre + costo. Alpha 0.35 si oro insuficiente
+  - **Actions** 160px (torre): mejorar + vender + advertencia cartas
+- Barra XP: GO `XPBar` anchorMin`(0.05,0)`, anchorMax`(0.95,0)`, 20px margen, 10px alto. Fill `XPFill` color `#C8A840`; controlar con `rectTransform.anchorMax.x` (NO `fillAmount`). Nivel 15 → anchorMax.x=1, texto "MAX"
 - Escucha: `OnSelectionChanged`, `OnGoldChanged`, `OnInventoryChanged`, `OnEffectApplied`, `OnTowerSold`, `OnTowerUpgraded`, `XPManager.OnXpChanged`, `XPManager.OnLevelUp`, `EnemyBehaviour.OnEnemyDeath`
-- **Iconos oro y corazón:** cada par icono→número está en un `HorizontalLayoutGroup` (spacing 4px, `childForceExpandWidth=false`). El icono tiene `LayoutElement` con tamaño fijo igual a `fontSize` del TMP adyacente. El panel usa `ContentSizeFitter` horizontal para crecer con el número (sin ancho fijo). El TMP tiene `enableWordWrapping=false` y `overflowMode=Overflow`
-- **Barra de XP:** `BuildXpHUD()` crea el GameObject `XPBar` anclado al borde inferior del canvas (anchorMin=`(0.05,0)`, anchorMax=`(0.95,0)`, margen 20px, alto 10px). Fondo semitransparente `(0.06,0.06,0.06, 120/255)`. Hijo `XPFill`: `Image.Type.Simple`, color `#C8A840`; el fill se controla moviendo `rectTransform.anchorMax.x` entre 0 y 1 (NO usar `fillAmount` — Unity no lo respeta sin sprite en modo Filled). Hijo `XpLabel`: TMP centrado, 11pt, blanco. `RefreshXp(int)` calcula `xpRelativa = xp - nivel*100`, `anchorMax.x = xpRelativa/100f`. Al nivel 15: anchorMax.x=1, texto "MAX"
-- **SerializeFields necesarios en Inspector:** `_goldText`, `_goldIcon`, `_livesText`, `_heartIcon`, `_meleeTowerData`, `_rangeTowerData`
+- **SerializeFields:** `_goldText`, `_goldIcon`, `_livesText`, `_heartIcon`, `_meleeTowerData`, `_rangeTowerData`
 
 ### TowerPlacementManager
-- Singleton en el GameObject `GameManager`
-- `SelectTower(TowerData)` — activa el modo placement; dispara `OnTowerSelected` (escuchado por `CursorManager`)
-- `CancelSelection()` — desactiva el modo; dispara `OnPlacementCancelled`. **Solo se llama en estos casos:**
-  - Clic derecho o ESC (`HeroBehaviour.HandleCancelInput`)
-  - Click en botón de otra torre del HUD (llama `SelectTower` con el nuevo tipo)
-  - Click en celda con torre ya construida (SelectionManager la selecciona)
-  - Oro insuficiente al intentar construir (`RequestPlacement` lo detecta y llama `CancelSelection` + flash rojo)
-- `RequestPlacement(cell, data)` — llamado por `HeroBehaviour` al llegar al tile adyacente; valida con `CanPlaceTower`, gasta oro e instancia la torre. **Tras una construcción exitosa NO cancela el modo** — el preview del cursor permanece activo con el mismo `TowerData` para permitir construir múltiples torres sin volver a pulsar el botón
+- `SelectTower(TowerData)` → `OnTowerSelected` · `CancelSelection()` → `OnPlacementCancelled`
+- `CancelSelection()` solo en: clic derecho/ESC, cambio de tipo, click en torre existente, oro insuficiente
+- `RequestPlacement(cell, data)` — valida, gasta oro, instancia. **Construcción exitosa NO cancela el modo** (permite construir múltiples)
 - Eventos: `OnTowerSelected(TowerData)`, `OnPlacementCancelled`, `OnTowerPlaced(TowerBehaviour)`
 
 ### CursorManager
-- Singleton en escena; escucha `TowerPlacementManager.OnTowerSelected` / `OnPlacementCancelled`
-- **Modo normal:** cursor de hardware personalizado (`_cursorTexture` / `_cursorDownTexture`)
-- **Modo placement:** cursor oculto; sprite del prefab snapeado a la celda de la grilla, tintado verde (`_validColor`) o rojo (`_invalidColor`) según `CanPlaceQuick()`
-- **`CanPlaceQuick(cell)`** — check ligero por frame (sin A*): bounds + `CellState.Libre` + no SpawnCell/GoalCell + `IsRestricted` + **columna en `[PathColMin, PathColMax]`**. La validación completa con pathfinding corre en click (`CanPlaceTower`)
-- El sprite del preview toma `TowerData.Icon`; si es null, coge el `SpriteRenderer` del prefab. Escala igual al prefab
-- Hijo `CursorIcon` (0.3 u) pegado a la esquina inferior-derecha del preview
+- Modo normal: cursor hardware (`_cursorTexture` / `_cursorDownTexture`)
+- Modo placement: cursor oculto; sprite snapeado a celda, verde/rojo según `CanPlaceQuick()`
+- `CanPlaceQuick(cell)`: bounds + Libre + no Spawn/GoalCell + IsRestricted + col∈[PathColMin,PathColMax]. Sin A*
+- Preview: `TowerData.Icon` o SpriteRenderer del prefab, misma escala. Hijo `CursorIcon` (0.3u) esquina inferior-derecha
 
 ### GameOverScreen
-- **MonoBehaviour** en el GameObject `GameManager`
-- Escucha `GameManager.OnGameStateChanged`
-- **Defeat** → muestra "DERROTA" + "Llegaron demasiados enemigos a la base"
-- **Victory** → muestra "VICTORIA" + "¡Derrotaste al Troll Anciano!"
-- Canvas procedural `sortingOrder=300` (encima del CardSystem a 200). Panel centrado 480×290px con título (56pt bold) + subtítulo (15pt) + botón "Reintentar" → `SceneManager.LoadScene(GetActiveScene().name)`
-- Se destruye y recrea en cada estado relevante; `_canvas.SetActive(false)` para otros estados
+- Escucha `OnGameStateChanged`. Canvas `sortingOrder=300`, panel 480×290
+- Defeat → "DERROTA" + "Llegaron demasiados enemigos" · Victory → "VICTORIA" + "¡Derrotaste al Troll Anciano!"
+- Botón "Reintentar" → `SceneManager.LoadScene(GetActiveScene().name)`
 
-### EffectSystem (componente en EnemyBehaviour)
-- Gestiona `Burn` (DoT 4 dmg/s, ignora armadura) y `Slow` (−40%, acumula hasta −70%)
-- Burn: nuevo impacto refresca duración (no acumula stacks)
-- Slow: múltiples fuentes acumulan hasta cap −70%
+### EffectSystem
+- `Burn`: DoT 4 dmg/s ignora armadura, nuevo impacto refresca duración
+- `Slow`: −40%, acumula hasta −70%
 
 ---
 
@@ -334,172 +253,111 @@ Leyenda: W=Walker R=Runner Br=Brute P=Priest A=Armored
 
 | Torre | Costo | Daño | Rango | Efecto |
 |-------|-------|------|-------|--------|
-| Melee Lv1 | 12 oro | 15 dps (físico) | 3 celdas radio (TowerData.Range=3) | Slow −15% |
-| Melee Lv2 (Sierra) | +18 oro | 28 dps | = Lv1 | = Lv1 |
-| Rango Lv1 | 10 oro | 20/proyectil (físico) | 6 celdas radio (TowerData.Range=6) | — |
+| Melee Lv1 | 12 | 15 dps (físico) | 3 celdas | Slow −15% |
+| Melee Lv2 | +18 | 28 dps | 3 celdas | Slow −15% |
+| Rango Lv1 | 10 | 20/proyectil (físico) | 6 celdas | — |
 
-- Construcción: **5 segundos** — el héroe puede moverse y atacar libremente durante ese tiempo
-- **Modo placement persistente:** tras construir una torre exitosamente, el modo placement **no se cancela** — el cursor mantiene el preview activo para construir otra del mismo tipo de inmediato. Se cancela solo con clic derecho, ESC, cambio de tipo de torre u oro insuficiente
-- Venta: devuelve **60%** del costo total (construcción + mejoras)
-- **TowerType** (`enum`): cada `TowerData` tiene un campo `Type` (Melee/Range) — usado por `CardData.IsCompatibleWith()` para filtrar cartas aplicables
-- Los efectos elementales (Burn, Slow, ArmorReduction) se aplican exclusivamente a través de **cartas**, no como torres dedicadas
-- **Cartas aplicadas:** cada torre tiene `AppliedEffects` (máx 6 `CardData`). `ApplyCard(CardData)` agrega permanentemente y llama `RebuildEffectiveEffects()`. Evento `OnEffectApplied`. Las cartas se pierden al vender la torre
-- **`RebuildEffectiveEffects()`** — recalcula en cada `Initialize()`, `ApplyCard()` y `TryUpgrade()`:
-  - `_effectiveDamageBase` = `_data.DamageBase` (físico, sujeto a armadura del enemigo)
-  - `_effectiveBonusDamage` = suma de `card.BonusDamage` de todas las cartas (se aplica como `DamageType.Fire`, **ignora armadura**)
-  - `_effectiveOnHitEffects` = unión de todos los `card.OnHitEffects[]`
-  - Melee: por tick → `TakeDamage(_effectiveDamageBase, _data.DamageType)` + si bonusDmg > 0: `TakeDamage(bonusDmg, DamageType.Fire)`
-  - Ranged: pasa `_effectiveBonusDamage` a `ProjectileBehaviour.Launch()` como parámetro opcional
-- **`ProjectileBehaviour.Launch(target, damage, damageType, bonusDamage = 0f)`** — al impactar: `TakeDamage(damage, damageType)` + si `bonusDamage > 0`: `TakeDamage(bonusDamage, DamageType.Fire)`. `bonusDamage` es parámetro opcional con default `0f`
-- **TotalGoldInvested:** trackea oro invertido (base + mejoras). `SellValue = 60% * TotalGoldInvested`
+- Construcción: 5 s · Venta: 60% del TotalGoldInvested
+- Efectos elementales solo vía cartas
+- `AppliedEffects` máx 6 · `ApplyCard()` → `RebuildEffectiveEffects()`
+- `RebuildEffectiveEffects()`: `_effectiveDamageBase` = DamageBase (físico) · `_effectiveBonusDamage` = Σ BonusDamage cartas (Fire, ignora armadura) · `_effectiveOnHitEffects` = unión OnHitEffects
+- `ProjectileBehaviour.Launch(target, damage, damageType, bonusDamage=0f)`
+- `TowerType` enum (Melee/Range) — usado por `CardData.IsCompatibleWith()`
 
 ---
 
 ## Monstruos
 
-| Monstruo | HP | Velocidad | Armadura | Oro | XP |
+| Monstruo | HP | Vel (c/s) | Armadura | Oro | XP |
 |----------|----|-----------|----------|-----|-----|
-| Caminante | 150 | 1.2 c/s | 0% | 2 | 5 |
-| Rápido | 40 | 4 c/s | 0% | 3 | 8 |
-| Blindado | 200 | 1.5 c/s | 50% físico | 5 | 15 |
-| Sacerdote | 200 | 1.2 c/s | 0% | 4 | 12 |
-| Bruto | 650 | 1.2 c/s | 20% físico | 6 | 18 |
+| Caminante | 150 | 1.2 | 0% | 2 | 5 |
+| Rápido | 40 | 4.0 | 0% | 3 | 8 |
+| Blindado | 200 | 1.5 | 50% físico | 5 | 15 |
+| Sacerdote | 200 | 1.2 | 0% | 4 | 12 |
+| Bruto | 650 | 1.2 | 20% físico | 6 | 18 |
 
-- La armadura del Blindado **no afecta el DoT de Burn** (aplicado vía cartas)
-- Rápido: siempre spawna solo, nunca en grupo
-- Blindado: siempre precedido por 3 Caminantes
-- **Sacerdote (`PriestBehaviour`):** cada 2 s cura el 15% del HP máximo a todos los enemigos en radio 4 celdas (4 × CellSize world units), incluyéndose a sí mismo. No cura a otros Sacerdotes. La curación no supera el HP máximo del objetivo. El timer de curación se reinicia al salir y volver del pool.
-  - Al curar: se detiene (`_aiPath.canMove = false`), reproduce animación `priest_cast.png` (3 frames a 8 fps), luego llama `SearchPath()` y reanuda movimiento.
-  - En el **frame 2** del cast instancia un `HealOrb` por cada enemigo curado — proyectil visual puro que vuela hacia el target a 4 u/s ciclando `heal_orb_DRAFT.png` (4 frames). La curación ya fue aplicada instantáneamente; el orbe es solo feedback visual.
-  - `EnemyAnimator.IsLocked = true` durante el cast para evitar conflicto entre el animator y los sprites del cast.
-- **Bruto (`BruteBehaviour`):** aura pasiva en radio 4 celdas (4 × CellSize world units) — otorga +30% armadura física a todos los enemigos en rango (incluido él mismo). Múltiples Brutos no acumulan: `EnemyBehaviour` lleva un contador `_bruteAuraCount`; `IsUnderBruteAura` es true cuando el contador > 0. El aura se recalcula cada frame. La constante del bono es `EnemyBehaviour.BruteAuraArmorBonus = 0.3f`.
+- Blindado: armadura NO afecta Burn · siempre precedido por [Caminante×3]
+- Rápido: nunca en grupo
+- **Sacerdote:** cada 2s cura 15% MaxHp a enemigos en radio 4 celdas (no a otros Sacerdotes). Se detiene (`canMove=false`), cast 3f a 8fps, frame 2 → `HealOrb` visual (4u/s). `EnemyAnimator.IsLocked=true` durante cast. Al reanudar: `SearchPath()`.
+- **Bruto:** aura radio 4 celdas → +30% armadura física a todos en rango. Contador `_bruteAuraCount`; no acumulan múltiples Brutos.
 
 ---
 
 ## Héroe
-- Movimiento WASD, 8 direcciones, **vuela sobre torres** (ignora pathfinding)
-- Sin colisión con torres ni monstruos
-- **Confinado horizontalmente** a las columnas jugables (`GridVisualizer.PathColMin`–`GridVisualizer.PathColMax`, cols 2–11) — `ClampToScreen()` calcula los límites en X a partir del origen de la grilla. Movimiento en Y libre (filas 0–17)
-- Ataque automático al **enemigo más cercano** en rango (1.5 celdas, 25 dmg, 1.5 ataques/s)
-- Sin HP — no puede ser dañado en el MVP
-- La construcción es remota: seleccionar torre en HUD + clic en celda → 5s de build desde cualquier posición
-- Múltiples construcciones simultáneas con timers independientes
-- **Sprite:** `Assets/_Project/Art/Sprites/Hero/roguelikeChar_magenta_0_transparent.png` (Kenney Roguelike Characters, fondo magenta removido por script) · **Escala:** 4.5 → 0.72 unidades mundo (~75% de una celda)
+- WASD, 8 dir, vuela sobre torres (ignora pathfinding), sin colisiones, sin HP
+- Confinado a cols 2–11 (`ClampToScreen()`), Y libre (filas 0–17)
+- Ataque automático: enemigo más cercano, rango 1.5 celdas, 25 dmg, 1.5/s
+- Construcción remota: HUD + click → 5s. Múltiples construcciones simultáneas
+- Sprite: `Art/Sprites/Hero/roguelikeChar_magenta_0_transparent.png`, escala 0.72u
 
 ---
 
 ## Boss — Troll Anciano (~14:00)
-- HP: 1500 · Velocidad: 0.8 c/s · Armadura: 25% física · Recompensa: 30 oro / 50 XP
-- **Fase 1** (100%→50%): lento; a los 30s invoca 8 Caminantes
-- **Fase 2** (50%→0%): velocidad +60% → 1.3 c/s; rugido +20% velocidad a todos 6s; horda mixta cada 40s; regenera **2 HP/s**
-- La regeneración de fase 2 requiere DPS > 2 HP/s para no estancarse
+- HP 1500 · 0.8 c/s · 25% armadura física · 30 oro / 50 XP
+- Fase 1 (100→50%): a los 30s invoca 8 Caminantes
+- Fase 2 (50→0%): vel 1.3 c/s; rugido +20% vel a todos cada 6s; horda mixta cada 40s; regen 2 HP/s (requiere DPS > 2)
 
 ---
 
 ## Convenciones de código
 
-### Nombrado
-- Clases, métodos, propiedades públicas: `PascalCase`
-- Variables privadas: `_camelCase` con prefijo `_`
-- ScriptableObjects: sufijo `Data` (ej. `TowerData`, `EnemyData`, `CardData`)
-- Eventos: prefijo `On` (ej. `OnLevelUp`, `OnEnemyDeath`)
+- `PascalCase` clases/métodos/props · `_camelCase` privados · sufijo `Data` para SOs · prefijo `On` para eventos
+- Object Pooling: `UnityEngine.Pool.ObjectPool<T>` · SOs para config · Eventos C# entre managers · No reimplementar A*
+- **Unidades en celdas** siempre; el código multiplica por `GridManager.CellSize` (1.0f)
+- Sprites 64×64 PPU=64 → 1 world unit/celda → `localScale=(1,1,1)`
 
-### Patrones obligatorios
-- **Object Pooling** para monstruos, proyectiles y efectos visuales — usar `UnityEngine.Pool.ObjectPool<T>`
-- **ScriptableObjects** para todos los datos de configuración (torres, monstruos, cartas)
-- **Eventos C#** para comunicación entre managers (no referencias directas)
-- No implementar A\* desde cero — usar **A\* Pathfinding Project**
-
-### Convención de unidades (sprites 64×64, PPU=64)
-- **Todos los valores de diseño se expresan en celdas**, no en world units
-- El código multiplica por `GridManager.CellSize` (= 1.0f) donde sea necesario → cambiar CellSize es trivial
-- `EnemyData.MoveSpeed` — celdas/seg · `TowerData.Range` — celdas · velocidades de héroe/proyectil — celdas/seg · radios de Priest/Bruto — celdas
-- Sprites 64×64 a PPU=64 → 1 world unit por celda → `transform.localScale = (1,1,1)` sin escalar por código
-
-### Lo que NO tocar sin revisión cuidadosa
-- Lógica de validación del pathfinding en `GridManager.CanPlaceTower` — un bug aquí rompe el juego
-- Números de balance (daño, HP, XP, oro) — están en ScriptableObjects, no hardcodeados
-- Lógica de aplicación de cartas épicas (`Tormenta de fuego`, `El laberinto vivo`)
-
-### Errores conocidos y sus causas (post-mortem)
-
-**EnemyData.Prefab con fileID incorrecto → `InvalidCastException` en Instantiate**
-- Al crear o reasignar prefabs de enemigos via YAML/script, el campo `Prefab` en el SO queda con `fileID: 100100000` (ID legacy). Eso hace que `Instantiate(prefab)` lance `InvalidCastException` porque no apunta al root GameObject.
-- El fileID correcto es el anchor `&` del objeto `!u!1` (GameObject) en el archivo `.prefab`. En los prefabs actuales de enemigos ese valor es `5651935703564863863`.
-- **Siempre asignar prefabs desde el Inspector de Unity**, nunca editando el YAML a mano con fileID arbitrarios.
-
-**WaveManager duplicado en la escena → eventos recibidos dos veces**
-- El GameObject `GameManager` tuvo en un momento dos componentes `WaveManager`. Ambos se suscriben a `OnGameStateChanged` y ambos inician su propio `SpawnLoop`.
-- Verificar con el Inspector que `GameManager` tiene exactamente **un** componente `WaveManager`.
-
-**WaveManager con `_phases` vacío → silencio total, sin spawn ni error**
-- Si el array `_phases` o los campos `_caminanteData/_rapidoData/_blindadoData` están en null en el Inspector, `GetActivePhase()` siempre devuelve null y el SpawnLoop no hace nada. No hay error en consola.
-- Después de añadir o recrear el WaveManager en la escena, verificar siempre que estos campos están asignados.
-
-**Sacerdote/Bruto atraviesan torres → `constrainInsideGraph: 0` + `orientation: 0`**
-- Prefabs creados sin copiar la configuración AIPath del Caminante. `orientation: 0` (ZAxisForward) pone el agente en modo 3D, ignorando el graph 2D. `constrainInsideGraph: 0` hace que si el enemigo deriva mínimamente fuera de un nodo walkable (por la pausa del cast, flotantes, etc.) A* planifique el siguiente path desde ese nodo inválido e incluya celdas de torres como atajos.
-- **Configuración obligatoria en prefabs 2D:** `orientation: 1` (YAxisForward) · `enableRotation: 0` · `constrainInsideGraph: 1`. Verificar estos tres campos en cualquier prefab de enemigo nuevo.
-- Además, al restaurar `canMove = true` en `PriestBehaviour` se llama `SearchPath()` para forzar recálculo desde la posición actual ya-snapada.
-
-**WASD interrumpe auto-move → cola de construcción queda trabada permanentemente**
-- Presionar WASD mientras el héroe se desplaza automáticamente hacia un tile de construcción seteaba `_isAutoMoving = false` pero no limpiaba `_currentBuild`. `HandleAutoMove()` retornaba early para siempre, bloqueando cualquier construcción futura.
-- Fix en `HeroBehaviour.HandleMovement()`: al detectar WASD con `_isAutoMoving == true`, limpiar `_currentBuild = default` y vaciar `_buildQueue`. El oro no fue gastado (se gasta en `RequestPlacement` al llegar), por lo que no se necesita reembolso.
-
-**Tile queda pintado verde tras intento de construcción sin oro suficiente**
-- `TowerPlacementManager.RequestPlacement` llama `FlashTile(cell, true)` (verde) al validar la celda, y luego `FlashTile(cell, false)` (rojo) al detectar oro insuficiente. `FlashTile` llama `StopAllCoroutines()` antes de iniciar la nueva coroutine, matando la coroutine verde con `sr.color` ya seteado en verde. La coroutine roja capturaba `origColor = verde` y al terminar restauraba... verde.
-- Fix en `GridVisualizer.FlashRoutine()`: resetear `sr.color = Color.white` al inicio de la coroutine, antes de capturar `origColor`, para limpiar cualquier tint residual de una coroutine interrumpida.
-
-**Enemigos oscilan ante el gap del laberinto y no avanzan → `pickNextWaypointDist` demasiado grande**
-- Con `pickNextWaypointDist: 0.96` (2 celdas) o mayor, el cursor de waypoints salta 2+ celdas por delante. Al aproximarse al gap desde una columna lateral, el enemigo intenta moverse en línea recta hacia un punto al otro lado del muro, cruzando diagonalmente por una celda de torre. `constrainInsideGraph: true` lo devuelve al área caminable → oscilación.
-- El problema no ocurre con laberintos de 1 fila (los caminos son casi verticales), pero sí con laberintos de varias filas donde hay giros horizontales→verticales.
-- **Valor correcto: `pickNextWaypointDist: 1.04`** (≈ 1 celda, ligeramente mayor que `CellSize = 1.0`). El enemigo avanza al siguiente waypoint solo cuando ya está en él, siguiendo el camino celda a celda sin atajos diagonales.
-- **`radius: 0.5` también era incorrecto** — mayor que la mitad de una celda (0.24). Corregido a `0.1` en los 5 prefabs de enemigos.
-- **NO subir `pickNextWaypointDist` por encima de `CellSize (1.0)` + margen pequeño** en prefabs de enemigos. El valor de `ForceAllEnemiesRepath` también se corrigió para usar `ai.SearchPath()` en lugar de construir `ABPath` manualmente (que eludía el Seeker y creaba condiciones de carrera).
-
-**`mainObjectFileID: 0` en `.meta` de carta → `Resources.LoadAll<CardData>` devuelve array vacío**
-- Al crear un asset `.asset` de forma manual (edición directa del YAML, fuera del Editor de Unity), Unity genera el `.meta` con `mainObjectFileID: 0`. Eso hace que `Resources.LoadAll<CardData>("Cards")` no encuentre el asset — como si no existiera.
-- El `fileID` correcto para un `ScriptableObject` es `11400000`, coincidiendo con el anchor YAML `&11400000` del objeto `!u!114`.
-- **Fix:** editar el `.meta` del asset y cambiar `mainObjectFileID: 0` → `mainObjectFileID: 11400000`, luego hacer *Assets → Reimport* en Unity.
-- El síntoma visible es que el picker de carta muestra cartas placeholder (sin nombre real, sin ícono) en vez de las cartas reales.
-
-**`PlayerInventory` ausente en la escena → cartas elegidas no aparecen en el HUD ni en el inventario**
-- El componente `PlayerInventory` es un singleton MonoBehaviour que debe vivir en el GameObject `GameManager`. Si no está en la escena, `PlayerInventory.Instance` es `null`.
-- `CardSystem.ChooseCard()` usa `PlayerInventory.Instance?.AddCard(chosen)` — el operador `?.` silencia el error y descarta la carta sin ningún mensaje en consola.
-- Al no llamarse `AddCard`, tampoco se dispara `OnInventoryChanged`, por lo que `HUDController.RefreshCardSections()` nunca actualiza los slots. El jugador ve el picker de carta funcionar correctamente pero la carta elegida no aparece en ningún lugar del HUD.
-- **Fix:** en la escena, agregar el script `PlayerInventory` como componente del GameObject `GameManager` (junto a `LivesManager`, `EconomyManager`, `XPManager`, `SelectionManager`, `CardSystem`, `EnemyPool`, `WaveManager`).
-- **Síntoma adicional:** las cartas del inventario tampoco se muestran en la fila "APLICAR CARTA" del panel de torre, ni pueden aplicarse a ninguna torre.
+### NO tocar sin revisión
+- `GridManager.CanPlaceTower` — un bug rompe el juego
+- Números de balance (están en SOs)
+- Lógica de cartas épicas (`Tormenta de fuego`, `El laberinto vivo`)
 
 ---
 
-## Criterios de éxito
+## Errores conocidos (post-mortem)
 
-### Técnicos (mes 4)
-- Run completa de ~15 minutos sin crashes
-- Pathfinding recalcula en tiempo real sin stutters
-- Las 15 cartas funcionan correctamente
-- El boss completa sus 2 fases
-- 60 fps estables en hardware de gama media
+**EnemyData.Prefab fileID incorrecto → `InvalidCastException`**
+- `fileID: 100100000` (legacy) en el SO al asignar via YAML. fileID correcto = anchor `&` del `!u!1` (GameObject) del prefab = `5651935703564863863`.
+- Siempre asignar prefabs desde el Inspector, nunca editando YAML a mano.
 
-### Diseño (mes 5)
-- **3 de 5 testers quieren hacer otra run inmediatamente** — único criterio que importa para continuar
+**WaveManager duplicado → eventos 2×**
+- Verificar que GO `GameManager` tiene exactamente **un** componente `WaveManager`.
+
+**WaveManager `_phases` vacío → sin spawn, sin error**
+- `GetActivePhase()` devuelve null silenciosamente. Siempre asignar `_phases`, `_caminanteData`, `_rapidoData`, `_blindadoData` en Inspector.
+
+**Sacerdote/Bruto atraviesan torres → `constrainInsideGraph:0` + `orientation:0`**
+- `orientation:0` (ZAxisForward) = modo 3D ignora graph 2D.
+- **Obligatorio en prefabs 2D:** `orientation:1` (YAxisForward) · `enableRotation:0` · `constrainInsideGraph:1`
+- Al restaurar `canMove=true` en PriestBehaviour llamar `SearchPath()`.
+
+**WASD interrumpe auto-move → cola de construcción trabada**
+- Fix: al detectar WASD con `_isAutoMoving==true`, limpiar `_currentBuild=default` y vaciar `_buildQueue`.
+
+**Tile verde residual tras construcción sin oro**
+- Fix en `GridVisualizer.FlashRoutine()`: resetear `sr.color=Color.white` al inicio, antes de capturar `origColor`.
+
+**Enemigos oscilan ante gap del laberinto**
+- `pickNextWaypointDist` excesivo saltaba waypoints. **Valor correcto: `1.04`** (≈ CellSize + margen).
+- `radius` correcto: `0.1` (no 0.5). No subir `pickNextWaypointDist` por encima de 1.0+margen.
+- `ForceAllEnemiesRepath`: usar `ai.SearchPath()`, no `ABPath` manual (elude el Seeker → condiciones de carrera).
+
+**`mainObjectFileID:0` en `.meta` de carta → `Resources.LoadAll` vacío**
+- Fix: cambiar `mainObjectFileID:0` → `mainObjectFileID:11400000` en el `.meta`, luego reimportar.
+
+**`PlayerInventory` ausente en escena → cartas elegidas descartadas silenciosamente**
+- `CardSystem.ChooseCard()` usa `?.AddCard` que no lanza error. Carta se pierde, `OnInventoryChanged` no dispara, HUD no actualiza.
+- Fix: agregar `PlayerInventory` como componente del GO `GameManager`.
 
 ---
 
 ## Assets externos y estilo visual
-- **Plataforma:** PC (Windows/Mac) — el diseño original era mobile, ya no aplica
-- **Estilo visual:** 3/4 view (2.5D) — inspirado en Ball x Pit (que es 3D). Unity 2D estándar, grilla rectangular normal, sin Tilemap isométrico
-- **Kenney Tower Defense Top-Down** — fuente original: `kenney_tower-defense-top-down/` (raíz del proyecto, no modificar). Sprites top-down compatibles con 3/4 view
-- **Kenney Roguelike Characters** — sprites direccionales (frente/espalda/izq/der) para héroe y monstruos. Clave para el estilo 3/4 view
-- **Kenney Tower Defense (original)** — más variantes de torres y monstruos
-- **Kenney Roguelike/RPG Pack** — iconos para cartas
-- **Kenney UI Pack** — HUD, botones, barras
-- Tiles importados a `Assets/Resources/Grid/` según necesidad — renombrados con prefijo `Tile_`
-- Arte final se implementa post-validación del MVP
-- Audio no es bloqueante — el juego debe ser jugable en silencio
+- PC (Windows/Mac) · 3/4 view (2.5D), Unity 2D estándar, grilla rectangular
+- Kenney Tower Defense Top-Down, Roguelike Characters, Roguelike/RPG Pack, UI Pack (no modificar)
+- Sorting Layers: `Ground` → `Shadows` → `TowerBase` → `Characters` → `TowerTop` → `Effects` → `UI`
+- Cada entidad: hijo `Shadow` (elipse alpha 0.3, escala 0.7×0.35, layer Shadows)
+- `SpriteRenderer`: `Sprite Sort Point = Pivot`, pivot en la base del sprite
+- Audio no bloqueante — jugable en silencio
 
-### Configuración visual 3/4 view (TASK-12)
-- Héroe y monstruos con **sprites direccionales** (mínimo frente/espalda) — cambian según dirección de movimiento
-- `Camera`: `Transparency Sort Mode = Custom Axis`, `Y = 1`
-- Todos los `SpriteRenderer` de entidades: `Sprite Sort Point = Pivot`, pivot en la base del sprite
-- Sorting Layers (orden inferior a superior): `Ground` → `Shadows` → `TowerBase` → `Characters` → `TowerTop` → `Effects` → `UI`
-- Cada monstruo/héroe/torre tiene un hijo `Shadow` (sprite elipse, alpha 0.3, escala `0.7×0.35`, layer `Shadows`)
+## Criterios de éxito
+- Técnico (mes 4): run ~15 min sin crashes, pathfinding sin stutters, 15 cartas funcionales, boss 2 fases, 60 fps
+- Diseño (mes 5): **3/5 testers quieren otra run inmediatamente**

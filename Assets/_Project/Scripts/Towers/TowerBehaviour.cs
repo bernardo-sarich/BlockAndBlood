@@ -18,12 +18,20 @@ public class TowerBehaviour : MonoBehaviour, ISelectable
 
     [SerializeField] private LayerMask _enemyLayer;
 
+    [Header("Shoot Animation (Range towers)")]
+    [SerializeField] private Sprite[] _shootFramesDown;
+    [SerializeField] private Sprite[] _shootFramesUp;
+    [SerializeField] private Sprite[] _shootFramesRight;
+    [SerializeField] private Sprite[] _shootFramesLeft;
+    [SerializeField] private float    _shootAnimFps = 10f;
+
     private TowerData  _data;
     private Vector2Int _cell;
     private TowerState _state;
     private int        _totalGoldInvested;
     private float      _attackTimer;
     private float      _meleeEffectTimer;
+    private bool       _isShooting;
 
     // Melee re-applies aura effects every MeleeEffectInterval to keep EffectSystem timer alive.
     private const float MeleeEffectInterval = 0.15f;
@@ -40,6 +48,11 @@ public class TowerBehaviour : MonoBehaviour, ISelectable
     public const int MaxAppliedCards = 6;
     private readonly List<CardData> _appliedEffects = new List<CardData>(MaxAppliedCards);
     public IReadOnlyList<CardData> AppliedEffects => _appliedEffects;
+
+    // Merged values rebuilt whenever _data or _appliedEffects changes.
+    private EffectData[] _effectiveOnHitEffects;
+    private float        _effectiveDamageBase;   // physical — subject to armor
+    private float        _effectiveBonusDamage;  // fire (card bonus) — ignores armor
 
     // ── Events ───────────────────────────────────────────────────────────────
     public static event System.Action<TowerBehaviour>      OnTowerBuilt;
@@ -90,6 +103,8 @@ public class TowerBehaviour : MonoBehaviour, ISelectable
 
         // Show "under construction" visual
         ShowBuildingVisual();
+
+        RebuildEffectiveEffects();
 
         GridManager.Instance.SetCellState(cell, GridManager.CellState.EnConstruccion);
         _visualizer?.RefreshTile(cell);
@@ -168,7 +183,43 @@ public class TowerBehaviour : MonoBehaviour, ISelectable
     {
         if (!CanApplyCard(card)) return;
         _appliedEffects.Add(card);
+        RebuildEffectiveEffects();
         OnEffectApplied?.Invoke(this);
+    }
+
+    /// <summary>
+    /// Rebuilds _effectiveOnHitEffects by merging TowerData base effects with all applied card effects.
+    /// Call whenever _data or _appliedEffects changes.
+    /// </summary>
+    private void RebuildEffectiveEffects()
+    {
+        // Physical damage — goes through armor calculation
+        _effectiveDamageBase  = _data.DamageBase;
+
+        // Card bonus damage — applied as Fire (ignores armor)
+        _effectiveBonusDamage = 0f;
+        for (int i = 0; i < _appliedEffects.Count; i++)
+            _effectiveBonusDamage += _appliedEffects[i].BonusDamage;
+
+        // On-hit effects = tower base effects + all card effects merged
+        int baseCount = _data.OnHitEffects?.Length ?? 0;
+        int cardCount = 0;
+        for (int i = 0; i < _appliedEffects.Count; i++)
+            cardCount += _appliedEffects[i].OnHitEffects?.Length ?? 0;
+
+        _effectiveOnHitEffects = new EffectData[baseCount + cardCount];
+        int idx = 0;
+
+        if (_data.OnHitEffects != null)
+            for (int i = 0; i < _data.OnHitEffects.Length; i++)
+                _effectiveOnHitEffects[idx++] = _data.OnHitEffects[i];
+
+        for (int c = 0; c < _appliedEffects.Count; c++)
+        {
+            if (_appliedEffects[c].OnHitEffects == null) continue;
+            for (int e = 0; e < _appliedEffects[c].OnHitEffects.Length; e++)
+                _effectiveOnHitEffects[idx++] = _appliedEffects[c].OnHitEffects[e];
+        }
     }
 
     // ── Upgrade / Sell ───────────────────────────────────────────────────────
@@ -188,6 +239,7 @@ public class TowerBehaviour : MonoBehaviour, ISelectable
 
         _totalGoldInvested += next.Cost;
         _data               = next;
+        RebuildEffectiveEffects();
 
         _projectilePool?.Clear();
         _projectilePool = null;
@@ -220,7 +272,7 @@ public class TowerBehaviour : MonoBehaviour, ISelectable
         if (_state != TowerState.Active) return;
 
         float dt    = Time.deltaTime;
-        float range = _data.Range;
+        float range = _data.Range * GridManager.CellSize;
 
         if (_data.IsAreaAttack)
         {
@@ -228,23 +280,27 @@ public class TowerBehaviour : MonoBehaviour, ISelectable
             int count = Physics2D.OverlapCircleNonAlloc(
                 transform.position, range, _hitBuffer, _enemyLayer);
 
-            float dmg = _data.DamageBase * dt;
+            float dmg      = _effectiveDamageBase * dt;
+            float bonusDmg = _effectiveBonusDamage * dt;
             for (int i = 0; i < count; i++)
             {
                 if (_hitBuffer[i].TryGetComponent<IDamageable>(out var t) && t.IsAlive)
+                {
                     t.TakeDamage(dmg, _data.DamageType);
+                    if (bonusDmg > 0f) t.TakeDamage(bonusDmg, DamageType.Fire);
+                }
             }
 
             // Re-apply aura effects at fixed interval
             _meleeEffectTimer -= dt;
-            if (_meleeEffectTimer <= 0f && _data.OnHitEffects != null)
+            if (_meleeEffectTimer <= 0f && _effectiveOnHitEffects != null && _effectiveOnHitEffects.Length > 0)
             {
                 _meleeEffectTimer = MeleeEffectInterval;
                 for (int i = 0; i < count; i++)
                 {
                     if (_hitBuffer[i].TryGetComponent<IDamageable>(out var t) && t.IsAlive)
-                        for (int e = 0; e < _data.OnHitEffects.Length; e++)
-                            t.ApplyEffect(_data.OnHitEffects[e]);
+                        for (int e = 0; e < _effectiveOnHitEffects.Length; e++)
+                            t.ApplyEffect(_effectiveOnHitEffects[e]);
                 }
             }
         }
@@ -252,7 +308,7 @@ public class TowerBehaviour : MonoBehaviour, ISelectable
         {
             // ── Ranged: single-target projectile ─────────────────────────────
             _attackTimer -= dt;
-            if (_attackTimer > 0f) return;
+            if (_attackTimer > 0f || _isShooting) return;
 
             int count = Physics2D.OverlapCircleNonAlloc(
                 transform.position, range, _hitBuffer, _enemyLayer);
@@ -270,16 +326,47 @@ public class TowerBehaviour : MonoBehaviour, ISelectable
 
             if (best == null) return;
 
-            if (_projectilePool != null)
-            {
-                ProjectileBehaviour proj = _projectilePool.Get();
-                proj.transform.position  = GetSpawnPoint(best.Position);
-                proj.Launch(best, _data.DamageBase, _data.DamageType,
-                            _data.OnHitEffects, _projectilePool);
-            }
-
-            _attackTimer = _data.AttackSpeed > 0f ? 1f / _data.AttackSpeed : 1f;
+            _isShooting = true;
+            StartCoroutine(ShootRoutine(best));
         }
+    }
+
+    private Sprite[] GetShootFrames(Vector3 targetPos)
+    {
+        Vector2 delta = targetPos - transform.position;
+        if (Mathf.Abs(delta.x) > Mathf.Abs(delta.y))
+            return delta.x > 0f ? _shootFramesRight : _shootFramesLeft;
+        return delta.y > 0f ? _shootFramesUp : _shootFramesDown;
+    }
+
+    private IEnumerator ShootRoutine(IDamageable target)
+    {
+        Sprite[] frames = target != null ? GetShootFrames(target.Position) : _shootFramesDown;
+
+        if (frames != null && frames.Length > 0 && _shootAnimFps > 0f)
+        {
+            float frameTime = 1f / _shootAnimFps;
+            for (int i = 0; i < frames.Length; i++)
+            {
+                if (_spriteRenderer != null && frames[i] != null)
+                    _spriteRenderer.sprite = frames[i];
+                yield return new WaitForSeconds(frameTime);
+            }
+            // Restore idle: frame 0 of the direction just used
+            if (_spriteRenderer != null && frames[0] != null)
+                _spriteRenderer.sprite = frames[0];
+        }
+
+        if (target != null && target.IsAlive && _projectilePool != null)
+        {
+            ProjectileBehaviour proj = _projectilePool.Get();
+            proj.transform.position  = GetSpawnPoint(target.Position);
+            proj.Launch(target, _effectiveDamageBase, _data.DamageType,
+                        _effectiveOnHitEffects, _projectilePool, _effectiveBonusDamage);
+        }
+
+        _attackTimer = _data.AttackSpeed > 0f ? 1f / _data.AttackSpeed : 1f;
+        _isShooting  = false;
     }
 
     private void OnMouseDown()

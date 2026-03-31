@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5861066723975323706}
   - component: {fileID: 1857756639215678660}
   - component: {fileID: 7721865415795492417}
+  - component: {fileID: 3312445566778890011}
   m_Layer: 0
   m_Name: Tower_Range_Lv1
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2222, y: 0.2222, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,12 +84,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 27474753a9234bc4eb894e4ff6e600da, type: 3}
+  m_Sprite: {fileID: 6527467073598181691, guid: 4a1f52ab9dff9eb4fa8f26a68b9c5bd1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 0.53, y: 0.62}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -144,3 +145,37 @@ MonoBehaviour:
   _enemyLayer:
     serializedVersion: 2
     m_Bits: 0
+  _shootFramesDown:
+  - {fileID: 9018815525341109156, guid: 2808673b1f2447c4fb3dc64b9c2cac29, type: 3}
+  - {fileID: 4156794028301567633, guid: 2808673b1f2447c4fb3dc64b9c2cac29, type: 3}
+  - {fileID: 3100445471448807299, guid: 2808673b1f2447c4fb3dc64b9c2cac29, type: 3}
+  _shootFramesUp:
+  - {fileID: 6527467073598181691, guid: 4a1f52ab9dff9eb4fa8f26a68b9c5bd1, type: 3}
+  - {fileID: -8138571011297122173, guid: 4a1f52ab9dff9eb4fa8f26a68b9c5bd1, type: 3}
+  - {fileID: -6791739615898050011, guid: 4a1f52ab9dff9eb4fa8f26a68b9c5bd1, type: 3}
+  _shootFramesRight:
+  - {fileID: 8594868411339387055, guid: db79b22704e160d48950938349771377, type: 3}
+  - {fileID: 5639602520599932794, guid: db79b22704e160d48950938349771377, type: 3}
+  - {fileID: -7459352001555580864, guid: db79b22704e160d48950938349771377, type: 3}
+  _shootFramesLeft:
+  - {fileID: -8420354659705310052, guid: 6cce399b4c6922d4d8380e13deba9acc, type: 3}
+  - {fileID: 7893297312816518179, guid: 6cce399b4c6922d4d8380e13deba9acc, type: 3}
+  - {fileID: 3670768926568965030, guid: 6cce399b4c6922d4d8380e13deba9acc, type: 3}
+  _shootAnimFps: 10
+--- !u!114 &3312445566778890011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6407354298655566531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f9a4246689bdf4c8238fb16a08c644, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityShadow
+  sourceRenderer: {fileID: 0}
+  _scale: {x: 0.7, y: 0.35}
+  _yOffset: -0.5
+  _useSpriteAsShadow: 0
+  _useSquareShadow: 1

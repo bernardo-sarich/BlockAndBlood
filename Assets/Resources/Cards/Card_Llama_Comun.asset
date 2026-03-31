@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b1c24e6385b0144aad132f5210cf1f3, type: 3}
+  m_Name: Card_Llama_Comun
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  CardName: Llama
+  Description: "+5 de da\xF1o. Los golpes prenden fuego a los enemigos (5 DPS durante
+    3 s)."
+  CardRarity: 0
+  Icon: {fileID: -6847123348642159669, guid: cd1b5b89f14fb0f42be5fc9b3f1da70a, type: 3}
+  IconFrames:
+  - {fileID: -6847123348642159669, guid: cd1b5b89f14fb0f42be5fc9b3f1da70a, type: 3}
+  - {fileID: -5262662000183889903, guid: cd1b5b89f14fb0f42be5fc9b3f1da70a, type: 3}
+  - {fileID: 878057575626606788, guid: cd1b5b89f14fb0f42be5fc9b3f1da70a, type: 3}
+  MaxCharges: 3
+  BonusDamage: 5
+  OnHitEffects:
+  - Type: 0
+    Value: 5
+    Duration: 3
+  CompatibleTowerTypes: 

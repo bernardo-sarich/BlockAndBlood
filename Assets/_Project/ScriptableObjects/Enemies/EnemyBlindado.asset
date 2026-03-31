@@ -18,3 +18,4 @@ MonoBehaviour:
   ArmorFraction: 0.5
   GoldReward: 5
   XpReward: 15
+  Prefab: {fileID: 5651935703564863863, guid: a497757ba0ad33a4aae10a02fe947fe3, type: 3}

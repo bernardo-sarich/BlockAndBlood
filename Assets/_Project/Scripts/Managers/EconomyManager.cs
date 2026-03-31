@@ -12,7 +12,7 @@ public class EconomyManager : MonoBehaviour
     public static event System.Action<int> OnGoldChanged;
 
     [Header("Config")]
-    [SerializeField] private int _startingGold = 50;
+    [SerializeField] private int _startingGold = 75;
 
     public int Gold { get; private set; }
 

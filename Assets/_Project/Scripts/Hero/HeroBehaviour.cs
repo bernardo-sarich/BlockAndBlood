@@ -23,7 +23,7 @@ public class HeroBehaviour : MonoBehaviour, ISelectable
 
     // ── Inspector ─────────────────────────────────────────────────────────────
     [Header("Movement")]
-    [SerializeField] private float _baseMoveSpeed = 4f;
+    [SerializeField] private float _baseMoveSpeed = 8.33f; // cells/sec
 
     [Header("Combat")]
     [SerializeField] private float _baseDamage        = 25f;
@@ -32,7 +32,7 @@ public class HeroBehaviour : MonoBehaviour, ISelectable
     [SerializeField] private LayerMask _enemyLayer;
 
     [Header("Build")]
-    [SerializeField] private float _arrivalThreshold = 0.05f; // world units
+    [SerializeField] private float _arrivalThreshold = 0.1f; // cells
     [SerializeField] private LayerMask _placementClickMask;   // optional — not required
 
     // ── Runtime stats (modified by cards) ────────────────────────────────────
@@ -120,6 +120,7 @@ public class HeroBehaviour : MonoBehaviour, ISelectable
     /// </summary>
     private void HandleBuildInput()
     {
+        if (CardSystem.IsPickerActive) return;
         if (TowerPlacementManager.Instance == null) return;
         if (TowerPlacementManager.Instance.SelectedTower == null) return;
         if (!Mouse.current.leftButton.wasPressedThisFrame) return;
@@ -145,6 +146,7 @@ public class HeroBehaviour : MonoBehaviour, ISelectable
 
     private void HandleCancelInput()
     {
+        if (CardSystem.IsPickerActive) return;
         if (Keyboard.current.escapeKey.wasPressedThisFrame || Mouse.current.rightButton.wasPressedThisFrame)
             TowerPlacementManager.Instance?.CancelSelection();
     }
@@ -177,7 +179,7 @@ public class HeroBehaviour : MonoBehaviour, ISelectable
         }
 
         Vector3 dir = new Vector3(h, v, 0f).normalized;
-        transform.position += dir * (MoveSpeed * Time.deltaTime);
+        transform.position += dir * (MoveSpeed * GridManager.CellSize * Time.deltaTime);
         ClampToScreen();
 
         _isAutoMoving = false;
@@ -195,7 +197,7 @@ public class HeroBehaviour : MonoBehaviour, ISelectable
         Vector3 delta = _autoMoveTarget - transform.position;
         float   dist  = delta.magnitude;
 
-        if (dist <= _arrivalThreshold)
+        if (dist <= _arrivalThreshold * GridManager.CellSize)
         {
             // Arrived — execute the build
             transform.position = _autoMoveTarget;
@@ -205,7 +207,7 @@ public class HeroBehaviour : MonoBehaviour, ISelectable
             return;
         }
 
-        transform.position += delta.normalized * (MoveSpeed * Time.deltaTime);
+        transform.position += delta.normalized * (MoveSpeed * GridManager.CellSize * Time.deltaTime);
         ClampToScreen();
     }
 

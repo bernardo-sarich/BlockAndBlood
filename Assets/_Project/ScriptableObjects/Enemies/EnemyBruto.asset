@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417a10cfeaf8b6c4486b0202eeb09c75, type: 3}
+  m_Name: EnemyBruto
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyData
+  EnemyName: Bruto
+  MaxHp: 650
+  MoveSpeed: 1.2
+  ArmorFraction: 0.2
+  GoldReward: 6
+  XpReward: 18
+  Prefab: {fileID: 6090846786965261395, guid: db98d97e56eeb6042a6f1da93b0c2243, type: 3}

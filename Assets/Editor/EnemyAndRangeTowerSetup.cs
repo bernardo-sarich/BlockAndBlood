@@ -51,7 +51,7 @@ public static class EnemyAndRangeTowerSetup
         root.transform.localScale = new Vector3(1.6f, 1.6f, 1f);
 
         var sr = root.GetComponent<SpriteRenderer>();
-        if (sr != null)
+        if (sr != null) sr.enabled = false;
         {
             sr.sprite       = frontIdle;
             sr.sortingOrder = 5;
