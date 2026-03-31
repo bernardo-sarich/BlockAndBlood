@@ -3,7 +3,7 @@
 
 > **Este archivo es la fuente de verdad editable del diseño.**
 > El archivo `GDD — Line Wars TD · MVP.pdf` es un snapshot histórico y ya no se actualiza.
-> Última actualización: v2.8 — Sprite del Rápido reemplazado por spider_sheet.png (araña, 4 frames).
+> Última actualización: v2.9 — Fix: PlayerInventory añadido a la escena; sistema de cartas completamente funcional.
 
 ---
 
@@ -233,10 +233,12 @@ Componente de `EnemyBehaviour` que gestiona efectos activos:
 ### Flujo de pausa de carta (implementado)
 
 1. Barra llena → `XPManager.OnLevelUp` dispara → `GameManager` transiciona a `GameState.Paused`
-2. `CardSystem` construye proceduralmente un picker Canvas (`sortingOrder=200`): panel centrado 580×260px con 3 cartas clickeables (placeholder con nombre + rareza)
-3. Jugador elige una carta → `PlayerInventory.AddCard()` + `OnCardChosen` → `GameManager` transiciona a `GameState.Playing`
-4. Stream **se reanuda** (WaveManager escucha el cambio de estado)
-5. Sin tiempo límite de elección
+2. `GameManager.TransitionTo(Paused)` establece `Time.timeScale = 0` — **congela** movimiento de enemigos, ataques de torres y el `SpawnLoop` del WaveManager; la UI de Unity sigue respondiendo
+3. `SelectionManager` detecta el estado `Paused` y, si hay una torre seleccionada, la deselecciona automáticamente (vuelve al héroe)
+4. `CardSystem` carga cartas reales desde `Assets/Resources/Cards/` (`Resources.LoadAll<CardData>("Cards")`), filtra por rareza del nivel y construye proceduralmente un picker Canvas (`sortingOrder=200`): panel centrado 580×260px con 3 cartas clickeables — cada carta muestra **sprite animado** (8 fps, `WaitForSecondsRealtime` para ignorar `timeScale=0`), nombre, rareza y descripción. El cursor se confina al picker (`CursorLockMode.Confined`) y se bloquean los inputs del juego (`CardSystem.IsPickerActive`) hasta elegir
+5. Jugador elige una carta → `PlayerInventory.AddCard()` + `OnCardChosen` → `GameManager` transiciona a `GameState.Playing` → `Time.timeScale = 1`
+6. Stream **se reanuda** (WaveManager escucha el cambio de estado)
+7. Sin tiempo límite de elección
 
 ### Rareza por nivel (pesos probabilísticos)
 
@@ -252,33 +254,34 @@ Componente de `EnemyBehaviour` que gestiona efectos activos:
 
 #### Comunes (8)
 
-| Carta | Efecto |
-|-------|--------|
-| Filo afilado | Torres Melee +20% daño |
-| Pólvora | Torres de Rango +20% daño |
-| Rescoldo | Torres con Burn: quemadura 5s (antes 3s) |
-| Corriente fría | Torres con Slow: slow −55% (antes −40%) |
-| Construcción rápida | Tiempo de construcción 3s (antes 5s) |
-| Buen ojo | Héroe +50% rango de ataque |
-| Golpe certero | Héroe +30% daño |
-| Avaricia | Cada monstruo da +1 oro al morir |
+| Carta | Efecto | Estado |
+|-------|--------|--------|
+| **Llama** | +5 daño de fuego (ignora armadura) + Burn 5 DPS durante 3 s. Compatible con todas las torres | ✅ Implementada |
+| Filo afilado | Torres Melee +20% daño | Pendiente |
+| Pólvora | Torres de Rango +20% daño | Pendiente |
+| Rescoldo | Torres con Burn: quemadura 5s (antes 3s) | Pendiente |
+| Corriente fría | Torres con Slow: slow −55% (antes −40%) | Pendiente |
+| Construcción rápida | Tiempo de construcción 3s (antes 5s) | Pendiente |
+| Buen ojo | Héroe +50% rango de ataque | Pendiente |
+| Golpe certero | Héroe +30% daño | Pendiente |
+| Avaricia | Cada monstruo da +1 oro al morir | Pendiente |
 
 #### Raras (5)
 
-| Carta | Efecto |
-|-------|--------|
-| Corriente amplificada | Enemigo ralentizado por Slow recibe +25% daño de todas las fuentes |
-| Brasas | Al expirar quemadura, AoE de 10 dmg en 1 celda alrededor |
-| Economía de guerra | Vender torre devuelve 80% (antes 60%) — una vez por pausa de XP |
-| Sierra en cadena | Torre Melee mata enemigo → siguiente en misma celda recibe 50% del daño del kill |
-| Instinto cazador | Héroe prioriza enemigo con mayor HP en lugar del más cercano |
+| Carta | Efecto | Estado |
+|-------|--------|--------|
+| Corriente amplificada | Enemigo ralentizado por Slow recibe +25% daño de todas las fuentes | Pendiente |
+| Brasas | Al expirar quemadura, AoE de 10 dmg en 1 celda alrededor | Pendiente |
+| Economía de guerra | Vender torre devuelve 80% (antes 60%) — una vez por pausa de XP | Pendiente |
+| Sierra en cadena | Torre Melee mata enemigo → siguiente en misma celda recibe 50% del daño del kill | Pendiente |
+| Instinto cazador | Héroe prioriza enemigo con mayor HP en lugar del más cercano | Pendiente |
 
 #### Épicas (2)
 
-| Carta | Requisito | Efecto |
-|-------|-----------|--------|
-| Tormenta de fuego | ≥1 torre con Burn aplicado | Torres con Burn también aplican Slow (−25% vel, 1.5s) |
-| El laberinto vivo | — | Monstruo que dobla en esquina recibe 15 de daño |
+| Carta | Requisito | Efecto | Estado |
+|-------|-----------|--------|--------|
+| Tormenta de fuego | ≥1 torre con Burn aplicado | Torres con Burn también aplican Slow (−25% vel, 1.5s) | Pendiente |
+| El laberinto vivo | — | Monstruo que dobla en esquina recibe 15 de daño | Pendiente |
 
 ### Sinergias destacadas
 
@@ -697,9 +700,14 @@ GameObject prefab
 string cardName
 CardData.Rarity cardRarity  // Common / Rare / Epic
 string description
-Sprite icon
+Sprite icon              // estático principal
+Sprite[] iconFrames      // frames de animación del picker (8 fps)
+Sprite displayIcon       // computed: icon ?? iconFrames[0]
+float bonusDamage        // daño plano adicional; se aplica como DamageType.Fire (ignora armadura)
+EffectData[] onHitEffects  // efectos de estado aplicados en cada golpe (Burn, Slow, etc.)
 TowerType[] compatibleTowerTypes  // vacío = compatible con todos
 ```
+> Assets de carta deben estar en `Assets/Resources/Cards/` con `mainObjectFileID: 11400000` en el `.meta` para ser descubiertos por `Resources.LoadAll<CardData>("Cards")`.
 
 **WavePhase**
 ```csharp
@@ -787,6 +795,8 @@ Este GDD cubre exclusivamente el MVP. El diseño completo (Mundos 2–5, Torres 
 | 1.10 | 2026-03-24 | HUD migrado de panel inferior a **panel lateral derecho** (200px ancho, altura completa). Viewport de cámara ajustado para excluir franja del panel. Secciones en `VerticalLayoutGroup` vertical. Botones de construcción reestructurados: grilla 2×2 (`GridLayoutGroup`, cell 84×48) con layout vertical por botón (ícono 24×24 + nombre + costo). Botones para `TowerData` null se omiten; altura de sección dinámica. `_fireTowerData` y `_waterTowerData` asignados en Inspector (`TowerFire_Lv2`, `TowerWater_Lv2`). Botón desactivado a alpha 0.35 |
 | 1.11 | 2026-03-24 | **Torres Fuego y Agua eliminadas.** Los efectos elementales (Burn, Slow, ArmorReduction) ahora se aplican exclusivamente vía cartas. `TowerType` enum reducido a Melee/Range. Eliminados: `TowerFire_Lv2` y `TowerWater_Lv2` (SOs + prefabs), upgrade paths de torre Rango vaciados, `_fireTowerData`/`_waterTowerData` del HUD. Botones de construcción reducidos a 2 (Melee/Rango). Cartas actualizadas para referenciar efectos en vez de torres. Boss: estrategia ahora requiere cartas de Burn/Slow en vez de torres dedicadas |
 | 1.12 | 2026-03-24 | **Tiles de suelo diferenciados por columna.** `GRASS+_58` uniforme reemplazado por 4 sprites artesanales: `grass_base` (pasto), `path_base` (camino central, cols 2–4), `path_edge_left` (col 1), `path_edge_right` (col 5). `GridVisualizer`: constantes `PathColMin=2`/`PathColMax=4`, método `GetTileSprite(col,row)` para asignar sprite según columna. Nuevos assets en `Resources/Decorations/` |
+| 3.2 | 2026-03-30 | **Sistema de cartas completo + primera carta implementada.** `CardData` extendido: `BonusDamage` (float), `OnHitEffects[]` (`EffectData`), `IconFrames[]` (sprites de animación), `DisplayIcon` (computed). `CardSystem` reescrito: carga cartas reales desde `Resources/Cards/` (`Resources.LoadAll`), filtra por rareza, deduplication por índice. Picker: sprite animado 8 fps (`WaitForSecondsRealtime` para timeScale=0), cursor confinado (`CursorLockMode.Confined`), flag `IsPickerActive` bloquea inputs del héroe. `TowerBehaviour.RebuildEffectiveEffects()`: separa daño físico (`_effectiveDamageBase`) de daño bonus de fuego (`_effectiveBonusDamage`, ignora armadura). `ProjectileBehaviour.Launch()` acepta `bonusDamage` opcional — dispara segundo `TakeDamage` con `DamageType.Fire`. Primera carta: **Llama** (Común) — +5 daño fuego + Burn 5 DPS/3s, todas las torres. Bug corregido: `mainObjectFileID: 11400000` requerido en `.meta` de assets de carta creados manualmente. |
+| 3.1 | 2026-03-29 | **Pausa completa al elegir carta + auto-deselección de torre.** `GameManager.TransitionTo(Paused)` establece `Time.timeScale = 0`, congelando enemigos (AIPath + Update), torres (atacTimer) y el SpawnLoop (WaitForSeconds usa tiempo escalado). Al volver a Playing/Victory/Defeat se restaura `Time.timeScale = 1`. `SelectionManager` suscrito a `OnGameStateChanged`: si el estado es `Paused` y hay una `TowerBehaviour` seleccionada, llama `SelectHero()` automáticamente. |
 | 3.0 | 2026-03-28 | **Sacerdote y Bruto: sprites, animaciones y corrección de pathfinding.** Sacerdote: sprites de caminata (`priest_walk.png`, 4 frames) y cast (`priest_cast.png`, 3 frames) asignados; `EnemyAnimator` añadido al prefab (`_walkCols=4`). Al curar: se detiene, reproduce animación cast y lanza un `HealOrb` visual (4 frames, `heal_orb_DRAFT.png`) por cada enemigo curado. Velocidad reducida 2.0 → **1.2 c/s** (igual que Caminante). `EnemyAnimator.IsLocked` añadido para ceder control del sprite durante el cast. Bugfix: `Enemy_Sacerdote` y `Enemy_Bruto` atravesaban torres por `orientation: 0` (ZAxisForward, modo 3D) + `constrainInsideGraph: 0`; corregido a `orientation: 1` + `enableRotation: 0` + `constrainInsideGraph: 1` en ambos prefabs. |
 | 2.9 | 2026-03-28 | **Sprite del Caminante reemplazado por zombie.** `Enemy_Caminante.prefab`: `SpriteRenderer` y `EnemyAnimator.walkSprites` apuntan ahora a `zombie_32x32-sheet.png` (`Assets/_Project/Art/Enemies/`, guid `cb37bb16db387ef4aa3bc29d8ff6ed69`, PPU 48). 4 frames 32×32 en fila horizontal. `EnemyAnimator`: `WalkCols` const → campo serializable `_walkCols` (default 9, retrocompatible con LPC); `Enemy_Caminante` usa `_walkCols=4`. `EntityShadow._yOffset` ajustado de −0.55 a −0.25 para compensar el sprite más pequeño (PPU 48 vs 32 anterior). |
 | 2.8 | 2026-03-28 | **Sprite del Rápido reemplazado.** `Enemy_Rapido.prefab`: `SpriteRenderer` y `EnemyAnimator.walkSprites` ahora apuntan a `spider_sheet.png` (`Assets/_Project/Art/Enemies/`, guid `47b54cba9bbc9b643b35a004a3646539`). 4 frames 32×32, animación a 8 fps. Sheet creado en proyecto. |

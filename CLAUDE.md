@@ -59,14 +59,14 @@ Assets/
 ## Sistemas principales
 
 ### GridManager
-- Grilla de **14 columnas × 18 filas** (252 celdas, `CellSize = 0.48f` unidades mundo)
+- Grilla de **14 columnas × 18 filas** (252 celdas, `CellSize = 1.0f` unidades mundo — 1 celda = 1 world unit, diseñado para sprites 64×64 PPU=64)
 - Spawn: fila 17 (visual superior) · Meta: fila 0 (visual inferior)
 - Estados de celda: `Libre` / `EnConstrucción` / `Ocupada`
 - **Celdas restringidas:** fila 17 completa (14 celdas) — permanentemente no buildable
 - **Columnas jugables:** solo cols `GridVisualizer.PathColMin` (2) a `GridVisualizer.PathColMax` (11); cols 0, 1, 12, 13 son no buildables y no transitables
 - Expone `bool CanPlaceTower(Vector2Int cell)` — valida bounds + estado + `IsRestricted` + columna jugable + pathfinding **antes** de confirmar construcción
 - Expone `bool IsRestricted(Vector2Int cell)` — consulta `RestrictedCells[]`
-- Configura el `GridGraph` de A* en `Awake()` (width=14, depth=18, nodeSize=0.48, is2D=true); tras el scan marca como `Walkable=false` todos los nodos en cols < `PathColMin` o > `PathColMax`
+- Configura el `GridGraph` de A* en `Awake()` (width=14, depth=18, nodeSize=CellSize=1.0, is2D=true); tras el scan marca como `Walkable=false` todos los nodos en cols < `PathColMin` o > `PathColMax`
 - Notifica al PathfindingSystem via `AstarPath.active.UpdateGraphs(bounds)` cuando una celda cambia
 - `_gridOrigin` se calcula para centrar el grid en el origen mundo: `(-(gridWidth/2), -(gridHeight/2), 0)`
 - Pathfinding: **A\* Pathfinding Project** instalado en `Assets/AstarPathfindingProject/`
@@ -76,7 +76,7 @@ Assets/
 - **FOV:** `CameraFOV = 60°` · **Tilt X:** `CameraTilt = 15°` (efecto 3/4 view)
 - **`CenterCamera()`** en GridManager calcula la distancia Z para que el grid llene el viewport:
   - `distFromH` y `distFromW` → se toma el mayor, multiplicado por `0.85f` para acercar la cámara
-  - `offsetY = 2.44f` — compensa el desplazamiento visual del tilt (la cámara baja en Y para centrar el grid)
+  - `offsetY = gridHeight * 0.2824f` — compensa el desplazamiento visual del tilt; computado desde la altura del grid para auto-adaptarse a cambios de CellSize (ratio derivado de tuning manual original)
   - Posición final: `(GridCenter.x, GridCenter.y - offsetY, -distZ)`
   - Rotación: `Euler(-CameraTilt, 0, 0)`
 - **Sorting:** `TransparencySortMode.CustomAxis`, `sortAxis = Vector3.up`
@@ -104,10 +104,10 @@ Assets/
 - `static event Action<GameState> OnGameStateChanged` — todos los sistemas escuchan este evento
 - `CurrentState` propiedad pública; `TransitionTo(GameState)` con guard de mismo estado
 - **Preparation:** `_prepDuration = 5s`; `EconomyManager.Add(50)` en `Start()`; build countdown procedural (TMP, `sortingOrder=100`)
-- **Playing:** al expirar countdown o al elegir una carta (`CardSystem.OnCardChosen`)
-- **Paused:** al dispararse `XPManager.OnLevelUp`
-- **Victory:** al dispararse `BossBehaviour.OnBossDefeated`
-- **Defeat:** al dispararse `LivesManager.OnGameOver`
+- **Playing:** al expirar countdown o al elegir una carta (`CardSystem.OnCardChosen`) → `Time.timeScale = 1`
+- **Paused:** al dispararse `XPManager.OnLevelUp` → `Time.timeScale = 0` (congela enemigos, torres y spawner; la UI de Unity sigue respondiendo)
+- **Victory:** al dispararse `BossBehaviour.OnBossDefeated` → `Time.timeScale = 1`
+- **Defeat:** al dispararse `LivesManager.OnGameOver` → `Time.timeScale = 1`
 - **Singleton:** componente en el GameObject `GameManager` junto con `LivesManager`, `EconomyManager`, `XPManager`, `SelectionManager`, `PlayerInventory`, `EnemyPool`
 
 ### WaveManager
@@ -225,17 +225,28 @@ Leyenda: W=Walker R=Runner Br=Brute P=Priest A=Armored
 - Gastos: construcción y mejora de torres
 
 ### CardData (ScriptableObject)
-- `CardName`, `Description`, `Icon` (sprite), `CardRarity` (Common/Rare/Epic)
+- `CardName`, `Description`, `CardRarity` (Common/Rare/Epic)
+- `Icon` (sprite estático), `IconFrames[]` (frames de animación para el picker)
+- `DisplayIcon` — computed: `Icon != null ? Icon : IconFrames?[0]` — usar siempre esto para mostrar el ícono
+- `BonusDamage` — daño plano adicional; se aplica como `DamageType.Fire` (ignora armadura física)
+- `OnHitEffects[]` — array de `EffectData` (Burn, Slow, etc.) aplicados en cada golpe de la torre
 - `TowerType[] CompatibleTowerTypes` — vacío = compatible con todos los tipos de torre
 - `IsCompatibleWith(TowerType)` — consulta si la carta es aplicable a un tipo de torre específico
 - Creación: `Create > Block&Blood > CardData`
+- **Ubicación obligatoria:** `Assets/Resources/Cards/` para ser descubiertas por `Resources.LoadAll<CardData>("Cards")`
+- **`mainObjectFileID: 11400000`** requerido en el `.meta` — sin esto `Resources.LoadAll` devuelve array vacío
 
 ### CardSystem
 - **MonoBehaviour singleton** en el GameObject `GameManager`
-- Escucha `XPManager.OnLevelUp` → genera 3 cartas placeholder (`ScriptableObject.CreateInstance<CardData>()`) según rareza del nivel via `XPManager.GetRarityForCurrentLevel()`
-- Muestra picker procedural (Canvas `sortingOrder=200`): overlay oscuro + panel centrado 580×260px con título + fila de 3 cartas clickeables (160×140px cada una)
+- Escucha `XPManager.OnLevelUp` → carga cartas reales desde `Resources.LoadAll<CardData>("Cards")`, filtra por rareza (`XPManager.GetRarityForCurrentLevel()`), elige 3 sin repetir via `HashSet<int> used`
+- Si `Resources/Cards/` está vacío, recurre a `MakePlaceholderCard()` como fallback
+- Muestra picker procedural (Canvas `sortingOrder=200`): overlay oscuro + panel centrado 580×260px + fila de 3 cartas clickeables (160×140px cada una)
+  - Cada carta muestra: imagen 64px animada (`AnimateIcon` coroutine con `WaitForSecondsRealtime(1f/8f)` — crítico para `timeScale=0`), nombre, color de rareza, descripción
+  - Sprite usa `card.DisplayIcon` (no `card.Icon` directo)
 - Colores de rareza: Común blanco `(0.9,0.9,0.9)`, Rara amarillo `(1,0.85,0.2)`, Épica violeta `(0.75,0.4,1)`
-- Al elegir: `PlayerInventory.Instance?.AddCard(chosen)` + destruye canvas + `OnCardChosen?.Invoke()`
+- `ShowPicker()`: `IsPickerActive = true`, `Cursor.visible = true`, `Cursor.lockState = CursorLockMode.Confined`
+- `ChooseCard()`: `IsPickerActive = false`, `Cursor.lockState = CursorLockMode.None` + `PlayerInventory.Instance?.AddCard(chosen)` + destruye canvas + `OnCardChosen?.Invoke()`
+- `public static bool IsPickerActive` — chequeado por `HeroBehaviour` (bloquea right-click/ESC/clicks) y `CursorManager` (fuerza cursor visible, omite preview de placement)
 - `static event Action OnCardChosen` — escuchado por `GameManager` para transicionar de `Paused` a `Playing`
 - **Enum dual:** `CardRarity` standalone (`Scripts/Data/CardRarity.cs`) para XPManager/CardSystem; `CardData.Rarity` (nested) para los SO de cartas; mapeados via switch expression
 - Distribución de rareza delegada a `XPManager.GetRarityForCurrentLevel()` (pesos por rango de nivel)
@@ -253,6 +264,7 @@ Leyenda: W=Walker R=Runner Br=Brute P=Priest A=Armored
   - Click en celda `Ocupada` → busca torre via `Physics2D.OverlapCircle` en el centro de la celda
   - Click en celda vacía / ESC / right-click → reselecciona héroe
   - Clicks durante build mode o sobre UI son ignorados
+- **Auto-deselección en Paused:** escucha `GameManager.OnGameStateChanged`; si el estado es `Paused` y la selección actual es una `TowerBehaviour`, llama `SelectHero()` automáticamente
 - Evento: `OnSelectionChanged(ISelectable previous, ISelectable current)`
 - **HUDController** escucha `OnSelectionChanged` → reconstruye el panel inferior completo
   - Héroe seleccionado → portrait héroe, stats héroe, inventario + 4 build buttons, mensaje neutro en acciones
@@ -322,16 +334,23 @@ Leyenda: W=Walker R=Runner Br=Brute P=Priest A=Armored
 
 | Torre | Costo | Daño | Rango | Efecto |
 |-------|-------|------|-------|--------|
-| Melee Lv1 | 12 oro | 15 dps (físico) | Celda + 8 adyacentes | Slow −15% |
+| Melee Lv1 | 12 oro | 15 dps (físico) | 3 celdas radio (TowerData.Range=3) | Slow −15% |
 | Melee Lv2 (Sierra) | +18 oro | 28 dps | = Lv1 | = Lv1 |
-| Rango Lv1 | 10 oro | 20/proyectil (físico) | 3 celdas radio | — |
+| Rango Lv1 | 10 oro | 20/proyectil (físico) | 6 celdas radio (TowerData.Range=6) | — |
 
 - Construcción: **5 segundos** — el héroe puede moverse y atacar libremente durante ese tiempo
 - **Modo placement persistente:** tras construir una torre exitosamente, el modo placement **no se cancela** — el cursor mantiene el preview activo para construir otra del mismo tipo de inmediato. Se cancela solo con clic derecho, ESC, cambio de tipo de torre u oro insuficiente
 - Venta: devuelve **60%** del costo total (construcción + mejoras)
 - **TowerType** (`enum`): cada `TowerData` tiene un campo `Type` (Melee/Range) — usado por `CardData.IsCompatibleWith()` para filtrar cartas aplicables
 - Los efectos elementales (Burn, Slow, ArmorReduction) se aplican exclusivamente a través de **cartas**, no como torres dedicadas
-- **Cartas aplicadas:** cada torre tiene `AppliedEffects` (máx 6 `CardData`). `ApplyCard(CardData)` agrega permanentemente. Evento `OnEffectApplied`. Las cartas se pierden al vender la torre
+- **Cartas aplicadas:** cada torre tiene `AppliedEffects` (máx 6 `CardData`). `ApplyCard(CardData)` agrega permanentemente y llama `RebuildEffectiveEffects()`. Evento `OnEffectApplied`. Las cartas se pierden al vender la torre
+- **`RebuildEffectiveEffects()`** — recalcula en cada `Initialize()`, `ApplyCard()` y `TryUpgrade()`:
+  - `_effectiveDamageBase` = `_data.DamageBase` (físico, sujeto a armadura del enemigo)
+  - `_effectiveBonusDamage` = suma de `card.BonusDamage` de todas las cartas (se aplica como `DamageType.Fire`, **ignora armadura**)
+  - `_effectiveOnHitEffects` = unión de todos los `card.OnHitEffects[]`
+  - Melee: por tick → `TakeDamage(_effectiveDamageBase, _data.DamageType)` + si bonusDmg > 0: `TakeDamage(bonusDmg, DamageType.Fire)`
+  - Ranged: pasa `_effectiveBonusDamage` a `ProjectileBehaviour.Launch()` como parámetro opcional
+- **`ProjectileBehaviour.Launch(target, damage, damageType, bonusDamage = 0f)`** — al impactar: `TakeDamage(damage, damageType)` + si `bonusDamage > 0`: `TakeDamage(bonusDamage, DamageType.Fire)`. `bonusDamage` es parámetro opcional con default `0f`
 - **TotalGoldInvested:** trackea oro invertido (base + mejoras). `SellValue = 60% * TotalGoldInvested`
 
 ---
@@ -349,11 +368,11 @@ Leyenda: W=Walker R=Runner Br=Brute P=Priest A=Armored
 - La armadura del Blindado **no afecta el DoT de Burn** (aplicado vía cartas)
 - Rápido: siempre spawna solo, nunca en grupo
 - Blindado: siempre precedido por 3 Caminantes
-- **Sacerdote (`PriestBehaviour`):** cada 2 s cura el 15% del HP máximo a todos los enemigos en radio 1.92 u, incluyéndose a sí mismo. No cura a otros Sacerdotes. La curación no supera el HP máximo del objetivo. El timer de curación se reinicia al salir y volver del pool.
+- **Sacerdote (`PriestBehaviour`):** cada 2 s cura el 15% del HP máximo a todos los enemigos en radio 4 celdas (4 × CellSize world units), incluyéndose a sí mismo. No cura a otros Sacerdotes. La curación no supera el HP máximo del objetivo. El timer de curación se reinicia al salir y volver del pool.
   - Al curar: se detiene (`_aiPath.canMove = false`), reproduce animación `priest_cast.png` (3 frames a 8 fps), luego llama `SearchPath()` y reanuda movimiento.
   - En el **frame 2** del cast instancia un `HealOrb` por cada enemigo curado — proyectil visual puro que vuela hacia el target a 4 u/s ciclando `heal_orb_DRAFT.png` (4 frames). La curación ya fue aplicada instantáneamente; el orbe es solo feedback visual.
   - `EnemyAnimator.IsLocked = true` durante el cast para evitar conflicto entre el animator y los sprites del cast.
-- **Bruto (`BruteBehaviour`):** aura pasiva en radio 1.92 u — otorga +30% armadura física a todos los enemigos en rango (incluido él mismo). Múltiples Brutos no acumulan: `EnemyBehaviour` lleva un contador `_bruteAuraCount`; `IsUnderBruteAura` es true cuando el contador > 0. El aura se recalcula cada frame. La constante del bono es `EnemyBehaviour.BruteAuraArmorBonus = 0.3f`.
+- **Bruto (`BruteBehaviour`):** aura pasiva en radio 4 celdas (4 × CellSize world units) — otorga +30% armadura física a todos los enemigos en rango (incluido él mismo). Múltiples Brutos no acumulan: `EnemyBehaviour` lleva un contador `_bruteAuraCount`; `IsUnderBruteAura` es true cuando el contador > 0. El aura se recalcula cada frame. La constante del bono es `EnemyBehaviour.BruteAuraArmorBonus = 0.3f`.
 
 ---
 
@@ -391,6 +410,12 @@ Leyenda: W=Walker R=Runner Br=Brute P=Priest A=Armored
 - **Eventos C#** para comunicación entre managers (no referencias directas)
 - No implementar A\* desde cero — usar **A\* Pathfinding Project**
 
+### Convención de unidades (sprites 64×64, PPU=64)
+- **Todos los valores de diseño se expresan en celdas**, no en world units
+- El código multiplica por `GridManager.CellSize` (= 1.0f) donde sea necesario → cambiar CellSize es trivial
+- `EnemyData.MoveSpeed` — celdas/seg · `TowerData.Range` — celdas · velocidades de héroe/proyectil — celdas/seg · radios de Priest/Bruto — celdas
+- Sprites 64×64 a PPU=64 → 1 world unit por celda → `transform.localScale = (1,1,1)` sin escalar por código
+
 ### Lo que NO tocar sin revisión cuidadosa
 - Lógica de validación del pathfinding en `GridManager.CanPlaceTower` — un bug aquí rompe el juego
 - Números de balance (daño, HP, XP, oro) — están en ScriptableObjects, no hardcodeados
@@ -427,9 +452,22 @@ Leyenda: W=Walker R=Runner Br=Brute P=Priest A=Armored
 **Enemigos oscilan ante el gap del laberinto y no avanzan → `pickNextWaypointDist` demasiado grande**
 - Con `pickNextWaypointDist: 0.96` (2 celdas) o mayor, el cursor de waypoints salta 2+ celdas por delante. Al aproximarse al gap desde una columna lateral, el enemigo intenta moverse en línea recta hacia un punto al otro lado del muro, cruzando diagonalmente por una celda de torre. `constrainInsideGraph: true` lo devuelve al área caminable → oscilación.
 - El problema no ocurre con laberintos de 1 fila (los caminos son casi verticales), pero sí con laberintos de varias filas donde hay giros horizontales→verticales.
-- **Valor correcto: `pickNextWaypointDist: 0.5`** (≈ 1 celda, ligeramente mayor que `CellSize = 0.48`). El enemigo avanza al siguiente waypoint solo cuando ya está en él, siguiendo el camino celda a celda sin atajos diagonales.
+- **Valor correcto: `pickNextWaypointDist: 1.04`** (≈ 1 celda, ligeramente mayor que `CellSize = 1.0`). El enemigo avanza al siguiente waypoint solo cuando ya está en él, siguiendo el camino celda a celda sin atajos diagonales.
 - **`radius: 0.5` también era incorrecto** — mayor que la mitad de una celda (0.24). Corregido a `0.1` en los 5 prefabs de enemigos.
-- **NO subir `pickNextWaypointDist` por encima de `CellSize (0.48)`** en prefabs de enemigos. El valor de `ForceAllEnemiesRepath` también se corrigió para usar `ai.SearchPath()` en lugar de construir `ABPath` manualmente (que eludía el Seeker y creaba condiciones de carrera).
+- **NO subir `pickNextWaypointDist` por encima de `CellSize (1.0)` + margen pequeño** en prefabs de enemigos. El valor de `ForceAllEnemiesRepath` también se corrigió para usar `ai.SearchPath()` en lugar de construir `ABPath` manualmente (que eludía el Seeker y creaba condiciones de carrera).
+
+**`mainObjectFileID: 0` en `.meta` de carta → `Resources.LoadAll<CardData>` devuelve array vacío**
+- Al crear un asset `.asset` de forma manual (edición directa del YAML, fuera del Editor de Unity), Unity genera el `.meta` con `mainObjectFileID: 0`. Eso hace que `Resources.LoadAll<CardData>("Cards")` no encuentre el asset — como si no existiera.
+- El `fileID` correcto para un `ScriptableObject` es `11400000`, coincidiendo con el anchor YAML `&11400000` del objeto `!u!114`.
+- **Fix:** editar el `.meta` del asset y cambiar `mainObjectFileID: 0` → `mainObjectFileID: 11400000`, luego hacer *Assets → Reimport* en Unity.
+- El síntoma visible es que el picker de carta muestra cartas placeholder (sin nombre real, sin ícono) en vez de las cartas reales.
+
+**`PlayerInventory` ausente en la escena → cartas elegidas no aparecen en el HUD ni en el inventario**
+- El componente `PlayerInventory` es un singleton MonoBehaviour que debe vivir en el GameObject `GameManager`. Si no está en la escena, `PlayerInventory.Instance` es `null`.
+- `CardSystem.ChooseCard()` usa `PlayerInventory.Instance?.AddCard(chosen)` — el operador `?.` silencia el error y descarta la carta sin ningún mensaje en consola.
+- Al no llamarse `AddCard`, tampoco se dispara `OnInventoryChanged`, por lo que `HUDController.RefreshCardSections()` nunca actualiza los slots. El jugador ve el picker de carta funcionar correctamente pero la carta elegida no aparece en ningún lugar del HUD.
+- **Fix:** en la escena, agregar el script `PlayerInventory` como componente del GameObject `GameManager` (junto a `LivesManager`, `EconomyManager`, `XPManager`, `SelectionManager`, `CardSystem`, `EnemyPool`, `WaveManager`).
+- **Síntoma adicional:** las cartas del inventario tampoco se muestran en la fila "APLICAR CARTA" del panel de torre, ni pueden aplicarse a ninguna torre.
 
 ---
 
