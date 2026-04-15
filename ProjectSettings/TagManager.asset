@@ -45,5 +45,8 @@ TagManager:
   - name: Bordes
     uniqueID: 3767775427
     locked: 0
+  - name: Effects
+    uniqueID: 1234567890
+    locked: 0
   m_RenderingLayers:
   - Default
