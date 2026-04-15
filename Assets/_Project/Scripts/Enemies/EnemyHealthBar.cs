@@ -39,7 +39,12 @@ public class EnemyHealthBar : MonoBehaviour
     private void LateUpdate()
     {
         if (_enemy == null || !_enemy.IsAlive) return;
-        if (_frames == null || _frames.Length != TotalFrames) return;
+        if (_sr == null) return;
+        if (_frames == null || _frames.Length != TotalFrames)
+        {
+            Debug.LogWarning($"[EnemyHealthBar] _frames must have exactly {TotalFrames} sprites.", this);
+            return;
+        }
 
         float ratio = Mathf.Clamp01(_enemy.CurrentHp / _enemy.MaxHp);
 
