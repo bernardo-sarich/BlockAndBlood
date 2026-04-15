@@ -57,36 +57,42 @@ public static class AddHealthBarToEnemies
             using var scope = new PrefabUtility.EditPrefabContentsScope(path);
             var root = scope.prefabContentsRoot;
 
-            // Skip if already set up
             if (root.GetComponentInChildren<EnemyHealthBar>() != null)
             {
                 Debug.Log($"[AddHealthBarToEnemies] Skipping '{path}' — EnemyHealthBar already present.");
-                continue;
             }
+            else
+            {
+                // Create child GO
+                var barGO = new GameObject("HealthBar");
+                barGO.transform.SetParent(root.transform, worldPositionStays: false);
+                barGO.transform.localPosition = new Vector3(0f, 0.7f, 0f);
 
-            // Create child GO
-            var barGO = new GameObject("HealthBar");
-            barGO.transform.SetParent(root.transform, worldPositionStays: false);
-            barGO.transform.localPosition = new Vector3(0f, 0.7f, 0f);
+                // SpriteRenderer — sorting layer Effects, order 10
+                var sr = barGO.AddComponent<SpriteRenderer>();
+                sr.sortingLayerName = "Effects";
+                sr.sortingOrder     = 10;
+                sr.enabled          = false; // hidden until first hit
 
-            // SpriteRenderer — sorting layer Effects, order 10
-            var sr          = barGO.AddComponent<SpriteRenderer>();
-            sr.sortingLayerName = "Effects";
-            sr.sortingOrder     = 10;
-            sr.enabled          = false; // hidden until first hit
+                // EnemyHealthBar
+                var hb = barGO.AddComponent<EnemyHealthBar>();
 
-            // EnemyHealthBar
-            var hb = barGO.AddComponent<EnemyHealthBar>();
+                // Assign sprites via SerializedObject so Unity serializes them properly
+                var so     = new SerializedObject(hb);
+                so.Update(); // sync before writing
+                var frProp = so.FindProperty("_frames");
+                if (frProp == null)
+                {
+                    Debug.LogError($"[AddHealthBarToEnemies] Could not find '_frames' property on EnemyHealthBar. Was it renamed?");
+                    continue;
+                }
+                frProp.arraySize = FrameCount;
+                for (int i = 0; i < FrameCount; i++)
+                    frProp.GetArrayElementAtIndex(i).objectReferenceValue = frames[i];
+                so.ApplyModifiedPropertiesWithoutUndo(); // no Undo stack inside prefab scope
 
-            // Assign sprites via SerializedObject so Unity serializes them properly
-            var so    = new SerializedObject(hb);
-            var frProp = so.FindProperty("_frames");
-            frProp.arraySize = FrameCount;
-            for (int i = 0; i < FrameCount; i++)
-                frProp.GetArrayElementAtIndex(i).objectReferenceValue = frames[i];
-            so.ApplyModifiedPropertiesWithoutUndo();
-
-            Debug.Log($"[AddHealthBarToEnemies] Added HealthBar to '{path}'.");
+                Debug.Log($"[AddHealthBarToEnemies] Added HealthBar to '{path}'.");
+            }
         }
 
         AssetDatabase.SaveAssets();
