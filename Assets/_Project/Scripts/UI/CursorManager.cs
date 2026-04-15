@@ -130,7 +130,7 @@ public class CursorManager : MonoBehaviour
         _previewRenderer                  = _previewObj.AddComponent<SpriteRenderer>();
         _previewRenderer.sprite           = sprite;
         _previewRenderer.sortingLayerName = "Effects";
-        _previewRenderer.sortingOrder     = 100;
+        _previewRenderer.sortingOrder     = 9999;
         _previewRenderer.color            = _validColor;
         _previewObj.transform.localScale  = scale;
 
@@ -155,7 +155,7 @@ public class CursorManager : MonoBehaviour
         _cursorSpriteRenderer                  = cursorGO.AddComponent<SpriteRenderer>();
         _cursorSpriteRenderer.sprite           = cursorSprite;
         _cursorSpriteRenderer.sortingLayerName = "Effects";
-        _cursorSpriteRenderer.sortingOrder     = 101;
+        _cursorSpriteRenderer.sortingOrder     = 10000;
 
         // Size: ~0.625 cells, compensate for parent scale
         float desiredSize = 0.625f * GridManager.CellSize;
